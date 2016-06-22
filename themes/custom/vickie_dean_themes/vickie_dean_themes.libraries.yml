@@ -1,0 +1,40 @@
+global-styling:
+  css:
+    theme:
+      css/font-awesome/font-awesome.css: {}
+      css/print.css: {}
+      css/screen.css: {}
+      css/ie.css: {}
+      css/style.css: {}
+      css/bootstrap.min.css: {}
+      css/bootstrap-datetimepicker.min.css: {}
+      css/owl.carousel.css: {}
+      css/magnificent.css: {}
+      css/jquery.bxslider.css: {}
+      css/photoswipe.css: {}
+      css/jquery.fancybox.css: {}
+      css/material-design.css: {}
+      css/material-icons.css: {}
+      css/thin.css: {}
+      css/owl.transitions.css: {}
+      css/stylesheet.css: {}
+  js:
+     js/popup/jquery-2.1.1.min.js: {}
+     js/bootstrap.min.js: {}
+     js/moment.js: {}
+     js/bootstrap-datetimepicker.min.js: {}
+     js/common.js: {}
+     js/owl.carousel.min.js: {} 
+     js/bootstrap-tabcollapse.js: {}
+     js/camera/camera.js: {}
+     js/tmmegamenu/superfish.min.js: {}
+     js/tmmegamenu/jquery.rd-navbar.min.js: {}
+     js/device.min.js: {}
+     js/jquery.matchHeight.js: {}
+     js/livesearch.min.js: {}
+     js/script.js: {}
+     js/header.js: {}
+     js/custom.js: {}
+     js/newsletter.js: {}
+  dependencies:
+    - core/jquery 
