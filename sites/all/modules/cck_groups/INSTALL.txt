@@ -1,0 +1,34 @@
+cck_groups install
+
+To set up CCK Groups:
+
+1. Enable one or more modules that support cck_groups. For now,
+   this means casetracker_basic. project_issue and nodereference
+   support are possible future additions.
+
+2. Install and enable the CCK Groups module.
+
+3. Create a userreference field for the group content type or types
+   you're using. You can do this manually or use an existing userreference
+   field. Alternately, you can enable the Content Copy module (part of CCK)
+   and import a field definition by following these instructions:
+
+   a. Enable the Content copy and Userreference modules, both parts of CCK.
+   b. Navigate to Administer > Settings > CCK Groups
+      (admin/settings/cck-groups).
+   c. Click the "Import" link under "Create CCK group".
+   d. On the form that loads, select an existing content type to apply
+      fields functionality to. For now, casetracker_basic_project is the
+      only supported type.
+   e. Click the "Submit" button.
+
+4. At Administer > Content > Content types, open the edit screen for each
+   group content type and select the desired groups behaviour under the
+   "Groups" fieldset.
+
+5. Return to Administer > Settings > CCK Groups and enable access control.
+   CCK Groups needs controls access through the node access control system.
+   To initialize this system, you need to click the button under "Access
+   Control".
+
+
