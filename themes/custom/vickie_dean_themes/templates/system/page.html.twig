@@ -72,147 +72,232 @@
         theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
       ]
     %}
-      <header>
-        <div class="top-line">
-          <div class="container">
-            <div {{ navbar_attributes.addClass(navbar_classes) }} role="navigation">
-              <div class="mid-line">
-                <div id="stuck" class="stuck-menu">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-xs-5">
-                        <div id="logo" class="logo">
-                          <img src="/themes/custom/vickie_dean_themes/image/catalog/logo.png" title="Contact Lens Store" alt="Contact Lens Store" class="img-responsive"/>
-                        </div>
-                      </div>                  
-                      {{ page.navigation }}
-                      {# .btn-navbar is used as the toggle for collapsed navbar content #}
-                      {% if page.navigation_collapsible %}
-                        <button type="button" class="navbar-toggle navbar-collapse" data-toggle="collapse" data-target=".navbar-collapse"
-                          aria-expanded="false" aria-controls="navbar">
-                          <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-                          <span class="icon-bar top-bar"></span>
-                          <span class="icon-bar middle-bar"></span>
-                          <span class="icon-bar bottom-bar"></span>
-                        </button>
-                      {% endif %}
-                    </div>
+        <header>
+          <div class="top-line">
+            <div class="container">
+              <div {{ navbar_attributes.addClass(navbar_classes) }} role="navigation">
+                <div class="mid-line">
+                  <div id="stuck" class="stuck-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-xs-5">
+                          <div id="logo" class="logo">
+                            <img src="/themes/custom/vickie_dean_themes/image/catalog/logo.png" title="Contact Lens Store" alt="Contact Lens Store" class="img-responsive"/>
+                          </div>
+                        </div>                  
+                        {{ page.navigation }}
+                        {# .btn-navbar is used as the toggle for collapsed navbar content #}
+                        {% if page.navigation_collapsible %}
+                          <button type="button" class="navbar-toggle navbar-collapse" data-toggle="collapse" data-target=".navbar-collapse"
+                            aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+                            <span class="icon-bar top-bar"></span>
+                            <span class="icon-bar middle-bar"></span>
+                            <span class="icon-bar bottom-bar"></span>
+                          </button>
+                        {% endif %}
+                      </div>
 
-                      {# Navigation (collapsible) #} 
-                      {% if page.navigation_collapsible %}
-                        <div class="navbar-collapse collapse">
-                              {{ page.navigation_collapsible }}
-                        </div>
-                      {% endif %}
+                        {# Navigation (collapsible) #} 
+                        {% if page.navigation_collapsible %}
+                          <div class="navbar-collapse collapse">
+                                {{ page.navigation_collapsible }}
+                          </div>
+                        {% endif %}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </header>
-  {% endblock %}
-{% endif %}
+        </header>
+    {% endblock %}
+  {% endif %}
 
-{# Main #}
-{% block main %}
-  <div role="main" class="main-container {{ container }} js-quickedit-main-content">
+  {# Main #}
+  {% block main %}
+    <div role="main" class="main-container {{ container }} js-quickedit-main-content">
 
-      {# Header #}
-      {% if page.header %}
-        {% block header %}
-          <div class="col-sm-12" role="heading">
-            {{ page.header }}
-          </div>
-        {% endblock %}
-      {% endif %}
-
-      {# Sidebar First #}
-      {% if page.sidebar_first %}
-        {% block sidebar_first %}
-          <aside class="col-sm-3" role="complementary">
-            {{ page.sidebar_first }}
-          </aside>
-        {% endblock %}
-      {% endif %}
-
-      {# Content #}
-      {%
-        set content_classes = [
-          page.sidebar_first and page.sidebar_second ? 'col-sm-6',
-          page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
-          page.sidebar_first is empty and page.sidebar_second is empty ? 'row'
-        ]
-      %}
-      <section{{ content_attributes.addClass(content_classes) }}>
-
-        {# Highlighted #}
-        {% if page.highlighted %}
-          {% block highlighted %}
-            <div class="highlighted">{{ page.highlighted }}</div>
+        {# Header #}
+        {% if page.header %}
+          {% block header %}
+            <div class="col-sm-12" role="heading">
+              {{ page.header }}
+            </div>
           {% endblock %}
         {% endif %}
 
-        {# Breadcrumbs #}
-        {% if breadcrumb %}
-          {% block breadcrumb %}
-            {{ breadcrumb }}
-          {% endblock %}
-        {% endif %}
-
-        {# Action Links #}
-        {% if action_links %}
-          {% block action_links %}
-            <ul class="action-links">{{ action_links }}</ul>
-          {% endblock %}
-        {% endif %}
-
-        {# Help #}
-        {% if page.help %}
-          {% block help %}
-            {{ page.help }}
+        {# Sidebar First #}
+        {% if page.sidebar_first %}
+          {% block sidebar_first %}
+            <aside class="col-sm-3" role="complementary">
+              {{ page.sidebar_first }}
+            </aside>
           {% endblock %}
         {% endif %}
 
         {# Content #}
-        {% block content %}
-          <a id="main-content"></a>
-          {{ page.content }}
-        {% endblock %}
+        {%
+          set content_classes = [
+            page.sidebar_first and page.sidebar_second ? 'col-sm-6',
+            page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
+            page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
+            page.sidebar_first is empty and page.sidebar_second is empty ? 'row'
+          ]
+        %}
+        <section{{ content_attributes.addClass(content_classes) }}>
 
-      </section>
+          {# Highlighted #}
+          {% if page.highlighted %}
+            {% block highlighted %}
+              <div class="highlighted">{{ page.highlighted }}</div>
+            {% endblock %}
+          {% endif %}
 
-      {# Sidebar Second #}
-      {% if page.sidebar_second %}
-        {% block sidebar_second %}
-          <aside class="col-sm-3" role="complementary">
-            {{ page.sidebar_second }}
-          </aside>
-        {% endblock %}
-      {% endif %}
-  </div>
-{% endblock %}
+          {# Breadcrumbs #}
+          {% if breadcrumb %}
+            {% block breadcrumb %}
+              {{ breadcrumb }}
+            {% endblock %}
+          {% endif %}
 
-{# Slideshow #}
-{% if page.slideshow %}
-  {% block slideshow %}
-    <div class="fluid_container">
-      <div class="camera_container">        
-          {{ page.slideshow }}
-      </div>
-      <div class="clear"></div>
+          {# Action Links #}
+          {% if action_links %}
+            {% block action_links %}
+              <ul class="action-links">{{ action_links }}</ul>
+            {% endblock %}
+          {% endif %}
+
+          {# Help #}
+          {% if page.help %}
+            {% block help %}
+              {{ page.help }}
+            {% endblock %}
+          {% endif %}
+
+          {# Content #}
+          {% block content %}
+            <a id="main-content"></a>
+            {{ page.content }}
+          {% endblock %}
+
+        </section>
+
+        {# Sidebar Second #}
+        {% if page.sidebar_second %}
+          {% block sidebar_second %}
+            <aside class="col-sm-3" role="complementary">
+              {{ page.sidebar_second }}
+            </aside>
+          {% endblock %}
+        {% endif %}
     </div>
   {% endblock %}
-{% endif %}
 
-{# Footer #}
-{% if page.footer %}
-  {% block footer %}
-    <!--/ FOOTER SECTION-->  
-    <div class="footer grey-bg">
-          ©2014 Stamp LLC. All Rights Reserved
-          {{ page.footer }}
-    </div><!--/ Footer  End --> 
-  {% endblock %}
-{% endif %}
+<div id="page">
+
+  {# Slideshow #}
+  {% if page.slideshow %}
+    {% block slideshow %}      
+        {{ page.slideshow }}
+    {% endblock %}
+  {% endif %}
+
+  {# Feature Top #}
+  {% if page.feature_top %}
+    {% block feature_top %}
+      <div id="banner0" class="banners row">
+        {{ page.feature_top }}
+      </div>
+    {% endblock %}
+  {% endif %}
+
+  {# Products #}
+  {% if page.products %}
+    {% block products %}
+        {{ page.products }}
+    {% endblock %}
+  {% endif %}
+
+  <section class="bottom"> 
+    {# Partners #}
+    {% if page.partners %}
+      {% block partners %}     
+          {{ page.partners }}
+      {% endblock %}
+    {% endif %}
+
+    {# General Info #}
+    {% if page.general_info %}
+      {% block general_info %}
+        <div class="box_html ">
+          <div class="content-block">
+            <div class="container">
+              <div class="row">     
+                {{ page.general_info }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+    {% endif %}
+  </section> 
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        {# Footer Link Right #}
+        {% if page.footer_link_right %}
+          {% block footer_link_right %}
+            <div class="col-xs-6 col-sm-6 col-md-3">
+              <div class="footer_box">
+                  {{ page.footer_link_right }}
+              </div>
+            </div>
+          {% endblock %}
+        {% endif %}
+
+        {# Footer Link Left #}
+        {% if page.footer_link_left %}
+          {% block footer_link_left %}
+            <div class="col-xs-6 col-sm-6 col-md-3">
+              <div class="footer_box">
+                  {{ page.footer_link_left }}
+              </div>
+            </div>
+          {% endblock %}
+        {% endif %}
+
+        {# Footer Address #}
+        {% if page.footer_address %}
+          {% block footer_address %}
+            <div class="col-xs-6 col-sm-6 col-md-4">
+              <div class="footer_box">
+                <address>
+                  <ul>
+                    {{ page.footer_address }}
+                  </ul>
+                </address>
+             </div>
+           </div>
+          {% endblock %}
+        {% endif %}
+
+        {# Footer Social #}
+        {% if page.footer_social %}
+          {% block footer_social %}
+                <p class="newsletter-description">Social Media Links</p>
+                {{ page.footer_social }}
+            </div>
+          </div>
+          {% endblock %}
+        {% endif %}
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        Powered By <a href="http://www.opencart.com">OpenCart</a><br/> Contact Lens Store &copy; 2016 
+      </div>
+    </div>
+  </footer>
+</div>

@@ -13,12 +13,19 @@ regions:
   highlighted: Highlighted
   help: Help
   slideshow: Slideshow
+  feature_top: Feature Top
   content: Content
+  products: Products
+  partners: Partners
+  general_info: General Info
   sidebar_first: Primary
   sidebar_second: Secondary
-  footer: Footer 
+  footer_link_right: Footer Link Right 
+  footer_link_left: Footer Link Left
+  footer_address: Footer address
+  footer_social: Footer Social 
   page_top: Page top
   page_bottom: Page bottom
 
-libraries:
+libraries: 
   - vickie_dean_themes/global-styling

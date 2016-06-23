@@ -1,8 +1,11 @@
-{% for row in rows %}
-	{%
-		set row_classes = [
-		    default_row_class ? 'views-row',
-		]
-	%}
-{{ row.content }}
-{% endfor %}	               
+{{ attach_library('vickiedean/bx-slider') }}
+	<ul class="bxslider" >
+		{% for row in rows %}
+			{%
+				set row_classes = [
+				    default_row_class ? 'views-row',
+				]
+			%}
+		{{ row.content }}
+		{% endfor %}
+	</ul>               

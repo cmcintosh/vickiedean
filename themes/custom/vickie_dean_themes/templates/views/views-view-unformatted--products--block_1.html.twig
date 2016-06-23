@@ -1,0 +1,20 @@
+<section id="container">
+	<div class="container">
+		<div class="row">
+			<div id="content" class="col-sm-12">
+				<div role="tabpanel" class="module_tab module_tab__0">
+ 					<ul class="nav nav-tabs" role="tablist" id="module-tabs-0">
+						{% for row in rows %}
+							{%
+								set row_classes = [
+									default_row_class ? 'views-row',
+								]
+							%}
+						{{ row.content }}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

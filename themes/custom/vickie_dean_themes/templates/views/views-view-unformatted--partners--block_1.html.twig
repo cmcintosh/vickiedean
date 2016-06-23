@@ -1,0 +1,20 @@
+<div class="box_html ">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="brand-list">
+					<ul>
+						{% for row in rows %}
+							{%
+								set row_classes = [
+								    default_row_class ? 'views-row',
+								]
+							%}
+						{{ row.content }}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>		
+	</div> 
+</div>	
