@@ -29,3 +29,4 @@ regions:
 
 libraries: 
   - vickie_dean_themes/global-styling
+  - vickie_dean_themes/bx-slider

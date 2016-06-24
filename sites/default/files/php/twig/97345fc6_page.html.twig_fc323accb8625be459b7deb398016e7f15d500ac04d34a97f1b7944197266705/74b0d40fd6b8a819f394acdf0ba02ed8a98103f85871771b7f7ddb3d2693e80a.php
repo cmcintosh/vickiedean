@@ -74,106 +74,94 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
         // line 118
         echo "  ";
         $this->displayBlock('main', $context, $blocks);
-        // line 196
+        // line 211
         echo "
 <div id=\"page\">
 
   ";
-        // line 200
+        // line 215
         echo "  ";
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "slideshow", array())) {
-            // line 201
+            // line 216
             echo "    ";
             $this->displayBlock('slideshow', $context, $blocks);
-            // line 204
+            // line 219
             echo "  ";
         }
-        // line 205
+        // line 220
         echo "
   ";
-        // line 207
+        // line 222
         echo "  ";
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "feature_top", array())) {
-            // line 208
+            // line 223
             echo "    ";
             $this->displayBlock('feature_top', $context, $blocks);
-            // line 213
-            echo "  ";
-        }
-        // line 214
-        echo "
-  ";
-        // line 216
-        echo "  ";
-        if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "products", array())) {
-            // line 217
-            echo "    ";
-            $this->displayBlock('products', $context, $blocks);
-            // line 220
-            echo "  ";
-        }
-        // line 221
-        echo "
-  <section class=\"bottom\"> 
-    ";
-        // line 224
-        echo "    ";
-        if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "partners", array())) {
-            // line 225
-            echo "      ";
-            $this->displayBlock('partners', $context, $blocks);
             // line 228
-            echo "    ";
+            echo "  ";
         }
         // line 229
         echo "
-    ";
+  ";
         // line 231
-        echo "    ";
-        if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "general_info", array())) {
+        echo "  ";
+        if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "products", array())) {
             // line 232
+            echo "    ";
+            $this->displayBlock('products', $context, $blocks);
+            // line 235
+            echo "  ";
+        }
+        // line 236
+        echo "
+  <section class=\"bottom\"> 
+    ";
+        // line 239
+        echo "    ";
+        if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "partners", array())) {
+            // line 240
             echo "      ";
-            $this->displayBlock('general_info', $context, $blocks);
+            $this->displayBlock('partners', $context, $blocks);
             // line 243
             echo "    ";
         }
         // line 244
+        echo "
+    ";
+        // line 246
+        echo "    ";
+        if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "general_info", array())) {
+            // line 247
+            echo "      ";
+            $this->displayBlock('general_info', $context, $blocks);
+            // line 258
+            echo "    ";
+        }
+        // line 259
         echo "  </section> 
 
   <footer>
     <div class=\"container\">
       <div class=\"row\">
         ";
-        // line 250
+        // line 265
         echo "        ";
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_link_right", array())) {
-            // line 251
+            // line 266
             echo "          ";
             $this->displayBlock('footer_link_right', $context, $blocks);
-            // line 258
+            // line 273
             echo "        ";
         }
-        // line 259
+        // line 274
         echo "
         ";
-        // line 261
+        // line 276
         echo "        ";
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_link_left", array())) {
-            // line 262
+            // line 277
             echo "          ";
             $this->displayBlock('footer_link_left', $context, $blocks);
-            // line 269
-            echo "        ";
-        }
-        // line 270
-        echo "
-        ";
-        // line 272
-        echo "        ";
-        if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_address", array())) {
-            // line 273
-            echo "          ";
-            $this->displayBlock('footer_address', $context, $blocks);
             // line 284
             echo "        ";
         }
@@ -182,14 +170,26 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
         ";
         // line 287
         echo "        ";
-        if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_social", array())) {
+        if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_address", array())) {
             // line 288
             echo "          ";
-            $this->displayBlock('footer_social', $context, $blocks);
-            // line 294
+            $this->displayBlock('footer_address', $context, $blocks);
+            // line 299
             echo "        ";
         }
-        // line 295
+        // line 300
+        echo "
+        ";
+        // line 302
+        echo "        ";
+        if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_social", array())) {
+            // line 303
+            echo "          ";
+            $this->displayBlock('footer_social', $context, $blocks);
+            // line 309
+            echo "        ";
+        }
+        // line 310
         echo "      </div>
     </div>
     <div class=\"container\">
@@ -292,104 +292,104 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
             // line 123
             echo "          ";
             $this->displayBlock('header', $context, $blocks);
-            // line 128
+            // line 143
             echo "        ";
         }
-        // line 129
+        // line 144
         echo "
         ";
-        // line 131
+        // line 146
         echo "        ";
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_first", array())) {
-            // line 132
+            // line 147
             echo "          ";
             $this->displayBlock('sidebar_first', $context, $blocks);
-            // line 137
+            // line 152
             echo "        ";
         }
-        // line 138
+        // line 153
         echo "
         ";
-        // line 140
+        // line 155
         echo "        ";
-        // line 141
-        $context["content_classes"] = array(0 => ((($this->getAttribute(        // line 142
-(isset($context["page"]) ? $context["page"] : null), "sidebar_first", array()) && $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_second", array()))) ? ("col-sm-6") : ("")), 1 => ((($this->getAttribute(        // line 143
-(isset($context["page"]) ? $context["page"] : null), "sidebar_first", array()) && twig_test_empty($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_second", array())))) ? ("col-sm-9") : ("")), 2 => ((($this->getAttribute(        // line 144
-(isset($context["page"]) ? $context["page"] : null), "sidebar_second", array()) && twig_test_empty($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_first", array())))) ? ("col-sm-9") : ("")), 3 => (((twig_test_empty($this->getAttribute(        // line 145
+        // line 156
+        $context["content_classes"] = array(0 => ((($this->getAttribute(        // line 157
+(isset($context["page"]) ? $context["page"] : null), "sidebar_first", array()) && $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_second", array()))) ? ("col-sm-6") : ("")), 1 => ((($this->getAttribute(        // line 158
+(isset($context["page"]) ? $context["page"] : null), "sidebar_first", array()) && twig_test_empty($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_second", array())))) ? ("col-sm-9") : ("")), 2 => ((($this->getAttribute(        // line 159
+(isset($context["page"]) ? $context["page"] : null), "sidebar_second", array()) && twig_test_empty($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_first", array())))) ? ("col-sm-9") : ("")), 3 => (((twig_test_empty($this->getAttribute(        // line 160
 (isset($context["page"]) ? $context["page"] : null), "sidebar_first", array())) && twig_test_empty($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_second", array())))) ? ("row") : ("")));
-        // line 148
+        // line 163
         echo "        <section";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["content_attributes"]) ? $context["content_attributes"] : null), "addClass", array(0 => (isset($context["content_classes"]) ? $context["content_classes"] : null)), "method"), "html", null, true));
         echo ">
 
           ";
-        // line 151
+        // line 166
         echo "          ";
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "highlighted", array())) {
-            // line 152
+            // line 167
             echo "            ";
             $this->displayBlock('highlighted', $context, $blocks);
-            // line 155
+            // line 170
             echo "          ";
         }
-        // line 156
+        // line 171
         echo "
           ";
-        // line 158
+        // line 173
         echo "          ";
         if ((isset($context["breadcrumb"]) ? $context["breadcrumb"] : null)) {
-            // line 159
+            // line 174
             echo "            ";
             $this->displayBlock('breadcrumb', $context, $blocks);
-            // line 162
+            // line 177
             echo "          ";
         }
-        // line 163
+        // line 178
         echo "
           ";
-        // line 165
+        // line 180
         echo "          ";
         if ((isset($context["action_links"]) ? $context["action_links"] : null)) {
-            // line 166
+            // line 181
             echo "            ";
             $this->displayBlock('action_links', $context, $blocks);
-            // line 169
+            // line 184
             echo "          ";
         }
-        // line 170
+        // line 185
         echo "
           ";
-        // line 172
+        // line 187
         echo "          ";
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "help", array())) {
-            // line 173
+            // line 188
             echo "            ";
             $this->displayBlock('help', $context, $blocks);
-            // line 176
+            // line 191
             echo "          ";
         }
-        // line 177
+        // line 192
         echo "
           ";
-        // line 179
+        // line 194
         echo "          ";
         $this->displayBlock('content', $context, $blocks);
-        // line 183
+        // line 198
         echo "
         </section>
 
         ";
-        // line 187
+        // line 202
         echo "        ";
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_second", array())) {
-            // line 188
+            // line 203
             echo "          ";
             $this->displayBlock('sidebar_second', $context, $blocks);
-            // line 193
+            // line 208
             echo "        ";
         }
-        // line 194
+        // line 209
         echo "    </div>
   ";
     }
@@ -399,147 +399,162 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
     {
         // line 124
         echo "            <div class=\"col-sm-12\" role=\"heading\">
-              ";
-        // line 125
+              <div class=\"navigation\">
+                <div class=\"container\">
+                  <div class=\"wrapp\">
+                    <div class=\"megamenu\">
+                      ";
+        // line 129
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "html", null, true));
         echo "
+                    </div>
+                    <div id=\"search\" class=\"search\">
+                      <div class=\"search__cnt\">
+                        <input id=\"search__input\" class=\"search__input\" type=\"text\" name=\"search\" value=\"\" placeholder=\"\"/>
+                        <button id=\"search__btn\" class=\"search__btn\" type=\"button\"><span>Search</span></button>
+                      </div>
+                      <i class=\"tog_btn\"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           ";
     }
 
-    // line 132
+    // line 147
     public function block_sidebar_first($context, array $blocks = array())
     {
-        // line 133
+        // line 148
         echo "            <aside class=\"col-sm-3\" role=\"complementary\">
               ";
-        // line 134
+        // line 149
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_first", array()), "html", null, true));
         echo "
             </aside>
           ";
     }
 
-    // line 152
+    // line 167
     public function block_highlighted($context, array $blocks = array())
     {
-        // line 153
+        // line 168
         echo "              <div class=\"highlighted\">";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "highlighted", array()), "html", null, true));
         echo "</div>
             ";
     }
 
-    // line 159
+    // line 174
     public function block_breadcrumb($context, array $blocks = array())
     {
-        // line 160
+        // line 175
         echo "              ";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["breadcrumb"]) ? $context["breadcrumb"] : null), "html", null, true));
         echo "
             ";
     }
 
-    // line 166
+    // line 181
     public function block_action_links($context, array $blocks = array())
     {
-        // line 167
+        // line 182
         echo "              <ul class=\"action-links\">";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["action_links"]) ? $context["action_links"] : null), "html", null, true));
         echo "</ul>
             ";
     }
 
-    // line 173
+    // line 188
     public function block_help($context, array $blocks = array())
     {
-        // line 174
+        // line 189
         echo "              ";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "help", array()), "html", null, true));
         echo "
             ";
     }
 
-    // line 179
+    // line 194
     public function block_content($context, array $blocks = array())
     {
-        // line 180
+        // line 195
         echo "            <a id=\"main-content\"></a>
             ";
-        // line 181
+        // line 196
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array()), "html", null, true));
         echo "
           ";
     }
 
-    // line 188
+    // line 203
     public function block_sidebar_second($context, array $blocks = array())
     {
-        // line 189
+        // line 204
         echo "            <aside class=\"col-sm-3\" role=\"complementary\">
               ";
-        // line 190
+        // line 205
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_second", array()), "html", null, true));
         echo "
             </aside>
           ";
     }
 
-    // line 201
+    // line 216
     public function block_slideshow($context, array $blocks = array())
     {
-        echo "      
-        ";
-        // line 202
+        echo "     
+           ";
+        // line 217
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "slideshow", array()), "html", null, true));
         echo "
     ";
     }
 
-    // line 208
+    // line 223
     public function block_feature_top($context, array $blocks = array())
     {
-        // line 209
+        // line 224
         echo "      <div id=\"banner0\" class=\"banners row\">
         ";
-        // line 210
+        // line 225
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "feature_top", array()), "html", null, true));
         echo "
       </div>
     ";
     }
 
-    // line 217
+    // line 232
     public function block_products($context, array $blocks = array())
     {
-        // line 218
+        // line 233
         echo "        ";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "products", array()), "html", null, true));
         echo "
     ";
     }
 
-    // line 225
+    // line 240
     public function block_partners($context, array $blocks = array())
     {
         echo "     
           ";
-        // line 226
+        // line 241
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "partners", array()), "html", null, true));
         echo "
       ";
     }
 
-    // line 232
+    // line 247
     public function block_general_info($context, array $blocks = array())
     {
-        // line 233
+        // line 248
         echo "        <div class=\"box_html \">
           <div class=\"content-block\">
             <div class=\"container\">
               <div class=\"row\">     
                 ";
-        // line 237
+        // line 252
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "general_info", array()), "html", null, true));
         echo "
               </div>
@@ -549,14 +564,14 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
       ";
     }
 
-    // line 251
+    // line 266
     public function block_footer_link_right($context, array $blocks = array())
     {
-        // line 252
+        // line 267
         echo "            <div class=\"col-xs-6 col-sm-6 col-md-3\">
               <div class=\"footer_box\">
                   ";
-        // line 254
+        // line 269
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_link_right", array()), "html", null, true));
         echo "
               </div>
@@ -564,14 +579,14 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
           ";
     }
 
-    // line 262
+    // line 277
     public function block_footer_link_left($context, array $blocks = array())
     {
-        // line 263
+        // line 278
         echo "            <div class=\"col-xs-6 col-sm-6 col-md-3\">
               <div class=\"footer_box\">
                   ";
-        // line 265
+        // line 280
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_link_left", array()), "html", null, true));
         echo "
               </div>
@@ -579,16 +594,16 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
           ";
     }
 
-    // line 273
+    // line 288
     public function block_footer_address($context, array $blocks = array())
     {
-        // line 274
+        // line 289
         echo "            <div class=\"col-xs-6 col-sm-6 col-md-4\">
               <div class=\"footer_box\">
                 <address>
                   <ul>
                     ";
-        // line 278
+        // line 293
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_address", array()), "html", null, true));
         echo "
                   </ul>
@@ -598,13 +613,13 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
           ";
     }
 
-    // line 288
+    // line 303
     public function block_footer_social($context, array $blocks = array())
     {
-        // line 289
+        // line 304
         echo "                <p class=\"newsletter-description\">Social Media Links</p>
                 ";
-        // line 290
+        // line 305
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_social", array()), "html", null, true));
         echo "
             </div>
@@ -624,7 +639,7 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
 
     public function getDebugInfo()
     {
-        return array (  608 => 290,  605 => 289,  602 => 288,  592 => 278,  586 => 274,  583 => 273,  575 => 265,  571 => 263,  568 => 262,  560 => 254,  556 => 252,  553 => 251,  543 => 237,  537 => 233,  534 => 232,  528 => 226,  523 => 225,  516 => 218,  513 => 217,  506 => 210,  503 => 209,  500 => 208,  494 => 202,  489 => 201,  482 => 190,  479 => 189,  476 => 188,  470 => 181,  467 => 180,  464 => 179,  457 => 174,  454 => 173,  447 => 167,  444 => 166,  437 => 160,  434 => 159,  427 => 153,  424 => 152,  417 => 134,  414 => 133,  411 => 132,  404 => 125,  401 => 124,  398 => 123,  393 => 194,  390 => 193,  387 => 188,  384 => 187,  379 => 183,  376 => 179,  373 => 177,  370 => 176,  367 => 173,  364 => 172,  361 => 170,  358 => 169,  355 => 166,  352 => 165,  349 => 163,  346 => 162,  343 => 159,  340 => 158,  337 => 156,  334 => 155,  331 => 152,  328 => 151,  322 => 148,  320 => 145,  319 => 144,  318 => 143,  317 => 142,  316 => 141,  314 => 140,  311 => 138,  308 => 137,  305 => 132,  302 => 131,  299 => 129,  296 => 128,  293 => 123,  290 => 122,  284 => 119,  281 => 118,  270 => 107,  264 => 104,  261 => 103,  259 => 102,  256 => 101,  252 => 99,  243 => 93,  239 => 91,  236 => 90,  232 => 88,  219 => 78,  214 => 75,  212 => 72,  211 => 71,  210 => 69,  208 => 68,  205 => 67,  193 => 295,  190 => 294,  187 => 288,  184 => 287,  181 => 285,  178 => 284,  175 => 273,  172 => 272,  169 => 270,  166 => 269,  163 => 262,  160 => 261,  157 => 259,  154 => 258,  151 => 251,  148 => 250,  141 => 244,  138 => 243,  135 => 232,  132 => 231,  129 => 229,  126 => 228,  123 => 225,  120 => 224,  116 => 221,  113 => 220,  110 => 217,  107 => 216,  104 => 214,  101 => 213,  98 => 208,  95 => 207,  92 => 205,  89 => 204,  86 => 201,  83 => 200,  78 => 196,  75 => 118,  72 => 116,  69 => 115,  66 => 67,  64 => 66,  62 => 64,);
+        return array (  623 => 305,  620 => 304,  617 => 303,  607 => 293,  601 => 289,  598 => 288,  590 => 280,  586 => 278,  583 => 277,  575 => 269,  571 => 267,  568 => 266,  558 => 252,  552 => 248,  549 => 247,  543 => 241,  538 => 240,  531 => 233,  528 => 232,  521 => 225,  518 => 224,  515 => 223,  509 => 217,  504 => 216,  497 => 205,  494 => 204,  491 => 203,  485 => 196,  482 => 195,  479 => 194,  472 => 189,  469 => 188,  462 => 182,  459 => 181,  452 => 175,  449 => 174,  442 => 168,  439 => 167,  432 => 149,  429 => 148,  426 => 147,  408 => 129,  401 => 124,  398 => 123,  393 => 209,  390 => 208,  387 => 203,  384 => 202,  379 => 198,  376 => 194,  373 => 192,  370 => 191,  367 => 188,  364 => 187,  361 => 185,  358 => 184,  355 => 181,  352 => 180,  349 => 178,  346 => 177,  343 => 174,  340 => 173,  337 => 171,  334 => 170,  331 => 167,  328 => 166,  322 => 163,  320 => 160,  319 => 159,  318 => 158,  317 => 157,  316 => 156,  314 => 155,  311 => 153,  308 => 152,  305 => 147,  302 => 146,  299 => 144,  296 => 143,  293 => 123,  290 => 122,  284 => 119,  281 => 118,  270 => 107,  264 => 104,  261 => 103,  259 => 102,  256 => 101,  252 => 99,  243 => 93,  239 => 91,  236 => 90,  232 => 88,  219 => 78,  214 => 75,  212 => 72,  211 => 71,  210 => 69,  208 => 68,  205 => 67,  193 => 310,  190 => 309,  187 => 303,  184 => 302,  181 => 300,  178 => 299,  175 => 288,  172 => 287,  169 => 285,  166 => 284,  163 => 277,  160 => 276,  157 => 274,  154 => 273,  151 => 266,  148 => 265,  141 => 259,  138 => 258,  135 => 247,  132 => 246,  129 => 244,  126 => 243,  123 => 240,  120 => 239,  116 => 236,  113 => 235,  110 => 232,  107 => 231,  104 => 229,  101 => 228,  98 => 223,  95 => 222,  92 => 220,  89 => 219,  86 => 216,  83 => 215,  78 => 211,  75 => 118,  72 => 116,  69 => 115,  66 => 67,  64 => 66,  62 => 64,);
     }
 }
 /* {#*/
@@ -751,7 +766,22 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
 /*         {% if page.header %}*/
 /*           {% block header %}*/
 /*             <div class="col-sm-12" role="heading">*/
-/*               {{ page.header }}*/
+/*               <div class="navigation">*/
+/*                 <div class="container">*/
+/*                   <div class="wrapp">*/
+/*                     <div class="megamenu">*/
+/*                       {{ page.header }}*/
+/*                     </div>*/
+/*                     <div id="search" class="search">*/
+/*                       <div class="search__cnt">*/
+/*                         <input id="search__input" class="search__input" type="text" name="search" value="" placeholder=""/>*/
+/*                         <button id="search__btn" class="search__btn" type="button"><span>Search</span></button>*/
+/*                       </div>*/
+/*                       <i class="tog_btn"></i>*/
+/*                     </div>*/
+/*                   </div>*/
+/*                 </div>*/
+/*               </div>*/
 /*             </div>*/
 /*           {% endblock %}*/
 /*         {% endif %}*/
@@ -827,8 +857,8 @@ class __TwigTemplate_00057bac7a1e22d85a43a890059285c8372f92890d19bd5c93f68a17e67
 /* */
 /*   {# Slideshow #}*/
 /*   {% if page.slideshow %}*/
-/*     {% block slideshow %}      */
-/*         {{ page.slideshow }}*/
+/*     {% block slideshow %}     */
+/*            {{ page.slideshow }}*/
 /*     {% endblock %}*/
 /*   {% endif %}*/
 /* */

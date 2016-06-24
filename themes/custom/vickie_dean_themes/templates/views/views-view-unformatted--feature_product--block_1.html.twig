@@ -1,0 +1,16 @@
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane" id="tab-featured-0">
+		<div class="box clearfix">
+				<div class="product-thumb transition options">
+						{% for row in rows %}
+							{%
+								set row_classes = [
+									default_row_class ? 'views-row',
+								]
+							%}
+						{{ row.content }}
+						{% endfor %}
+				</div>
+		</div>
+	</div>
+</div>

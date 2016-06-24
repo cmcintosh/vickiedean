@@ -10116,7 +10116,208 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* No files to import found in effects/**\/* */
-/* No files to import found in components/**\/* */
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+footer address {
+  position: relative;
+}
+
+@media only screen and (min-width: 260px) and (max-width: 580px) {
+  footer ul.menu.nav {
+    margin-top: -4em;
+  }
+
+  address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.42857143;
+    margin-left: 0em;
+    z-index: 1;
+  }
+
+  ul.platforms.inline.horizontal {
+    width: 100%;
+    margin-top: -3em;
+    margin-left: -1em;
+    position: relative;
+    left: 6em;
+  }
+
+  .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px 15px !important;
+  }
+
+  a {
+    background-color: transparent !important;
+  }
+
+  p.newsletter-description {
+    position: relative;
+    left: 6em;
+  }
+}
+@media only screen and (min-width: 640px) {
+  footer ul.menu.nav {
+    margin-top: -4em;
+  }
+
+  address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.42857143;
+    margin-left: 0em;
+    z-index: 1;
+  }
+
+  ul.platforms.inline.horizontal {
+    width: 100%;
+    margin-top: -3em;
+    margin-left: -1em;
+    position: relative;
+    left: 5em;
+  }
+
+  .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px 15px !important;
+  }
+
+  a {
+    background-color: transparent !important;
+  }
+
+  p.newsletter-description {
+    position: relative;
+    left: 6em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  footer ul.menu.nav {
+    margin-top: -4em;
+  }
+
+  address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.42857143;
+    margin-left: 0em;
+    z-index: 1;
+  }
+
+  ul.platforms.inline.horizontal {
+    width: 100%;
+    margin-top: -3em;
+    margin-left: -1em;
+    position: relative;
+    left: 5em;
+  }
+
+  .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px 15px !important;
+  }
+
+  a {
+    background-color: transparent !important;
+  }
+
+  p.newsletter-description {
+    position: relative;
+    left: 6em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer ul.menu.nav {
+    margin-top: -6em;
+  }
+
+  address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.42857143;
+    margin-left: -3em;
+    z-index: 1;
+  }
+
+  ul.platforms.inline.horizontal {
+    width: 125%;
+    margin-top: -8em;
+    margin-left: -1em;
+    position: relative;
+    left: -1em;
+  }
+
+  .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px 15px !important;
+  }
+
+  a {
+    background-color: transparent !important;
+  }
+
+  p.newsletter-description {
+    position: relative;
+    left: 0em;
+  }
+}
+@media only screen and (min-width: 1100px), only screen and (min-width: 1400px) {
+  footer ul.menu.nav {
+    margin-top: -4em;
+  }
+
+  address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.42857143;
+    margin-left: -3em;
+    z-index: 1;
+  }
+
+  ul.platforms.inline.horizontal {
+    width: 100%;
+    margin-top: -5em;
+    margin-left: -1em;
+    position: relative;
+    left: -1em;
+  }
+
+  .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px 15px !important;
+  }
+
+  a {
+    background-color: transparent !important;
+  }
+
+  p.newsletter-description {
+    position: relative;
+    left: 0em;
+  }
+}
 /* No files to import found in edit-pages/**\/* */
 /* No files to import found in pages/**\/* */
 body {

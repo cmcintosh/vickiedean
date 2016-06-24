@@ -5,7 +5,7 @@ bx-slider:
       js/jquery.bxslider/jquery.bxslider.css: {}
   js:
     js/jquery.bxslider/jquery.bxslider.js: {}
-    js/cta_slideshow.js: {}
+    js/jquery.bxslider/cta_slideshow.js: {}
   dependencies:
     - core/jquery
 
@@ -30,7 +30,6 @@ global-styling:
       css/owl.transitions.css: {}
       css/stylesheet.css: {}
   js:
-     js/popup/jquery-2.1.1.min.js: {}
      js/bootstrap.min.js: {}
      js/moment.js: {}
      js/bootstrap-datetimepicker.min.js: {}
@@ -43,9 +42,7 @@ global-styling:
      js/device.min.js: {}
      js/jquery.matchHeight.js: {}
      js/livesearch.min.js: {}
-     js/script.js: {}
      js/header.js: {}
      js/custom.js: {}
-     js/newsletter.js: {}
   dependencies:
     - core/jquery 

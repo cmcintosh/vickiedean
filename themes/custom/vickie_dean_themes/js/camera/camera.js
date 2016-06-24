@@ -218,8 +218,8 @@
 
 
 	var allImg = new Array();
-	$('> div', elem).each( function() { 
-		allImg.push($(this).attr('data-src'));
+	$('> img', elem).each( function() { 
+		allImg.push($(this).attr('src'));
 	});
 	
 	var allLinks = new Array();

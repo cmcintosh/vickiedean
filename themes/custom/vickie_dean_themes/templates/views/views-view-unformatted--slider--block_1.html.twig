@@ -1,11 +1,14 @@
-{{ attach_library('vickiedean/bx-slider') }}
-	<ul class="bxslider" >
-		{% for row in rows %}
-			{%
-				set row_classes = [
-				    default_row_class ? 'views-row',
-				]
-			%}
-		{{ row.content }}
-		{% endfor %}
-	</ul>               
+<div class="fluid_container">
+    <div class="camera_container">
+        <div id="camera_wrap_0"> 
+			{% for row in rows %}
+				{%
+					set row_classes = [
+					    default_row_class ? 'views-row',
+					]
+				%}
+			{{ row.content }}
+			{% endfor %}
+		</div>
+	</div>
+</div>             

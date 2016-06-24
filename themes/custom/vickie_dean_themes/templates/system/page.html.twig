@@ -122,7 +122,22 @@
         {% if page.header %}
           {% block header %}
             <div class="col-sm-12" role="heading">
-              {{ page.header }}
+              <div class="navigation">
+                <div class="container">
+                  <div class="wrapp">
+                    <div class="megamenu">
+                      {{ page.header }}
+                    </div>
+                    <div id="search" class="search">
+                      <div class="search__cnt">
+                        <input id="search__input" class="search__input" type="text" name="search" value="" placeholder=""/>
+                        <button id="search__btn" class="search__btn" type="button"><span>Search</span></button>
+                      </div>
+                      <i class="tog_btn"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           {% endblock %}
         {% endif %}
@@ -198,8 +213,8 @@
 
   {# Slideshow #}
   {% if page.slideshow %}
-    {% block slideshow %}      
-        {{ page.slideshow }}
+    {% block slideshow %}     
+           {{ page.slideshow }}
     {% endblock %}
   {% endif %}
 
