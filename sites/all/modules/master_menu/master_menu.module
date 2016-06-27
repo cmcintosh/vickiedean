@@ -1,0 +1,45 @@
+<?php
+
+function master_menu_form_alter(&$form, &$form_state, $form_id){ 
+
+ if($form_id == 'menu_edit_item'){ 
+	 
+		$form['description_show'] = array( 
+																																				'#type' => 'checkbox',
+																																				'#title' => t('Display Description in Menu'),
+																																				'#default_value' => variable_get("menu_".$form['mlid']['#value']."_show_description", FALSE)
+																																				);
+		$form['menu_column'] = array( 
+																															'#type' => 'fieldset',
+																															'#title' => t('Menu Column'),
+																															'#collapsed' => TRUE,
+																															'#collapsible' => TRUE
+																															);
+		$form['menu_column']['first_column'] = array( 
+																																															'#type' => 'checkbox',
+																																															'#title' => t('First Column'),
+																																															'#default_value' => variable_get("menu_".$form['mlid']['#value']."_first_column", FALSE)
+																																															);
+		
+		$form['menu_column']['start_new_column'] = array( 
+																																				'#type' => 'checkbox',
+																																				'#title' => t('Start of New Column'),
+																																				'#default_value' => variable_get("menu_".$form['mlid']['#value']."_start_new_column", FALSE)																																				
+																																				);
+		
+		$form['#submit'][] = 'master_menu_submit';
+	}
+ 
+
+}
+
+function master_menu_submit($form, $form_state){ 
+	variable_set("menu_".$form_state['values']['mlid']."_show_description", $form_state['values']['description_show']);
+	
+	variable_set("menu_".$form_state['values']['mlid']."_first_column", $form_state['values']['first_column']);
+	variable_set("menu_".$form_state['values']['mlid']."_start_new_column", $form_state['values']['start_new_column']);
+	
+	
+	
+	
+}

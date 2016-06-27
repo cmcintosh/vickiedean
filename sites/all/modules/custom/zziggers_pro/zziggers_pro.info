@@ -1,0 +1,5 @@
+name = ZZiggers Pro
+description = Creates End Points for the ZZiggers Pro Java Application to communicate with
+package = ZZiggers Pro
+core = 7.x
+php = 5.2

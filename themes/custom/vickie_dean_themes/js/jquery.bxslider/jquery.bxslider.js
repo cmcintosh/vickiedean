@@ -7,7 +7,7 @@
  *
  * Released under the MIT license - http://opensource.org/licenses/MIT
  */
- 
+
 ;(function($){
 
 	var plugin = {};
@@ -15,7 +15,7 @@
 	var defaults = {
 
 		// GENERAL
-		mode: 'fade',
+		mode: 'horizontal',
 		slideSelector: '',
 		infiniteLoop: true,
 		hideControlOnEnd: false,
@@ -27,7 +27,7 @@
 		captions: false,
 		ticker: false,
 		tickerHover: false,
-		adaptiveHeight: false,
+		adaptiveHeight: true,
 		adaptiveHeightSpeed: 500,
 		video: false,
 		useCSS: true,
@@ -53,8 +53,8 @@
 
 		// CONTROLS
 		controls: true,
-		nextText: 'Next',
-		prevText: 'Prev',
+		nextText: '<i class="fa fa-chevron-right"></i>',
+		prevText: '<i class="fa fa-chevron-left"></i>',
 		nextSelector: null,
 		prevSelector: null,
 		autoControls: false,

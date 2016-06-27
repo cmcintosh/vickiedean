@@ -218,8 +218,9 @@
 
 
 	var allImg = new Array();
-	$('> img', elem).each( function() { 
-		allImg.push($(this).attr('src'));
+	$('> div', elem).each( function() { 
+		allImg.push($(this).attr('data-\
+			src'));
 	});
 	
 	var allLinks = new Array();
@@ -648,15 +649,15 @@
 		$('iframe',fakeHover).each(function(){
 			var t = $(this);
 			var src = t.attr('src');
-			t.attr('data-src',src);
-			var divInd = t.parent().index('.camera_src > div');
+			t.attr('src',src);
+			var divInd = t.parent().index('.camera_src > img');
 			$('.camera_target_content .cameraContent:eq('+divInd+')',wrap).append(t);
 		});
 		function imgFake() {
 				$('iframe',fakeHover).each(function(){
 					$('.camera_caption',fakeHover).show();
 					var t = $(this);
-					var cloneSrc = t.attr('data-src');
+					var cloneSrc = t.attr('src');
 					t.attr('src',cloneSrc);
 					var imgFakeUrl = opts.imagePath+'blank.gif';
 					var imgFake = new Image();

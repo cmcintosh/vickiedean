@@ -1,0 +1,4 @@
+name = Master Menu
+description = Provides extra options for menus needed to render them properly
+core = 7.x
+package = Wembassy LLC

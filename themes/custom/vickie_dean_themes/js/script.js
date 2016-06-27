@@ -1,6 +1,6 @@
 var gl_path = jQuery('#gl_path').html();
 function include(scriptUrl) {
-	document.write('<script src="catalog/view/theme/' + gl_path + '/' + scriptUrl + '"></script>');
+	document.write('<script src="themes/custom/vickie_dean_themes/' + scriptUrl + '"></script>');
 }
 
 /**

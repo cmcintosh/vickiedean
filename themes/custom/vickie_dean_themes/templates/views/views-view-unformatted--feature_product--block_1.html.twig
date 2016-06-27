@@ -1,7 +1,8 @@
 <div class="tab-content">
 	<div role="tabpanel" class="tab-pane" id="tab-featured-0">
 		<div class="box clearfix">
-				<div class="product-thumb transition options">
+			<div class="box-carousel">
+				
 						{% for row in rows %}
 							{%
 								set row_classes = [
@@ -10,7 +11,8 @@
 							%}
 						{{ row.content }}
 						{% endfor %}
-				</div>
+
+			</div>
 		</div>
 	</div>
 </div>

@@ -16,7 +16,7 @@
  * - is_admin: A flag indicating if the user has permission to access
  *   administration pages.
  *
- * Site identity:
+ * Site identity: 
  * - front_page: The URL of the front page. Use this instead of base_path when
  *   linking to the front page. This includes the language domain or prefix.
  * - logo: The url of the logo image, as defined in theme settings.
@@ -61,6 +61,18 @@
  * @ingroup templates
  */
 #}
+<header>
+{# Top Navigation #}
+  {% if page.top_navigation %}
+    {% block top_navigation %}  
+    <div class="top-line">
+      <div class="container"> 
+        {{ page.top_navigation }}
+      </div>
+    </div>
+    {% endblock %}
+  {% endif %}
+
 {% set container = 'container' %}
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
@@ -72,19 +84,11 @@
         theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
       ]
     %}
-        <header>
-          <div class="top-line">
-            <div class="container">
-              <div {{ navbar_attributes.addClass(navbar_classes) }} role="navigation">
                 <div class="mid-line">
                   <div id="stuck" class="stuck-menu">
                     <div class="container">
                       <div class="row">
-                        <div class="col-xs-5">
-                          <div id="logo" class="logo">
-                            <img src="/themes/custom/vickie_dean_themes/image/catalog/logo.png" title="Contact Lens Store" alt="Contact Lens Store" class="img-responsive"/>
-                          </div>
-                        </div>                  
+                                
                         {{ page.navigation }}
                         {# .btn-navbar is used as the toggle for collapsed navbar content #}
                         {% if page.navigation_collapsible %}
@@ -107,13 +111,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </header>
     {% endblock %}
   {% endif %}
-
+</header>
   {# Main #}
   {% block main %}
     <div role="main" class="main-container {{ container }} js-quickedit-main-content">
@@ -121,13 +121,13 @@
         {# Header #}
         {% if page.header %}
           {% block header %}
-            <div class="col-sm-12" role="heading">
+            <!-- <div class="col-sm-12" role="heading">
               <div class="navigation">
                 <div class="container">
                   <div class="wrapp">
-                    <div class="megamenu">
+                    <div class="megamenu">-->
                       {{ page.header }}
-                    </div>
+                    <!-- </div> -->
                     <div id="search" class="search">
                       <div class="search__cnt">
                         <input id="search__input" class="search__input" type="text" name="search" value="" placeholder=""/>
@@ -135,10 +135,10 @@
                       </div>
                       <i class="tog_btn"></i>
                     </div>
-                  </div>
+                  <!-- </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           {% endblock %}
         {% endif %}
 
