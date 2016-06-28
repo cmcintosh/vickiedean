@@ -1,7 +1,7 @@
 <?php
 
-/* themes/contrib/bootstrap/templates/block/block--system-menu-block--main.html.twig */
-class __TwigTemplate_a23c9bdfc3ffa9a5c1b2132cfd10d2b5893aa4ebaa68140ee3d8ca4e5274bd53 extends Twig_Template
+/* core/modules/system/templates/block--system-menu-block.html.twig */
+class __TwigTemplate_5019815ef02091f269f1f963414798291fb516eff5af7be0917aa99a6b727def extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -16,13 +16,13 @@ class __TwigTemplate_a23c9bdfc3ffa9a5c1b2132cfd10d2b5893aa4ebaa68140ee3d8ca4e527
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("set" => 36, "block" => 38);
+        $tags = array("set" => 36, "if" => 39, "block" => 47);
         $filters = array("clean_id" => 36, "without" => 37);
         $functions = array();
 
         try {
             $this->env->getExtension('sandbox')->checkSecurity(
-                array('set', 'block'),
+                array('set', 'if', 'block'),
                 array('clean_id', 'without'),
                 array()
             );
@@ -46,20 +46,45 @@ class __TwigTemplate_a23c9bdfc3ffa9a5c1b2132cfd10d2b5893aa4ebaa68140ee3d8ca4e527
         echo "<nav role=\"navigation\" aria-labelledby=\"";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["heading_id"]) ? $context["heading_id"] : null), "html", null, true));
         echo "\"";
-        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, twig_without($this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "removeClass", array(0 => "clearfix"), "method"), "role", "aria-labelledby"), "html", null, true));
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, twig_without((isset($context["attributes"]) ? $context["attributes"] : null), "role", "aria-labelledby"), "html", null, true));
         echo ">
   ";
-        // line 38
+        // line 39
+        echo "  ";
+        if ( !$this->getAttribute((isset($context["configuration"]) ? $context["configuration"] : null), "label_display", array())) {
+            // line 40
+            echo "    ";
+            $context["title_attributes"] = $this->getAttribute((isset($context["title_attributes"]) ? $context["title_attributes"] : null), "addClass", array(0 => "visually-hidden"), "method");
+            // line 41
+            echo "  ";
+        }
+        // line 42
+        echo "  ";
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["title_prefix"]) ? $context["title_prefix"] : null), "html", null, true));
+        echo "
+  <h2";
+        // line 43
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["title_attributes"]) ? $context["title_attributes"] : null), "html", null, true));
+        echo ">";
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["configuration"]) ? $context["configuration"] : null), "label", array()), "html", null, true));
+        echo "</h2>
+  ";
+        // line 44
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["title_suffix"]) ? $context["title_suffix"] : null), "html", null, true));
+        echo "
+
+  ";
+        // line 47
+        echo "  ";
         $this->displayBlock('content', $context, $blocks);
-        // line 41
-        echo "</nav>
-";
+        // line 50
+        echo "</nav>";
     }
 
-    // line 38
+    // line 47
     public function block_content($context, array $blocks = array())
     {
-        // line 39
+        // line 48
         echo "    ";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["content"]) ? $context["content"] : null), "html", null, true));
         echo "
@@ -68,7 +93,7 @@ class __TwigTemplate_a23c9bdfc3ffa9a5c1b2132cfd10d2b5893aa4ebaa68140ee3d8ca4e527
 
     public function getTemplateName()
     {
-        return "themes/contrib/bootstrap/templates/block/block--system-menu-block--main.html.twig";
+        return "core/modules/system/templates/block--system-menu-block.html.twig";
     }
 
     public function isTraitable()
@@ -78,7 +103,7 @@ class __TwigTemplate_a23c9bdfc3ffa9a5c1b2132cfd10d2b5893aa4ebaa68140ee3d8ca4e527
 
     public function getDebugInfo()
     {
-        return array (  63 => 39,  60 => 38,  55 => 41,  53 => 38,  46 => 37,  44 => 36,);
+        return array (  88 => 48,  85 => 47,  81 => 50,  78 => 47,  73 => 44,  67 => 43,  62 => 42,  59 => 41,  56 => 40,  53 => 39,  46 => 37,  44 => 36,);
     }
 }
 /* {#*/
@@ -100,7 +125,7 @@ class __TwigTemplate_a23c9bdfc3ffa9a5c1b2132cfd10d2b5893aa4ebaa68140ee3d8ca4e527
 /*  * - title_attributes: HTML attributes for the title element.*/
 /*  * - content_attributes: HTML attributes for the content element.*/
 /*  * - title_prefix: Additional output populated by modules, intended to be*/
-/*  *   displayed in front of the main title tag that appears in the template.*/
+/*  *   displayed in front of the main title tag that appears in the template. */
 /*  * - title_suffix: Additional output populated by modules, intended to be*/
 /*  *   displayed after the main title tag that appears in the template.*/
 /*  **/
@@ -117,9 +142,17 @@ class __TwigTemplate_a23c9bdfc3ffa9a5c1b2132cfd10d2b5893aa4ebaa68140ee3d8ca4e527
 /*  *//* */
 /* #}*/
 /* {% set heading_id = attributes.id ~ '-menu'|clean_id %}*/
-/* <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.removeClass('clearfix')|without('role', 'aria-labelledby') }}>*/
+/* <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>*/
+/*   {# Label. If not displayed, we still provide it for screen readers. #}*/
+/*   {% if not configuration.label_display %}*/
+/*     {% set title_attributes = title_attributes.addClass('visually-hidden') %}*/
+/*   {% endif %}*/
+/*   {{ title_prefix }}*/
+/*   <h2{{ title_attributes }}>{{ configuration.label }}</h2>*/
+/*   {{ title_suffix }}*/
+/* */
+/*   {# Menu. #}*/
 /*   {% block content %}*/
 /*     {{ content }}*/
 /*   {% endblock %}*/
 /* </nav>*/
-/* */

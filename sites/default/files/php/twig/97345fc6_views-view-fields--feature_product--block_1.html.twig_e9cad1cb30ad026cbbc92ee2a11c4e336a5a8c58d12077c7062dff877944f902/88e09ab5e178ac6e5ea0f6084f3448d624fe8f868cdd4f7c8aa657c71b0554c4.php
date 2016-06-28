@@ -42,7 +42,7 @@ class __TwigTemplate_02265178e3aa67dcea8ae757dad45ab9516c5a149496f42d8df4bd61582
         // line 1
         echo "<div class=\"product-thumb transition options\">
 \t<div class=\"image\">
-\t\t<a class=\"lazy\" style=\"padding-bottom: 100%\" href=\"#\">
+\t\t<a class=\"lazy lazy-loaded\" style=\"padding-bottom: 100%\" href=\"#\">
 \t\t  ";
         // line 4
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($this->getAttribute((isset($context["fields"]) ? $context["fields"] : null), "field_product_image", array()), "content", array()), "html", null, true));
@@ -102,7 +102,7 @@ class __TwigTemplate_02265178e3aa67dcea8ae757dad45ab9516c5a149496f42d8df4bd61582
 }
 /* <div class="product-thumb transition options">*/
 /* 	<div class="image">*/
-/* 		<a class="lazy" style="padding-bottom: 100%" href="#">*/
+/* 		<a class="lazy lazy-loaded" style="padding-bottom: 100%" href="#">*/
 /* 		  {{fields.field_product_image.content}}*/
 /* 		</a>*/
 /* 		<a class="quickview" data-rel="details" href="#quickview_featured_110010">*/

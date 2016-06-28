@@ -7,6 +7,7 @@ description: Uses for Vickie Dean Theming
 package: Bootstrap
 
 regions:
+  top_schedule: Top Schedule
   top_navigation: Top Navigation
   navigation: Navigation
   navigation_collapsible: Navigation (Collapsible)

@@ -1,21 +1,16 @@
 <?php
 
-/* themes/contrib/bootstrap/templates/block/block--page-title-block.html.twig */
-class __TwigTemplate_f62a111db96127a80c3564275efb9a271c22923553f8cfc1f8bbddf2ee0e636b extends Twig_Template
+/* core/modules/system/templates/block--system-messages-block.html.twig */
+class __TwigTemplate_4d97402696be83d58b6aadd3f79d24a3cace1bedd8b36233fac0ca7f73c1de8e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
-        // line 1
-        $this->parent = $this->loadTemplate("block--bare.html.twig", "themes/contrib/bootstrap/templates/block/block--page-title-block.html.twig", 1);
+        $this->parent = false;
+
         $this->blocks = array(
         );
-    }
-
-    protected function doGetParent(array $context)
-    {
-        return "block--bare.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -44,12 +39,15 @@ class __TwigTemplate_f62a111db96127a80c3564275efb9a271c22923553f8cfc1f8bbddf2ee0
             throw $e;
         }
 
-        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        // line 15
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["content"]) ? $context["content"] : null), "html", null, true));
+        echo "
+";
     }
 
     public function getTemplateName()
     {
-        return "themes/contrib/bootstrap/templates/block/block--page-title-block.html.twig";
+        return "core/modules/system/templates/block--system-messages-block.html.twig";
     }
 
     public function isTraitable()
@@ -59,8 +57,22 @@ class __TwigTemplate_f62a111db96127a80c3564275efb9a271c22923553f8cfc1f8bbddf2ee0
 
     public function getDebugInfo()
     {
-        return array (  11 => 1,);
+        return array (  43 => 15,);
     }
 }
-/* {% extends "block--bare.html.twig" %}*/
+/* {#*/
+/* /***/
+/*  * @file*/
+/*  * Default theme implementation for the messages block.*/
+/*  **/
+/*  * Removes wrapper elements from block so that empty block does not appear when*/
+/*  * there are no messages.*/
+/*  **/
+/*  * Available variables:*/
+/*  * - content: The content of this block.*/
+/*  **/
+/*  * @ingroup themeable*/
+/*  *//* */
+/* #}*/
+/* {{ content }}*/
 /* */

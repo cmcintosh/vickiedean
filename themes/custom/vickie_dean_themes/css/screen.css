@@ -10116,6 +10116,82 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* No files to import found in effects/**\/* */
+@media only screen and (min-width: 260px) and (max-width: 580px) {
+  .toggle_cont {
+    width: 200px;
+    top: 8% !important;
+    padding: 0 !important;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .toggle_cont {
+    width: 200px;
+    top: 8% !important;
+    padding: 0 !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  ul.menu.nav.navbar-nav.navbar-right.toggle_cont {
+    display: block !important;
+    position: static !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    width: auto !important;
+  }
+
+  header .nav {
+    position: relative !important;
+    top: 0.2em !important;
+    float: left !important;
+    margin-top: 0em !important;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  ul.menu.nav.navbar-nav.navbar-right.toggle_cont {
+    display: block !important;
+    position: static !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    width: auto !important;
+  }
+
+  header .nav {
+    position: relative !important;
+    top: -0.7em !important;
+    float: right !important;
+    margin-top: 1em !important;
+  }
+}
+@media only screen and (min-width: 1100px), only screen and (min-width: 1400px) {
+  ul.menu.nav.navbar-nav.navbar-right.toggle_cont {
+    display: block !important;
+    position: static !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    width: auto !important;
+    margin-top: -0.2em !important;
+  }
+
+  header .nav {
+    position: relative !important;
+    top: -0.8em !important;
+    float: right !important;
+    margin-top: 0em !important;
+  }
+}
+.region.region-footer-link-right {
+  position: relative;
+  top: -3em;
+}
+
+.region.region-footer-link-left {
+  position: relative;
+  top: -3em;
+}
+
 .nav {
   padding-left: 0;
   margin-bottom: 0;
@@ -10140,7 +10216,7 @@ footer address {
 
 @media only screen and (min-width: 260px) and (max-width: 580px) {
   footer ul.menu.nav {
-    margin-top: -4em;
+    margin-top: -3em;
   }
 
   address {
@@ -10176,7 +10252,7 @@ footer address {
 }
 @media only screen and (min-width: 640px) {
   footer ul.menu.nav {
-    margin-top: -4em;
+    margin-top: -3em;
   }
 
   address {
@@ -10212,7 +10288,7 @@ footer address {
 }
 @media only screen and (min-width: 768px) {
   footer ul.menu.nav {
-    margin-top: -4em;
+    margin-top: -2em;
   }
 
   address {
@@ -10248,7 +10324,7 @@ footer address {
 }
 @media only screen and (min-width: 1024px) {
   footer ul.menu.nav {
-    margin-top: -6em;
+    margin-top: -3em;
   }
 
   address {
@@ -10283,13 +10359,8 @@ footer address {
   }
 }
 @media only screen and (min-width: 1100px), only screen and (min-width: 1400px) {
-  header .nav {
-    position: relative !important;
-    top: -1.7em !important;
-  }
-
   footer ul.menu.nav {
-    margin-top: -4em;
+    margin-top: -1em;
   }
 
   address {
@@ -10325,6 +10396,154 @@ footer address {
 
   header address {
     margin-left: 5% !important;
+  }
+}
+.sf-menu {
+  position: relative !important;
+  top: 2em !important;
+  margin-top: -4em !important;
+}
+
+.cart .toggle_cont {
+  max-height: 300px;
+  overflow: auto;
+  right: -30px;
+  top: 100% !important;
+}
+
+.product-thumb .image > .quickview {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-block;
+  opacity: 0;
+  padding: 0;
+  width: 67px;
+  height: 67px;
+  line-height: 65px;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 50%;
+  letter-spacing: 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background-color: #3d8afc !important;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 260px) and (max-width: 580px) {
+  .search {
+    top: 7.8% !important;
+  }
+
+  div#stuck {
+    margin-top: -3em;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .search {
+    top: 8.3% !important;
+  }
+
+  div#stuck {
+    margin-top: -3em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .search {
+    top: 8.4% !important;
+  }
+
+  div#stuck {
+    margin-top: 0em;
+  }
+
+  .search__cnt {
+    margin-right: 10% !important;
+    width: 0px;
+    z-index: 500;
+  }
+
+  .search__cnt.open {
+    width: 88% !important;
+    z-index: 500;
+  }
+
+  .search .tog_btn {
+    right: 4% !important;
+    z-index: 500 !important;
+  }
+
+  .search.open {
+    z-index: 500 !important;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .search {
+    top: 7.82% !important;
+  }
+
+  div#stuck {
+    margin-top: 0em;
+  }
+
+  .search__cnt {
+    margin-right: 15% !important;
+    width: 0px;
+    z-index: 500;
+  }
+
+  .search__cnt.open {
+    width: 80% !important;
+    z-index: 500;
+  }
+
+  .search .tog_btn {
+    right: 8% !important;
+    z-index: 500 !important;
+  }
+
+  .search.open {
+    z-index: 500 !important;
+  }
+}
+@media only screen and (min-width: 1100px), only screen and (min-width: 1400px) {
+  .search {
+    top: 6.7% !important;
+  }
+
+  div#stuck {
+    margin-top: 0em;
+  }
+
+  .search__cnt {
+    margin-right: 15% !important;
+    width: 0px;
+    z-index: 500;
+  }
+
+  .search__cnt.open {
+    width: 80% !important;
+    z-index: 500;
+  }
+
+  .search .tog_btn {
+    right: 8% !important;
+    z-index: 500;
+  }
+
+  .search.open {
+    z-index: 500 !important;
   }
 }
 /* No files to import found in edit-pages/**\/* */

@@ -62,16 +62,26 @@
  */
 #}
 <header>
-{# Top Navigation #}
-  {% if page.top_navigation %}
-    {% block top_navigation %}  
-    <div class="top-line">
-      <div class="container"> 
-        {{ page.top_navigation }}
-      </div>
+  <div class="top-line">
+    <div class="container">
+      {# Top Schedule #}
+        {% if page.top_schedule %}
+          {% block top_schedule %}  
+            {{ page.top_schedule }}
+          {% endblock %}
+        {% endif %}
+
+      {# Top Navigation #}
+        {% if page.top_navigation %}
+          {% block top_navigation %}  
+              <nav id="top-links" class="nav toggle-wrap">
+                <a class="toggle material-design-settings49" href='#'></a>
+                    {{ page.top_navigation }}
+              </nav>
+          {% endblock %}
+        {% endif %}
     </div>
-    {% endblock %}
-  {% endif %}
+  </div>
 
 {% set container = 'container' %}
 {# Navbar #}
@@ -104,9 +114,7 @@
 
                         {# Navigation (collapsible) #} 
                         {% if page.navigation_collapsible %}
-                          <div class="navbar-collapse collapse">
                                 {{ page.navigation_collapsible }}
-                          </div>
                         {% endif %}
                     </div>
                   </div>
@@ -230,7 +238,17 @@
   {# Products #}
   {% if page.products %}
     {% block products %}
-        {{ page.products }}
+      <section id="container">
+        <div class="container">
+          <div class="row"> 
+            <div id="content" class="col-sm-12">
+              <div role="tabpanel" class="module_tab module_tab__0">
+                {{ page.products }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     {% endblock %}
   {% endif %}
 

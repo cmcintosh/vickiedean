@@ -1,7 +1,7 @@
 <?php
 
-/* themes/custom/vickie_dean_themes/templates/views/views-view-unformatted--products--block_1.html.twig */
-class __TwigTemplate_dc785bb3541049495ebbcebbef9ff0e6b84fabf6d91bca099214de7d742f0c2b extends Twig_Template
+/* themes/custom/vickie_dean_themes/templates/views/views-view-unformatted--feature_product--block_1.html.twig */
+class __TwigTemplate_b4a99a81bb099441365b4a8bac751466d1c4105a1b773c1d0a989aac52d63302 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,7 +15,7 @@ class __TwigTemplate_dc785bb3541049495ebbcebbef9ff0e6b84fabf6d91bca099214de7d742
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("for" => 7, "set" => 9);
+        $tags = array("for" => 6, "set" => 8);
         $filters = array();
         $functions = array();
 
@@ -40,23 +40,22 @@ class __TwigTemplate_dc785bb3541049495ebbcebbef9ff0e6b84fabf6d91bca099214de7d742
         }
 
         // line 1
-        echo "<section id=\"container\">
-\t<div class=\"container\">
-\t\t<div class=\"row\">
-\t\t\t<div id=\"content\" class=\"col-sm-12\">
-\t\t\t\t<div role=\"tabpanel\" class=\"module_tab module_tab__0\">
- \t\t\t\t\t<ul class=\"nav nav-tabs\" role=\"tablist\" id=\"module-tabs-0\">
+        echo "<div class=\"tab-content\">
+\t<div role=\"tabpanel\" class=\"tab-pane active\" id=\"tab-featured-0\">
+\t\t<div class=\"box clearfix\">
+\t\t\t<div class=\"box-carousel\">
+\t\t\t\t
 \t\t\t\t\t\t";
-        // line 7
+        // line 6
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["rows"]) ? $context["rows"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
-            // line 8
+            // line 7
             echo "\t\t\t\t\t\t\t";
-            // line 9
-            $context["row_classes"] = array(0 => ((            // line 10
+            // line 8
+            $context["row_classes"] = array(0 => ((            // line 9
 (isset($context["default_row_class"]) ? $context["default_row_class"] : null)) ? ("views-row") : ("")));
-            // line 13
+            // line 12
             echo "\t\t\t\t\t\t";
             echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($context["row"], "content", array()), "html", null, true));
             echo "
@@ -65,18 +64,17 @@ class __TwigTemplate_dc785bb3541049495ebbcebbef9ff0e6b84fabf6d91bca099214de7d742
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['row'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 15
-        echo "\t\t\t\t\t</ul>
-\t\t\t\t</div>
+        // line 14
+        echo "
 \t\t\t</div>
 \t\t</div>
 \t</div>
-</section>";
+</div>";
     }
 
     public function getTemplateName()
     {
-        return "themes/custom/vickie_dean_themes/templates/views/views-view-unformatted--products--block_1.html.twig";
+        return "themes/custom/vickie_dean_themes/templates/views/views-view-unformatted--feature_product--block_1.html.twig";
     }
 
     public function isTraitable()
@@ -86,15 +84,14 @@ class __TwigTemplate_dc785bb3541049495ebbcebbef9ff0e6b84fabf6d91bca099214de7d742
 
     public function getDebugInfo()
     {
-        return array (  69 => 15,  60 => 13,  58 => 10,  57 => 9,  55 => 8,  51 => 7,  43 => 1,);
+        return array (  68 => 14,  59 => 12,  57 => 9,  56 => 8,  54 => 7,  50 => 6,  43 => 1,);
     }
 }
-/* <section id="container">*/
-/* 	<div class="container">*/
-/* 		<div class="row">*/
-/* 			<div id="content" class="col-sm-12">*/
-/* 				<div role="tabpanel" class="module_tab module_tab__0">*/
-/*  					<ul class="nav nav-tabs" role="tablist" id="module-tabs-0">*/
+/* <div class="tab-content">*/
+/* 	<div role="tabpanel" class="tab-pane active" id="tab-featured-0">*/
+/* 		<div class="box clearfix">*/
+/* 			<div class="box-carousel">*/
+/* 				*/
 /* 						{% for row in rows %}*/
 /* 							{%*/
 /* 								set row_classes = [*/
@@ -103,9 +100,8 @@ class __TwigTemplate_dc785bb3541049495ebbcebbef9ff0e6b84fabf6d91bca099214de7d742
 /* 							%}*/
 /* 						{{ row.content }}*/
 /* 						{% endfor %}*/
-/* 					</ul>*/
-/* 				</div>*/
+/* */
 /* 			</div>*/
 /* 		</div>*/
 /* 	</div>*/
-/* </section>*/
+/* </div>*/

@@ -72,7 +72,7 @@ class __TwigTemplate_aaa1daeb135c2c02cf4d856940406733f2f1cc9cfc77e83a115caf6c6f9
 \t\t\t\t<p class=\"text-center\">Your shopping cart is empty!</p>
 \t\t\t</li>
 \t\t</ul>
-\t</div>
+\t</div> 
 </div>
 <span class=\"separator\"></span>
 <div class=\"wishlist\">
@@ -125,7 +125,7 @@ class __TwigTemplate_aaa1daeb135c2c02cf4d856940406733f2f1cc9cfc77e83a115caf6c6f9
 /* 				<p class="text-center">Your shopping cart is empty!</p>*/
 /* 			</li>*/
 /* 		</ul>*/
-/* 	</div>*/
+/* 	</div> */
 /* </div>*/
 /* <span class="separator"></span>*/
 /* <div class="wishlist">*/

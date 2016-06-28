@@ -1,0 +1,74 @@
+
+@media #{$mobilePortrait} {
+	.toggle_cont {
+	    width: 200px;
+	    top: 8% !important;
+	    padding: 0 !important;
+	}
+}
+
+@media #{$mobileLandscape} {
+	.toggle_cont {
+	    width: 200px;
+	    top: 8% !important;
+	    padding: 0 !important;
+	}
+}
+ 
+@media #{$tabletPortrait} {
+
+	ul.menu.nav.navbar-nav.navbar-right.toggle_cont {
+	    display: block !important;
+	    position: static !important;
+	    padding: 0 !important;
+	    margin: 0 !important;
+	    background: none !important;
+	    width: auto !important;
+	}
+
+	header .nav {
+        position: relative !important;
+        top: 0.2em !important;
+        float: left !important;
+        margin-top: 0em !important;
+    }
+}
+
+@media #{$tabletLandscape} {
+
+	ul.menu.nav.navbar-nav.navbar-right.toggle_cont {
+	    display: block !important;
+	    position: static !important;
+	    padding: 0 !important;
+	    margin: 0 !important;
+	    background: none !important;
+	    width: auto !important;
+	}
+
+	 header .nav {
+        position: relative !important;
+        top: -0.7em !important;
+        float: right !important;
+        margin-top: 1em !important;
+    }
+}
+
+@media #{$smallDesktop, $desktopDisplay} {
+
+	ul.menu.nav.navbar-nav.navbar-right.toggle_cont {
+	    display: block !important;
+	    position: static !important;
+	    padding: 0 !important;
+	    margin: 0 !important;
+	    background: none !important;
+	    width: auto !important;
+	    margin-top: -0.2em !important;
+	}
+
+	header .nav {
+        position: relative !important;
+        top: -0.8em !important;
+        float: right !important;
+        margin-top: 0em !important;
+    }
+}

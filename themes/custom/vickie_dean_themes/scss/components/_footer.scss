@@ -1,3 +1,11 @@
+.region.region-footer-link-right {
+    position: relative;
+    top: -3em;
+}
+.region.region-footer-link-left {
+    position: relative;
+    top: -3em;
+}
 .nav {
     padding-left: 0;
     margin-bottom: 0;
@@ -8,7 +16,7 @@
     padding-left: 0;
     list-style: none;
 }
-.nav {
+.nav { 
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
@@ -20,7 +28,7 @@ footer address {
 @media #{$mobilePortrait} {
 
     footer ul.menu.nav {
-        margin-top: -4em;
+        margin-top: -3em;
     }
 
     address {
@@ -57,7 +65,7 @@ footer address {
 @media #{$mobileLandscape} {
 
     footer ul.menu.nav {
-        margin-top: -4em;
+        margin-top: -3em;
     }
 
     address {
@@ -94,7 +102,7 @@ footer address {
 @media #{$tabletPortrait} {
 
     footer ul.menu.nav {
-        margin-top: -4em;
+        margin-top: -2em;
     }
 
     address {
@@ -131,7 +139,7 @@ footer address {
 @media #{$tabletLandscape} {
 
     footer ul.menu.nav {
-        margin-top: -6em;
+        margin-top: -3em;
     }
 
     address {
@@ -165,14 +173,9 @@ footer address {
 }
 
 @media #{$smallDesktop, $desktopDisplay} {
-    
-    header .nav {
-        position: relative !important;
-        top: -1.7em !important;
-    }
 
     footer ul.menu.nav {
-        margin-top: -4em;
+        margin-top: -1em;
     }
 
     address {

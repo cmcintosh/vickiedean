@@ -1,7 +1,7 @@
 <?php
 
-/* themes/contrib/bootstrap/templates/menu/menu--account.html.twig */
-class __TwigTemplate_6f0c95a857b908c20733a63430f25e37ab46f44b9bf6ccc384cb391114195ee5 extends Twig_Template
+/* themes/custom/vickie_dean_themes/templates/menu/menu--account.html.twig */
+class __TwigTemplate_74bb459f82cbf527ff1f84e7090fcc60e5f524fcdbb53e7a92f0977bf78b6ecd extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,9 +15,9 @@ class __TwigTemplate_6f0c95a857b908c20733a63430f25e37ab46f44b9bf6ccc384cb3911141
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("import" => 18, "macro" => 26, "if" => 28, "for" => 34);
+        $tags = array("import" => 18, "macro" => 26, "if" => 28, "for" => 35);
         $filters = array();
-        $functions = array("link" => 40);
+        $functions = array("link" => 41);
 
         try {
             $this->env->getExtension('sandbox')->checkSecurity(
@@ -75,65 +75,67 @@ class __TwigTemplate_6f0c95a857b908c20733a63430f25e37ab46f44b9bf6ccc384cb3911141
                 echo "    ";
                 if (((isset($context["menu_level"]) ? $context["menu_level"] : null) == 0)) {
                     // line 30
-                    echo "      <ul";
-                    echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => "menu", 1 => "nav", 2 => "navbar-nav", 3 => "navbar-right"), "method"), "html", null, true));
+                    echo "        <ul";
+                    echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => "menu", 1 => "nav", 2 => "navbar-nav", 3 => "navbar-right", 4 => "toggle_cont"), "method"), "html", null, true));
                     echo ">
-    ";
+      ";
                 } else {
                     // line 32
-                    echo "      <ul";
+                    echo "      </div>
+        <ul";
+                    // line 33
                     echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => "dropdown-menu"), "method"), "html", null, true));
                     echo ">
-    ";
+      ";
                 }
-                // line 34
-                echo "    ";
+                // line 35
+                echo "      ";
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable((isset($context["items"]) ? $context["items"] : null));
                 foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-                    // line 35
-                    echo "      ";
+                    // line 36
+                    echo "        ";
                     if ((((isset($context["menu_level"]) ? $context["menu_level"] : null) == 0) && $this->getAttribute($context["item"], "is_expanded", array()))) {
-                        // line 36
-                        echo "        <li";
+                        // line 37
+                        echo "          <li";
                         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($this->getAttribute($context["item"], "attributes", array()), "addClass", array(0 => "expanded", 1 => "dropdown"), "method"), "html", null, true));
                         echo ">
-        <a href=\"";
-                        // line 37
+          <a href=\"";
+                        // line 38
                         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($context["item"], "url", array()), "html", null, true));
                         echo "\" class=\"dropdown-toggle\" data-target=\"#\" data-toggle=\"dropdown\">";
                         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($context["item"], "title", array()), "html", null, true));
                         echo " <span class=\"caret\"></span></a>
-      ";
+        ";
                     } else {
-                        // line 39
-                        echo "        <li";
+                        // line 40
+                        echo "          <li";
                         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($context["item"], "attributes", array()), "html", null, true));
                         echo ">
-        ";
-                        // line 40
+          ";
+                        // line 41
                         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->env->getExtension('drupal_core')->getLink($this->getAttribute($context["item"], "title", array()), $this->getAttribute($context["item"], "url", array())), "html", null, true));
                         echo "
-      ";
+        ";
                     }
-                    // line 42
-                    echo "      ";
+                    // line 43
+                    echo "        ";
                     if ($this->getAttribute($context["item"], "below", array())) {
-                        // line 43
-                        echo "        ";
+                        // line 44
+                        echo "          ";
                         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->renderVar($context["menus"]->getmenu_links($this->getAttribute($context["item"], "below", array()), $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "removeClass", array(0 => "nav", 1 => "navbar-nav", 2 => "navbar-right"), "method"), ((isset($context["menu_level"]) ? $context["menu_level"] : null) + 1))));
                         echo "
-      ";
+        ";
                     }
-                    // line 45
-                    echo "      </li>
-    ";
+                    // line 46
+                    echo "        </li>
+      ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 47
-                echo "    </ul>
+                // line 48
+                echo "      </ul>
   ";
             }
         } catch (Exception $e) {
@@ -147,7 +149,7 @@ class __TwigTemplate_6f0c95a857b908c20733a63430f25e37ab46f44b9bf6ccc384cb3911141
 
     public function getTemplateName()
     {
-        return "themes/contrib/bootstrap/templates/menu/menu--account.html.twig";
+        return "themes/custom/vickie_dean_themes/templates/menu/menu--account.html.twig";
     }
 
     public function isTraitable()
@@ -157,7 +159,7 @@ class __TwigTemplate_6f0c95a857b908c20733a63430f25e37ab46f44b9bf6ccc384cb3911141
 
     public function getDebugInfo()
     {
-        return array (  136 => 47,  129 => 45,  123 => 43,  120 => 42,  115 => 40,  110 => 39,  103 => 37,  98 => 36,  95 => 35,  90 => 34,  84 => 32,  78 => 30,  75 => 29,  72 => 28,  69 => 27,  55 => 26,  48 => 24,  45 => 19,  43 => 18,);
+        return array (  138 => 48,  131 => 46,  125 => 44,  122 => 43,  117 => 41,  112 => 40,  105 => 38,  100 => 37,  97 => 36,  92 => 35,  87 => 33,  84 => 32,  78 => 30,  75 => 29,  72 => 28,  69 => 27,  55 => 26,  48 => 24,  45 => 19,  43 => 18,);
     }
 }
 /* {#*/
@@ -189,24 +191,25 @@ class __TwigTemplate_6f0c95a857b908c20733a63430f25e37ab46f44b9bf6ccc384cb3911141
 /*   {% import _self as menus %}*/
 /*   {% if items %}*/
 /*     {% if menu_level == 0 %}*/
-/*       <ul{{ attributes.addClass('menu', 'nav', 'navbar-nav', 'navbar-right') }}>*/
-/*     {% else %}*/
-/*       <ul{{ attributes.addClass('dropdown-menu') }}>*/
-/*     {% endif %}*/
-/*     {% for item in items %}*/
-/*       {% if menu_level == 0 and item.is_expanded %}*/
-/*         <li{{ item.attributes.addClass('expanded', 'dropdown') }}>*/
-/*         <a href="{{ item.url }}" class="dropdown-toggle" data-target="#" data-toggle="dropdown">{{ item.title }} <span class="caret"></span></a>*/
+/*         <ul{{ attributes.addClass('menu', 'nav', 'navbar-nav', 'navbar-right', 'toggle_cont') }}>*/
 /*       {% else %}*/
-/*         <li{{ item.attributes }}>*/
-/*         {{ link(item.title, item.url) }}*/
+/*       </div>*/
+/*         <ul{{ attributes.addClass('dropdown-menu') }}>*/
 /*       {% endif %}*/
-/*       {% if item.below %}*/
-/*         {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav', 'navbar-right'), menu_level + 1) }}*/
-/*       {% endif %}*/
-/*       </li>*/
-/*     {% endfor %}*/
-/*     </ul>*/
+/*       {% for item in items %}*/
+/*         {% if menu_level == 0 and item.is_expanded %}*/
+/*           <li{{ item.attributes.addClass('expanded', 'dropdown') }}>*/
+/*           <a href="{{ item.url }}" class="dropdown-toggle" data-target="#" data-toggle="dropdown">{{ item.title }} <span class="caret"></span></a>*/
+/*         {% else %}*/
+/*           <li{{ item.attributes }}>*/
+/*           {{ link(item.title, item.url) }}*/
+/*         {% endif %}*/
+/*         {% if item.below %}*/
+/*           {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav', 'navbar-right'), menu_level + 1) }}*/
+/*         {% endif %}*/
+/*         </li>*/
+/*       {% endfor %}*/
+/*       </ul>*/
 /*   {% endif %}*/
 /* {% endmacro %}*/
 /* */

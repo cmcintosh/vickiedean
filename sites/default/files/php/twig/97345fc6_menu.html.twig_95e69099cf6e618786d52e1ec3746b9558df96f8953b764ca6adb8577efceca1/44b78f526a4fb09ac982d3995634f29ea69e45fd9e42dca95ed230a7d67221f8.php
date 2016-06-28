@@ -160,7 +160,7 @@ class __TwigTemplate_7a6ca860a7cb2aa28a82fb09e91895f8825ea7336539f65e1da50733305
 /*  *     that are not currently visible.*/
 /*  *   - in_active_trail: TRUE if the link is in the active trail.*/
 /*  **/
-/*  * @ingroup themeable*/
+/*  * @ingroup themeable */
 /*  *//*  */
 /* #}*/
 /* {% import _self as menus %}*/
