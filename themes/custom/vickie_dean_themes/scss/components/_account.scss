@@ -1,4 +1,6 @@
-
+h2.block-title {
+    display: none !important;
+}
 @media #{$mobilePortrait} {
 	.toggle_cont {
 	    width: 200px;

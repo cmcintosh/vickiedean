@@ -10116,6 +10116,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* No files to import found in effects/**\/* */
+h2.block-title {
+  display: none !important;
+}
+
 @media only screen and (min-width: 260px) and (max-width: 580px) {
   .toggle_cont {
     width: 200px;
@@ -10229,7 +10233,6 @@ footer address {
 
   ul.platforms.inline.horizontal {
     width: 100%;
-    margin-top: -3em;
     margin-left: -1em;
     position: relative;
     left: 6em;
@@ -10265,7 +10268,6 @@ footer address {
 
   ul.platforms.inline.horizontal {
     width: 100%;
-    margin-top: -3em;
     margin-left: -1em;
     position: relative;
     left: 5em;
@@ -10301,7 +10303,6 @@ footer address {
 
   ul.platforms.inline.horizontal {
     width: 100%;
-    margin-top: -3em;
     margin-left: -1em;
     position: relative;
     left: 5em;
@@ -10337,7 +10338,6 @@ footer address {
 
   ul.platforms.inline.horizontal {
     width: 125%;
-    margin-top: -8em;
     margin-left: -1em;
     position: relative;
     left: -1em;
@@ -10373,7 +10373,6 @@ footer address {
 
   ul.platforms.inline.horizontal {
     width: 100%;
-    margin-top: -5em;
     margin-left: -1em;
     position: relative;
     left: -1em;
@@ -10443,7 +10442,7 @@ footer address {
 
 @media only screen and (min-width: 260px) and (max-width: 580px) {
   .search {
-    top: 7.8% !important;
+    top: 6.8% !important;
   }
 
   div#stuck {
@@ -10452,7 +10451,7 @@ footer address {
 }
 @media only screen and (min-width: 640px) {
   .search {
-    top: 8.3% !important;
+    top: 7.3% !important;
   }
 
   div#stuck {
@@ -10461,7 +10460,7 @@ footer address {
 }
 @media only screen and (min-width: 768px) {
   .search {
-    top: 8.4% !important;
+    top: 7.2% !important;
   }
 
   div#stuck {
@@ -10490,7 +10489,7 @@ footer address {
 }
 @media only screen and (min-width: 1024px) {
   .search {
-    top: 7.82% !important;
+    top: 6.6% !important;
   }
 
   div#stuck {
@@ -10519,7 +10518,7 @@ footer address {
 }
 @media only screen and (min-width: 1100px), only screen and (min-width: 1400px) {
   .search {
-    top: 6.7% !important;
+    top: 5.7% !important;
   }
 
   div#stuck {

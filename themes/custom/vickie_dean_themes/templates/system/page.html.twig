@@ -134,6 +134,7 @@
                 <div class="container">
                   <div class="wrapp">
                     <div class="megamenu">-->
+                  <div class="container">
                       {{ page.header }}
                     <!-- </div> -->
                     <div id="search" class="search">
@@ -143,6 +144,7 @@
                       </div>
                       <i class="tog_btn"></i>
                     </div>
+                  </div>
                   <!-- </div>
                 </div>
               </div>
@@ -201,7 +203,7 @@
           {# Content #}
           {% block content %}
             <a id="main-content"></a>
-            {{ page.content }}
+              {{ page.content }}
           {% endblock %}
 
         </section>
@@ -218,6 +220,19 @@
   {% endblock %}
 
 <div id="page">
+
+  {# Features #}
+  {% if page.features %}
+    {% block features %}
+      <div class="container">
+        <div class="row"> 
+          <div id="content" class="col-sm-12">     
+           {{ page.features }}
+         </div>
+       </div>
+     </div>
+    {% endblock %}
+  {% endif %}
 
   {# Slideshow #}
   {% if page.slideshow %}

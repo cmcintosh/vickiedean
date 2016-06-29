@@ -1,0 +1,12 @@
+<div class="row">
+    {% for row in rows %}
+      {%
+        set row_classes = [
+          default_row_class ? 'views-row',
+        ]
+      %}
+
+        {{ row.content }}
+
+    {% endfor %}
+</div>
