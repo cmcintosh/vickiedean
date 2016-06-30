@@ -1,0 +1,14 @@
+blog:
+  label: About Layout
+  category: About
+  path: layouts/about
+  #icon: blog.png
+  #css: blog.css
+  template: about
+  regions:
+    top:
+      label: top
+    middle:
+      label: middle
+    bottom:
+      label: bottom

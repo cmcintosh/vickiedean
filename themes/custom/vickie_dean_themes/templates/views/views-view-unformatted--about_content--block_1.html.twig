@@ -1,12 +1,18 @@
-<div class="row">
-    {% for row in rows %}
-      {%
-        set row_classes = [
-          default_row_class ? 'views-row',
-        ]
-      %}
+<div class="container">
+  <div class="row"> 
+    <div id="content" class="col-sm-12"> 
+      <div class="row">
+          {% for row in rows %}
+            {%
+              set row_classes = [
+                default_row_class ? 'views-row',
+              ]
+            %}
 
-        {{ row.content }}
+              {{ row.content }}
 
-    {% endfor %}
+          {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
