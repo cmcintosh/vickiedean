@@ -12,10 +12,18 @@
  *   - content.middle: The only panel in the layout.
  */
 #}
-<div id="page">
-	<div class="panel-1col" {% if css_id %}{{ css_id }}{% endif %}>
-	  <div class="panel-panel">
-	    {{ content.middle }}
-	  </div>
-	</div> 
+<div class="information-information">
+	<div id="page">
+			<div class="panel-1col" {% if css_id %}{{ css_id }}{% endif %}>
+			  	<div class="panel-panel">
+					<div class="container">
+			  			<div class="row"> 
+			    			<div id="content" class="col-sm-12"> 
+					    		{{ content.middle }}
+					    	</div>
+					   	</div>
+			 		</div>
+			  	</div>
+			</div>
+	</div>
 </div>
