@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class ActionAddForm extends ActionFormBase {
 
-  /**
+  /** 
    * The action manager.
    *
    * @var \Drupal\Core\Action\ActionManager

@@ -10230,6 +10230,14 @@ h2.block-title {
     margin-top: 0em !important;
   }
 }
+button#edit-preview {
+  display: none;
+}
+
+button#edit-submit {
+  float: right;
+}
+
 .col-sm-6 {
   margin-bottom: 2em !important;
 }
@@ -10523,6 +10531,20 @@ footer address {
     /* border: 1px solid green; */
   }
 }
+.map {
+  position: relative;
+  padding-bottom: 40% !important;
+  width: -6em;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .sf-menu {
   position: relative !important;
   top: 2em !important;
