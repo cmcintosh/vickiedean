@@ -64,7 +64,7 @@
 <header>
   <div class="top-line">
     <div class="container">
-      {# Top Schedule #}
+      {# Top Schedule #} 
         {% if page.top_schedule %}
           {% block top_schedule %}  
             {{ page.top_schedule }}
@@ -134,15 +134,19 @@
                 <div class="container">
                   <div class="wrapp">
                     <div class="megamenu">-->
-                  <div class="container">
-                      {{ page.header }}
-                    <!-- </div> -->
-                    <div id="search" class="search">
-                      <div class="search__cnt">
-                        <input id="search__input" class="search__input" type="text" name="search" value="" placeholder=""/>
-                        <button id="search__btn" class="search__btn" type="button"><span>Search</span></button>
+                  <div class="navigation">
+                    <div class="container">
+                      <div class="wrapp">
+                          {{ page.header }}
+                          <!-- </div> -->
+                          <div id="search" class="search">
+                            <div class="search__cnt">
+                              <input id="search__input" class="search__input" type="text" name="search" value="" placeholder=""/>
+                              <button id="search__btn" class="search__btn" type="button"><span>Search</span></button>
+                            </div>
+                            <i class="tog_btn"></i>
+                          </div>
                       </div>
-                      <i class="tog_btn"></i>
                     </div>
                   </div>
                   <!-- </div>

@@ -62,8 +62,7 @@
 		playPause			: true,	//true or false, to display or not the play/pause buttons
 		
 		pauseOnClick		: true,	//true, false. It stops the slideshow when you click the sliders.
-		
-		pieDiameter			: 38,
+		 
 		
 		piePosition			: 'rightTop',	//'rightTop', 'leftTop', 'leftBottom', 'rightBottom'
 		

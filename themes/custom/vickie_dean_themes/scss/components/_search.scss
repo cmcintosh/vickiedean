@@ -1,4 +1,9 @@
 
+.wrapp {
+    position: relative;
+    top: -3px;
+}
+
 .sf-menu {
     position: relative !important;
     top: 2em !important;
@@ -23,7 +28,7 @@
     height: 67px;
     line-height: 65px;
     -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); 
     -o-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -41,20 +46,17 @@
     background-color: #3d8afc !important;
     z-index: 1;
 }
-
-@media #{$mobilePortrait} {
-    .search {
-        top: 6.8% !important;
+.search {
+        top: -15px !important;
     }
+@media #{$mobilePortrait} {
+
     div#stuck {
         margin-top: -3em;
     }
 }
 
 @media #{$mobileLandscape} {
-    .search {
-        top: 7.3% !important;
-    }
     div#stuck {
         margin-top: -3em;
     }
@@ -62,9 +64,6 @@
  
 @media #{$tabletPortrait} {
 
-    .search {
-        top: 7.2% !important;
-    }
     div#stuck {
         margin-top: 0em;
     }
@@ -74,7 +73,7 @@
         z-index: 500;
     }
     .search__cnt.open {
-        width: 88% !important;
+        width: 95% !important;
         z-index: 500;
     }
     .search .tog_btn {
@@ -89,9 +88,6 @@
 
 @media #{$tabletLandscape} {
 
-    .search {
-        top: 6.6% !important;
-    }
     div#stuck {
         margin-top: 0em;
     }
@@ -101,7 +97,7 @@
         z-index: 500;
     }
     .search__cnt.open {
-        width: 80% !important;
+        width: 90% !important;
         z-index: 500;
     }
     .search .tog_btn {
@@ -115,9 +111,6 @@
 }
 
 @media #{$smallDesktop, $desktopDisplay} {
-    .search {
-        top: 5.7% !important;
-    }
     div#stuck {
         margin-top: 0em;
     }
@@ -127,7 +120,7 @@
         z-index: 500;
     }
     .search__cnt.open {
-        width: 80% !important;
+        width: 90% !important;
         z-index: 500;
     }
     .search .tog_btn {

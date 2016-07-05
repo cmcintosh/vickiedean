@@ -10545,6 +10545,11 @@ footer address {
   height: 100% !important;
 }
 
+.wrapp {
+  position: relative;
+  top: -3px;
+}
+
 .sf-menu {
   position: relative !important;
   top: 2em !important;
@@ -10588,29 +10593,21 @@ footer address {
   z-index: 1;
 }
 
-@media only screen and (min-width: 260px) and (max-width: 580px) {
-  .search {
-    top: 6.8% !important;
-  }
+.search {
+  top: -15px !important;
+}
 
+@media only screen and (min-width: 260px) and (max-width: 580px) {
   div#stuck {
     margin-top: -3em;
   }
 }
 @media only screen and (min-width: 640px) {
-  .search {
-    top: 7.3% !important;
-  }
-
   div#stuck {
     margin-top: -3em;
   }
 }
 @media only screen and (min-width: 768px) {
-  .search {
-    top: 7.2% !important;
-  }
-
   div#stuck {
     margin-top: 0em;
   }
@@ -10622,7 +10619,7 @@ footer address {
   }
 
   .search__cnt.open {
-    width: 88% !important;
+    width: 95% !important;
     z-index: 500;
   }
 
@@ -10636,10 +10633,6 @@ footer address {
   }
 }
 @media only screen and (min-width: 1024px) {
-  .search {
-    top: 6.6% !important;
-  }
-
   div#stuck {
     margin-top: 0em;
   }
@@ -10651,7 +10644,7 @@ footer address {
   }
 
   .search__cnt.open {
-    width: 80% !important;
+    width: 90% !important;
     z-index: 500;
   }
 
@@ -10665,10 +10658,6 @@ footer address {
   }
 }
 @media only screen and (min-width: 1100px), only screen and (min-width: 1400px) {
-  .search {
-    top: 5.7% !important;
-  }
-
   div#stuck {
     margin-top: 0em;
   }
@@ -10680,7 +10669,7 @@ footer address {
   }
 
   .search__cnt.open {
-    width: 80% !important;
+    width: 90% !important;
     z-index: 500;
   }
 
@@ -10691,6 +10680,66 @@ footer address {
 
   .search.open {
     z-index: 500 !important;
+  }
+}
+@media only screen and (min-width: 260px) and (max-width: 580px) {
+  .picture img {
+    height: 307px !important;
+    width: 692px !important;
+    /* overflow: hidden; */
+    margin-bottom: -16em;
+    margin-left: -14em;
+    margin-top: -4em;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .picture img {
+    height: 326px !important;
+    width: 692px !important;
+    /* overflow: hidden; */
+    margin-bottom: -18em;
+    margin-left: -8em;
+    margin-top: -4em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .picture img {
+    height: 333px !important;
+    width: 780px !important;
+    /* overflow: hidden; */
+    margin-bottom: -18em;
+    margin-left: -2em;
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .picture img {
+    height: 444px !important;
+    width: 1033px !important;
+    /* overflow: hidden; */
+    margin-bottom: -16em;
+    margin-left: -3em;
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .picture img {
+    height: 720px !important;
+    width: 1422px !important;
+    /* overflow: hidden; */
+    margin-bottom: -32em;
+    margin-left: -8em;
+    margin-top: 0em;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .picture img {
+    height: 720px !important;
+    width: 1422px !important;
+    /* overflow: hidden; */
+    margin-bottom: -38em;
+    margin-left: -8em;
+    margin-top: -5em;
   }
 }
 /* No files to import found in edit-pages/**\/* */

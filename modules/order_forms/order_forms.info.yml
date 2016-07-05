@@ -1,0 +1,6 @@
+name: Order forms
+type: module
+description: 'For Registration forms.'
+package: Custom
+core: 8.x
+hidden: false 
