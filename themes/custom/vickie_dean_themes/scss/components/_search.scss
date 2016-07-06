@@ -110,7 +110,30 @@
     }
 }
 
-@media #{$smallDesktop, $desktopDisplay} {
+@media #{$smallDesktop} {
+    div#stuck {
+        margin-top: 0em;
+    }
+    .search__cnt {
+        margin-right: 15% !important;
+        width: 0px;
+        z-index: 500;
+    }
+    .search__cnt.open {
+        width: 90% !important;
+        z-index: 500;
+    }
+    .search .tog_btn {
+        right: 8% !important;
+        z-index: 500;
+
+    }
+    .search.open {
+        z-index: 500 !important;
+    }
+}
+
+@media #{$desktopDisplay} {
     div#stuck {
         margin-top: 0em;
     }

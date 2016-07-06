@@ -56,7 +56,27 @@ h2.block-title {
     }
 }
 
-@media #{$smallDesktop, $desktopDisplay} {
+@media #{$smallDesktop} {
+
+	ul.menu.nav.navbar-nav.navbar-right.toggle_cont {
+	    display: block !important;
+	    position: static !important;
+	    padding: 0 !important;
+	    margin: 0 !important;
+	    background: none !important;
+	    width: auto !important;
+	    margin-top: -0.2em !important;
+	}
+
+	header .nav {
+        position: relative !important;
+        top: -0.8em !important;
+        float: right !important;
+        margin-top: 0em !important;
+    }
+}
+
+@media #{$desktopDisplay} {
 
 	ul.menu.nav.navbar-nav.navbar-right.toggle_cont {
 	    display: block !important;
