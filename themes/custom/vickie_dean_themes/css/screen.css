@@ -10260,6 +10260,42 @@ h2.block-title {
     margin-top: 0em !important;
   }
 }
+@media only screen and (min-width: 260px) and (max-width: 580px) {
+  .simple_blog-category {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .simple_blog-category {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .simple_blog-category {
+    margin-left: -2%;
+    margin-right: -2%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .simple_blog-category {
+    margin-left: -2.8%;
+    margin-right: -2.8%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .simple_blog-category {
+    margin-left: -6%;
+    margin-right: -6%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .simple_blog-category {
+    margin-left: -9.3%;
+    margin-right: -9.3%;
+  }
+}
 button#edit-preview {
   display: none;
 }

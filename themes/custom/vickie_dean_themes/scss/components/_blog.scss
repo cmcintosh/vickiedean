@@ -1,0 +1,46 @@
+
+@media #{$mobilePortrait} {
+	.simple_blog-category {
+	    margin-left: 0%;
+	    margin-right: 0%;
+	}
+}
+
+@media #{$mobileLandscape} {
+
+.simple_blog-category {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+}
+
+@media #{$tabletPortrait} {
+	.simple_blog-category {
+	    margin-left: -2%;
+	    margin-right: -2%;
+	}
+}
+
+@media #{$tabletLandscape} {
+
+.simple_blog-category {
+    margin-left: -2.8%;
+    margin-right: -2.8%;
+}
+
+}
+
+@media #{$smallDesktop} {
+	.simple_blog-category {
+	    margin-left: -6%;
+	    margin-right: -6%;
+	}
+}
+
+@media #{$desktopDisplay} {
+	.simple_blog-category {
+	    margin-left: -9.3%;
+	    margin-right: -9.3%;
+	}
+}

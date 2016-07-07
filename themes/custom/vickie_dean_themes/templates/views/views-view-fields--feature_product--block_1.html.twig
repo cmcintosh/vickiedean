@@ -1,5 +1,6 @@
 <div class="product-thumb transition options">
-	<div class="product-option-wrap">
+	
+	<!--<div class="product-option-wrap">
 		<div class="product-options form-horizontal">
 			<div class="options">
 				<a class="ajax-overlay_close" href='#'></a>
@@ -29,7 +30,7 @@
 				</button>
 			</div>
 		</div>
-	</div>
+	</div> -->
  
 	<div class="quick_info">
 		<div id="quickview_featured_110010" class="quickview-style">
@@ -132,10 +133,7 @@
 		<div class="name">
 			<a href="#">{{fields.field_product_name.content}}</a>
 		</div>
-		<div class="price">
-			<span class="price-new">${{new_price}}</span>
-			<span class="price-old">${{fields.field_price.content}}</span> 
-		</div>
+		<div class="price">${{fields.field_price.content}}</div>
 	</div>
 
 {% endif %}
