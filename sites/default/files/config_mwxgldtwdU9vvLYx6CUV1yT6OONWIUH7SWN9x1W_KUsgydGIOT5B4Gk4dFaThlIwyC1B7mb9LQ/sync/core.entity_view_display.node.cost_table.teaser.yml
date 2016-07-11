@@ -1,0 +1,17 @@
+uuid: f2a93373-c9e7-49ad-a38a-2ac06bb49e27
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.cost_table
+  module:
+    - user
+id: node.cost_table.teaser
+targetEntityType: node
+bundle: cost_table
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

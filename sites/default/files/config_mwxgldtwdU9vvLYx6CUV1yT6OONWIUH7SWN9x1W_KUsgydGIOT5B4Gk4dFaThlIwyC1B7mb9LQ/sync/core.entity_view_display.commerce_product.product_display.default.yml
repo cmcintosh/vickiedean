@@ -1,0 +1,34 @@
+uuid: 1b9d11a6-ff69-41bb-8a12-34d5be8a1ba1
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.product_display
+    - field.field.commerce_product.product_display.body
+    - field.field.commerce_product.product_display.stores
+    - field.field.commerce_product.product_display.variations
+  module:
+    - commerce_product
+    - text
+id: commerce_product.product_display.default
+targetEntityType: commerce_product
+bundle: product_display
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: -4
+    settings: {  }
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 10
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  stores: true
+  uid: true

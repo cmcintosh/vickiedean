@@ -1,0 +1,65 @@
+uuid: be3ce042-dfbc-471e-b58a-e285e0b75726
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.delivery_
+    - views.view.cost_table
+    - views.view.delivery_info
+    - views.view.shipment
+  module:
+    - panels
+    - views
+id: delivery
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    c2f47164-8461-44bd-8c2c-703cb4eb83c7:
+      id: 'views_block:delivery_info-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -10
+      uuid: c2f47164-8461-44bd-8c2c-703cb4eb83c7
+      context_mapping: {  }
+    eb795bfa-08fd-4b55-9bdc-1f3062ce7d8a:
+      id: 'views_block:cost_table-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -9
+      uuid: eb795bfa-08fd-4b55-9bdc-1f3062ce7d8a
+      context_mapping: {  }
+    9e2b11cc-cbf8-458e-a7ed-c7c786ce1a1b:
+      id: 'views_block:shipment-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -8
+      uuid: 9e2b11cc-cbf8-458e-a7ed-c7c786ce1a1b
+      context_mapping: {  }
+  id: panels_variant
+  uuid: f47e01ed-7cc8-4eb7-8031-fd2c0dd48c18
+  label: null
+  weight: 0
+  layout: onecol
+  layout_settings: {  }
+  page_title: 'Delivery Informaion'
+  storage_type: page_manager
+  storage_id: delivery
+  builder: standard
+page: delivery_
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,21 @@
+uuid: a63561c3-5731-41cc-86ca-6da4a2b1340f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.order_information
+    - field.storage.contact_message.field_other
+id: contact_message.order_information.field_other
+field_name: field_other
+entity_type: contact_message
+bundle: order_information
+label: Other
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

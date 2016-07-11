@@ -1,0 +1,21 @@
+uuid: de6a3694-6216-41f0-aa17-94ed13749df0
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.order_information
+    - field.storage.contact_message.field_order_date
+  module:
+    - datetime
+id: contact_message.order_information.field_order_date
+field_name: field_order_date
+entity_type: contact_message
+bundle: order_information
+label: 'Order Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

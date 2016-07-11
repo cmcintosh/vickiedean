@@ -1,0 +1,13 @@
+uuid: f14cac05-ba29-47e6-bef0-ce91474dcab9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_product
+_core:
+  default_config_hash: qTArzcArE8_V1Y5jY-mp8pN65_Vm6mk4LgGbrtgOeug
+label: 'Product variation'
+id: product_variation
+purchasableEntityType: commerce_product_variation
+orderType: default

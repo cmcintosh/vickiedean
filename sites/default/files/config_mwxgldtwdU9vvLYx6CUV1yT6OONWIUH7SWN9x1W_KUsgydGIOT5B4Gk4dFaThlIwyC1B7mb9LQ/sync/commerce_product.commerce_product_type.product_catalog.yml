@@ -1,0 +1,9 @@
+uuid: d997f013-0540-4c19-9bdf-c25180ba7fa3
+langcode: en
+status: true
+dependencies: {  }
+id: product_catalog
+label: 'Product Catalog'
+description: 'This is for the product catalog display.'
+variationType: default
+injectVariationFields: true

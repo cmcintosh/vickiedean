@@ -1,0 +1,11 @@
+uuid: 3dcda2d7-2f3d-4dcd-9107-98c9f3e3cfc8
+langcode: en
+status: true
+dependencies: {  }
+id: blog_branding
+label: blog-branding
+use_admin_theme: null
+path: /blog-branding
+access_logic: and
+access_conditions: {  }
+parameters: {  }

@@ -1,0 +1,22 @@
+uuid: 27e7a2a2-ffac-4ee0-8712-994547d491a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sizes
+id: node.sizes.promote
+field_name: promote
+entity_type: node
+bundle: sizes
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

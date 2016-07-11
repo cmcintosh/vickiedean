@@ -1,0 +1,19 @@
+uuid: 8964de87-2559-4074-8533-7ab1fb14c2f8
+langcode: en
+status: true
+dependencies: {  }
+countryCode: PG
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%locality %postalCode %administrativeArea"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+  - administrativeArea
+uppercaseFields:
+  - locality
+administrativeAreaType: province
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: '\d{3}'
+postalCodePrefix: null

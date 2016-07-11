@@ -1,0 +1,8 @@
+uuid: a6727024-89e0-4034-9e5f-325940444a61
+langcode: en
+status: true
+dependencies: {  }
+id: middle-navigation
+label: 'Middle Navigation'
+description: ''
+locked: false

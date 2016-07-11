@@ -1,0 +1,21 @@
+uuid: ab101b60-0747-4e40-827a-f1ec8d3ab7db
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_order_id
+field_name: field_order_id
+entity_type: contact_message
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

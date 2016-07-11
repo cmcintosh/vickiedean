@@ -1,0 +1,16 @@
+uuid: 16026e7b-ed10-4882-8470-15cc0a84ef0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.product_display
+id: commerce_product_variation.product_display.default
+targetEntityType: commerce_product_variation
+bundle: product_display
+mode: default
+content: {  }
+hidden:
+  price: true
+  product_id: true
+  sku: true
+  title: true

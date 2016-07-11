@@ -1,0 +1,22 @@
+uuid: 8c7717aa-5304-44df-9a18-056bbeffca5c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vickie_dean_themes
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: vickie_dean_themes_local_tasks
+theme: vickie_dean_themes
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

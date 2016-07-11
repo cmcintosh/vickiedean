@@ -1,0 +1,19 @@
+uuid: ac60b34c-6284-417b-9452-98e102a881b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_delivery_schedule
+field_name: field_delivery_schedule
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

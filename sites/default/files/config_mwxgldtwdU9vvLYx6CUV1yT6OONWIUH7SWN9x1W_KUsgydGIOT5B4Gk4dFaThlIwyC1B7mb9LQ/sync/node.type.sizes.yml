@@ -1,0 +1,17 @@
+uuid: 80593124-e59e-4c47-b9ee-f905543d3c6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Sizes
+type: sizes
+description: 'This is the for the different sizes of the product.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

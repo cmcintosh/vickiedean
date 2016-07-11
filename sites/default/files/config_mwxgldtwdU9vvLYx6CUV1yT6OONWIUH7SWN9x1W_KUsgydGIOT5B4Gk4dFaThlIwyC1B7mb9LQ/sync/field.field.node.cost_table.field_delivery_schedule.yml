@@ -1,0 +1,22 @@
+uuid: cdb224ff-4bf4-4cdc-a5a9-8a9f9706d4a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_delivery_schedule
+    - node.type.cost_table
+  module:
+    - text
+id: node.cost_table.field_delivery_schedule
+field_name: field_delivery_schedule
+entity_type: node
+bundle: cost_table
+label: 'DELIVERY SCHEDULE'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

@@ -1,0 +1,10 @@
+uuid: b05519dd-e741-4b00-93cb-e4de07e6fa12
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6XZWDC3qvZQ73SrBtcg0wloBMuprfIKiWr2cRHMJeX0
+id: default
+label: Default
+lineItemType: product_variation
+generateTitle: true

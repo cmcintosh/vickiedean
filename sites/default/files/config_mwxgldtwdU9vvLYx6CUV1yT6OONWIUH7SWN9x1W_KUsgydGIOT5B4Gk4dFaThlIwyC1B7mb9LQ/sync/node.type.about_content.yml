@@ -1,0 +1,17 @@
+uuid: 9af4522e-4a58-4cf0-842e-1ca07060e334
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'About Content'
+type: about_content
+description: 'This is for the content of about us feature. it includes product available, clients comeback and site member.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

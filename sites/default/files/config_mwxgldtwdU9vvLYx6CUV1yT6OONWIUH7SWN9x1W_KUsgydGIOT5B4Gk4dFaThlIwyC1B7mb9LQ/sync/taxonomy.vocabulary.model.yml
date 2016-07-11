@@ -1,0 +1,9 @@
+uuid: 08dfe94e-2585-4bae-9900-4b09caf796c5
+langcode: en
+status: true
+dependencies: {  }
+name: Model
+vid: model
+description: 'For product model'
+hierarchy: 0
+weight: 0

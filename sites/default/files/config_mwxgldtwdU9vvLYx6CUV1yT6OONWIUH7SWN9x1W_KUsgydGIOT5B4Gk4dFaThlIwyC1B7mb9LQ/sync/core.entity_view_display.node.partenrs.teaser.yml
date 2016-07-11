@@ -1,0 +1,17 @@
+uuid: 7a1d4c2a-856e-435f-a8ea-b6ea8570b883
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.partenrs
+  module:
+    - user
+id: node.partenrs.teaser
+targetEntityType: node
+bundle: partenrs
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

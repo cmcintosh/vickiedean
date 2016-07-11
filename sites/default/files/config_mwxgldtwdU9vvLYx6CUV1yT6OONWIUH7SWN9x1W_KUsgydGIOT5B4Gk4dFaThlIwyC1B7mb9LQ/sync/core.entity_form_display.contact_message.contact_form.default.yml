@@ -1,0 +1,41 @@
+uuid: 3f914ae1-eea9-4883-aaf5-ca5b6eae695f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact_form
+    - field.field.contact_message.contact_form.field_e_mail_address
+    - field.field.contact_message.contact_form.field_enquiry1
+    - field.field.contact_message.contact_form.field_your_name
+id: contact_message.contact_form.default
+targetEntityType: contact_message
+bundle: contact_form
+mode: default
+content:
+  field_e_mail_address:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_enquiry1:
+    weight: 53
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_your_name:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  copy: true
+  mail: true
+  message: true
+  name: true
+  subject: true

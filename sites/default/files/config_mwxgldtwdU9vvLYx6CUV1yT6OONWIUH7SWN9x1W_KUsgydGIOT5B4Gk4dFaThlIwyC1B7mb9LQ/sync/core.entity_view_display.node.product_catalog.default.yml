@@ -1,0 +1,32 @@
+uuid: 739e891d-5a73-4eca-9da6-37f041ee0bcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_catalog.body
+    - field.field.node.product_catalog.field_product1
+    - node.type.product_catalog
+  module:
+    - text
+    - user
+id: node.product_catalog.default
+targetEntityType: node
+bundle: product_catalog
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_product1:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 100
+hidden: {  }

@@ -1,0 +1,17 @@
+uuid: 19f5c912-e428-4401-922e-bbc21d4c699e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.privacy_policy
+  module:
+    - user
+id: node.privacy_policy.teaser
+targetEntityType: node
+bundle: privacy_policy
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

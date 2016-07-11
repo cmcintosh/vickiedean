@@ -1,0 +1,17 @@
+uuid: d6a7b9ca-0007-404d-9b62-1794b896710d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.store_events
+  module:
+    - user
+id: node.store_events.teaser
+targetEntityType: node
+bundle: store_events
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

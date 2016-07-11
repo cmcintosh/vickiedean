@@ -1,0 +1,17 @@
+uuid: dfeb189e-7182-42cd-ba0f-120bfb69d7ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.slideshow
+  module:
+    - user
+id: node.slideshow.teaser
+targetEntityType: node
+bundle: slideshow
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

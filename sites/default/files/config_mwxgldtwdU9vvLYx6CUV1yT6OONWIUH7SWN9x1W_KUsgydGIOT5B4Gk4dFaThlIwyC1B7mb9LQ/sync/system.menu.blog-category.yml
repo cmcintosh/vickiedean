@@ -1,0 +1,8 @@
+uuid: 5087b9b0-3f55-4692-9ead-6c481d4b18ea
+langcode: en
+status: true
+dependencies: {  }
+id: blog-category
+label: 'Blog Category'
+description: 'Blog Category Menus'
+locked: false

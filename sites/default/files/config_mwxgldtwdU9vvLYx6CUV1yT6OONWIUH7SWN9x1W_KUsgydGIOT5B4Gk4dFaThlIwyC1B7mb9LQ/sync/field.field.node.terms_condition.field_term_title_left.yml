@@ -1,0 +1,19 @@
+uuid: 097bcbc7-0d73-40af-9dbb-61e97999b337
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_title_left
+    - node.type.terms_condition
+id: node.terms_condition.field_term_title_left
+field_name: field_term_title_left
+entity_type: node
+bundle: terms_condition
+label: 'Term Title left'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

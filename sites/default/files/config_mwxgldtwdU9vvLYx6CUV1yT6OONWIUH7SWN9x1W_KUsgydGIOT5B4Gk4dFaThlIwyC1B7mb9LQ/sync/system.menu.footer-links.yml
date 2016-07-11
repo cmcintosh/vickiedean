@@ -1,0 +1,8 @@
+uuid: af57726d-1c3d-4238-963f-340be31c2a5f
+langcode: en
+status: true
+dependencies: {  }
+id: footer-links
+label: 'Footer links Right'
+description: 'For the footer links such as about, contact us  and etc..'
+locked: false

@@ -1,0 +1,19 @@
+uuid: c155094f-34ce-4390-b716-1006ae4525c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_name
+    - node.type.product_display
+id: node.product_display.field_product_name
+field_name: field_product_name
+entity_type: node
+bundle: product_display
+label: 'Product Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

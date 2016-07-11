@@ -1,0 +1,17 @@
+uuid: 0471cfd9-5fee-4c47-ae0c-379aea81029d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Free Shipping'
+type: free_shipping
+description: 'This is for the Free Delivery feature'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

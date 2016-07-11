@@ -1,0 +1,15 @@
+uuid: a0ce552e-960a-47ad-9819-da8b90d55789
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_order
+_core:
+  default_config_hash: g5ZsAbSK7d3NPzvQVlTj61PyacIGeR2sKdoK8I5d4fU
+id: billing
+label: Billing
+registration: false
+multiple: false
+roles: {  }
+weight: 0

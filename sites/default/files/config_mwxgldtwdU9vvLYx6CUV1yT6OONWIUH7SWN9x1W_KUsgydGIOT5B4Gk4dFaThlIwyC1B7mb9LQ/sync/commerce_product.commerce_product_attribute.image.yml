@@ -1,0 +1,7 @@
+uuid: 97000c79-786c-484f-b473-804ba3be70c7
+langcode: en
+status: true
+dependencies: {  }
+id: image
+label: 'Product Catalog'
+elementType: select

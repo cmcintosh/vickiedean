@@ -1,0 +1,51 @@
+definitions:
+  contact__site_page:
+    enabled: true
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+  user__page:
+    weight: -48
+    menu_name: account
+    parent: ''
+    enabled: true
+    expanded: false
+  user__logout:
+    weight: -47
+    menu_name: account
+    parent: ''
+    expanded: false
+    enabled: true
+  standard__front_page:
+    weight: -47
+    parent: 'menu_link_content:13b4bb91-b0a4-4a7c-837b-78dee9d60f0a'
+    menu_name: main
+    enabled: false
+    expanded: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__blog_category__13':
+    enabled: false
+    menu_name: blog-category
+    parent: ''
+    expanded: false
+    weight: 0
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__blog_category__14':
+    enabled: false
+    menu_name: blog-category
+    parent: ''
+    weight: 0
+    expanded: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__blog_category__15':
+    enabled: false
+    menu_name: blog-category
+    parent: ''
+    weight: 0
+    expanded: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__blog_category__16':
+    enabled: false
+    menu_name: blog-category
+    parent: ''
+    weight: 0
+    expanded: false
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

@@ -1,0 +1,40 @@
+uuid: db281510-ba5e-466a-b39f-6955e8512327
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact_addresses.field_address
+    - field.field.node.contact_addresses.field_icon
+    - field.field.node.contact_addresses.field_label
+    - node.type.contact_addresses
+  module:
+    - user
+id: node.contact_addresses.default
+targetEntityType: node
+bundle: contact_addresses
+mode: default
+content:
+  field_address:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_icon:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_label:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

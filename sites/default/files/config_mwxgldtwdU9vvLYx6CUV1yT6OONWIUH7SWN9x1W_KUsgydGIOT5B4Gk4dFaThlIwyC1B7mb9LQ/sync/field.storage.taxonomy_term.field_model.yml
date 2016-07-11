@@ -1,0 +1,33 @@
+uuid: 91de53e5-5e5b-4b0f-965c-887f743423c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_model
+field_name: field_model
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Collectible
+      label: Collectible
+    -
+      value: Premium
+      label: Premium
+    -
+      value: Classic
+      label: Classic
+    -
+      value: Deluxe
+      label: Deluxe
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

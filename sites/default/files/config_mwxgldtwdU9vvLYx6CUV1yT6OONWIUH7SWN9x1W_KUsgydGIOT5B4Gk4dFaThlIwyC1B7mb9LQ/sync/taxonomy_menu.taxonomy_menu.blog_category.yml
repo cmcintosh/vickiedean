@@ -1,0 +1,11 @@
+uuid: 3aaa518b-7872-49b3-982b-814441c88cf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.blog-category
+    - taxonomy.vocabulary.blog_category
+id: blog_category
+label: 'Blog Category'
+vocabulary: blog_category
+menu: blog-category

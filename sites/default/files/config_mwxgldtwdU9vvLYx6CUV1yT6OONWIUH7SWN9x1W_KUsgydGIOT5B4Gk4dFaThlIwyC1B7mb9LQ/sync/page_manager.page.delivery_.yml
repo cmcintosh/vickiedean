@@ -1,0 +1,11 @@
+uuid: d8658f1a-1f5a-49d3-8fe2-8cd605476563
+langcode: en
+status: true
+dependencies: {  }
+id: delivery_
+label: 'Delivery '
+use_admin_theme: null
+path: /delivery
+access_logic: and
+access_conditions: {  }
+parameters: {  }

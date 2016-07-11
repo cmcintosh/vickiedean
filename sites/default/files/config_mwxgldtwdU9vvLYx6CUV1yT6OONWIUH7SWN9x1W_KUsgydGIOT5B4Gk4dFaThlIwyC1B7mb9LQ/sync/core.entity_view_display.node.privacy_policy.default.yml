@@ -1,0 +1,31 @@
+uuid: e5545df0-793b-4ff5-a5bc-50a4ca603430
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.privacy_policy.field_description
+    - field.field.node.privacy_policy.field_policy
+    - node.type.privacy_policy
+  module:
+    - user
+id: node.privacy_policy.default
+targetEntityType: node
+bundle: privacy_policy
+mode: default
+content:
+  field_description:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_policy:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

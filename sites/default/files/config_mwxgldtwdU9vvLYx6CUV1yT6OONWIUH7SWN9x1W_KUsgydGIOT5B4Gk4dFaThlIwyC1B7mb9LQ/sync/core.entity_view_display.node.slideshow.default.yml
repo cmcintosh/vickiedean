@@ -1,0 +1,48 @@
+uuid: 7c61ac15-5980-4429-9b28-03a1b68eb034
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.slideshow.field_button
+    - field.field.node.slideshow.field_description
+    - field.field.node.slideshow.field_slide_background
+    - field.field.node.slideshow.field_sub_text
+    - node.type.slideshow
+  module:
+    - image
+    - user
+id: node.slideshow.default
+targetEntityType: node
+bundle: slideshow
+mode: default
+content:
+  field_button:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_slide_background:
+    weight: 103
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_sub_text:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  links:
+    weight: 100
+hidden: {  }

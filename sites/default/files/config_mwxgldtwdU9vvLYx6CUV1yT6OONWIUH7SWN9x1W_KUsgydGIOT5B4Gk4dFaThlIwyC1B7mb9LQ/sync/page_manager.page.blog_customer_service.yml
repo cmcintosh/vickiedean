@@ -1,0 +1,11 @@
+uuid: 01727d20-ba9f-46c9-8dad-d1c2459bdb9c
+langcode: en
+status: true
+dependencies: {  }
+id: blog_customer_service
+label: 'Blog Customer Service'
+use_admin_theme: null
+path: /blog-customer-service
+access_logic: and
+access_conditions: {  }
+parameters: {  }

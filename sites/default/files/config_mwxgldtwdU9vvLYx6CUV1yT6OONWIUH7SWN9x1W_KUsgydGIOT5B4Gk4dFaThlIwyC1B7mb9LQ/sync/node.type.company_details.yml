@@ -1,0 +1,17 @@
+uuid: f0d7ffd4-24b4-4ca5-a03a-b49d809c520b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Company Details'
+type: company_details
+description: 'This is for the basic information of the company, including the address, email, contact number.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

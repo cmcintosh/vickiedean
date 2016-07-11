@@ -1,0 +1,17 @@
+uuid: 4fc867a6-0dcc-49ee-b3c2-a0cf6e28026f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Delivery Information'
+type: delivery_information
+description: 'This is for the delivery Information of the site.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

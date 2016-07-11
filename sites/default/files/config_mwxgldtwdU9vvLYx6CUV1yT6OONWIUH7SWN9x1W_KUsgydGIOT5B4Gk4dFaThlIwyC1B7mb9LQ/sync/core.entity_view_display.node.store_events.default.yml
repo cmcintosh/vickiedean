@@ -1,0 +1,39 @@
+uuid: 8ae62987-65d5-49c9-b20a-c1f475c15319
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.store_events.field_description
+    - field.field.node.store_events.field_heading
+    - field.field.node.store_events.field_icon
+    - node.type.store_events
+  module:
+    - user
+id: node.store_events.default
+targetEntityType: node
+bundle: store_events
+mode: default
+content:
+  field_description:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_heading:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_icon:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

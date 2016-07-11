@@ -1,0 +1,19 @@
+uuid: 06ac806e-3050-4ade-9c99-eb6e644cf041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_label
+    - node.type.about_content
+id: node.about_content.field_label
+field_name: field_label
+entity_type: node
+bundle: about_content
+label: Label
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

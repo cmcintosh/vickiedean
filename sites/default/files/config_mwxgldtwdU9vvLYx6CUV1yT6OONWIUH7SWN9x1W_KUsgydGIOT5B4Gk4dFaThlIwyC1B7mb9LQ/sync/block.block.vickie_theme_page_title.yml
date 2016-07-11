@@ -1,0 +1,20 @@
+uuid: 4146be79-164a-40a4-9d0b-57844be78333
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vickie_theme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: vickie_theme_page_title
+theme: vickie_theme
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

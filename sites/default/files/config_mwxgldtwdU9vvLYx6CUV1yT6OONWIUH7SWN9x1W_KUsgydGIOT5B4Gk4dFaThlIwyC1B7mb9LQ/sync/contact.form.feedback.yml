@@ -1,0 +1,12 @@
+uuid: c8dfd3df-6937-4d5b-9311-1740e630ef34
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c4zaT5cyPxuTXI6JOWt3qRtMvICT9tHB6d9a5VG-CmQ
+id: feedback
+label: 'Website feedback'
+recipients:
+  - vickie_dean@yahoo.com
+reply: ''
+weight: 0

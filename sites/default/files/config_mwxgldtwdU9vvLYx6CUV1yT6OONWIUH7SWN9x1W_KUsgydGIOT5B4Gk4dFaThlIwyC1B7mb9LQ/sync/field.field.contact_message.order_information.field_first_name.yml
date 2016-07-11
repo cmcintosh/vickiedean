@@ -1,0 +1,19 @@
+uuid: 9552ad0a-987e-4c6f-a352-f7e2ef21a704
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.order_information
+    - field.storage.contact_message.field_first_name
+id: contact_message.order_information.field_first_name
+field_name: field_first_name
+entity_type: contact_message
+bundle: order_information
+label: 'First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

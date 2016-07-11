@@ -1,0 +1,19 @@
+uuid: 315dd6e2-8629-4dc1-a8aa-28c86478891a
+langcode: en
+status: true
+dependencies: {  }
+countryCode: TR
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%postalCode %locality/%administrativeArea"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+  - postalCode
+uppercaseFields:
+  - locality
+administrativeAreaType: province
+localityType: district
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: '\d{5}'
+postalCodePrefix: null

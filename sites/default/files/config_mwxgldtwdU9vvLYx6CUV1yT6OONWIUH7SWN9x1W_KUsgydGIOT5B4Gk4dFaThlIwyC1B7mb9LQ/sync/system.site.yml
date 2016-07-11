@@ -1,0 +1,14 @@
+uuid: d63dfe0c-2c02-4421-b3dd-88d6417f933d
+name: Vickie_Dean
+mail: vickie_dean@yahoo.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
