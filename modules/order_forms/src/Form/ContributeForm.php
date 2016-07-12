@@ -25,49 +25,25 @@ class ContributeForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-     $form['candidate_name'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Candidate Name:'),
-      '#required' => TRUE,
-    );
-    $form['candidate_mail'] = array(
+    $form['#theme'] = 'user_account';
+     $form['email'] = array(
       '#type' => 'email',
-      '#title' => t('Email ID:'),
-      '#required' => TRUE,
+      '#placeholder' => 'E-Mail Address',
     );
-    $form['candidate_number'] = array (
-      '#type' => 'tel',
-      '#title' => t('Mobile no'),
+    $form['pass'] = array (
+      '#type' => 'password',
+      '#placeholder' => 'Password',
     );
-    $form['candidate_dob'] = array (
-      '#type' => 'date',
-      '#title' => t('DOB'),
-      '#required' => TRUE,
+    $form['recovery'] = array (
+      '#type' => 'label',
+      '#title' => t('Forgotten Password'),
+      '#value' => $this->t('Forgotten Password'),
     );
-    $form['candidate_gender'] = array (
-      '#type' => 'select',
-      '#title' => ('Gender'),
-      '#options' => array(
-        'Female' => t('Female'),
-        'male' => t('Male'),
-      ),
-    );
-    $form['candidate_confirmation'] = array (
-      '#type' => 'radios',
-      '#title' => ('Are you above 18 years old?'),
-      '#options' => array(
-        'Yes' =>t('Yes'),
-        'No' =>t('No')
-      ),
-    );
-    $form['candidate_copy'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Send me a copy of the application.'),
-    );
+   
     $form['actions']['#type'] = 'actions';
     $form['actions']['submit'] = array(
       '#type' => 'submit',
-      '#value' => $this->t('Save'),
+      '#value' => $this->t('Login'),
       '#button_type' => 'primary',
     );
     return $form;

@@ -1,0 +1,187 @@
+<?php
+
+/* themes/custom/vickie_dean_themes/templates/views/views-view-unformatted--product_display_catalog--block_2.html.twig */
+class __TwigTemplate_df928c6f463d6df97b607ffa8197d8c6b76ac1ba0aea3820910533cc98700c50 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $tags = array("for" => 45, "set" => 47);
+        $filters = array();
+        $functions = array();
+
+        try {
+            $this->env->getExtension('sandbox')->checkSecurity(
+                array('for', 'set'),
+                array(),
+                array()
+            );
+        } catch (Twig_Sandbox_SecurityError $e) {
+            $e->setTemplateFile($this->getTemplateName());
+
+            if ($e instanceof Twig_Sandbox_SecurityNotAllowedTagError && isset($tags[$e->getTagName()])) {
+                $e->setTemplateLine($tags[$e->getTagName()]);
+            } elseif ($e instanceof Twig_Sandbox_SecurityNotAllowedFilterError && isset($filters[$e->getFilterName()])) {
+                $e->setTemplateLine($filters[$e->getFilterName()]);
+            } elseif ($e instanceof Twig_Sandbox_SecurityNotAllowedFunctionError && isset($functions[$e->getFunctionName()])) {
+                $e->setTemplateLine($functions[$e->getFunctionName()]);
+            }
+
+            throw $e;
+        }
+
+        // line 1
+        echo "<div id=\"content\" class=\"col-sm-9\"> <h2>Special Offers</h2>
+\t<div class=\"product-filter clearfix\">
+\t\t<div class=\"product-filter_elem\">
+\t\t\t<div class=\"button-view\">
+\t\t\t\t<button type=\"button\" id=\"list-view\" data-toggle=\"tooltip\" title=\"List\">
+\t\t\t\t\t<i class=\"material-design-view12\"></i>
+\t\t\t\t</button>
+\t\t\t\t<button type=\"button\" id=\"grid-view\" data-toggle=\"tooltip\" title=\"Grid\">
+\t\t\t\t\t<i class=\"material-design-two375\"></i>
+\t\t\t\t</button>
+\t\t\t</div>
+\t\t</div>
+\t\t<div class=\"product-filter_elem sort\">
+\t\t\t<label class=\"control-label\" for=\"input-sort\">Sort By:</label>
+\t\t\t<select id=\"input-sort\" class=\"form-control col-sm-3\" onchange=\"location = this.value;\">
+\t\t\t\t<option value=\"#&amp;sort=p.sort_order&amp;order=ASC&amp;limit=25\">Default</option>
+\t\t\t\t<option value=\"#&amp;sort=pd.name&amp;order=ASC&amp;limit=25\">Name (A - Z)</option>
+\t\t\t\t<option value=\"#&amp;sort=pd.name&amp;order=DESC&amp;limit=25\">Name (Z - A)</option>
+\t\t\t\t<option value=\"#&amp;sort=ps.price&amp;order=ASC&amp;limit=25\" selected=\"selected\">Price (Low &gt; High)</option>
+\t\t\t\t<option value=\"#&amp;sort=ps.price&amp;order=DESC&amp;limit=25\">Price (High &gt; Low)</option>
+\t\t\t\t<option value=\"#&amp;sort=rating&amp;order=DESC&amp;limit=25\">Rating (Highest)</option>
+\t\t\t\t<option value=\"#&amp;sort=rating&amp;order=ASC&amp;limit=25\">Rating (Lowest)</option>
+\t\t\t\t<option value=\"#&amp;sort=p.model&amp;order=ASC&amp;limit=25\">Model (A - Z)</option>
+\t\t\t\t<option value=\"#&amp;sort=p.model&amp;order=DESC&amp;limit=25\">Model (Z - A)</option>
+\t\t\t</select>
+\t\t</div>
+\t\t<div class=\"product-filter_elem show pull-right\">
+\t\t\t<label class=\"control-label\" for=\"input-limit\">Show:</label>
+\t\t\t<select id=\"input-limit\" class=\"form-control\" onchange=\"location = this.value;\">
+\t\t\t\t<option value=\"#&amp;sort=ps.price&amp;order=ASC&amp;limit=4\">4</option>
+\t\t\t\t<option value=\"#&amp;sort=ps.price&amp;order=ASC&amp;limit=25\" selected=\"selected\">25</option>
+\t\t\t\t<option value=\"#&amp;sort=ps.price&amp;order=ASC&amp;limit=50\">50</option>
+\t\t\t\t<option value=\"#&amp;sort=ps.price&amp;order=ASC&amp;limit=75\">75</option>
+\t\t\t\t<option value=\"#&amp;sort=ps.price&amp;order=ASC&amp;limit=100\">100</option>
+\t\t\t</select>
+\t\t</div>
+\t\t<div class=\"product-filter_elem\">
+\t\t\t<div class=\"button-view\">
+\t\t\t\t<a href=\"#\" id=\"compare-total\" class=\"compare-total material-icons-sort\" data-toggle=\"tooltip\" title=\"Product Compare (0)\">
+\t\t\t\t</a>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+\t<div class=\"row\">
+\t\t";
+        // line 45
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["rows"]) ? $context["rows"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
+            // line 46
+            echo "\t\t\t";
+            // line 47
+            $context["row_classes"] = array(0 => ((            // line 48
+(isset($context["default_row_class"]) ? $context["default_row_class"] : null)) ? ("views-row") : ("")));
+            // line 51
+            echo "\t\t\t";
+            echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($context["row"], "content", array()), "html", null, true));
+            echo " 
+\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['row'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 53
+        echo "\t</div>
+\t<div class=\"row\">
+\t\t<div class=\"col-sm-6 text-left\"></div>
+\t\t<div class=\"col-sm-6 text-right\">Showing 1 to 2 of 2 (1 Pages)</div>
+\t</div>
+</div> ";
+    }
+
+    public function getTemplateName()
+    {
+        return "themes/custom/vickie_dean_themes/templates/views/views-view-unformatted--product_display_catalog--block_2.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  107 => 53,  98 => 51,  96 => 48,  95 => 47,  93 => 46,  89 => 45,  43 => 1,);
+    }
+}
+/* <div id="content" class="col-sm-9"> <h2>Special Offers</h2>*/
+/* 	<div class="product-filter clearfix">*/
+/* 		<div class="product-filter_elem">*/
+/* 			<div class="button-view">*/
+/* 				<button type="button" id="list-view" data-toggle="tooltip" title="List">*/
+/* 					<i class="material-design-view12"></i>*/
+/* 				</button>*/
+/* 				<button type="button" id="grid-view" data-toggle="tooltip" title="Grid">*/
+/* 					<i class="material-design-two375"></i>*/
+/* 				</button>*/
+/* 			</div>*/
+/* 		</div>*/
+/* 		<div class="product-filter_elem sort">*/
+/* 			<label class="control-label" for="input-sort">Sort By:</label>*/
+/* 			<select id="input-sort" class="form-control col-sm-3" onchange="location = this.value;">*/
+/* 				<option value="#&amp;sort=p.sort_order&amp;order=ASC&amp;limit=25">Default</option>*/
+/* 				<option value="#&amp;sort=pd.name&amp;order=ASC&amp;limit=25">Name (A - Z)</option>*/
+/* 				<option value="#&amp;sort=pd.name&amp;order=DESC&amp;limit=25">Name (Z - A)</option>*/
+/* 				<option value="#&amp;sort=ps.price&amp;order=ASC&amp;limit=25" selected="selected">Price (Low &gt; High)</option>*/
+/* 				<option value="#&amp;sort=ps.price&amp;order=DESC&amp;limit=25">Price (High &gt; Low)</option>*/
+/* 				<option value="#&amp;sort=rating&amp;order=DESC&amp;limit=25">Rating (Highest)</option>*/
+/* 				<option value="#&amp;sort=rating&amp;order=ASC&amp;limit=25">Rating (Lowest)</option>*/
+/* 				<option value="#&amp;sort=p.model&amp;order=ASC&amp;limit=25">Model (A - Z)</option>*/
+/* 				<option value="#&amp;sort=p.model&amp;order=DESC&amp;limit=25">Model (Z - A)</option>*/
+/* 			</select>*/
+/* 		</div>*/
+/* 		<div class="product-filter_elem show pull-right">*/
+/* 			<label class="control-label" for="input-limit">Show:</label>*/
+/* 			<select id="input-limit" class="form-control" onchange="location = this.value;">*/
+/* 				<option value="#&amp;sort=ps.price&amp;order=ASC&amp;limit=4">4</option>*/
+/* 				<option value="#&amp;sort=ps.price&amp;order=ASC&amp;limit=25" selected="selected">25</option>*/
+/* 				<option value="#&amp;sort=ps.price&amp;order=ASC&amp;limit=50">50</option>*/
+/* 				<option value="#&amp;sort=ps.price&amp;order=ASC&amp;limit=75">75</option>*/
+/* 				<option value="#&amp;sort=ps.price&amp;order=ASC&amp;limit=100">100</option>*/
+/* 			</select>*/
+/* 		</div>*/
+/* 		<div class="product-filter_elem">*/
+/* 			<div class="button-view">*/
+/* 				<a href="#" id="compare-total" class="compare-total material-icons-sort" data-toggle="tooltip" title="Product Compare (0)">*/
+/* 				</a>*/
+/* 			</div>*/
+/* 		</div>*/
+/* 	</div>*/
+/* 	<div class="row">*/
+/* 		{% for row in rows %}*/
+/* 			{%*/
+/* 				set row_classes = [*/
+/* 					default_row_class ? 'views-row',*/
+/* 				]*/
+/* 			%}*/
+/* 			{{ row.content }} */
+/* 		{% endfor %}*/
+/* 	</div>*/
+/* 	<div class="row">*/
+/* 		<div class="col-sm-6 text-left"></div>*/
+/* 		<div class="col-sm-6 text-right">Showing 1 to 2 of 2 (1 Pages)</div>*/
+/* 	</div>*/
+/* </div> */

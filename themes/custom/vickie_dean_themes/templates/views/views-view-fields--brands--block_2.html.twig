@@ -1,0 +1,9 @@
+{% set items = fields.name_1.content %}
+{% set array = [items] %}
+{% set newArray = [] %}
+{% for items in array %}
+   {% if items not in newArray %}
+     &nbsp;&nbsp;&nbsp; {{items}}
+   {% set newArray = newArray|merge([items]) %}
+   {% endif %}
+{% endfor %}

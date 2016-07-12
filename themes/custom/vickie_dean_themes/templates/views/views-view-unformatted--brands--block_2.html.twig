@@ -1,0 +1,15 @@
+<div id="content" class="col-sm-9">
+ <h1>Find Your Favorite Brand</h1>
+  <p class="brands"><strong>Brand Index:</strong>
+          {% for row in rows %}
+            {%
+              set row_classes = [
+                default_row_class ? 'views-row',
+              ]
+            %}
+
+              {{ row.content }}
+
+          {% endfor %}
+  </p>
+</div>  

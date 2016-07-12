@@ -10172,6 +10172,20 @@ ul.breadcrumb {
     margin-right: -9.3%;
   }
 }
+div#content.col-sm-10 {
+  float: right;
+  margin-top: -50%;
+}
+
+.col-sm-10 {
+  width: 75% !important;
+}
+
+.manufacturer-list {
+  line-height: 0;
+  margin-bottom: -2%;
+}
+
 h2.block-title {
   display: none !important;
 }
