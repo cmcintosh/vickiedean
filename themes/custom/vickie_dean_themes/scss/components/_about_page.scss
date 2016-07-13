@@ -1,3 +1,14 @@
+.form-horizontal .form-group {
+    margin-right: -53px !important;
+    margin-left: -15px;
+}
+.form-textarea-wrapper {
+    margin-right: -50px;
+}
+.input-group-btn>button.btn.btn-default {
+    position: relative;
+    top: -7px;
+}
 .ui-to-top.material-icons-keyboard_arrow_up.active:hover {
     background: #3d8afc !important;
 }
@@ -11,13 +22,16 @@ h3 {
     margin-top: 2em !important;
 }
 ul.breadcrumb {
-    margin-top: 3em;
+    margin-top: 3em; 
 }
 
 @media #{$mobilePortrait} {
 	.information-information {
 	    margin-left: 0%;
 	    margin-right: 0%;
+	}
+	.form-group>.col-sm-10 {
+    	margin-left: 4%;
 	}
 }
 

@@ -1,7 +1,0 @@
-amazing_forms_contribute:
-  path: '/login'
-  defaults:
-    _form: '\Drupal\order_forms\Form\ContributeForm'
-    _title: 'Registration Page'
-  requirements:
-    _permission: 'access content' 

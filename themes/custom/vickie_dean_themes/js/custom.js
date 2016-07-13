@@ -81,3 +81,7 @@ jQuery(function(){
 		$('.module_tab__0 #module-tabs-0 a:first').tab('show');
 		$('.module_tab__0').tabCollapse();
 	});
+	
+$('.date').datetimepicker({
+	pickTime: false
+});

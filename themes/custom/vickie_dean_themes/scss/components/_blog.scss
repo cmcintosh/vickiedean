@@ -1,14 +1,26 @@
 .field.field--name-title.field--type-string.field--label-hidden.field--item {
     display: none;
 }
-aside .blog-categories ul > li:hover {
+aside .account.info ul > li:hover {
     background: #4fc3ff !important;
+}
+aside .account.info ul > li {
+    background: #f3f6fc !important;
+}
+aside .affilate.info ul > li:hover {
+    background: #4fc3ff !important;
+}
+aside .affilate.info ul > li {
+    background: #f3f6fc !important;
 }
 aside#column-left {
     z-index: 10;
 }
 aside .blog-categories ul > li {
     background: #f3f6fc !important;
+}
+aside .blog-categories ul > li:hover {
+    background: #4fc3ff !important;
 }
 @media #{$mobilePortrait} {
 	.simple_blog-category {

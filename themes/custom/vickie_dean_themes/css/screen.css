@@ -10116,6 +10116,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* No files to import found in effects/**\/* */
+.form-horizontal .form-group {
+  margin-right: -53px !important;
+  margin-left: -15px;
+}
+
+.form-textarea-wrapper {
+  margin-right: -50px;
+}
+
+.input-group-btn > button.btn.btn-default {
+  position: relative;
+  top: -7px;
+}
+
 .ui-to-top.material-icons-keyboard_arrow_up.active:hover {
   background: #3d8afc !important;
 }
@@ -10140,6 +10154,10 @@ ul.breadcrumb {
   .information-information {
     margin-left: 0%;
     margin-right: 0%;
+  }
+
+  .form-group > .col-sm-10 {
+    margin-left: 4%;
   }
 }
 @media only screen and (min-width: 640px) {
@@ -10278,8 +10296,20 @@ h2.block-title {
   display: none;
 }
 
-aside .blog-categories ul > li:hover {
+aside .account.info ul > li:hover {
   background: #4fc3ff !important;
+}
+
+aside .account.info ul > li {
+  background: #f3f6fc !important;
+}
+
+aside .affilate.info ul > li:hover {
+  background: #4fc3ff !important;
+}
+
+aside .affilate.info ul > li {
+  background: #f3f6fc !important;
 }
 
 aside#column-left {
@@ -10288,6 +10318,10 @@ aside#column-left {
 
 aside .blog-categories ul > li {
   background: #f3f6fc !important;
+}
+
+aside .blog-categories ul > li:hover {
+  background: #4fc3ff !important;
 }
 
 @media only screen and (min-width: 260px) and (max-width: 580px) {

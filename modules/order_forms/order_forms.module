@@ -19,6 +19,11 @@ function order_forms_theme($existing, $type, $theme, $path) {
       'template' => 'user_account',
       'path' => $path . '/templates'
     ),
+    'affiliate_account' => array(
+    	'render element' => 'form',
+    	'template' => 'affiliate_account',
+    	'path' => $path . '/templates'
+    ),
   );
 }
 
