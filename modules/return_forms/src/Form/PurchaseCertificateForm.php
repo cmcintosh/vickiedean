@@ -48,7 +48,10 @@ class PurchaseCertificateForm extends FormBase {
       '#type' => 'textarea',
     );
     $form['amount'] = array (
-      '#type' => 'textfield',
+      '#type' => 'address_field',
+    );
+    $form['address'] = array (
+      '#type' => 'address',
     );
     $form['understand'] = array(
       '#title' => t('I understand that gift certificates are non-refundable.'),

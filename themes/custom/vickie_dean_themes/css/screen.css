@@ -10367,6 +10367,10 @@ button#edit-preview {
 /* button#edit-submit {
     float: right;
 } */
+.box {
+  margin-top: -3em;
+}
+
 .col-sm-6 {
   margin-bottom: 2em !important;
 }

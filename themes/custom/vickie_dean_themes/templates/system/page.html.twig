@@ -82,7 +82,7 @@
         {% endif %}
     </div>
   </div>
-
+ 
 {% set container = 'container' %}
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
@@ -155,16 +155,7 @@
             </div> -->
           {% endblock %}
         {% endif %}
-
-        {# Sidebar First #}
-        {% if page.sidebar_first %}
-          {% block sidebar_first %}
-            <aside class="col-sm-3" role="complementary">
-              {{ page.sidebar_first }}
-            </aside>
-          {% endblock %}
-        {% endif %}
-
+ 
         {# Content #}
         {%
           set content_classes = [
@@ -237,7 +228,26 @@
      </div>
     {% endblock %}
   {% endif %}
-
+ {# Sidebar First #}
+  {% if page.sidebar_first %}
+    {% block sidebar_first %}
+    <div class="simple_blog-category layout">
+        <div class="container">
+          <ul class="breadcrumb">
+            <li><a href="/front"><i class="fa fa-home"></i></a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+            <div class="row">
+              <aside class="col-sm-3" id="colum-left">
+                {{ page.sidebar_first }}
+              </aside>
+              {% include 'affiliate_account.html.twig' %}
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+  {% endif %}
   {# Slideshow #}
   {% if page.slideshow %}
     {% block slideshow %}     
