@@ -1,7 +1,7 @@
 <?php
 
-/* themes/custom/vickie_dean_themes/templates/views/views-view-fields--testimonials--block_1.html.twig */
-class __TwigTemplate_28724d456df92fa253454c037a85d530fd61494a3902a0375a94cab91865ab19 extends Twig_Template
+/* core/modules/system/templates/form.html.twig */
+class __TwigTemplate_b0675d5f25fb90d8bc79349af43dcc5deb6c436b0bd1c3c01a529d964b3e4414 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -39,24 +39,21 @@ class __TwigTemplate_28724d456df92fa253454c037a85d530fd61494a3902a0375a94cab9186
             throw $e;
         }
 
-        // line 1
-        echo "<div class=\"item\">
-     <blockquote>
-          <h5>";
-        // line 3
-        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($this->getAttribute((isset($context["fields"]) ? $context["fields"] : null), "field_name", array()), "content", array()), "html", null, true));
-        echo "</h5>
-          <p>";
-        // line 4
-        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($this->getAttribute((isset($context["fields"]) ? $context["fields"] : null), "field_comments", array()), "content", array()), "html", null, true));
-        echo "</p>
-     </blockquote>
-</div>";
+        // line 15
+        echo "<form";
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["attributes"]) ? $context["attributes"] : null), "html", null, true));
+        echo ">
+  ";
+        // line 16
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["children"]) ? $context["children"] : null), "html", null, true));
+        echo "
+</form>
+";
     }
 
     public function getTemplateName()
     {
-        return "themes/custom/vickie_dean_themes/templates/views/views-view-fields--testimonials--block_1.html.twig";
+        return "core/modules/system/templates/form.html.twig";
     }
 
     public function isTraitable()
@@ -66,12 +63,24 @@ class __TwigTemplate_28724d456df92fa253454c037a85d530fd61494a3902a0375a94cab9186
 
     public function getDebugInfo()
     {
-        return array (  51 => 4,  47 => 3,  43 => 1,);
+        return array (  48 => 16,  43 => 15,);
     }
 }
-/* <div class="item">*/
-/*      <blockquote>*/
-/*           <h5>{{fields.field_name.content}}</h5>*/
-/*           <p>{{fields.field_comments.content}}</p>*/
-/*      </blockquote>*/
-/* </div>*/
+/* {#*/
+/* /***/
+/*  * @file*/
+/*  * Default theme implementation for a 'form' element.*/
+/*  **/
+/*  * Available variables*/
+/*  * - attributes: A list of HTML attributes for the wrapper element.*/
+/*  * - children: The child elements of the form.*/
+/*  **/
+/*  * @see template_preprocess_form()*/
+/*  **/
+/*  * @ingroup themeable*/
+/*  *//* */
+/* #}*/
+/* <form{{ attributes }}>*/
+/*   {{ children }}*/
+/* </form>*/
+/* */

@@ -58,21 +58,21 @@ class __TwigTemplate_aaa1daeb135c2c02cf4d856940406733f2f1cc9cfc77e83a115caf6c6f9
 \t\t</a>
 \t</div>
 \t<div class=\"box-cart\">
-\t<div id=\"cart\" class=\"cart toggle-wrap\">
-\t\t<button type=\"button\" data-loading-text=\"Loading...\" class=\"toggle\">
-\t\t\t<i class=\"material-icons-shopping_cart\"></i>
-\t\t\t<strong>";
+\t\t<div id=\"cart\" class=\"cart toggle-wrap\">
+\t\t\t<button type=\"button\" data-loading-text=\"Loading...\" class=\"toggle\">
+\t\t\t\t<i class=\"material-icons-shopping_cart\"></i>
+\t\t\t\t<strong>";
         // line 16
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($this->getAttribute((isset($context["fields"]) ? $context["fields"] : null), "field_cart", array()), "content", array()), "html", null, true));
         echo "</strong>
-\t\t\t<span id=\"cart-total2\" class=\"cart-total2\">0</span>
-\t\t</button>
-\t\t<ul class=\"pull-right toggle_cont\">
-\t\t\t<li>
-\t\t\t\t<p class=\"text-center\">Your shopping cart is empty!</p>
-\t\t\t</li>
-\t\t</ul>
-\t</div> 
+\t\t\t\t<span id=\"cart-total2\" class=\"cart-total2\">0</span>
+\t\t\t</button>
+\t\t\t<ul class=\"pull-right toggle_cont\">
+\t\t\t\t<li>
+\t\t\t\t\t<p class=\"text-center\">Your shopping cart is empty!</p>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div> 
 </div>
 <span class=\"separator\"></span>
 <div class=\"wishlist\">
@@ -114,18 +114,18 @@ class __TwigTemplate_aaa1daeb135c2c02cf4d856940406733f2f1cc9cfc77e83a115caf6c6f9
 /* 		</a>*/
 /* 	</div>*/
 /* 	<div class="box-cart">*/
-/* 	<div id="cart" class="cart toggle-wrap">*/
-/* 		<button type="button" data-loading-text="Loading..." class="toggle">*/
-/* 			<i class="material-icons-shopping_cart"></i>*/
-/* 			<strong>{{fields.field_cart.content}}</strong>*/
-/* 			<span id="cart-total2" class="cart-total2">0</span>*/
-/* 		</button>*/
-/* 		<ul class="pull-right toggle_cont">*/
-/* 			<li>*/
-/* 				<p class="text-center">Your shopping cart is empty!</p>*/
-/* 			</li>*/
-/* 		</ul>*/
-/* 	</div> */
+/* 		<div id="cart" class="cart toggle-wrap">*/
+/* 			<button type="button" data-loading-text="Loading..." class="toggle">*/
+/* 				<i class="material-icons-shopping_cart"></i>*/
+/* 				<strong>{{fields.field_cart.content}}</strong>*/
+/* 				<span id="cart-total2" class="cart-total2">0</span>*/
+/* 			</button>*/
+/* 			<ul class="pull-right toggle_cont">*/
+/* 				<li>*/
+/* 					<p class="text-center">Your shopping cart is empty!</p>*/
+/* 				</li>*/
+/* 			</ul>*/
+/* 		</div> */
 /* </div>*/
 /* <span class="separator"></span>*/
 /* <div class="wishlist">*/
