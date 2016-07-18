@@ -1,0 +1,22 @@
+uuid: ce340e99-b478-45be-80e8-818261b13afa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.registration_link
+  module:
+    - text
+id: node.registration_link.body
+field_name: body
+entity_type: node
+bundle: registration_link
+label: 'Above Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,26 +1,17 @@
-uuid: 2be596e9-aad8-4815-8581-2ed641a844da
+uuid: 65b8ebf6-aa4a-4d34-802e-1f1995900480
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_brand
-    - field.storage.node.field_description
-    - field.storage.node.field_image
-    - field.storage.node.field_model
-    - field.storage.node.field_product1
-    - field.storage.node.field_product_name
-    - field.storage.node.field_product_price
-    - field.storage.node.field_product_type
-    - field.storage.node.field_sale
-    - image.style.medium
-    - node.type.product_display
+    - field.storage.node.body
+    - field.storage.node.field_button
+    - node.type.registration_link
   module:
-    - commerce_price
-    - image
     - node
+    - text
     - user
-id: product_display_catalog
-label: 'Product Display Catalog'
+id: registration
+label: Registration
 module: views
 description: ''
 tag: ''
@@ -62,32 +53,17 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 12
+          items_per_page: 1
           offset: 0
       style:
         type: default
       row:
         type: fields
       fields:
-        field_brand:
-          id: field_brand
-          table: node__field_brand
-          field: field_brand
-          plugin_id: field
-        field_sale:
-          id: field_sale
-          table: node__field_sale
-          field: field_sale
-          plugin_id: field
-        field_description:
-          id: field_description
-          table: node__field_description
-          field: field_description
-          plugin_id: field
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
@@ -132,12 +108,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
+          click_sort_column: value
+          type: string
           settings:
-            image_style: medium
-            image_link: ''
-          group_column: ''
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -148,20 +123,15 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_model:
-          id: field_model
-          table: node__field_model
-          field: field_model
+        body:
+          id: body
+          table: node__body
+          field: body
           plugin_id: field
-        field_product_price:
-          id: field_product_price
-          table: node__field_product_price
-          field: field_product_price
-          plugin_id: field
-        field_product1:
-          id: field_product1
-          table: node__field_product1
-          field: field_product1
+        field_button:
+          id: field_button
+          table: node__field_button
+          field: field_button
           relationship: none
           group_type: group
           admin_label: ''
@@ -206,11 +176,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_view
+          click_sort_column: value
+          type: string
           settings:
-            link: false
-          group_column: target_id
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -220,16 +190,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-        field_product_name:
-          id: field_product_name
-          table: node__field_product_name
-          field: field_product_name
-          plugin_id: field
-        field_product_type:
-          id: field_product_type
-          table: node__field_product_type
-          field: field_product_type
           plugin_id: field
       filters:
         status:
@@ -248,7 +208,7 @@ display:
           table: node_field_data
           field: type
           value:
-            product_display: product_display
+            registration_link: registration_link
           entity_type: node
           entity_field: type
           plugin_id: bundle
@@ -283,23 +243,16 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_brand'
-        - 'config:field.storage.node.field_description'
-        - 'config:field.storage.node.field_image'
-        - 'config:field.storage.node.field_model'
-        - 'config:field.storage.node.field_product1'
-        - 'config:field.storage.node.field_product_name'
-        - 'config:field.storage.node.field_product_price'
-        - 'config:field.storage.node.field_product_type'
-        - 'config:field.storage.node.field_sale'
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_button'
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'Product Display Catalog'
+    display_title: Registration
     position: 1
     display_options:
       display_extenders: {  }
-      block_description: 'Product Display Catalog'
+      block_description: Registration
       display_description: ''
     cache_metadata:
       max-age: -1
@@ -309,38 +262,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_brand'
-        - 'config:field.storage.node.field_description'
-        - 'config:field.storage.node.field_image'
-        - 'config:field.storage.node.field_model'
-        - 'config:field.storage.node.field_product1'
-        - 'config:field.storage.node.field_product_name'
-        - 'config:field.storage.node.field_product_price'
-        - 'config:field.storage.node.field_product_type'
-        - 'config:field.storage.node.field_sale'
-  block_2:
-    display_plugin: block
-    id: block_2
-    display_title: 'Special Offers'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      block_description: 'Special Offers'
-      display_description: ''
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_brand'
-        - 'config:field.storage.node.field_description'
-        - 'config:field.storage.node.field_image'
-        - 'config:field.storage.node.field_model'
-        - 'config:field.storage.node.field_product1'
-        - 'config:field.storage.node.field_product_name'
-        - 'config:field.storage.node.field_product_price'
-        - 'config:field.storage.node.field_product_type'
-        - 'config:field.storage.node.field_sale'
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_button'

@@ -1,11 +1,11 @@
 <div class="col-xs-5">
   <div id="logo" class="logo">
-    {{fields.field_logo.content}}
+    <a href="/node"><img src="/themes/custom/vickie_dean_themes/image/catalog/logo.png"/></a>
   </div>
 </div>
 <div class="col-xs-7">
   <div class="check">
-    <a class="check-btn" href="#" title="Checkout"><b>Checkout</b>
+    <a class="check-btn" href="{{ url }}" title="Checkout"><b>Checkout</b>
       <i class="material-icons-check"></i>
     </a>
   </div>
@@ -14,8 +14,11 @@
       <div{{ attributes}}>
         <div class="cart-block--summary toggle">
           <a class="cart-block--link__expand" href="{{ url }}">
-            <span class="cart-block--summary__icon">{{ icon }}</span>
-            <span class="cart-block--summary__count cart-total2">Cart {{ count }}</span>
+            <button type="button" data-loading-text="Loading..." class="toggle">
+            <i class="material-icons-shopping_cart"></i>
+            <strong class="white">Cart</strong>
+            <span id="cart-total2" class="cart-total2">{{ count }}</span>
+            </button>
           </a>
         </div>
         {% if content %}
@@ -24,8 +27,9 @@
             <div class="cart-block--contents__items">
               {{ content }}
             </div>
-            <div class="cart-block--contents__links">
-              {{ links }}
+            <div class="text-right">
+              <a class="cart-remove-btn material-design-visibility1" href="/cart"><span> View Cart</span></a>
+              <a class="cart-remove-btn material-design-forward18" href="/checkout"><span>Checkout</span></a>
             </div>
           </div>
         </div>

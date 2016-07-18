@@ -1,0 +1,17 @@
+uuid: 9bf9412a-9d17-4876-b799-429990edfb5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Registration Link'
+type: registration_link
+description: 'For the Registration link'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

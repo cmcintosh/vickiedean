@@ -67,7 +67,7 @@ reactions:
         views_label: ''
         items_per_page: none
         region: feature_top
-        weight: '0'
+        weight: '-7'
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
@@ -226,7 +226,7 @@ reactions:
         views_label: ''
         items_per_page: none
         region: content
-        weight: '-6'
+        weight: '-9'
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
@@ -316,6 +316,17 @@ reactions:
         theme: vickie_dean_themes
         unique: 0
         uuid: 3b36342e-e82e-4c90-a474-1aa1737f3b07
+      d0839f96-6190-4744-a8c8-affdcc8cd6e3:
+        id: formblock_user_register
+        label: 'User registration form'
+        provider: user
+        label_display: visible
+        region: feature_top
+        weight: '-6'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: d0839f96-6190-4744-a8c8-affdcc8cd6e3
     id: blocks
     saved: false
     uuid: eb71de64-84d7-4580-b5cd-2f191fdc0bfd

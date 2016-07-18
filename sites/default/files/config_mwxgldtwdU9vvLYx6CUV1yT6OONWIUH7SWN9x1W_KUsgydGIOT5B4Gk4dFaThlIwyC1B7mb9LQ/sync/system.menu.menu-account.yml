@@ -1,0 +1,8 @@
+uuid: 6cb6d7f3-8610-4362-9a3a-040c7ca1cadf
+langcode: en
+status: true
+dependencies: {  }
+id: menu-account
+label: Account
+description: 'For the side bar menu account'
+locked: false

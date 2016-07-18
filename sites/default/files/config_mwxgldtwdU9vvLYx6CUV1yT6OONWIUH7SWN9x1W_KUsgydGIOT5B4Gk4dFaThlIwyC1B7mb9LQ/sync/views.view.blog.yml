@@ -474,3 +474,95 @@ display:
         - 'config:field.storage.node.field_button'
         - 'config:field.storage.node.field_date'
         - 'config:field.storage.node.field_image'
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: Blog-Branding
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: Blog-Branding
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_author'
+        - 'config:field.storage.node.field_button'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_image'
+  block_3:
+    display_plugin: block
+    id: block_3
+    display_title: Blog-consulting
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: Blog-consulting
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_author'
+        - 'config:field.storage.node.field_button'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_image'
+  block_4:
+    display_plugin: block
+    id: block_4
+    display_title: Blog-service
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: Blog-Service
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_author'
+        - 'config:field.storage.node.field_button'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_image'
+  block_5:
+    display_plugin: block
+    id: block_5
+    display_title: Blog-Management
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: Blog-Management
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_author'
+        - 'config:field.storage.node.field_button'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_image'

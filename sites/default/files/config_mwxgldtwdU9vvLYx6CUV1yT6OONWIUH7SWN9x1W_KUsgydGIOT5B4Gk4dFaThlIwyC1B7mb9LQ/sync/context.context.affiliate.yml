@@ -1,26 +1,26 @@
-uuid: 821a619d-d056-43ca-aba3-24967d529f61
+uuid: 3eebdbea-dc18-4d5d-9595-3a407bce80ae
 langcode: en
 status: true
 dependencies:
   module:
     - system
-name: order_information
-label: Login
+name: affiliate
+label: Affiliate
 group: Layout
-description: 'Creates the Layout for the Login Page'
+description: 'Creates the Layout for the Affiliate page'
 requireAllConditions: false
 disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: /login
+    pages: /affiliate
     negate: 0
-    uuid: 0d9e2e94-38a1-40bf-9b41-7678087d2bf0
+    uuid: 66f32ec1-3a12-4578-94fc-ec5c3cd4029e
     context_mapping: {  }
 reactions:
   blocks:
     blocks:
-      3e8bd882-2f4b-450d-8e70-f5aebf4aa12a:
+      97628547-bd86-43f4-947b-f17467ce2950:
         id: 'views_block:schedule_heading-block_1'
         label: ''
         provider: views
@@ -32,8 +32,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 3e8bd882-2f4b-450d-8e70-f5aebf4aa12a
-      69c79644-3ce2-467c-af22-9cde4da68d5e:
+        uuid: 97628547-bd86-43f4-947b-f17467ce2950
+      473d707b-8946-45ce-a7bf-bbeed9a7db0a:
         id: 'system_menu_block:account'
         label: 'User account menu'
         provider: system
@@ -45,8 +45,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 69c79644-3ce2-467c-af22-9cde4da68d5e
-      181bac66-94d4-4308-a867-1b74d2f02d36:
+        uuid: 473d707b-8946-45ce-a7bf-bbeed9a7db0a
+      5090d3eb-2322-48e1-bd9a-75a93cb509b5:
         id: 'views_block:mid_line-block_1'
         label: ''
         provider: views
@@ -58,8 +58,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 181bac66-94d4-4308-a867-1b74d2f02d36
-      c4881872-0386-4307-897f-073e732b2a37:
+        uuid: 5090d3eb-2322-48e1-bd9a-75a93cb509b5
+      9aa4ff6f-9006-45d5-955f-0fd07b9d9cb5:
         id: 'superfish:main'
         label: 'Main navigation'
         provider: superfish
@@ -113,12 +113,12 @@ reactions:
         custom_item_class: ''
         custom_link_class: ''
         region: header
-        weight: '0'
+        weight: '-3'
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: c4881872-0386-4307-897f-073e732b2a37
-      6148ea54-4201-4b74-a979-22db8ea62c87:
+        uuid: 9aa4ff6f-9006-45d5-955f-0fd07b9d9cb5
+      45946465-051c-45c7-8523-767d06f9d307:
         id: 'system_menu_block:footer-links-left'
         label: 'Footer links Left'
         provider: system
@@ -130,8 +130,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 6148ea54-4201-4b74-a979-22db8ea62c87
-      a7c6276e-f76b-4cb3-bf94-d606de1bac64:
+        uuid: 45946465-051c-45c7-8523-767d06f9d307
+      225c57f9-b5bc-4e77-afae-4e6e55a23588:
         id: 'system_menu_block:footer-links'
         label: 'Footer links Right'
         provider: system
@@ -143,8 +143,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: a7c6276e-f76b-4cb3-bf94-d606de1bac64
-      9ee69c45-6b5c-44d7-b39a-1e7a06ffb805:
+        uuid: 225c57f9-b5bc-4e77-afae-4e6e55a23588
+      e26bbd65-5ff5-4ed5-a5b1-c1f9a8eaa499:
         id: 'views_block:company_details-block_1'
         label: ''
         provider: views
@@ -156,8 +156,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 9ee69c45-6b5c-44d7-b39a-1e7a06ffb805
-      2f6e453c-da7e-479f-8884-8215427dc11b:
+        uuid: e26bbd65-5ff5-4ed5-a5b1-c1f9a8eaa499
+      364ae4c3-6aa5-47c5-ac85-8faa1eb0656c:
         id: social_media_links_block
         label: 'Social Media Links'
         provider: social_media_links
@@ -224,8 +224,21 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 2f6e453c-da7e-479f-8884-8215427dc11b
+        uuid: 364ae4c3-6aa5-47c5-ac85-8faa1eb0656c
+      a240e2ba-60f6-4c75-95a0-171a9c1e4e8b:
+        id: 'system_menu_block:affiliate'
+        label: Affiliatetttt
+        provider: system
+        label_display: 0
+        level: '1'
+        depth: '0'
+        region: sidebar_first
+        weight: '-4'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: a240e2ba-60f6-4c75-95a0-171a9c1e4e8b
     id: blocks
     saved: false
-    uuid: 596f2891-ad33-4050-ab5e-697320fae7e8
+    uuid: 8f0fbb39-3926-4112-8c5b-9be626202beb
 weight: 0

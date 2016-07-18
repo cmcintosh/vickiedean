@@ -1,0 +1,11 @@
+uuid: 8f232aae-dfb7-4abf-81cb-a568f644e7e6
+langcode: en
+status: true
+dependencies: {  }
+id: brand
+label: Brand
+use_admin_theme: null
+path: /brand
+access_logic: and
+access_conditions: {  }
+parameters: {  }

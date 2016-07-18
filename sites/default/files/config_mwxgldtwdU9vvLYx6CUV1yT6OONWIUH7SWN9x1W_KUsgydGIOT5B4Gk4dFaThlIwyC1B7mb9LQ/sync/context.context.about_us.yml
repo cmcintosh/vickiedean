@@ -46,19 +46,6 @@ reactions:
         theme: vickie_dean_themes
         unique: 0
         uuid: d807d016-5ff8-4d78-85ff-e19175c9b130
-      3c875fcb-dfbc-4eba-b5e7-ece0c7a08d8e:
-        id: 'views_block:mid_line-block_1'
-        label: ''
-        provider: views
-        label_display: visible
-        views_label: ''
-        items_per_page: none
-        region: navigation_collapsible
-        weight: '-4'
-        context_mapping: {  }
-        theme: vickie_dean_themes
-        unique: 0
-        uuid: 3c875fcb-dfbc-4eba-b5e7-ece0c7a08d8e
       e8593a07-18b8-4236-9c71-8e137429b28d:
         id: 'superfish:main'
         label: 'Main navigation'
@@ -225,6 +212,30 @@ reactions:
         theme: vickie_dean_themes
         unique: 0
         uuid: 41393e52-4042-4cba-af09-dedb904f9fb9
+      7be63ab9-0d49-49de-b1bb-db7c87528d04:
+        id: commerce_checkout_progress
+        label: 'Checkout progress'
+        provider: commerce_checkout
+        label_display: visible
+        region: highlighted
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 7be63ab9-0d49-49de-b1bb-db7c87528d04
+      5b3c6ea5-c8d9-4c2b-9583-8b9b5c2c3ed2:
+        id: commerce_cart
+        label: Cart
+        provider: commerce_cart
+        label_display: visible
+        item_text: items
+        dropdown: '1'
+        region: navigation_collapsible
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 5b3c6ea5-c8d9-4c2b-9583-8b9b5c2c3ed2
     id: blocks
     saved: false
     uuid: bee4fa7c-2d1a-4799-b0b6-f45010348654

@@ -1,0 +1,19 @@
+uuid: 4e1a7c3c-1309-49d7-a135-98f19733f8ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_button
+    - node.type.registration_link
+id: node.registration_link.field_button
+field_name: field_button
+entity_type: node
+bundle: registration_link
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

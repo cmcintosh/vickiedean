@@ -42,7 +42,7 @@ variant_settings:
       id: 'system_menu_block:blog-category'
       label: 'Blog Category'
       provider: system
-      label_display: visible
+      label_display: '0'
       level: 1
       depth: 0
       region: left

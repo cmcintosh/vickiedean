@@ -1,26 +1,26 @@
-uuid: 821a619d-d056-43ca-aba3-24967d529f61
+uuid: dc8d4d6c-9bdf-413a-b616-e16e7cbd7e5d
 langcode: en
 status: true
 dependencies:
   module:
     - system
-name: order_information
-label: Login
+name: user_login
+label: 'Special Offers'
 group: Layout
-description: 'Creates the Layout for the Login Page'
+description: 'Creates the Layout for Special Offers Page.'
 requireAllConditions: false
 disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: /login
+    pages: /special-offers
     negate: 0
-    uuid: 0d9e2e94-38a1-40bf-9b41-7678087d2bf0
+    uuid: 4402a817-44cf-4d2a-a5bc-1aaa81e97fbc
     context_mapping: {  }
 reactions:
   blocks:
     blocks:
-      3e8bd882-2f4b-450d-8e70-f5aebf4aa12a:
+      b3517bcb-80b8-4ec1-8e1e-4669940eb63e:
         id: 'views_block:schedule_heading-block_1'
         label: ''
         provider: views
@@ -32,8 +32,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 3e8bd882-2f4b-450d-8e70-f5aebf4aa12a
-      69c79644-3ce2-467c-af22-9cde4da68d5e:
+        uuid: b3517bcb-80b8-4ec1-8e1e-4669940eb63e
+      d88b0872-63e3-44e2-bf37-f8cc70e79116:
         id: 'system_menu_block:account'
         label: 'User account menu'
         provider: system
@@ -45,8 +45,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 69c79644-3ce2-467c-af22-9cde4da68d5e
-      181bac66-94d4-4308-a867-1b74d2f02d36:
+        uuid: d88b0872-63e3-44e2-bf37-f8cc70e79116
+      586a6f73-2919-49aa-b5ca-6cf188efaa07:
         id: 'views_block:mid_line-block_1'
         label: ''
         provider: views
@@ -58,8 +58,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 181bac66-94d4-4308-a867-1b74d2f02d36
-      c4881872-0386-4307-897f-073e732b2a37:
+        uuid: 586a6f73-2919-49aa-b5ca-6cf188efaa07
+      a315c2e1-68c6-471d-b899-676757b70778:
         id: 'superfish:main'
         label: 'Main navigation'
         provider: superfish
@@ -113,12 +113,12 @@ reactions:
         custom_item_class: ''
         custom_link_class: ''
         region: header
-        weight: '0'
+        weight: '-3'
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: c4881872-0386-4307-897f-073e732b2a37
-      6148ea54-4201-4b74-a979-22db8ea62c87:
+        uuid: a315c2e1-68c6-471d-b899-676757b70778
+      67d553e8-0fe9-4847-856b-12ba14e05cc1:
         id: 'system_menu_block:footer-links-left'
         label: 'Footer links Left'
         provider: system
@@ -130,8 +130,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 6148ea54-4201-4b74-a979-22db8ea62c87
-      a7c6276e-f76b-4cb3-bf94-d606de1bac64:
+        uuid: 67d553e8-0fe9-4847-856b-12ba14e05cc1
+      8a7ff0ca-4ca1-45e8-aacd-57fc685d4ea6:
         id: 'system_menu_block:footer-links'
         label: 'Footer links Right'
         provider: system
@@ -143,8 +143,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: a7c6276e-f76b-4cb3-bf94-d606de1bac64
-      9ee69c45-6b5c-44d7-b39a-1e7a06ffb805:
+        uuid: 8a7ff0ca-4ca1-45e8-aacd-57fc685d4ea6
+      25bb35e0-a8d3-462c-9f1a-687339459e76:
         id: 'views_block:company_details-block_1'
         label: ''
         provider: views
@@ -156,8 +156,8 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 9ee69c45-6b5c-44d7-b39a-1e7a06ffb805
-      2f6e453c-da7e-479f-8884-8215427dc11b:
+        uuid: 25bb35e0-a8d3-462c-9f1a-687339459e76
+      a21952bd-fbf1-473b-ba65-8e5f66894fe0:
         id: social_media_links_block
         label: 'Social Media Links'
         provider: social_media_links
@@ -224,8 +224,19 @@ reactions:
         context_mapping: {  }
         theme: vickie_dean_themes
         unique: 0
-        uuid: 2f6e453c-da7e-479f-8884-8215427dc11b
+        uuid: a21952bd-fbf1-473b-ba65-8e5f66894fe0
+      8d8ceccf-af56-4b37-96aa-2f28708b5c64:
+        id: user_login_block
+        label: 'User login'
+        provider: user
+        label_display: visible
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 8d8ceccf-af56-4b37-96aa-2f28708b5c64
     id: blocks
     saved: false
-    uuid: 596f2891-ad33-4050-ab5e-697320fae7e8
+    uuid: fe03ef77-c795-4a52-91ce-f41a92774914
 weight: 0

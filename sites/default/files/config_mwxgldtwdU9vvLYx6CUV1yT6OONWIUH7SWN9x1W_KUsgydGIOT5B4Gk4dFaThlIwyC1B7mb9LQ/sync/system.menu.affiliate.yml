@@ -1,0 +1,8 @@
+uuid: 066b6f7f-60bb-4ded-b820-f78a42850be4
+langcode: en
+status: true
+dependencies: {  }
+id: affiliate
+label: Affiliate
+description: 'This is for the affiliate menu'
+locked: false

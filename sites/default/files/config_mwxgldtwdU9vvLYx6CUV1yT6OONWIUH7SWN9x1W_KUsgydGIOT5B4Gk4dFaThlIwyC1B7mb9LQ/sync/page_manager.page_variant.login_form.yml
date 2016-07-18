@@ -1,0 +1,40 @@
+uuid: a93fa23b-d2a9-4431-b57e-38f99e88f8e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.login_form
+    - views.view.registration
+  module:
+    - panels
+    - views
+id: login_form
+label: 'Login Form'
+variant: panels_variant
+variant_settings:
+  blocks:
+    9561c158-99c3-4929-830b-c99c213cc917:
+      id: 'views_block:registration-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: top
+      uuid: 9561c158-99c3-4929-830b-c99c213cc917
+      context_mapping: {  }
+  id: panels_variant
+  uuid: b0e36504-a408-4c17-a2e2-8a8eb184913a
+  label: null
+  weight: 0
+  layout: twocol_stacked
+  layout_settings: {  }
+  page_title: 'Login Form'
+  storage_type: page_manager
+  storage_id: login_form
+  builder: standard
+page: login_form
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,32 @@
+uuid: 9619c08c-760a-4903-9fbb-bacf85d0f569
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.registration_link.body
+    - field.field.node.registration_link.field_button
+    - node.type.registration_link
+  module:
+    - text
+    - user
+id: node.registration_link.default
+targetEntityType: node
+bundle: registration_link
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_button:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }
