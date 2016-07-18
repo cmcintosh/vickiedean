@@ -10116,6 +10116,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* No files to import found in effects/**\/* */
+.cart-block--contents {
+  width: 225px;
+  background: white;
+  color: black;
+  z-index: 500;
+}
+
+strong.white {
+  color: white;
+  text-transform: uppercase;
+}
+
+strong.white:hover {
+  color: #3d8afc;
+}
+
 .form-horizontal .form-group {
   margin-right: -53px !important;
   margin-left: -15px;
