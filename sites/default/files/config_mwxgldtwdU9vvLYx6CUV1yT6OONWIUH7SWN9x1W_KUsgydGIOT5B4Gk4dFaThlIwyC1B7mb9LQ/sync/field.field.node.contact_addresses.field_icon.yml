@@ -1,0 +1,19 @@
+uuid: edfa9cd5-d85a-44f5-9a36-dabf3153511e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon
+    - node.type.contact_addresses
+id: node.contact_addresses.field_icon
+field_name: field_icon
+entity_type: node
+bundle: contact_addresses
+label: 'Icon address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

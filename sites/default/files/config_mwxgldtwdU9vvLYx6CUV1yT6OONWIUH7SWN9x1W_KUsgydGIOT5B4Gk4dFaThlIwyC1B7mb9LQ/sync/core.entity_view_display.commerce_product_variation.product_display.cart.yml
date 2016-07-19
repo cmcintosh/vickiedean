@@ -1,0 +1,17 @@
+uuid: f7ef2f78-46ea-430c-800d-a506056aecb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.product_display
+    - core.entity_view_mode.commerce_product_variation.cart
+id: commerce_product_variation.product_display.cart
+targetEntityType: commerce_product_variation
+bundle: product_display
+mode: cart
+content: {  }
+hidden:
+  price: true
+  product_id: true
+  sku: true
+  title: true

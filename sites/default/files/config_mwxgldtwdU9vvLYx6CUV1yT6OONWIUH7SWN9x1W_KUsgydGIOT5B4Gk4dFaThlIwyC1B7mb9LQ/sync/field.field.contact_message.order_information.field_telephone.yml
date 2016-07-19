@@ -1,0 +1,19 @@
+uuid: 0f8ebe56-6545-4340-bb87-130011878ef0
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.order_information
+    - field.storage.contact_message.field_telephone
+id: contact_message.order_information.field_telephone
+field_name: field_telephone
+entity_type: contact_message
+bundle: order_information
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

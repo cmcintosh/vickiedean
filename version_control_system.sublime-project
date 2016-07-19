@@ -1,0 +1,14 @@
+{
+    "folders":
+    [
+        {
+
+            "path": "/C/xampp/htdocs/vickiedean"
+        }
+    ],
+    "settings": {
+        "xdebug": {
+             "url": "http://vickiedean.dev/",
+        }
+    }
+}  

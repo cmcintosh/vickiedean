@@ -1,0 +1,17 @@
+uuid: 5b08a926-e570-4703-aa12-b859f98ea23f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Contact Addresses'
+type: contact_addresses
+description: 'This is for the different contact addresses of the site.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

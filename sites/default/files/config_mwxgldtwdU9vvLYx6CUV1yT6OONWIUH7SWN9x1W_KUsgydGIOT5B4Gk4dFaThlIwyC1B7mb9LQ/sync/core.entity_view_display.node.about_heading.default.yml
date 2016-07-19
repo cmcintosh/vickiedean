@@ -1,0 +1,39 @@
+uuid: 2bc40806-a579-42d5-afbc-dee53894cbe3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about_heading.field_description
+    - field.field.node.about_heading.field_heading
+    - field.field.node.about_heading.field_sub_heading
+    - node.type.about_heading
+  module:
+    - user
+id: node.about_heading.default
+targetEntityType: node
+bundle: about_heading
+mode: default
+content:
+  field_description:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_heading:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_sub_heading:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

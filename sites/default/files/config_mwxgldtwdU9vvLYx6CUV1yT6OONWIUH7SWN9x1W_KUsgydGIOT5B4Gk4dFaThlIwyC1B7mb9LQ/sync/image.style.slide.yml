@@ -1,0 +1,15 @@
+uuid: af9870d3-5f17-40e8-93f4-4ee62f74563e
+langcode: en
+status: true
+dependencies: {  }
+name: slide
+label: 'Slide Image'
+effects:
+  7314a47b-1856-4148-ad16-0dfbbcab0116:
+    uuid: 7314a47b-1856-4148-ad16-0dfbbcab0116
+    id: image_scale
+    weight: 1
+    data:
+      width: 2050
+      height: 889
+      upscale: false

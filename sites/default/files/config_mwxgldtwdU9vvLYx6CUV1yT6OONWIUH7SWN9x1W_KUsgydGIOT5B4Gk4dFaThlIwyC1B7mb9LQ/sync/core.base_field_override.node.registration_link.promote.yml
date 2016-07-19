@@ -1,0 +1,22 @@
+uuid: a81677c9-18b5-4268-ab05-85ea64eb3346
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.registration_link
+id: node.registration_link.promote
+field_name: promote
+entity_type: node
+bundle: registration_link
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

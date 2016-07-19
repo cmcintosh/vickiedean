@@ -1,0 +1,19 @@
+uuid: 0d102604-c000-4023-8140-e553d7f84ebd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_button
+    - node.type.newsletter
+id: node.newsletter.field_button
+field_name: field_button
+entity_type: node
+bundle: newsletter
+label: Button
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

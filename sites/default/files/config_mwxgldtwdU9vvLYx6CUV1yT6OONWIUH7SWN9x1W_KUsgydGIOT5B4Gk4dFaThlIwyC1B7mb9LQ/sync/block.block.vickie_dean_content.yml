@@ -1,0 +1,22 @@
+uuid: dae13b75-a071-4fc5-9822-db6bd5ccdb38
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vickie_dean
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: vickie_dean_content
+theme: vickie_dean
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

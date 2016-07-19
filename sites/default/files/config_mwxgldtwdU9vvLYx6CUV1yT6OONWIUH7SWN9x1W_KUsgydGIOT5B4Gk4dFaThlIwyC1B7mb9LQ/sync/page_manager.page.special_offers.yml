@@ -1,0 +1,11 @@
+uuid: 5a874025-45e5-45db-a95c-3b1ddcdfba10
+langcode: en
+status: true
+dependencies: {  }
+id: special_offers
+label: 'Special Offers'
+use_admin_theme: null
+path: /special-offers
+access_logic: and
+access_conditions: {  }
+parameters: {  }

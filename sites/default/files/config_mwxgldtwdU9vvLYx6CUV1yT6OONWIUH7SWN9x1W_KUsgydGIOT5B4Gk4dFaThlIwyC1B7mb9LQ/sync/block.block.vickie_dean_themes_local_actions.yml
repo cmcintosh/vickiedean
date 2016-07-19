@@ -1,0 +1,20 @@
+uuid: 2a941cc7-1ec5-4744-9232-c684d1a16527
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vickie_dean_themes
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: vickie_dean_themes_local_actions
+theme: vickie_dean_themes
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

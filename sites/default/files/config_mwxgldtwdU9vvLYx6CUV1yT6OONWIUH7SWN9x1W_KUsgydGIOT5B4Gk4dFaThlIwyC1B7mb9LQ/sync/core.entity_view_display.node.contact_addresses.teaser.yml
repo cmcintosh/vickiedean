@@ -1,0 +1,17 @@
+uuid: cbfb60d7-e874-4b35-8d39-4f11b432f1d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.contact_addresses
+  module:
+    - user
+id: node.contact_addresses.teaser
+targetEntityType: node
+bundle: contact_addresses
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

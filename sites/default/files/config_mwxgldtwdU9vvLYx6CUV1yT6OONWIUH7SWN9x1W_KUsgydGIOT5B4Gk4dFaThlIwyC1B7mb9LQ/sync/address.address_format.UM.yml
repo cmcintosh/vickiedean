@@ -1,0 +1,24 @@
+uuid: bad212ac-9289-4583-8f05-b1170d66887e
+langcode: en
+status: true
+dependencies: {  }
+countryCode: UM
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%locality %administrativeArea %postalCode"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+  - administrativeArea
+uppercaseFields:
+  - addressLine1
+  - addressLine2
+  - locality
+  - recipient
+  - organization
+  - administrativeArea
+administrativeAreaType: state
+localityType: city
+dependentLocalityType: null
+postalCodeType: zip
+postalCodePattern: '96898'
+postalCodePrefix: null

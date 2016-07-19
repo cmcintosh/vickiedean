@@ -1,0 +1,20 @@
+uuid: c773745f-01f6-41bd-bb6d-75b0909a96d6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vickie_dean_themes
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: vickie_dean_themes_page_title
+theme: vickie_dean_themes
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

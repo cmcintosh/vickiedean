@@ -1,0 +1,18 @@
+uuid: d7eebc1b-f100-4f0b-b534-b853a9b81be8
+langcode: en
+status: true
+dependencies: {  }
+countryCode: OM
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%postalCode\n%locality"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+uppercaseFields:
+  - locality
+administrativeAreaType: null
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: '(PC )?\d{3}'
+postalCodePrefix: null

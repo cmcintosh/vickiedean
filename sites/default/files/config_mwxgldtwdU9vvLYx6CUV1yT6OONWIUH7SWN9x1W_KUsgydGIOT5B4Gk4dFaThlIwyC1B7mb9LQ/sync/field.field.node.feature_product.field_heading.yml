@@ -1,0 +1,19 @@
+uuid: 2980de4a-b129-4c72-82e4-95267e88d0b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_heading
+    - node.type.feature_product
+id: node.feature_product.field_heading
+field_name: field_heading
+entity_type: node
+bundle: feature_product
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

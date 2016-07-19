@@ -1,0 +1,17 @@
+uuid: 238efa19-b4cc-4fe8-9db9-81b34b8b9151
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.top_head
+  module:
+    - user
+id: node.top_head.teaser
+targetEntityType: node
+bundle: top_head
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

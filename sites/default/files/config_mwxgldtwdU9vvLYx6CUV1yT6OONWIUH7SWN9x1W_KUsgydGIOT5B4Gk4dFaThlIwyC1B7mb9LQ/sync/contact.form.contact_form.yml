@@ -1,0 +1,10 @@
+uuid: 89974894-5edf-4663-bc7d-78dd55cba0bb
+langcode: en
+status: true
+dependencies: {  }
+id: contact_form
+label: 'Contact Form'
+recipients:
+  - vickiedean@yahoo.com
+reply: ''
+weight: 0

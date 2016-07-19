@@ -1,0 +1,65 @@
+@media #{$mobilePortrait} {
+	.picture img {
+	    height: 307px !important;
+	    width: 692px !important;
+	    /* overflow: hidden; */
+	    margin-bottom: -16em;
+	    margin-left: -14em;
+	    margin-top: -4em;
+	}
+}
+
+@media #{$mobileLandscape} {
+	.picture img {
+	    height: 326px !important;
+	    width: 692px !important;
+	    /* overflow: hidden; */
+	    margin-bottom: -18em;
+	    margin-left: -8em;
+	    margin-top: -4em;
+	}
+}
+
+@media #{$tabletPortrait} {
+	.picture img {
+	    height: 333px !important;
+	    width: 780px !important;
+	    /* overflow: hidden; */
+	    margin-bottom: -18em;
+	    margin-left: -2em;
+	    margin-top: 0px;
+	}
+}
+
+@media #{$tabletLandscape} {
+	.picture img {
+	    height: 444px !important;
+	    width: 1033px !important;
+	    /* overflow: hidden; */
+	    margin-bottom: -16em;
+	    margin-left: -3em;
+	    margin-top: 0px;
+	}
+}
+
+@media #{$smallDesktop} {
+	.picture img {
+	    height: 720px !important;
+	    width: 1422px !important;
+	    /* overflow: hidden; */
+	    margin-bottom: -32em;
+	    margin-left: -8em;
+	    margin-top: 0em;
+	}
+}
+
+@media #{$desktopDisplay} {
+	.picture img {
+	    height: 720px !important;
+	    width: 1422px !important;
+	    /* overflow: hidden; */
+	    margin-bottom: -38em;
+	    margin-left: -8em;
+	    margin-top: -5em;
+	}
+}

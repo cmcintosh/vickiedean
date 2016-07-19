@@ -1,0 +1,33 @@
+<ul class="nav nav-tabs" role="tablist" id="module-tabs-0">
+	<li>
+		<a href="#tab-featured-0" role="tab" data-toggle="tab">
+		Featured </a>
+	</li>
+	<li>
+		<a href="#tab-latest-0" role="tab" data-toggle="tab">
+		Latest </a>
+	</li>
+	<li>
+		<a href="#tab-specials-0" role="tab" data-toggle="tab">
+		Specials </a>
+	</li>
+</ul>
+
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane" id="tab-featured-0">
+		<div class="box clearfix">
+			<div class="box-carousel">
+				
+						{% for row in rows %}
+							{%
+								set row_classes = [
+									default_row_class ? 'views-row',
+								]
+							%}
+						{{ row.content }} 
+						{% endfor %}
+
+			</div> 
+		</div>
+	</div>
+</div> 

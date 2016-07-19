@@ -1,0 +1,95 @@
+uuid: 0e1df2db-1af6-48f4-bf2b-c1dd67692f54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_display.field_brand
+    - field.field.node.product_display.field_description
+    - field.field.node.product_display.field_image
+    - field.field.node.product_display.field_model
+    - field.field.node.product_display.field_product1
+    - field.field.node.product_display.field_product_name
+    - field.field.node.product_display.field_product_price
+    - field.field.node.product_display.field_product_type
+    - field.field.node.product_display.field_sale
+    - node.type.product_display
+  module:
+    - commerce_price
+    - image
+    - user
+id: node.product_display.default
+targetEntityType: node
+bundle: product_display
+mode: default
+content:
+  field_brand:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_description:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_model:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_product1:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_product_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_product_price:
+    weight: 2
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      display_currency_code: false
+    third_party_settings: {  }
+    type: commerce_price_default
+  field_product_type:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_sale:
+    weight: 7
+    label: above
+    settings:
+      format: true-false
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,114 @@
+uuid: 933ba0ba-7fe7-42eb-ae0f-4d74459b190c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_display.field_brand
+    - field.field.node.product_display.field_description
+    - field.field.node.product_display.field_image
+    - field.field.node.product_display.field_model
+    - field.field.node.product_display.field_product1
+    - field.field.node.product_display.field_product_name
+    - field.field.node.product_display.field_product_price
+    - field.field.node.product_display.field_product_type
+    - field.field.node.product_display.field_sale
+    - image.style.thumbnail
+    - node.type.product_display
+  module:
+    - commerce_price
+    - image
+    - path
+id: node.product_display.default
+targetEntityType: node
+bundle: product_display
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  field_brand:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_description:
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_model:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_product1:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_product_name:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_product_price:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: commerce_price_default
+  field_product_type:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_sale:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,38 @@
+uuid: 8e357b86-89a7-4c11-88bf-bf6c128872a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_background_product
+    - node.type.feature_product
+  module:
+    - image
+id: node.feature_product.field_background_product
+field_name: field_background_product
+entity_type: node
+bundle: feature_product
+label: 'Background Product'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

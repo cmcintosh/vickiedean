@@ -1,0 +1,20 @@
+uuid: acd9de72-92b0-48a4-8357-0414a3e3478f
+langcode: en
+status: true
+dependencies: {  }
+countryCode: KR
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%dependentLocality\n%locality\n%administrativeArea\n%postalCode"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+  - administrativeArea
+  - postalCode
+uppercaseFields:
+  - postalCode
+administrativeAreaType: do_si
+localityType: city
+dependentLocalityType: district
+postalCodeType: postal
+postalCodePattern: '\d{3}(?:\d{2}|[\-]\d{3})'
+postalCodePrefix: null

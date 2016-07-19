@@ -1,0 +1,15 @@
+uuid: 46a6ff40-2f83-4156-a1ea-f4545d971882
+langcode: en
+status: true
+dependencies: {  }
+name: blog_size
+label: 'Blog size'
+effects:
+  e3278c45-8d48-42df-a624-32fc7d1d6b67:
+    uuid: e3278c45-8d48-42df-a624-32fc7d1d6b67
+    id: image_scale
+    weight: 1
+    data:
+      width: 420
+      height: 280
+      upscale: false

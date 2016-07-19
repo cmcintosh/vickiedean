@@ -1,0 +1,17 @@
+uuid: 33046928-9a64-4641-9f2e-4227b177af3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'About Heading'
+type: about_heading
+description: 'For the about heading of the site.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

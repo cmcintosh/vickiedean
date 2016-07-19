@@ -1,0 +1,19 @@
+uuid: 67e1fbad-2480-4917-94fd-cadb98aa1f97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.delivery_information
+id: node.delivery_information.field_description
+field_name: field_description
+entity_type: node
+bundle: delivery_information
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

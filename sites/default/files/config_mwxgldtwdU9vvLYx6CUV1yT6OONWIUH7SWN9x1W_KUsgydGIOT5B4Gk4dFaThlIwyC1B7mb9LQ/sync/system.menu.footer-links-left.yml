@@ -1,0 +1,8 @@
+uuid: dbe44412-243e-438f-a940-0b501b5ff5cf
+langcode: en
+status: true
+dependencies: {  }
+id: footer-links-left
+label: 'Footer links Left'
+description: 'For the left footer links'
+locked: false

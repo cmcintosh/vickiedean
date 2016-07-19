@@ -1,0 +1,21 @@
+uuid: 4854056f-f77c-49ca-9e0a-806f065aa239
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_model
+    - taxonomy.vocabulary.feature_product
+  module:
+    - options
+id: taxonomy_term.feature_product.field_model
+field_name: field_model
+entity_type: taxonomy_term
+bundle: feature_product
+label: Model
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

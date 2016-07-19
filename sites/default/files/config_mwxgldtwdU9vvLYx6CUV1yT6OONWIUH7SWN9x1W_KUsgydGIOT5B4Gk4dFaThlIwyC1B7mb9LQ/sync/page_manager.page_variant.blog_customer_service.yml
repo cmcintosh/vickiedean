@@ -1,0 +1,66 @@
+uuid: 5c06fdea-f00d-4370-a11c-da5b540d1966
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.blog_customer_service
+    - system.menu.blog-category
+    - views.view.blog
+    - views.view.popular_blog
+  module:
+    - panels
+    - system
+    - views
+id: blog_customer_service
+label: 'Blog Customer Service'
+variant: panels_variant
+variant_settings:
+  blocks:
+    dc32a2e9-77c6-4543-aa0b-c8de2c2b655e:
+      id: 'system_menu_block:blog-category'
+      label: 'Blog Category'
+      provider: system
+      label_display: '0'
+      level: 1
+      depth: 0
+      region: left
+      weight: 0
+      uuid: dc32a2e9-77c6-4543-aa0b-c8de2c2b655e
+      context_mapping: {  }
+    7f79942d-d8c9-4ff7-a1d6-a5ea0afa835c:
+      id: 'views_block:popular_blog-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: left
+      weight: 0
+      uuid: 7f79942d-d8c9-4ff7-a1d6-a5ea0afa835c
+      context_mapping: {  }
+    b8a28471-8e89-4efb-874b-171b10e8aafe:
+      id: 'views_block:blog-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: 0
+      uuid: b8a28471-8e89-4efb-874b-171b10e8aafe
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 829ab09a-b216-437c-a965-84777a4eac71
+  label: null
+  weight: 0
+  layout: twocol
+  layout_settings: {  }
+  page_title: 'Blog Customer Service'
+  storage_type: page_manager
+  storage_id: blog_customer_service
+  builder: standard
+page: blog_customer_service
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

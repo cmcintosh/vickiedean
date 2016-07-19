@@ -1,0 +1,89 @@
+uuid: 45295147-38a6-4cab-bab5-3906f0fd5bf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.about_us
+    - views.view.about_content
+    - views.view.about_heading
+    - views.view.our_team
+    - views.view.store_events
+    - views.view.testimonials
+  module:
+    - panels
+    - views
+id: panels
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    2d304832-3b70-47a7-b1d9-96c486c5960e:
+      id: 'views_block:about_heading-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -10
+      uuid: 2d304832-3b70-47a7-b1d9-96c486c5960e
+      context_mapping: {  }
+    d58a6f67-2d93-4f45-b90c-1a1e2c6d9329:
+      id: 'views_block:about_content-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -9
+      uuid: d58a6f67-2d93-4f45-b90c-1a1e2c6d9329
+      context_mapping: {  }
+    8d037a19-123b-4c80-ae80-38b9da58ed3c:
+      id: 'views_block:store_events-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -8
+      uuid: 8d037a19-123b-4c80-ae80-38b9da58ed3c
+      context_mapping: {  }
+    c451529a-71b6-4ad0-bc52-8ab7800a408a:
+      id: 'views_block:our_team-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -7
+      uuid: c451529a-71b6-4ad0-bc52-8ab7800a408a
+      context_mapping: {  }
+    4f06528a-6f8b-4c53-9de1-bf17c47e4e49:
+      id: 'views_block:testimonials-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -6
+      uuid: 4f06528a-6f8b-4c53-9de1-bf17c47e4e49
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 75af6590-0c5e-4e2c-a2eb-e9b29cb6f8c8
+  label: null
+  weight: 0
+  layout: onecol
+  layout_settings: {  }
+  page_title: 'About Page'
+  storage_type: page_manager
+  storage_id: panels
+  builder: standard
+page: about_us
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

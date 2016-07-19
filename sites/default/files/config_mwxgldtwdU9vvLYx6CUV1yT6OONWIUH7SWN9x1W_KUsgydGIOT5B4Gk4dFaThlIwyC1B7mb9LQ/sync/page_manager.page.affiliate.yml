@@ -1,0 +1,11 @@
+uuid: f8ba946a-6f3e-482f-a54c-82b38606b60b
+langcode: en
+status: true
+dependencies: {  }
+id: affiliate
+label: Affiliate
+use_admin_theme: false
+path: /affiliate
+access_logic: and
+access_conditions: {  }
+parameters: {  }

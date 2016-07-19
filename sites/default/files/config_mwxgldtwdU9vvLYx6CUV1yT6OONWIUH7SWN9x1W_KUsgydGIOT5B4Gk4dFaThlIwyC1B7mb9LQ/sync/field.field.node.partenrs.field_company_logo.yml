@@ -1,0 +1,38 @@
+uuid: c32d0c18-93e1-4d75-a2eb-d8489ad06075
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company_logo
+    - node.type.partenrs
+  module:
+    - image
+id: node.partenrs.field_company_logo
+field_name: field_company_logo
+entity_type: node
+bundle: partenrs
+label: 'Company Logo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

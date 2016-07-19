@@ -1,0 +1,41 @@
+uuid: 7a7efda6-3520-41b5-9807-a0aabb00a010
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.terms_and_condition
+    - views.view.terms_condition
+  module:
+    - panels
+    - views
+id: terms_and_condition
+label: 'Terms and Condition'
+variant: panels_variant
+variant_settings:
+  blocks:
+    8fdeae38-9062-4eae-b380-d76e0f9f12cf:
+      id: 'views_block:terms_condition-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: 0
+      uuid: 8fdeae38-9062-4eae-b380-d76e0f9f12cf
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 2809a0ad-d88e-48e9-989a-2471263bba30
+  label: null
+  weight: 0
+  layout: onecol
+  layout_settings: {  }
+  page_title: 'Terms and Condition'
+  storage_type: page_manager
+  storage_id: terms_and_condition
+  builder: standard
+page: terms_and_condition
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

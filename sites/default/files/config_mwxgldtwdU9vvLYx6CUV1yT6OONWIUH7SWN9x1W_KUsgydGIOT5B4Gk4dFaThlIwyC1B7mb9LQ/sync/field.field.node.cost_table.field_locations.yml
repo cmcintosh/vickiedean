@@ -1,0 +1,19 @@
+uuid: b694528b-f695-44e3-9abe-d431b12841ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_locations
+    - node.type.cost_table
+id: node.cost_table.field_locations
+field_name: field_locations
+entity_type: node
+bundle: cost_table
+label: LOCATIONS
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

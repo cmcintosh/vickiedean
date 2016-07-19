@@ -1,0 +1,50 @@
+uuid: 3dcf8c46-82cc-4406-963e-1dce1e5f453a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.top_head.field_cart
+    - field.field.node.top_head.field_checkout
+    - field.field.node.top_head.field_logo
+    - field.field.node.top_head.field_wishlist
+    - node.type.top_head
+  module:
+    - image
+    - user
+id: node.top_head.default
+targetEntityType: node
+bundle: top_head
+mode: default
+content:
+  field_cart:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_checkout:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_logo:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_wishlist:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

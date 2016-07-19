@@ -1,0 +1,17 @@
+uuid: 7f857787-4f0e-42f5-8b66-17b7c29bd2cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Cost Table'
+type: cost_table
+description: 'This is for the cost table.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

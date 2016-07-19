@@ -1,0 +1,11 @@
+uuid: cbdd688d-caee-4d44-be09-e4f54b5d5a24
+langcode: en
+status: true
+dependencies: {  }
+id: terms_and_condition
+label: 'Terms and Condition'
+use_admin_theme: null
+path: /terms
+access_logic: and
+access_conditions: {  }
+parameters: {  }

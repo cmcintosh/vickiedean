@@ -1,0 +1,152 @@
+uuid: 401d5bf5-3c8d-48f9-93e4-3633e28dae21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_info
+    - field.storage.node.field_icon
+    - field.storage.node.field_schedule
+    - node.type.schedule_heading
+  module:
+    - node
+    - user
+id: schedule_heading
+label: 'Schedule Heading'
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+core: 8.x
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: some
+        options:
+          items_per_page: 3
+          offset: 0
+      style:
+        type: default
+      row:
+        type: fields
+      fields:
+        field_contact_info:
+          id: field_contact_info
+          table: node__field_contact_info
+          field: field_contact_info
+          plugin_id: field
+        field_icon:
+          id: field_icon
+          table: node__field_icon
+          field: field_icon
+          plugin_id: field
+        field_schedule:
+          id: field_schedule
+          table: node__field_schedule
+          field: field_schedule
+          plugin_id: field
+      filters:
+        status:
+          value: true
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            schedule_heading: schedule_heading
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: ''
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_contact_info'
+        - 'config:field.storage.node.field_icon'
+        - 'config:field.storage.node.field_schedule'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: 'Schedule Heading'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: 'Schedule Heading'
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_contact_info'
+        - 'config:field.storage.node.field_icon'
+        - 'config:field.storage.node.field_schedule'

@@ -1,0 +1,18 @@
+uuid: 0a854a51-c017-4a45-822d-c1ee8033a8ae
+langcode: en
+status: true
+dependencies: {  }
+countryCode: MN
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%administrativeArea %locality-%sortingCode\n%postalCode"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+uppercaseFields:
+  - locality
+administrativeAreaType: province
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: '\d{5}'
+postalCodePrefix: null

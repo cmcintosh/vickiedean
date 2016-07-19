@@ -1,0 +1,21 @@
+uuid: 308adcef-7073-453d-98d7-4b6a23458afe
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.affiliate
+id: affiliate
+label: Affiliate
+variant: block_display
+variant_settings:
+  blocks: {  }
+  id: block_display
+  label: null
+  uuid: 6f6bb32f-4b52-4afe-9f91-72c0db9e6d5a
+  weight: 0
+  page_title: affiliate
+page: affiliate
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

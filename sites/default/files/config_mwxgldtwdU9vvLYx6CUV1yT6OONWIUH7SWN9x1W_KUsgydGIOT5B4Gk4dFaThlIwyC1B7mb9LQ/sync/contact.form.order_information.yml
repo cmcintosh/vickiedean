@@ -1,0 +1,10 @@
+uuid: 8cfc844d-546e-41a2-8727-d26e2072deed
+langcode: en
+status: true
+dependencies: {  }
+id: order_information
+label: 'Order Information'
+recipients:
+  - vickie_dean@yahoo.com
+reply: ''
+weight: 0

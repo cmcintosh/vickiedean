@@ -1,0 +1,8 @@
+uuid: 50986f98-7b72-472a-973d-b005af84f566
+langcode: en
+status: true
+dependencies: {  }
+id: product_display
+label: 'Product Display'
+lineItemType: product_variation
+generateTitle: false

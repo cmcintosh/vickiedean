@@ -1,0 +1,21 @@
+uuid: 39fb7d5d-2547-4bf7-8b91-66b1ab6b43fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_popular_blog
+    - node.type.blog
+id: node.blog.field_popular_blog
+field_name: field_popular_blog
+entity_type: node
+bundle: blog
+label: 'Popular blog?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

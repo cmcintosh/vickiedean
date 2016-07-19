@@ -1,0 +1,19 @@
+uuid: 2fc96ca8-30f4-4618-a5cc-df6038f817c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.newsletter
+id: node.newsletter.field_description
+field_name: field_description
+entity_type: node
+bundle: newsletter
+label: Message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

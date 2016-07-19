@@ -1,0 +1,26 @@
+uuid: 2b7d5602-e1be-4b05-9bf7-fe11636bde31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.billing.address
+    - profile.type.billing
+  enforced:
+    module:
+      - commerce_order
+  module:
+    - address
+_core:
+  default_config_hash: 8lrJC0iJmFolmZlyr6wTTsE75A6PZz4_51Tho187P6U
+id: profile.billing.default
+targetEntityType: profile
+bundle: billing
+mode: default
+content:
+  address:
+    type: address_default
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

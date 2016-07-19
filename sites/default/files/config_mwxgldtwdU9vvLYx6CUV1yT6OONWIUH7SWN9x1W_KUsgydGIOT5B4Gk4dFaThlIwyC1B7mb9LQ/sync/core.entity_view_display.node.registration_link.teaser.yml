@@ -1,0 +1,26 @@
+uuid: c5e97e6a-204d-466a-afca-d9716a70a3c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.registration_link.body
+    - node.type.registration_link
+  module:
+    - text
+    - user
+id: node.registration_link.teaser
+targetEntityType: node
+bundle: registration_link
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden: {  }

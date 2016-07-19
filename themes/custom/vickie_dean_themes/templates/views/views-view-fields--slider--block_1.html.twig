@@ -1,0 +1,13 @@
+<div title="slide-3" data-src="/themes/custom/vickie_dean_themes/image/loader.GIF">
+	<div class="camera_caption fadeIn">
+		<div class="picture"> {{ fields.field_slide_background.content }} </div>
+		{% if fields.field_sub_text.content is empty  %}
+			<h2>{{ fields.field_description.content }}</h2>
+			<a class="slide_btn" href="#">{{ fields.field_button.content }}</a>
+		   {% else %}
+		    <h2>{{ fields.field_description.content }}</h2>
+		    <p>{{ fields.field_sub_text.content }}</p>
+			<a class="slide_btn" href="#">{{ fields.field_button.content }}</a>
+		{% endif %}
+	</div>
+</div>  

@@ -1,0 +1,65 @@
+uuid: c9f6a994-97d1-4c91-b19a-5e0e673ac61f
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.brand
+    - system.menu.menu-account
+    - views.view.brands
+  module:
+    - panels
+    - system
+    - views
+id: brands
+label: Brands
+variant: panels_variant
+variant_settings:
+  blocks:
+    106d386a-ec02-421d-96c0-f2d4bc03c84c:
+      id: 'system_menu_block:menu-account'
+      label: Account
+      provider: system
+      label_display: '0'
+      level: 1
+      depth: 0
+      region: left
+      weight: 0
+      uuid: 106d386a-ec02-421d-96c0-f2d4bc03c84c
+      context_mapping: {  }
+    2f39b95a-3187-42a3-85e4-a792cb51ba72:
+      id: 'views_block:brands-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: -9
+      uuid: 2f39b95a-3187-42a3-85e4-a792cb51ba72
+      context_mapping: {  }
+    d4f793e8-33e7-4a02-a7d2-36abc97716c1:
+      id: 'views_block:brands-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: -10
+      uuid: d4f793e8-33e7-4a02-a7d2-36abc97716c1
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 55d911c7-8f45-4aa0-b103-6057c4d2b6b1
+  label: null
+  weight: 0
+  layout: twocol
+  layout_settings: {  }
+  page_title: Brands
+  storage_type: page_manager
+  storage_id: brands
+  builder: standard
+page: brand
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

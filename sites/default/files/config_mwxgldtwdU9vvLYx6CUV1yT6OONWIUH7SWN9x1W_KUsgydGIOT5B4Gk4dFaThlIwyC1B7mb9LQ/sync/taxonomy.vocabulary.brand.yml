@@ -1,0 +1,9 @@
+uuid: c50043cc-3925-494c-804e-8309ad37125e
+langcode: en
+status: true
+dependencies: {  }
+name: Brand
+vid: brand
+description: 'For the product Brand'
+hierarchy: 0
+weight: 0

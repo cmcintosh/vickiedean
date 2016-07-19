@@ -1,0 +1,54 @@
+uuid: c6fa9e99-1457-4610-8a5b-4ae27969acfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.special_offers
+    - system.menu.menu-account
+    - views.view.product_display_catalog
+  module:
+    - panels
+    - system
+    - views
+id: special_offers
+label: 'Special Offers'
+variant: panels_variant
+variant_settings:
+  blocks:
+    87fce8a9-8f53-4f13-8d41-b8108099782a:
+      id: 'system_menu_block:menu-account'
+      label: Account
+      provider: system
+      label_display: '0'
+      level: 1
+      depth: 0
+      region: left
+      weight: 0
+      uuid: 87fce8a9-8f53-4f13-8d41-b8108099782a
+      context_mapping: {  }
+    95c37246-118f-43af-8f34-aeac557de226:
+      id: 'views_block:product_display_catalog-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: 0
+      uuid: 95c37246-118f-43af-8f34-aeac557de226
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 225f1141-1f9a-4696-8f0f-a46c7e925024
+  label: null
+  weight: 0
+  layout: twocol
+  layout_settings: {  }
+  page_title: 'Special offers'
+  storage_type: page_manager
+  storage_id: special_offers
+  builder: standard
+page: special_offers
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

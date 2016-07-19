@@ -1,0 +1,17 @@
+uuid: 730a1cad-a229-42dd-a609-ffdf6fd03dd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Terms & Condition'
+type: terms_condition
+description: 'For the terms and condition of the site.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

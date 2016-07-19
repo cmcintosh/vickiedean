@@ -1,0 +1,32 @@
+uuid: 7cdde4af-cd2f-43c3-b25c-c82725f69ae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sizes.field_price
+    - field.field.node.sizes.field_sizes
+    - node.type.sizes
+  module:
+    - options
+    - user
+id: node.sizes.default
+targetEntityType: node
+bundle: sizes
+mode: default
+content:
+  field_price:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_sizes:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  links:
+    weight: 100
+hidden: {  }

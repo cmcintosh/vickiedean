@@ -1,0 +1,19 @@
+uuid: 401d4080-d14c-43c8-a957-8f9684ae17b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_button
+    - taxonomy.vocabulary.feature_product
+id: taxonomy_term.feature_product.field_button
+field_name: field_button
+entity_type: taxonomy_term
+bundle: feature_product
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

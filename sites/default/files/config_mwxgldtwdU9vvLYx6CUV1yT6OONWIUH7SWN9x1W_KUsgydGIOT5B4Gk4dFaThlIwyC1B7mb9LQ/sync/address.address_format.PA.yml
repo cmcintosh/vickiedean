@@ -1,0 +1,19 @@
+uuid: 37285961-8d46-4485-b30c-c42feae7ed0e
+langcode: en
+status: true
+dependencies: {  }
+countryCode: PA
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%locality\n%administrativeArea"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+uppercaseFields:
+  - locality
+  - administrativeArea
+administrativeAreaType: province
+localityType: city
+dependentLocalityType: null
+postalCodeType: null
+postalCodePattern: null
+postalCodePrefix: null

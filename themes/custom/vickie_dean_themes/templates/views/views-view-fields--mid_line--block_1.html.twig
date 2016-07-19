@@ -1,0 +1,33 @@
+<div class="col-xs-5">
+	<div id="logo" class="logo">
+		{{fields.field_logo.content}}
+	</div>
+</div>
+<div class="col-xs-7">
+	<div class="check">
+		<a class="check-btn" href="#" title="Checkout"><b>{{fields.field_checkout.content}}</b>
+			<i class="material-icons-check"></i>
+		</a>
+	</div>
+	<div class="box-cart">
+		<div id="cart" class="cart toggle-wrap">
+			<button type="button" data-loading-text="Loading..." class="toggle">
+				<i class="material-icons-shopping_cart"></i>
+				<strong>{{fields.field_cart.content}}</strong>
+				<span id="cart-total2" class="cart-total2">0</span>
+			</button>
+			<ul class="pull-right toggle_cont">
+				<li>
+					<p class="text-center">Your shopping cart is empty!</p>
+				</li>
+			</ul>
+		</div> 
+</div>
+<span class="separator"></span>
+<div class="wishlist">
+	<a href="#" id="wishlist-total" title="Wish List (0)">
+		<i class="material-design-favorite22"></i>
+		<span>{{fields.field_wishlist.content}}</span>
+	</a>
+</div>
+ 

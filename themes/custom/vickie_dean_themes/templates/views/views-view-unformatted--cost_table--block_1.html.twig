@@ -1,0 +1,28 @@
+<div class="delivery_page">
+  <h3 class="clear">Cost</h3>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <td>Service</td>
+            <td>Locations</td>
+            <td>Delivery Schedule</td>
+            <td>Cost per Shipment</td>
+          </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+              {%
+                set row_classes = [
+                  default_row_class ? 'views-row',
+                ]
+              %}
+
+                {{ row.content }}
+
+            {% endfor %}
+        </tbody>
+      </thead>
+    </table>
+  </div> 
+</div>

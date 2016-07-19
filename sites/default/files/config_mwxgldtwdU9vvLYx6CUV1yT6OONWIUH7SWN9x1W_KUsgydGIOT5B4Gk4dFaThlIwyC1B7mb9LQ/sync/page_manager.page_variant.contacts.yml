@@ -1,0 +1,64 @@
+uuid: c3741774-277d-416e-9e85-add03987ae60
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.contact_us
+    - views.view.contact_address
+    - views.view.map
+  module:
+    - contact_block
+    - panels
+    - views
+id: contacts
+label: Contacts
+variant: panels_variant
+variant_settings:
+  blocks:
+    aab6f1fb-f0d2-43c1-8de8-7f49792754be:
+      id: 'views_block:map-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -10
+      uuid: aab6f1fb-f0d2-43c1-8de8-7f49792754be
+      context_mapping: {  }
+    0bd483e3-55a1-41da-8290-22a26cc75e79:
+      id: 'views_block:contact_address-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -9
+      uuid: 0bd483e3-55a1-41da-8290-22a26cc75e79
+      context_mapping: {  }
+    a10be80f-c7cf-4a02-804d-0acb3e32f4e4:
+      id: contact_block
+      label: 'Contact block'
+      provider: contact_block
+      label_display: '0'
+      contact_form: contact_form
+      region: middle
+      weight: -8
+      uuid: a10be80f-c7cf-4a02-804d-0acb3e32f4e4
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 41097fd4-defc-4c27-9093-17b311745826
+  label: null
+  weight: 0
+  layout: onecol
+  layout_settings: {  }
+  page_title: Contacts
+  storage_type: page_manager
+  storage_id: contacts
+  builder: standard
+page: contact_us
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

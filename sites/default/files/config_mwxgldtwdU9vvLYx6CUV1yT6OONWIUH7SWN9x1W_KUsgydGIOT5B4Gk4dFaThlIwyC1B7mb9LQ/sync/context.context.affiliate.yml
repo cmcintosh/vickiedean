@@ -1,0 +1,244 @@
+uuid: 3eebdbea-dc18-4d5d-9595-3a407bce80ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: affiliate
+label: Affiliate
+group: Layout
+description: 'Creates the Layout for the Affiliate page'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /affiliate
+    negate: 0
+    uuid: 66f32ec1-3a12-4578-94fc-ec5c3cd4029e
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      97628547-bd86-43f4-947b-f17467ce2950:
+        id: 'views_block:schedule_heading-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: top_schedule
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 97628547-bd86-43f4-947b-f17467ce2950
+      473d707b-8946-45ce-a7bf-bbeed9a7db0a:
+        id: 'system_menu_block:account'
+        label: 'User account menu'
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        region: top_navigation
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 473d707b-8946-45ce-a7bf-bbeed9a7db0a
+      5090d3eb-2322-48e1-bd9a-75a93cb509b5:
+        id: 'views_block:mid_line-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: navigation_collapsible
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 5090d3eb-2322-48e1-bd9a-75a93cb509b5
+      9aa4ff6f-9006-45d5-955f-0fd07b9d9cb5:
+        id: 'superfish:main'
+        label: 'Main navigation'
+        provider: superfish
+        label_display: visible
+        level: '1'
+        depth: '0'
+        menu_type: horizontal
+        style: white
+        arrow: 0
+        shadow: 1
+        speed: fast
+        delay: '800'
+        slide: vertical
+        supposition: 1
+        hoverintent: 1
+        touch: '0'
+        touchbh: '2'
+        touchbp: '768'
+        touchua: '0'
+        touchual: ''
+        touchuam: '0'
+        small: '2'
+        smallbp: '768'
+        smallua: '0'
+        smallual: ''
+        smalluam: '0'
+        smallact: '1'
+        smallset: ''
+        smallasa: 0
+        smallcmc: 0
+        smallecm: ''
+        smallchc: 0
+        smallech: ''
+        smallicm: ''
+        smallich: ''
+        smallamt: ''
+        smallabt: '1'
+        supersubs: 1
+        minwidth: '12'
+        maxwidth: '27'
+        multicolumn: 1
+        multicolumn_depth: '1'
+        multicolumn_levels: '1'
+        pathlevels: '1'
+        expanded: 0
+        clone_parent: 0
+        hide_linkdescription: 0
+        add_linkdescription: 0
+        link_depth_class: 1
+        custom_list_class: ''
+        custom_item_class: ''
+        custom_link_class: ''
+        region: header
+        weight: '-3'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 9aa4ff6f-9006-45d5-955f-0fd07b9d9cb5
+      45946465-051c-45c7-8523-767d06f9d307:
+        id: 'system_menu_block:footer-links-left'
+        label: 'Footer links Left'
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        region: footer_link_left
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 45946465-051c-45c7-8523-767d06f9d307
+      225c57f9-b5bc-4e77-afae-4e6e55a23588:
+        id: 'system_menu_block:footer-links'
+        label: 'Footer links Right'
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        region: footer_link_right
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 225c57f9-b5bc-4e77-afae-4e6e55a23588
+      e26bbd65-5ff5-4ed5-a5b1-c1f9a8eaa499:
+        id: 'views_block:company_details-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: footer_address
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: e26bbd65-5ff5-4ed5-a5b1-c1f9a8eaa499
+      364ae4c3-6aa5-47c5-ac85-8faa1eb0656c:
+        id: social_media_links_block
+        label: 'Social Media Links'
+        provider: social_media_links
+        label_display: visible
+        region: footer_social
+        weight: '0'
+        platforms:
+          contact:
+            value: ''
+            weight: '-10'
+          drupal:
+            value: ''
+            weight: '-9'
+          email:
+            value: ''
+            weight: '-8'
+          facebook:
+            value: 'https://www.facebook.com/'
+            weight: '-7'
+          googleplus:
+            value: 'https://plus.google.com/'
+            weight: '-6'
+          instagram:
+            value: ''
+            weight: '-5'
+          linkedin:
+            value: ''
+            weight: '-4'
+          pinterest:
+            value: 'http://www.pinterest.com/'
+            weight: '-3'
+          rss:
+            value: ''
+            weight: '-2'
+          slideshare:
+            value: ''
+            weight: '-1'
+          tumblr:
+            value: ''
+            weight: '0'
+          twitter:
+            value: 'https://www.twitter.com/'
+            weight: '1'
+          vimeo:
+            value: ''
+            weight: '2'
+          youtube:
+            value: ''
+            weight: '3'
+          youtube_channel:
+            value: ''
+            weight: '4'
+        appearance:
+          orientation: h
+          show_name: 0
+        link_attributes:
+          target: '<none>'
+          rel: '<none>'
+        iconset:
+          style: 'fontawesome:2x'
+          installed_iconsets:
+            fontawesome:
+              examples: ''
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 364ae4c3-6aa5-47c5-ac85-8faa1eb0656c
+      a240e2ba-60f6-4c75-95a0-171a9c1e4e8b:
+        id: 'system_menu_block:affiliate'
+        label: Affiliatetttt
+        provider: system
+        label_display: 0
+        level: '1'
+        depth: '0'
+        region: sidebar_first
+        weight: '-4'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: a240e2ba-60f6-4c75-95a0-171a9c1e4e8b
+    id: blocks
+    saved: false
+    uuid: 8f0fbb39-3926-4112-8c5b-9be626202beb
+weight: 0

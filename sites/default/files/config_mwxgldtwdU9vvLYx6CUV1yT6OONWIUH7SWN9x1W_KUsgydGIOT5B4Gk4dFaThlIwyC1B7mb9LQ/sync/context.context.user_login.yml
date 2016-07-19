@@ -1,0 +1,242 @@
+uuid: dc8d4d6c-9bdf-413a-b616-e16e7cbd7e5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: user_login
+label: 'Special Offers'
+group: Layout
+description: 'Creates the Layout for Special Offers Page.'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /special-offers
+    negate: 0
+    uuid: 4402a817-44cf-4d2a-a5bc-1aaa81e97fbc
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      b3517bcb-80b8-4ec1-8e1e-4669940eb63e:
+        id: 'views_block:schedule_heading-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: top_schedule
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: b3517bcb-80b8-4ec1-8e1e-4669940eb63e
+      d88b0872-63e3-44e2-bf37-f8cc70e79116:
+        id: 'system_menu_block:account'
+        label: 'User account menu'
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        region: top_navigation
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: d88b0872-63e3-44e2-bf37-f8cc70e79116
+      586a6f73-2919-49aa-b5ca-6cf188efaa07:
+        id: 'views_block:mid_line-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: navigation_collapsible
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 586a6f73-2919-49aa-b5ca-6cf188efaa07
+      a315c2e1-68c6-471d-b899-676757b70778:
+        id: 'superfish:main'
+        label: 'Main navigation'
+        provider: superfish
+        label_display: visible
+        level: '1'
+        depth: '0'
+        menu_type: horizontal
+        style: white
+        arrow: 0
+        shadow: 1
+        speed: fast
+        delay: '800'
+        slide: vertical
+        supposition: 1
+        hoverintent: 1
+        touch: '0'
+        touchbh: '2'
+        touchbp: '768'
+        touchua: '0'
+        touchual: ''
+        touchuam: '0'
+        small: '2'
+        smallbp: '768'
+        smallua: '0'
+        smallual: ''
+        smalluam: '0'
+        smallact: '1'
+        smallset: ''
+        smallasa: 0
+        smallcmc: 0
+        smallecm: ''
+        smallchc: 0
+        smallech: ''
+        smallicm: ''
+        smallich: ''
+        smallamt: ''
+        smallabt: '1'
+        supersubs: 1
+        minwidth: '12'
+        maxwidth: '27'
+        multicolumn: 1
+        multicolumn_depth: '1'
+        multicolumn_levels: '1'
+        pathlevels: '1'
+        expanded: 0
+        clone_parent: 0
+        hide_linkdescription: 0
+        add_linkdescription: 0
+        link_depth_class: 1
+        custom_list_class: ''
+        custom_item_class: ''
+        custom_link_class: ''
+        region: header
+        weight: '-3'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: a315c2e1-68c6-471d-b899-676757b70778
+      67d553e8-0fe9-4847-856b-12ba14e05cc1:
+        id: 'system_menu_block:footer-links-left'
+        label: 'Footer links Left'
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        region: footer_link_left
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 67d553e8-0fe9-4847-856b-12ba14e05cc1
+      8a7ff0ca-4ca1-45e8-aacd-57fc685d4ea6:
+        id: 'system_menu_block:footer-links'
+        label: 'Footer links Right'
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        region: footer_link_right
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 8a7ff0ca-4ca1-45e8-aacd-57fc685d4ea6
+      25bb35e0-a8d3-462c-9f1a-687339459e76:
+        id: 'views_block:company_details-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: footer_address
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 25bb35e0-a8d3-462c-9f1a-687339459e76
+      a21952bd-fbf1-473b-ba65-8e5f66894fe0:
+        id: social_media_links_block
+        label: 'Social Media Links'
+        provider: social_media_links
+        label_display: visible
+        region: footer_social
+        weight: '0'
+        platforms:
+          contact:
+            value: ''
+            weight: '-10'
+          drupal:
+            value: ''
+            weight: '-9'
+          email:
+            value: ''
+            weight: '-8'
+          facebook:
+            value: 'https://www.facebook.com/'
+            weight: '-7'
+          googleplus:
+            value: 'https://plus.google.com/'
+            weight: '-6'
+          instagram:
+            value: ''
+            weight: '-5'
+          linkedin:
+            value: ''
+            weight: '-4'
+          pinterest:
+            value: 'http://www.pinterest.com/'
+            weight: '-3'
+          rss:
+            value: ''
+            weight: '-2'
+          slideshare:
+            value: ''
+            weight: '-1'
+          tumblr:
+            value: ''
+            weight: '0'
+          twitter:
+            value: 'https://www.twitter.com/'
+            weight: '1'
+          vimeo:
+            value: ''
+            weight: '2'
+          youtube:
+            value: ''
+            weight: '3'
+          youtube_channel:
+            value: ''
+            weight: '4'
+        appearance:
+          orientation: h
+          show_name: 0
+        link_attributes:
+          target: '<none>'
+          rel: '<none>'
+        iconset:
+          style: 'fontawesome:2x'
+          installed_iconsets:
+            fontawesome:
+              examples: ''
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: a21952bd-fbf1-473b-ba65-8e5f66894fe0
+      8d8ceccf-af56-4b37-96aa-2f28708b5c64:
+        id: user_login_block
+        label: 'User login'
+        provider: user
+        label_display: visible
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        theme: vickie_dean_themes
+        unique: 0
+        uuid: 8d8ceccf-af56-4b37-96aa-2f28708b5c64
+    id: blocks
+    saved: false
+    uuid: fe03ef77-c795-4a52-91ce-f41a92774914
+weight: 0
