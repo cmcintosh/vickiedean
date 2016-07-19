@@ -10312,6 +10312,24 @@ h2.block-title {
   display: none;
 }
 
+button#edit-actions-next {
+  /* float: right; */
+  margin-top: 6%;
+}
+
+.cart {
+  position: relative;
+  padding: 0px 0px !important;
+}
+
+button#edit-checkout {
+  float: right;
+}
+
+div#edit-actions {
+  margin-bottom: 3%;
+}
+
 aside .account.info ul > li:hover {
   background: #4fc3ff !important;
 }
@@ -10345,11 +10363,31 @@ aside .blog-categories ul > li:hover {
     margin-left: 0%;
     margin-right: 0%;
   }
+
+  #page1 {
+    background: #fff;
+    overflow: hidden;
+    margin-top: 6%;
+  }
+
+  #page {
+    margin-top: -6%;
+  }
 }
 @media only screen and (min-width: 640px) {
   .simple_blog-category {
     margin-left: 0%;
     margin-right: 0%;
+  }
+
+  #page1 {
+    background: #fff;
+    overflow: hidden;
+    margin-top: 3%;
+  }
+
+  #page {
+    margin-top: -4%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -10368,6 +10406,16 @@ aside .blog-categories ul > li:hover {
   .simple_blog-category {
     margin-left: -6%;
     margin-right: -6%;
+  }
+
+  #page1 {
+    background: #fff;
+    overflow: hidden;
+    margin-top: 2%;
+  }
+
+  #page {
+    margin-top: -2%;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -10520,6 +10568,44 @@ footer address {
     position: relative;
     left: 6em;
   }
+
+  .sf-menu li:hover ul, .sf-menu li.sfHover ul {
+    width: 550% !important;
+    background: white;
+    position: absolute;
+    list-style-type: none;
+    top: 115%;
+    left: 0;
+    right: 0;
+    z-index: 109;
+    padding: 35px 50px;
+    text-align: left;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .sf-menu ul li {
+    width: 33%;
+    display: inline;
+  }
+
+  a.sf-depth-2.menuparent {
+    color: #17356a;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  ol {
+    line-height: 3rem;
+  }
+
+  a.sf-depth-3 {
+    display: list-item;
+    color: #337ab7;
+  }
 }
 @media only screen and (min-width: 1024px) {
   footer ul.menu.nav {
@@ -10554,6 +10640,44 @@ footer address {
   p.newsletter-description {
     position: relative;
     left: 0em;
+  }
+
+  .sf-menu li:hover ul, .sf-menu li.sfHover ul {
+    width: 550% !important;
+    background: white;
+    position: absolute;
+    list-style-type: none;
+    top: 115%;
+    left: 0;
+    right: 0;
+    z-index: 109;
+    padding: 35px 50px;
+    text-align: left;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .sf-menu ul li {
+    width: 33%;
+    display: inline;
+  }
+
+  a.sf-depth-2.menuparent {
+    color: #17356a;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  ol {
+    line-height: 3rem;
+  }
+
+  a.sf-depth-3 {
+    display: list-item;
+    color: #337ab7;
   }
 }
 @media only screen and (min-width: 1100px) {

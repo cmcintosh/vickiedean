@@ -131,6 +131,40 @@ footer address {
         position: relative;
         left: 6em;
     }
+     .sf-menu li:hover ul, .sf-menu li.sfHover ul {
+        width: 550% !important;
+        background: white;
+        position: absolute;
+        list-style-type: none;
+        top: 115%;
+        left: 0;
+        right: 0;
+        z-index: 109;
+        padding: 35px 50px;
+        text-align: left;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    }
+    .sf-menu ul li {
+    width: 33%;
+    display: inline;
+}
+a.sf-depth-2.menuparent {
+    color: #17356a;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ol {
+    line-height: 3rem;
+}
+
+a.sf-depth-3 {
+    display: list-item;
+    color: #337ab7;
+}
 }
 
 @media #{$tabletLandscape} {
@@ -166,6 +200,40 @@ footer address {
         position: relative;
         left: 0em;
     }
+     .sf-menu li:hover ul, .sf-menu li.sfHover ul {
+        width: 550% !important;
+        background: white;
+        position: absolute;
+        list-style-type: none;
+        top: 115%;
+        left: 0;
+        right: 0;
+        z-index: 109;
+        padding: 35px 50px;
+        text-align: left;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    }
+    .sf-menu ul li {
+    width: 33%;
+    display: inline;
+}
+a.sf-depth-2.menuparent {
+    color: #17356a;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ol {
+    line-height: 3rem;
+}
+
+a.sf-depth-3 {
+    display: list-item;
+    color: #337ab7;
+}
 }
 
 @media #{$smallDesktop} {

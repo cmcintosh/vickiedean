@@ -9,33 +9,35 @@
       <i class="material-icons-check"></i>
     </a>
   </div>
-  <div class="box-cart">
-    <div id="cart" class="cart toggle-wrap">
-      <div{{ attributes}}>
-        <div class="cart-block--summary toggle">
-          <a class="cart-block--link__expand" href="{{ url }}">
-            <button type="button" data-loading-text="Loading..." class="toggle">
-            <span class="cart-block--summary__icon">{{ icon }}</span>
-            <strong class="white">Cart</strong>
-            <span id="cart-total2" class="cart-total2">{{ count }}</span>
-            </button>
-          </a>
-        </div>
-        {% if content %}
-        <div class="cart-block--contents">
-          <div class="cart-block--contents__inner">
-            <div class="cart-block--contents__items">
-              {{ content }}
-            </div>
-            <div class="text-right">
-              <a class="cart-remove-btn material-design-visibility1" href="/cart"><span> View Cart</span></a>
-              <a class="cart-remove-btn material-design-forward18" href="/checkout"><span>Checkout</span></a>
+  <div class="page">
+    <div class="box-cart">
+      <div id="cart" class="cart toggle-wrap">
+        <div{{ attributes}}>
+          <div class="cart-block--summary toggle">
+            <a class="cart-block--link__expand" href="{{ url }}">
+              <button type="button" data-loading-text="Loading..." class="toggle">
+              <span class="cart-block--summary__icon">{{ icon }}</span>
+              <strong class="white">Cart</strong>
+              <span id="cart-total2" class="cart-total2">{{ count }}</span>
+              </button>
+            </a>
+          </div>
+          {% if content %}
+          <div class="cart-block--contents">
+            <div class="cart-block--contents__inner">
+              <div class="cart-block--contents__items">
+                {{ content }}
+              </div>
+              <div class="text-right">
+                <a class="cart-remove-btn material-design-visibility1" href="/cart"><span> View Cart</span></a>
+                <a class="cart-remove-btn material-design-forward18" href="/checkout"><span>Checkout</span></a>
+              </div>
             </div>
           </div>
+          {% endif %}
         </div>
-        {% endif %}
       </div>
-    </div>
+  </div>
 </div>
 <span class="separator"></span>
 <div class="wishlist">

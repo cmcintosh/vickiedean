@@ -1,6 +1,20 @@
 .field.field--name-title.field--type-string.field--label-hidden.field--item {
     display: none;
 }
+button#edit-actions-next {
+    /* float: right; */
+    margin-top: 6%;
+}
+.cart {
+    position: relative;
+    padding: 0px 0px !important;
+}
+button#edit-checkout {
+    float: right;
+}
+div#edit-actions {
+    margin-bottom: 3%;
+}
 aside .account.info ul > li:hover {
     background: #4fc3ff !important;
 }
@@ -18,7 +32,7 @@ aside#column-left {
 }
 aside .blog-categories ul > li {
     background: #f3f6fc !important;
-}
+} 
 aside .blog-categories ul > li:hover {
     background: #4fc3ff !important;
 }
@@ -27,14 +41,30 @@ aside .blog-categories ul > li:hover {
 	    margin-left: 0%;
 	    margin-right: 0%;
 	}
+	#page1 {
+    	background: #fff;
+	    overflow: hidden;
+	    margin-top: 6%;
+	}
+	#page {
+	    margin-top: -6%;
+	}
 }
 
 @media #{$mobileLandscape} {
 
-.simple_blog-category {
-    margin-left: 0%;
-    margin-right: 0%;
-}
+	.simple_blog-category {
+	    margin-left: 0%;
+	    margin-right: 0%;
+	}
+	#page1 {
+	    background: #fff;
+	    overflow: hidden;
+	    margin-top: 3%;
+	}
+	#page {
+	    margin-top: -4%;
+	}
 
 }
 
@@ -58,6 +88,14 @@ aside .blog-categories ul > li:hover {
 	.simple_blog-category {
 	    margin-left: -6%;
 	    margin-right: -6%;
+	}
+	#page1 {
+	    background: #fff;
+	    overflow: hidden;
+	    margin-top: 2%;
+	}
+	#page {
+	    margin-top: -2%;
 	}
 }
 
