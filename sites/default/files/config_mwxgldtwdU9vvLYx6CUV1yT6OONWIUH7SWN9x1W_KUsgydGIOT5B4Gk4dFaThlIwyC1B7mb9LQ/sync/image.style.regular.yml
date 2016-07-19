@@ -1,0 +1,15 @@
+uuid: 2cd6975d-27ff-4f7f-afef-61527894146e
+langcode: en
+status: true
+dependencies: {  }
+name: regular
+label: 'Small (200×200)'
+effects:
+  4d75dc58-012a-46c7-983f-390bf1ff62ee:
+    uuid: 4d75dc58-012a-46c7-983f-390bf1ff62ee
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      upscale: false

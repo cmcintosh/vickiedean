@@ -1,0 +1,6 @@
+name: Return forms
+type: module
+description: 'For Product Return forms.'
+package: Custom
+core: 8.x
+hidden: false 

@@ -1,0 +1,9 @@
+uuid: d745f8fb-eb02-4562-8460-48d2b9055b56
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mw9FJm_3RUEJ1fA2tvJdLD-pb4xrqz4aczQF4rt80G8
+label: Default
+id: default
+workflow: order_default

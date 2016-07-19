@@ -1,0 +1,19 @@
+uuid: 71047f56-507a-4432-97a4-7018088c343f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.product_display
+id: node.product_display.field_description
+field_name: field_description
+entity_type: node
+bundle: product_display
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

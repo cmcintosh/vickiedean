@@ -1,0 +1,19 @@
+uuid: 04df8684-55e6-4e5c-a616-65f5b0963831
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.our_team
+id: node.our_team.field_name
+field_name: field_name
+entity_type: node
+bundle: our_team
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

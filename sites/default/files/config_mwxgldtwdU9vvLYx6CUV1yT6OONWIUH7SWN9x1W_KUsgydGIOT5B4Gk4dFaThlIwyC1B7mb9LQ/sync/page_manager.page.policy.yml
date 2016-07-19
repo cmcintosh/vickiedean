@@ -1,0 +1,11 @@
+uuid: e0b3e524-bc13-42f5-9709-4afb5f4e2573
+langcode: en
+status: true
+dependencies: {  }
+id: policy
+label: Policy
+use_admin_theme: false
+path: /policy
+access_logic: and
+access_conditions: {  }
+parameters: {  }

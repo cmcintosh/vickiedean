@@ -1,0 +1,66 @@
+uuid: b7e98cfd-7c7e-4867-adff-6f151def7e9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.blog_consulting
+    - system.menu.blog-category
+    - views.view.blog
+    - views.view.popular_blog
+  module:
+    - panels
+    - system
+    - views
+id: blog_consulting
+label: 'Blog Consulting'
+variant: panels_variant
+variant_settings:
+  blocks:
+    00a40ea5-de74-4ddf-951f-7d7a08d2bfb6:
+      id: 'views_block:popular_blog-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: left
+      weight: 0
+      uuid: 00a40ea5-de74-4ddf-951f-7d7a08d2bfb6
+      context_mapping: {  }
+    b5c5e396-57c5-42fc-84f2-b7776ad372bc:
+      id: 'views_block:blog-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: 0
+      uuid: b5c5e396-57c5-42fc-84f2-b7776ad372bc
+      context_mapping: {  }
+    d097606c-51c1-42a8-b817-879929a63f54:
+      id: 'system_menu_block:blog-category'
+      label: 'Blog Category'
+      provider: system
+      label_display: visible
+      level: 1
+      depth: 0
+      region: left
+      weight: 0
+      uuid: d097606c-51c1-42a8-b817-879929a63f54
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 717de15a-5e64-4a12-b5b5-096a0b815ffa
+  label: null
+  weight: 0
+  layout: twocol
+  layout_settings: {  }
+  page_title: 'Blog Consulting'
+  storage_type: page_manager
+  storage_id: blog_consulting
+  builder: standard
+page: blog_consulting
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

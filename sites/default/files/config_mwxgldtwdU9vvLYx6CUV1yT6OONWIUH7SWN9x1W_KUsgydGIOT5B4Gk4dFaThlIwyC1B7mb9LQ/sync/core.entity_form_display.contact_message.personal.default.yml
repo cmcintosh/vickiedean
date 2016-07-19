@@ -1,0 +1,42 @@
+uuid: b650cad6-1ca1-4c3f-8309-cb4e7bf8913b
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.field.contact_message.personal.field_e_mail_address
+    - field.field.contact_message.personal.field_enquiry1
+    - field.field.contact_message.personal.field_your_name
+id: contact_message.personal.default
+targetEntityType: contact_message
+bundle: personal
+mode: default
+content:
+  field_e_mail_address:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_enquiry1:
+    weight: 54
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_your_name:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  copy: true
+  mail: true
+  message: true
+  name: true
+  recipient: true
+  subject: true

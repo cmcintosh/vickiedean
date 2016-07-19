@@ -1,0 +1,39 @@
+uuid: 38aac50c-deb5-4eb3-b96d-77d82b8eef94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.general_information.field_description
+    - field.field.node.general_information.field_heading
+    - field.field.node.general_information.field_icon
+    - node.type.general_information
+  module:
+    - user
+id: node.general_information.default
+targetEntityType: node
+bundle: general_information
+mode: default
+content:
+  field_description:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_heading:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_icon:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

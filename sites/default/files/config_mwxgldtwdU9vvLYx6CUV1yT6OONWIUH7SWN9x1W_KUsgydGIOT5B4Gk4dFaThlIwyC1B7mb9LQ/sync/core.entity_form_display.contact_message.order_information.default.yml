@@ -1,0 +1,74 @@
+uuid: 3065f6be-563a-4810-9f8d-a21fd4ec23d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.order_information
+    - field.field.contact_message.order_information.field_email
+    - field.field.contact_message.order_information.field_first_name
+    - field.field.contact_message.order_information.field_last_name
+    - field.field.contact_message.order_information.field_order_date
+    - field.field.contact_message.order_information.field_order_id
+    - field.field.contact_message.order_information.field_other
+    - field.field.contact_message.order_information.field_telephone
+  module:
+    - datetime
+id: contact_message.order_information.default
+targetEntityType: contact_message
+bundle: order_information
+mode: default
+content:
+  field_email:
+    weight: 53
+    settings:
+      size: 60
+      placeholder: E-mail
+    third_party_settings: {  }
+    type: string_textfield
+  field_first_name:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: 'First Name'
+    third_party_settings: {  }
+    type: string_textfield
+  field_last_name:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: 'Last Name'
+    third_party_settings: {  }
+    type: string_textfield
+  field_order_date:
+    weight: 56
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_order_id:
+    weight: 55
+    settings:
+      size: 60
+      placeholder: 'Order ID'
+    third_party_settings: {  }
+    type: string_textfield
+  field_other:
+    weight: 57
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_telephone:
+    weight: 54
+    settings:
+      size: 60
+      placeholder: Telephone
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  copy: true
+  mail: true
+  message: true
+  name: true
+  subject: true

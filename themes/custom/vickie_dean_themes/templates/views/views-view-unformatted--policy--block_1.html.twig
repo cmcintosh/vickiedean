@@ -1,0 +1,24 @@
+<ul class="breadcrumb">
+	<li><a href="http://vickiedean.dev/"><i class="fa fa-home"></i></a></li>
+	<li><a href="http://vickiedean.dev/">Privacy Policy</a></li>
+</ul>
+<div class="row"> 
+	<div id="content" class="col-sm-12"> 
+		<h1 class="text-center">Privacy Policy</h1>
+		<div class="privacy_page">
+			<ol>
+			    {% for row in rows %}
+			      {%
+			        set row_classes = [
+			          default_row_class ? 'views-row',
+			        ]
+			      %}
+
+			        {{ row.content }}
+
+			    {% endfor %}
+			</ol>
+		</div>
+	</div>
+</div>
+ 

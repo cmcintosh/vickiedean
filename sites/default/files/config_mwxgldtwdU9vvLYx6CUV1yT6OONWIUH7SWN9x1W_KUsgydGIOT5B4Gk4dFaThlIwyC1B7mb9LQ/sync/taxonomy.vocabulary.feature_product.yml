@@ -1,0 +1,9 @@
+uuid: fccaf996-c791-49a9-81f4-1f76364301f9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Feature Product'
+vid: feature_product
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,19 @@
+uuid: fb08c7e2-765b-4cd9-9510-93189a78dfda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_title_right
+    - node.type.terms_condition
+id: node.terms_condition.field_term_title_right
+field_name: field_term_title_right
+entity_type: node
+bundle: terms_condition
+label: 'Term Title Right'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

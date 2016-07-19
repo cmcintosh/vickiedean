@@ -1,0 +1,20 @@
+{% if fields.field_heading.content != 'Contact Us' %}
+	<div class="col-xs-12 col-md-4 cols">
+		<h4>
+			<i class="{{fields.field_icon.content}}"></i>
+			{{fields.field_heading.content}}
+		</h4>
+		<p>{{fields.field_description.content}}</p>
+	</div>
+{% endif %}
+
+{% if fields.field_heading.content == 'Contact Us' %}
+	<div class="col-xs-12 col-md-4 cols">
+		<h4>
+			<i class="{{fields.field_icon.content}}"></i>
+			{{fields.field_heading.content}}
+		</h4>
+		<p>{{fields.field_description.content}}</p>
+		<a href="#" class="btn">get in touch</a>
+	</div>
+{% endif %} 

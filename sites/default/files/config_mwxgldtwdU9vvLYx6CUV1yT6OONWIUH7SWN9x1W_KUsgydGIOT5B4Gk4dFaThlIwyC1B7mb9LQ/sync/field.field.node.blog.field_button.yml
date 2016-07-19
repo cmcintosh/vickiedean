@@ -1,0 +1,19 @@
+uuid: 5072dba1-2d6b-48e0-abcd-c38c9dca8def
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_button
+    - node.type.blog
+id: node.blog.field_button
+field_name: field_button
+entity_type: node
+bundle: blog
+label: Button
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

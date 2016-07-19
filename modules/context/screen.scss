@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600,800");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+@import "compass/utilities/sprites";
+@import "compass/css3/columns";
+/* @import "sprites/*.png"; */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "compass/reset";
+@import "font-awesome";
+
+@import "variables/**/*";
+@import "effects/**/*";
+@import "components/**/*";
+@import "edit-pages/**/*";
+@import "pages/**/*";
+
+body {
+  margin-top: 45px; /* Prevents our content from starting below the top menu */
+  padding-bottom: 65px;
+  font-family: "Arial Regular";
+  background: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 200px) and (max-width : 1600px){
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

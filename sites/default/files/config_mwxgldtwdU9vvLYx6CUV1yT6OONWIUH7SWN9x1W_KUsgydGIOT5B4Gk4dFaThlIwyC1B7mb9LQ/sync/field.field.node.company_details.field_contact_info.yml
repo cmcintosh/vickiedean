@@ -1,0 +1,19 @@
+uuid: 0b254126-a7e2-49be-9625-f3e6aa58d836
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_info
+    - node.type.company_details
+id: node.company_details.field_contact_info
+field_name: field_contact_info
+entity_type: node
+bundle: company_details
+label: 'Contact Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,17 @@
+uuid: 6d4ebc85-f1ae-460b-876a-31e0a8c7c612
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Top Head'
+type: top_head
+description: 'This is intended for the top heading, where the logo, wishlist and the cart is being displayed.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

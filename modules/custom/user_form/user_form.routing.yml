@@ -1,0 +1,7 @@
+user_form.form:
+ path: '/user_form/myform'
+ defaults:
+   _title: 'Registration form'
+   _form: '\Drupal\user_form\Form\UserForm'
+ requirements:
+   _permission: 'access content' 

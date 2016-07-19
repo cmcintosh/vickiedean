@@ -1,0 +1,26 @@
+<div class="row"> 
+	<div id="content" class="col-sm-12 contact_page">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-4">
+						<a href="./">
+							<img src="themes/custom/vickie_dean_themes/image/catalog/logo1.png" alt="Contact Lens Store" title="Contact Lens Store" class="img-thumbnail"/>
+						</a>
+					</div>
+				    {% for row in rows %}
+				      {%
+				        set row_classes = [
+				          default_row_class ? 'views-row',
+				        ]
+				      %}
+
+				        {{ row.content }}
+
+				    {% endfor %}
+				</div> 
+			</div>
+		</div>
+	</div>
+</div>
+ 

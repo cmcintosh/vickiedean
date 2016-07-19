@@ -1,0 +1,11 @@
+
+ 					<ul class="nav nav-tabs" role="tablist" id="module-tabs-0">
+						{% for row in rows %}
+							{%
+								set row_classes = [
+									default_row_class ? 'views-row',
+								]
+							%}
+						{{ row.content }}
+						{% endfor %}
+					</ul>

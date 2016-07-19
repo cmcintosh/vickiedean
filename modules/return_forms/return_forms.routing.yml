@@ -1,0 +1,15 @@
+return_forms_contribute:
+  path: '/product_return'
+  defaults:
+    _form: '\Drupal\return_forms\Form\ReturnForm'
+    _title: 'Product Return Page'
+  requirements:
+    _permission: 'access content' 
+
+purchase_certificate_forms_contribute:
+  path: '/gift-certificate'
+  defaults:
+    _form: '\Drupal\return_forms\Form\PurchaseCertificateForm'
+    _title: 'Gift Voucher'
+  requirements:
+    _permission: 'access content' 

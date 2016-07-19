@@ -1,0 +1,22 @@
+uuid: 1e5fd402-e616-4ef7-b521-69cb1d1b13c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vickie_dean_themes
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: vickie_dean_themes_messages
+theme: vickie_dean_themes
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

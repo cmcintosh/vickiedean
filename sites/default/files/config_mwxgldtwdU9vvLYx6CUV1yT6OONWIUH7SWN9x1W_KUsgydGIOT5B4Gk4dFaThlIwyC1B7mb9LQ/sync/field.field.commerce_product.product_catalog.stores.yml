@@ -1,0 +1,21 @@
+uuid: 93db4769-cf80-4f33-b91a-b40f448afbe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.product_catalog
+    - field.storage.commerce_product.stores
+id: commerce_product.product_catalog.stores
+field_name: stores
+entity_type: commerce_product
+bundle: product_catalog
+label: Stores
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_store'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: 4a153ff6-654e-4e8d-9677-5363e77f7f92
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.free_shipping
+  module:
+    - user
+id: node.free_shipping.teaser
+targetEntityType: node
+bundle: free_shipping
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

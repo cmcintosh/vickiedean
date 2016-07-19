@@ -1,0 +1,66 @@
+uuid: 49b44dbe-34e1-4a6e-9825-cbe516b4e3da
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.blog_branding
+    - system.menu.blog-category
+    - views.view.blog
+    - views.view.popular_blog
+  module:
+    - panels
+    - system
+    - views
+id: branding
+label: Branding
+variant: panels_variant
+variant_settings:
+  blocks:
+    2cb77db7-be77-4e5c-8916-1ae27fbe74d6:
+      id: 'system_menu_block:blog-category'
+      label: 'Blog Category'
+      provider: system
+      label_display: '0'
+      level: 1
+      depth: 0
+      region: left
+      weight: 0
+      uuid: 2cb77db7-be77-4e5c-8916-1ae27fbe74d6
+      context_mapping: {  }
+    c6aa75c3-f50b-44ff-b9e7-e9ff75674ec2:
+      id: 'views_block:blog-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: 0
+      uuid: c6aa75c3-f50b-44ff-b9e7-e9ff75674ec2
+      context_mapping: {  }
+    ef6ae2f4-1653-4539-af67-008d3563a828:
+      id: 'views_block:popular_blog-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: left
+      weight: 0
+      uuid: ef6ae2f4-1653-4539-af67-008d3563a828
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 9af0350b-b303-4c16-8eb4-428e25ea307c
+  label: null
+  weight: 0
+  layout: twocol
+  layout_settings: {  }
+  page_title: 'Blog Branding'
+  storage_type: page_manager
+  storage_id: branding
+  builder: standard
+page: blog_branding
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

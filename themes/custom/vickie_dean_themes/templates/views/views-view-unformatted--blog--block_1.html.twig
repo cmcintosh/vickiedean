@@ -1,0 +1,11 @@
+<div id="content" class="col-sm-9">
+	<h1>Blog</h1>	
+	{% for row in rows %}
+		{%
+			set row_classes = [
+				default_row_class ? 'views-row',
+			]
+		%}
+	{{ row.content }}
+	{% endfor %}
+</div>

@@ -1,0 +1,45 @@
+uuid: 6c048e8f-3bbc-4541-bfe4-7a20acbd950d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_brand
+field_name: field_brand
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Vertex
+      label: Vertex
+    -
+      value: Proclear
+      label: Proclear
+    -
+      value: Acuvue
+      label: Acuvue
+    -
+      value: 'Fresh Look'
+      label: 'Fresh Look'
+    -
+      value: PureVision
+      label: PureVision
+    -
+      value: Frequency
+      label: Frequency
+    -
+      value: SofLens
+      label: SofLens
+    -
+      value: Biofinity
+      label: Biofinity
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

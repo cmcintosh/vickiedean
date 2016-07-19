@@ -1,0 +1,19 @@
+uuid: ad7e1933-d32b-400d-b1f2-02b65d246e66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_info
+    - node.type.schedule_heading
+id: node.schedule_heading.field_contact_info
+field_name: field_contact_info
+entity_type: node
+bundle: schedule_heading
+label: 'Contact Number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

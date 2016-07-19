@@ -1,0 +1,19 @@
+uuid: 0483e945-e0e2-48d9-b734-0b15ea419da0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon
+    - node.type.general_information
+id: node.general_information.field_icon
+field_name: field_icon
+entity_type: node
+bundle: general_information
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

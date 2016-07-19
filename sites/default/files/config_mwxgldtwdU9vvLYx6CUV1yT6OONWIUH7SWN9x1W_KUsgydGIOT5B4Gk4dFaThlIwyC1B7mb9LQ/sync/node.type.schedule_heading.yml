@@ -1,0 +1,17 @@
+uuid: 8a4476b6-2844-4d23-bce9-08e7b20f76c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Schedule Heading'
+type: schedule_heading
+description: 'This is for the the schedule detail display at the top of the page.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

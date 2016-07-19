@@ -1,0 +1,11 @@
+uuid: a2364429-4677-48f1-8337-181554fe1f87
+langcode: en
+status: true
+dependencies: {  }
+id: blog_consulting
+label: 'Blog Consulting'
+use_admin_theme: false
+path: /blog-consulting
+access_logic: and
+access_conditions: {  }
+parameters: {  }

@@ -1,0 +1,8 @@
+uuid: 97ad1862-8457-4d6c-8c76-47ea2af973ce
+langcode: en
+status: true
+dependencies: {  }
+id: top-bar
+label: 'Top Bar'
+description: 'Menu for top Bar Including add to cart and wishlist'
+locked: false

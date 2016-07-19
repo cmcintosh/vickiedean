@@ -1,0 +1,22 @@
+uuid: c1c37776-8737-4775-b1a9-6482b6d37784
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - vickie_theme
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: vickie_theme_search
+theme: vickie_theme
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

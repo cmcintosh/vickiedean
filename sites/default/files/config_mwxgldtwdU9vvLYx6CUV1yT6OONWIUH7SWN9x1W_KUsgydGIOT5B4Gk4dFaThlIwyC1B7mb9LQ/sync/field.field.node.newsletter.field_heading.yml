@@ -1,0 +1,19 @@
+uuid: d20e4f4c-bed0-4b35-b45c-5d91f3503358
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_heading
+    - node.type.newsletter
+id: node.newsletter.field_heading
+field_name: field_heading
+entity_type: node
+bundle: newsletter
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

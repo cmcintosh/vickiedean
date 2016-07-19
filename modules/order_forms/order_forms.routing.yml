@@ -1,0 +1,16 @@
+login_forms_contribute:
+  path: '/login'
+  defaults:
+    _form: '\Drupal\order_forms\Form\ContributeForm'
+    _title: 'Registration Page'
+  requirements:
+    _permission: 'access content' 
+
+
+affiliate_login_forms_contribute:
+  path: '/affiliate2'
+  defaults:
+    _form: '\Drupal\order_forms\Form\AffiliateForm'
+    _title: 'Affiliate Page'
+  requirements:
+    _permission: 'access content' 

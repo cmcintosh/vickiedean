@@ -1,0 +1,32 @@
+uuid: 1420efbc-20f4-44af-a108-9bff14350333
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about_content.field_content
+    - field.field.node.about_content.field_label
+    - node.type.about_content
+  module:
+    - user
+id: node.about_content.default
+targetEntityType: node
+bundle: about_content
+mode: default
+content:
+  field_content:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_label:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

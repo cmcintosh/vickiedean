@@ -1,0 +1,17 @@
+uuid: 1966f4ee-de79-4dbf-9539-1ac676644255
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.schedule_heading
+  module:
+    - user
+id: node.schedule_heading.teaser
+targetEntityType: node
+bundle: schedule_heading
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

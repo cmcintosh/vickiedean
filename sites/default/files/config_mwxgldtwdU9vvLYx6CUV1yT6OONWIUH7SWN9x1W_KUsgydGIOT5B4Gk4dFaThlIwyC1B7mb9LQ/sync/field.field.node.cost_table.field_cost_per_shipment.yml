@@ -1,0 +1,23 @@
+uuid: 5bc09d63-593c-450d-a1c7-8e789b4775f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cost_per_shipment
+    - node.type.cost_table
+id: node.cost_table.field_cost_per_shipment
+field_name: field_cost_per_shipment
+entity_type: node
+bundle: cost_table
+label: 'COST PER SHIPMENT'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

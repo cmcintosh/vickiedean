@@ -1,0 +1,41 @@
+uuid: b4707d7b-dcdb-4536-8d06-c7043cb643c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.policy
+    - views.view.policy
+  module:
+    - panels
+    - views
+id: policy
+label: Policy
+variant: panels_variant
+variant_settings:
+  blocks:
+    45e223de-0b4c-42df-b887-c64454fa9393:
+      id: 'views_block:policy-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -10
+      uuid: 45e223de-0b4c-42df-b887-c64454fa9393
+      context_mapping: {  }
+  id: panels_variant
+  uuid: af85640b-9af5-4439-a228-dde27af1f6e6
+  label: null
+  weight: 0
+  layout: onecol
+  layout_settings: {  }
+  page_title: 'Privacy Policy'
+  storage_type: page_manager
+  storage_id: policy
+  builder: standard
+page: policy
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

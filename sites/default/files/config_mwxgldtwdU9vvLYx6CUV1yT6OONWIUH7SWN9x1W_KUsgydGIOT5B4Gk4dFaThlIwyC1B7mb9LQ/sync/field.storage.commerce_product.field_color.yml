@@ -1,0 +1,30 @@
+uuid: 91cde53d-de55-4a5e-8579-b6e9f1dbaa20
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product.field_color
+field_name: field_color
+entity_type: commerce_product
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Black
+      label: Black
+    -
+      value: Red
+      label: Red
+    -
+      value: White
+      label: White
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

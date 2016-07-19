@@ -1,0 +1,75 @@
+.form-horizontal .form-group {
+    margin-right: -53px !important;
+    margin-left: -15px;
+}
+.form-textarea-wrapper {
+    margin-right: -50px;
+}
+.input-group-btn>button.btn.btn-default {
+    position: relative;
+    top: -7px;
+}
+.ui-to-top.material-icons-keyboard_arrow_up.active:hover {
+    background: #3d8afc !important;
+}
+.ui-to-top.material-icons-keyboard_arrow_up.active {
+    background: #17356a !important;
+}
+.col-xs-6.col-sm-6.col-md-3 {
+    z-index: 1;
+}
+h3 {
+    margin-top: 2em !important;
+}
+ul.breadcrumb {
+    margin-top: 3em; 
+}
+
+@media #{$mobilePortrait} {
+	.information-information {
+	    margin-left: 0%;
+	    margin-right: 0%;
+	}
+	.form-group>.col-sm-10 {
+    	margin-left: 4%;
+	}
+}
+
+@media #{$mobileLandscape} {
+
+.information-information {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+}
+
+@media #{$tabletPortrait} {
+	.information-information {
+	    margin-left: -2%;
+	    margin-right: -2%;
+	}
+}
+
+@media #{$tabletLandscape} {
+
+.information-information {
+    margin-left: -2.8%;
+    margin-right: -2.8%;
+}
+
+}
+
+@media #{$smallDesktop} {
+	.information-information {
+	    margin-left: -6%;
+	    margin-right: -6%;
+	}
+}
+
+@media #{$desktopDisplay} {
+	.information-information {
+	    margin-left: -9.3%;
+	    margin-right: -9.3%;
+	}
+}

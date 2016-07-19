@@ -1,0 +1,26 @@
+uuid: f5ce7167-d9e1-43fc-89fa-a0d1c9eea242
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.partenrs.field_company_logo
+    - node.type.partenrs
+  module:
+    - image
+    - user
+id: node.partenrs.default
+targetEntityType: node
+bundle: partenrs
+mode: default
+content:
+  field_company_logo:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+hidden: {  }

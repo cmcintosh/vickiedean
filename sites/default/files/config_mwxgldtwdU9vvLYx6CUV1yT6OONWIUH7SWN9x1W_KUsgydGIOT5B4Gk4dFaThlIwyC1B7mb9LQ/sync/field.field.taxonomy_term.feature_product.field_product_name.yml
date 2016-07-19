@@ -1,0 +1,19 @@
+uuid: 1d6a7d1f-65e7-4f6f-ae67-08bce38f8dfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_product_name
+    - taxonomy.vocabulary.feature_product
+id: taxonomy_term.feature_product.field_product_name
+field_name: field_product_name
+entity_type: taxonomy_term
+bundle: feature_product
+label: 'Product Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

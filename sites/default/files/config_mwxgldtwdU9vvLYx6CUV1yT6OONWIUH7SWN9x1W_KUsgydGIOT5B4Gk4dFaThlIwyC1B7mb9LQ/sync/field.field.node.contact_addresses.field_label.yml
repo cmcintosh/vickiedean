@@ -1,0 +1,19 @@
+uuid: c1e72611-e3a8-4f6d-9d0e-3b5a1f8702c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_label
+    - node.type.contact_addresses
+id: node.contact_addresses.field_label
+field_name: field_label
+entity_type: node
+bundle: contact_addresses
+label: Label
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

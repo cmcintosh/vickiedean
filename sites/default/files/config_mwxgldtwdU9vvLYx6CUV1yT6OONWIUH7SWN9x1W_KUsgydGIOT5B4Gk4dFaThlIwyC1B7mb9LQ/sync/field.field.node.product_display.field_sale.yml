@@ -1,0 +1,21 @@
+uuid: d9491cf0-c7fb-4f3f-802f-1255c793640c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sale
+    - node.type.product_display
+id: node.product_display.field_sale
+field_name: field_sale
+entity_type: node
+bundle: product_display
+label: 'Check if the Product is on sale.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

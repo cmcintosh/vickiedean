@@ -1,0 +1,19 @@
+uuid: 12c37fdd-6711-474b-8e99-64c0aab07786
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_heading
+    - node.type.delivery_information
+id: node.delivery_information.field_sub_heading
+field_name: field_sub_heading
+entity_type: node
+bundle: delivery_information
+label: 'Sub Heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

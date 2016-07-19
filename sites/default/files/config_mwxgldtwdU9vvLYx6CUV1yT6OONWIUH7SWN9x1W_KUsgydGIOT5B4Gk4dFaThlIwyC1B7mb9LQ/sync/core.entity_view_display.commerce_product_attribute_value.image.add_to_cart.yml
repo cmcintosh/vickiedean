@@ -1,0 +1,31 @@
+uuid: ce996302-8741-49c4-a4cb-ba7a8590946a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.image
+    - core.entity_view_mode.commerce_product_attribute_value.add_to_cart
+    - field.field.commerce_product_attribute_value.image.field_image
+  module:
+    - image
+id: commerce_product_attribute_value.image.add_to_cart
+targetEntityType: commerce_product_attribute_value
+bundle: image
+mode: add_to_cart
+content:
+  field_image:
+    weight: -4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  name:
+    label: hidden
+    type: string
+    weight: -5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

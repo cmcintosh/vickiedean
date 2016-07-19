@@ -1,0 +1,21 @@
+uuid: f6228648-9aca-43b4-909f-2af2ebf4ca86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sizes
+    - node.type.sizes
+  module:
+    - options
+id: node.sizes.field_sizes
+field_name: field_sizes
+entity_type: node
+bundle: sizes
+label: Sizes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

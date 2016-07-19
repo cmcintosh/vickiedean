@@ -1,0 +1,315 @@
+.rd-mobilemenu_ul a:hover {
+    background: #3d8afc !important;
+    color: #FFF;
+}
+.box {
+    margin-top: -3em;
+}
+.col-sm-6 {
+    margin-bottom: 2em !important;
+}
+.region.region-footer-link-right {
+    position: relative;
+    top: -3em;
+}
+.region.region-footer-link-left {
+    position: relative;
+    top: -3em;
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+footer address {
+    position: relative; 
+}
+@media #{$mobilePortrait} {
+
+    footer ul.menu.nav {
+        margin-top: -3em;
+    }
+
+    address {
+        margin-bottom: 20px;
+        font-style: normal;
+        line-height: 1.42857143;
+        margin-left: 0em;
+        z-index: 1
+    }
+
+    ul.platforms.inline.horizontal {
+        width: 100%;
+        margin-left: -1em;
+        position: relative;
+        left: 6em;
+    }
+
+    .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 0px 15px !important;
+    }
+
+    a {
+        background-color: transparent !important;
+    }
+    p.newsletter-description {
+        position: relative;
+        left: 6em;
+    }
+}
+
+@media #{$mobileLandscape} {
+
+    footer ul.menu.nav {
+        margin-top: -3em;
+    }
+
+    address {
+        margin-bottom: 20px;
+        font-style: normal;
+        line-height: 1.42857143;
+        margin-left: 0em;
+        z-index: 1
+    }
+
+    ul.platforms.inline.horizontal {
+        width: 100%;
+        margin-left: -1em;
+        position: relative;
+        left: 5em;
+    }
+    .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 0px 15px !important;
+    }
+
+    a {
+        background-color: transparent !important;
+    }
+
+    p.newsletter-description {
+        position: relative;
+        left: 6em;
+    }
+}
+
+@media #{$tabletPortrait} {
+
+    footer ul.menu.nav {
+        margin-top: -2em;
+    }
+
+    address {
+        margin-bottom: 20px;
+        font-style: normal;
+        line-height: 1.42857143;
+        margin-left: 0em;
+        z-index: 1
+    }
+
+    ul.platforms.inline.horizontal {
+        width: 100%;
+        margin-left: -1em;
+        position: relative;
+        left: 5em;
+
+    }
+    .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 0px 15px !important;
+    }
+
+    a {
+        background-color: transparent !important;
+    }
+    p.newsletter-description {
+        position: relative;
+        left: 6em;
+    }
+}
+
+@media #{$tabletLandscape} {
+
+    footer ul.menu.nav {
+        margin-top: -3em;
+    }
+
+    address {
+        margin-bottom: 20px;
+        font-style: normal;
+        line-height: 1.42857143;
+        margin-left: -3em;
+        z-index: 1
+    }
+
+    ul.platforms.inline.horizontal {
+        width: 125%;
+        margin-left: -1em;
+        position: relative;
+        left: -1em;
+    }
+    .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 0px 15px !important;
+    }
+
+    a {
+        background-color: transparent !important;
+    }
+    p.newsletter-description {
+        position: relative;
+        left: 0em;
+    }
+}
+
+@media #{$smallDesktop} {
+
+    footer ul.menu.nav {
+        margin-top: -1em;
+    }
+
+    address {
+        margin-bottom: 20px;
+        font-style: normal;
+        line-height: 1.42857143;
+        margin-left: -3em;
+        z-index: 1;
+    }
+
+    ul.platforms.inline.horizontal {
+        width: 100%;
+        margin-left: -1em;
+        position: relative;
+        left: -1em;
+    }
+    .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 0px 15px !important;
+    }
+
+    a {
+        background-color: transparent !important;
+    }
+    p.newsletter-description {
+        position: relative;
+        left: 0em;
+    }
+
+    header address {
+        margin-left: 5% !important;
+    }
+    .sf-menu li:hover ul, .sf-menu li.sfHover ul {
+        width: 550% !important;
+        background: white;
+        position: absolute;
+        list-style-type: none;
+        top: 115%;
+        left: 0;
+        right: 0;
+        z-index: 109;
+        padding: 35px 50px;
+        text-align: left;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    }
+    .sf-menu ul li {
+    width: 33%;
+    display: inline;
+}
+a.sf-depth-2.menuparent {
+    color: #17356a;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ol {
+    line-height: 3rem;
+}
+
+a.sf-depth-3 {
+    display: list-item;
+    color: #337ab7;
+}
+}
+
+@media #{$desktopDisplay} {
+
+    footer ul.menu.nav {
+        margin-top: -1em;
+    }
+
+    address {
+        margin-bottom: 20px;
+        font-style: normal;
+        line-height: 1.42857143;
+        margin-left: -3em;
+        z-index: 1;
+    }
+
+    ul.platforms.inline.horizontal {
+        width: 100%;
+        margin-left: -1em;
+        position: relative;
+        left: -1em;
+    }
+    .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 0px 15px !important;
+    }
+
+    a {
+        background-color: transparent !important;
+    }
+    p.newsletter-description {
+        position: relative;
+        left: 0em;
+    }
+
+    header address {
+        margin-left: 5% !important;
+    }
+    .sf-menu li:hover ul, .sf-menu li.sfHover ul {
+        width: 550% !important;
+        background: white;
+        position: absolute;
+        list-style-type: none;
+        top: 115%;
+        left: 0;
+        right: 0;
+        z-index: 109;
+        padding: 35px 50px;
+        text-align: left;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    }
+    .sf-menu ul li {
+    width: 33%;
+    display: inline;
+}
+a.sf-depth-2.menuparent {
+    color: #17356a;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ol {
+    line-height: 3rem;
+}
+
+a.sf-depth-3 {
+    display: list-item;
+    color: #337ab7;
+}
+}

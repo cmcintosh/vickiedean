@@ -1,0 +1,17 @@
+uuid: f6cabd89-d6f2-422c-aed3-525ffac38cf7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Partenrs
+type: partenrs
+description: 'This is for the company partners logo.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

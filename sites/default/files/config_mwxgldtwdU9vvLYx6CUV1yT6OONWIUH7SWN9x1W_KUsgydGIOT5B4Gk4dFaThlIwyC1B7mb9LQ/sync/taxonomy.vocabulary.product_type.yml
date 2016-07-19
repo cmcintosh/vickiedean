@@ -1,0 +1,9 @@
+uuid: 6b6c6031-097b-481a-a987-cd805613591b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product Type'
+vid: product_type
+description: 'For the Product Type'
+hierarchy: 0
+weight: 0

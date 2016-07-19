@@ -1,0 +1,25 @@
+uuid: 2cc61506-eef3-4199-9083-974686b06fb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vickie_dean_themes
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: vickie_dean_themes_branding
+theme: vickie_dean_themes
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

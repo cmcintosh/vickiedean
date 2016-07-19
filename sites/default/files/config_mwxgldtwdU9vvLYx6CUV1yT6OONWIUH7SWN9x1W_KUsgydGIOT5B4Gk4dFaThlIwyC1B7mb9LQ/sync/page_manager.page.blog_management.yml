@@ -1,0 +1,11 @@
+uuid: 809b0031-b29b-40f2-b8b4-909e0271f1db
+langcode: en
+status: true
+dependencies: {  }
+id: blog_management
+label: 'Blog Management'
+use_admin_theme: null
+path: /blog-management
+access_logic: and
+access_conditions: {  }
+parameters: {  }

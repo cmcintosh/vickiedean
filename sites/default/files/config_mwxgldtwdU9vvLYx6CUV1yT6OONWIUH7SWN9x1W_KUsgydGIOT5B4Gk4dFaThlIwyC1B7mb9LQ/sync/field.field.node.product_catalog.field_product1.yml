@@ -1,0 +1,21 @@
+uuid: 3a38519f-ed7a-4ebb-949e-20cd860b4187
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product1
+    - node.type.product_catalog
+id: node.product_catalog.field_product1
+field_name: field_product1
+entity_type: node
+bundle: product_catalog
+label: product
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings: {  }
+field_type: entity_reference

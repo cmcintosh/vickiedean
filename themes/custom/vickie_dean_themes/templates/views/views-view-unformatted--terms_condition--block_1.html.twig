@@ -1,0 +1,22 @@
+<ul class="breadcrumb">
+	<li><a href="http://vickiedean.dev/"><i class="fa fa-home"></i></a></li>
+	<li><a href="http://vickiedean.dev/">Terms &amp; Conditions</a></li>
+</ul>
+<div class="row"> 
+	<div id="content" class="col-sm-12"> 
+		<h1 class="text-center">Terms &amp; Conditions</h1>
+		<div class="row terms_conditions_page">
+				    {% for row in rows %}
+				      {%
+				        set row_classes = [
+				          default_row_class ? 'views-row',
+				        ]
+				      %}
+
+				        {{ row.content }}
+
+				    {% endfor %}
+		</div>
+	</div>
+</div>
+ 

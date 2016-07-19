@@ -1,0 +1,21 @@
+uuid: 8e9a0869-65ab-4bab-b01c-f7678204c090
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_price
+    - node.type.product_display
+  module:
+    - commerce_price
+id: node.product_display.field_product_price
+field_name: field_product_price
+entity_type: node
+bundle: product_display
+label: Price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: commerce_price

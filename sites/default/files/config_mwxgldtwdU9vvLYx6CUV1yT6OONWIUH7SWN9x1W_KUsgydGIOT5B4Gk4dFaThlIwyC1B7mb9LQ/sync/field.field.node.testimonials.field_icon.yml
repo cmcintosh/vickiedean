@@ -1,0 +1,19 @@
+uuid: 09aa2f73-884d-4236-8eba-f677a4083a2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon
+    - node.type.testimonials
+id: node.testimonials.field_icon
+field_name: field_icon
+entity_type: node
+bundle: testimonials
+label: Icon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

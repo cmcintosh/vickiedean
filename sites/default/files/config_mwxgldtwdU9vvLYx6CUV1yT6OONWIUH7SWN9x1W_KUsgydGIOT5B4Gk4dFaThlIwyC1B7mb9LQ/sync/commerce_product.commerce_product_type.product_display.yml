@@ -1,0 +1,9 @@
+uuid: d3c2226d-5fd9-4824-9d5a-6ad15cc23a59
+langcode: en
+status: true
+dependencies: {  }
+id: product_display
+label: 'Product Display'
+description: ''
+variationType: product_display
+injectVariationFields: true

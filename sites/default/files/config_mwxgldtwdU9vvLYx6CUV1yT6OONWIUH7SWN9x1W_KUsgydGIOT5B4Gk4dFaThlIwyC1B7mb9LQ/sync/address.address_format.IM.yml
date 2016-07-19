@@ -1,0 +1,20 @@
+uuid: 7ff52c63-7a98-4593-9137-b2a2836a9068
+langcode: en
+status: true
+dependencies: {  }
+countryCode: IM
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%sortingCode\n%locality\n%postalCode"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+  - postalCode
+uppercaseFields:
+  - locality
+  - postalCode
+administrativeAreaType: null
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: 'IM\d[\dA-Z]?[ ]?\d[ABD-HJLN-UW-Z]{2}'
+postalCodePrefix: null

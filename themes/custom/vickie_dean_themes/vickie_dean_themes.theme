@@ -1,0 +1,17 @@
+<?php
+/**
+* Implements hook_preprocess_HOOK() for image.html.twig.
+*/
+function mytheme_preprocess_image(&$variables) {
+  // If there is not an existing class array, create an empty array.
+	$attributes = $variables['attributes'];
+  	$attributes['data-src'] = file_create_url($variables['path']);
+  	
+  foreach (array('width', 'height', 'alt', 'title') as $key) {
+    if (isset($variables[$key])) {
+      $attributes[$key] = $variables[$key];
+    }
+  }
+
+  return '<img' . drupal_attributes($attributes) . ' />';
+}
