@@ -45,10 +45,10 @@
     width: 35px;
     background: #d5e0ef;
 }
-.site-map-page .content > ul.sitemap-menu > li:before, .site-map-page .content > ul.sitemap-menu > li:after {
+.site-map-page .content ul.sitemap-menu > li:before, .site-map-page .content ul.sitemap-menu > li:after {
 	background: #3d8afc;
 }
-.site-map-page .content > ul.sitemap-menu .first.expanded:before, .site-map-page .content > ul.sitemap-menu .first.expanded:after {
+.site-map-page .content  ul.sitemap-menu .first.expanded:before, .site-map-page .content ul.sitemap-menu .first.expanded:after {
 	-moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
@@ -58,7 +58,7 @@
 .site-map-page .content ul.sitemap-menu .first.expanded:before { 
 	top: 11.5px;
 }
-.site-map-page .content > ul.sitemap-menu > li:after {
+.site-map-page .content ul.sitemap-menu > li:after {
 	content: '';
     position: absolute;
     top: 50%;
