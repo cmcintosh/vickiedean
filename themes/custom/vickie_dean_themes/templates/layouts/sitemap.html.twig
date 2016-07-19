@@ -22,17 +22,15 @@
  * @see template_preprocess_sitemap()
  */
 #}
-<div id="page">
+<div id="page" class="sitemap-wrapper">
   <div class="container">
-  <ul class="breadcrumb">
-    <li><a href="/node"></a></li>
-    <li><a href="/sitemap"></a><span>Site Map</span></li>
-  </ul> 
+    <ul class="breadcrumb">
+      <li><a href="/node"></a></li>
+      <li><a href="/sitemap"></a><span>Site Map</span></li>
+    </ul> 
 
-  <div class="row site-map-page"> <div id="content" class="col-sm-12"> <h1>Site Map</h1>
-    <div class="row">
-      <div class="col-sm-6">
-        <h5>Categories</h5>
+    <div class="row site-map-page"> <div id="content" class="col-sm-12"> <h1>Site Map</h1>
+      <div class="row">
         <div class="sitemap">
         {% if message %}
           <div class="sitemap-message">
@@ -44,11 +42,18 @@
           {% for item in sitemap_items %}
             <div{{ item.attributes.addClass('sitemap-box') }}>
               <!-- Displaying specific menus. -->
-              {% if item.title == "Main navigation" || item.title == "Footer Links Right" %}
                 <div class="content">
-                  {{ item.content }}
+                  <div class="col-sm-6">
+                    {% if item.title == "Main navigation" %}
+                      <h5>Categories</h5>
+                    {% elseif item.title == "Account" %}
+                      <h5>Pages</h5>
+                    {% else %}
+                      <h5>Information</h5>
+                    {% endif %}
+                      {{ item.content }}
+                  </div>
                 </div>
-              {% endif %}
             </div>
           {% endfor %}
         {% endif %}
@@ -56,10 +61,10 @@
         {% if additional %}
           <div class="sitemap-additional">
             {{ additional }}
-            <div id="addition-here">
-            </div>
           </div>
         {% endif %}
         </div>
       </div>
-      <div class="col-sm-6">
+    </div>
+  </div>
+</div>
