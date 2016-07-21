@@ -10116,6 +10116,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* No files to import found in effects/**\/* */
+.col-sm-10.col-sm-offset-1 {
+  margin-left: 13%;
+}
+
 .cart-block--contents {
   width: 225px;
   background: white;
@@ -10206,15 +10210,6 @@ ul.breadcrumb {
     margin-right: -9.3%;
   }
 }
-div#content.col-sm-10 {
-  float: right;
-  margin-top: -50%;
-}
-
-.col-sm-10 {
-  width: 75% !important;
-}
-
 .manufacturer-list {
   line-height: 0;
   margin-bottom: -2%;
@@ -10230,12 +10225,25 @@ h2.block-title {
     top: 8% !important;
     padding: 0 !important;
   }
+
+  .col-sm-10 {
+    width: 100% !important;
+  }
 }
 @media only screen and (min-width: 640px) {
   .toggle_cont {
     width: 200px;
     top: 8% !important;
     padding: 0 !important;
+  }
+
+  .col-sm-10 {
+    width: 100% !important;
+  }
+
+  div#content.col-sm-10 {
+    float: right;
+    margin-top: -55%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -10254,6 +10262,15 @@ h2.block-title {
     float: left !important;
     margin-top: 0em !important;
   }
+
+  .col-sm-10 {
+    width: 75% !important;
+  }
+
+  div#content.col-sm-10 {
+    float: right;
+    margin-top: -86%;
+  }
 }
 @media only screen and (min-width: 1024px) {
   ul.menu.nav.navbar-nav.navbar-right.toggle_cont {
@@ -10270,6 +10287,15 @@ h2.block-title {
     top: -0.7em !important;
     float: right !important;
     margin-top: 1em !important;
+  }
+
+  .col-sm-10 {
+    width: 75% !important;
+  }
+
+  div#content.col-sm-10 {
+    float: right;
+    margin-top: -70%;
   }
 }
 @media only screen and (min-width: 1100px) {
@@ -10289,6 +10315,15 @@ h2.block-title {
     float: right !important;
     margin-top: 0em !important;
   }
+
+  .col-sm-10 {
+    width: 75% !important;
+  }
+
+  div#content.col-sm-10 {
+    float: right;
+    margin-top: -55%;
+  }
 }
 @media only screen and (min-width: 1400px) {
   ul.menu.nav.navbar-nav.navbar-right.toggle_cont {
@@ -10307,9 +10342,18 @@ h2.block-title {
     float: right !important;
     margin-top: 0em !important;
   }
+
+  .col-sm-10 {
+    width: 75% !important;
+  }
+
+  div#content.col-sm-10 {
+    float: right;
+    margin-top: -55%;
+  }
 }
-.col-sm-9 {
-  float: right !important;
+div#edit-actions {
+  margin-bottom: 10% !important;
 }
 
 .field.field--name-title.field--type-string.field--label-hidden.field--item {
@@ -10377,6 +10421,16 @@ aside .blog-categories ul > li:hover {
   #page {
     margin-top: -6%;
   }
+
+  .cart.cart-block {
+    margin-top: 15% !important;
+    background: white !important;
+  }
+
+  .text-right {
+    text-align: right;
+    margin-top: 97%;
+  }
 }
 @media only screen and (min-width: 640px) {
   .simple_blog-category {
@@ -10393,17 +10447,67 @@ aside .blog-categories ul > li:hover {
   #page {
     margin-top: -4%;
   }
+
+  .cart.cart-block {
+    margin-top: 10% !important;
+    background: white !important;
+  }
+
+  .text-right {
+    text-align: right;
+    margin-top: 70%;
+  }
 }
 @media only screen and (min-width: 768px) {
   .simple_blog-category {
     margin-left: -2%;
     margin-right: -2%;
   }
+
+  #page1 {
+    background: #fff;
+    overflow: hidden;
+    margin-top: 3%;
+  }
+
+  #page {
+    margin-top: -4%;
+  }
+
+  .cart.cart-block {
+    margin-top: 0% !important;
+    background: white !important;
+  }
+
+  .text-right {
+    text-align: right;
+    margin-top: 0%;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .simple_blog-category {
     margin-left: -2.8%;
     margin-right: -2.8%;
+  }
+
+  #page1 {
+    background: #fff;
+    overflow: hidden;
+    margin-top: 3%;
+  }
+
+  #page {
+    margin-top: -4%;
+  }
+
+  .cart.cart-block {
+    margin-top: 0% !important;
+    background: white !important;
+  }
+
+  .text-right {
+    text-align: right;
+    margin-top: 0%;
   }
 }
 @media only screen and (min-width: 1100px) {
@@ -10421,11 +10525,39 @@ aside .blog-categories ul > li:hover {
   #page {
     margin-top: -2%;
   }
+
+  .col-sm-9 {
+    float: right !important;
+  }
+
+  .cart.cart-block {
+    margin-top: 0% !important;
+    background: white !important;
+  }
+
+  .text-right {
+    text-align: right;
+    margin-top: 0%;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .simple_blog-category {
     margin-left: -9.3%;
     margin-right: -9.3%;
+  }
+
+  .col-sm-9 {
+    float: right !important;
+  }
+
+  .cart.cart-block {
+    margin-top: 0% !important;
+    background: white !important;
+  }
+
+  .text-right {
+    text-align: right;
+    margin-top: 0%;
   }
 }
 button#edit-preview {
@@ -11149,12 +11281,6 @@ a.sf-depth-3:hover {
   position: relative !important;
 }
 
-.camera_caption h2 {
-  font-size: 50px !important;
-  line-height: 40px !important;
-  margin-top: -80px !important;
-}
-
 @media only screen and (min-width: 260px) and (max-width: 580px) {
   .picture img {
     height: 307px !important;
@@ -11162,7 +11288,13 @@ a.sf-depth-3:hover {
     /* overflow: hidden; */
     margin-bottom: -16em;
     margin-left: -14em;
-    margin-top: -4em;
+    margin-top: 0em;
+  }
+
+  .camera_caption h2 {
+    font-size: 25px !important;
+    line-height: 30px !important;
+    margin-top: 0px !important;
   }
 }
 @media only screen and (min-width: 640px) {
@@ -11172,7 +11304,7 @@ a.sf-depth-3:hover {
     /* overflow: hidden; */
     margin-bottom: -18em;
     margin-left: -8em;
-    margin-top: -4em;
+    margin-top: 0px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -11184,13 +11316,19 @@ a.sf-depth-3:hover {
     margin-left: -2em;
     margin-top: 0px;
   }
+
+  .camera_caption h2 {
+    font-size: 35px !important;
+    line-height: 40px !important;
+    margin-top: 0px !important;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .picture img {
     height: 444px !important;
     width: 1033px !important;
     /* overflow: hidden; */
-    margin-bottom: -16em;
+    margin-bottom: -24em;
     margin-left: -3em;
     margin-top: 0px;
   }
@@ -11204,6 +11342,12 @@ a.sf-depth-3:hover {
     margin-left: -8em;
     margin-top: 0em;
   }
+
+  .camera_caption h2 {
+    font-size: 45px !important;
+    line-height: 45px !important;
+    margin-top: -80px !important;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .picture img {
@@ -11212,7 +11356,7 @@ a.sf-depth-3:hover {
     /* overflow: hidden; */
     margin-bottom: -38em;
     margin-left: -8em;
-    margin-top: -5em;
+    margin-top: 0px;
   }
 }
 /* No files to import found in edit-pages/**\/* */

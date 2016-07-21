@@ -1,10 +1,4 @@
-div#content.col-sm-10 {
-    float: right;
-    margin-top: -50%;
-}
-.col-sm-10 {
-    width: 75% !important;
-}
+
 .manufacturer-list {
     line-height: 0;
     margin-bottom: -2%;
@@ -18,6 +12,9 @@ h2.block-title {
 	    top: 8% !important;
 	    padding: 0 !important;
 	}
+	.col-sm-10 {
+    	width: 100% !important;
+	}
 }
 
 @media #{$mobileLandscape} {
@@ -26,6 +23,13 @@ h2.block-title {
 	    top: 8% !important;
 	    padding: 0 !important;
 	}
+	.col-sm-10 {
+    	width: 100% !important;
+	}
+	div#content.col-sm-10 {
+    float: right;
+    margin-top: -55%;
+}
 }
  
 @media #{$tabletPortrait} {
@@ -45,6 +49,13 @@ h2.block-title {
         float: left !important;
         margin-top: 0em !important;
     }
+    .col-sm-10 {
+    	width: 75% !important;
+	}
+	div#content.col-sm-10 {
+	    float: right;
+	    margin-top: -86%;
+	}
 }
 
 @media #{$tabletLandscape} {
@@ -64,6 +75,13 @@ h2.block-title {
         float: right !important;
         margin-top: 1em !important;
     }
+    .col-sm-10 {
+	    width: 75% !important;
+	}
+	div#content.col-sm-10 {
+	    float: right;
+	    margin-top: -70%;
+	}
 }
 
 @media #{$smallDesktop} {
@@ -84,6 +102,13 @@ h2.block-title {
         float: right !important;
         margin-top: 0em !important;
     }
+    .col-sm-10 {
+    width: 75% !important;
+	}
+	div#content.col-sm-10 {
+	    float: right;
+	    margin-top: -55%;
+	}
 }
 
 @media #{$desktopDisplay} {
@@ -104,4 +129,11 @@ h2.block-title {
         float: right !important;
         margin-top: 0em !important;
     }
+    .col-sm-10 {
+	    width: 75% !important;
+	}
+	div#content.col-sm-10 {
+	    float: right;
+	    margin-top: -55%;
+	}
 }

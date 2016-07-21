@@ -1,5 +1,5 @@
-.col-sm-9 {
-    float: right !important;
+div#edit-actions {
+    margin-bottom: 10% !important;
 }
 .field.field--name-title.field--type-string.field--label-hidden.field--item {
     display: none;
@@ -52,6 +52,14 @@ aside .blog-categories ul > li:hover {
 	#page {
 	    margin-top: -6%;
 	}
+	.cart.cart-block {
+	    margin-top: 15% !important;
+	    background: white !important;
+	}
+	.text-right {
+	    text-align: right;
+	    margin-top: 97%;
+	}
 }
 
 @media #{$mobileLandscape} {
@@ -68,13 +76,36 @@ aside .blog-categories ul > li:hover {
 	#page {
 	    margin-top: -4%;
 	}
-
+	.cart.cart-block {
+	    margin-top: 10% !important;
+	    background: white !important;
+	}
+	.text-right {
+	    text-align: right;
+	    margin-top: 70%;
+	}
 }
 
 @media #{$tabletPortrait} {
 	.simple_blog-category {
 	    margin-left: -2%;
 	    margin-right: -2%;
+	}
+	#page1 {
+	    background: #fff;
+	    overflow: hidden;
+	    margin-top: 3%;
+	}
+	#page {
+	    margin-top: -4%;
+	}
+	.cart.cart-block {
+	    margin-top: 0% !important;
+	    background: white !important;
+	}
+	.text-right {
+	    text-align: right;
+	    margin-top: 0%;
 	}
 }
 
@@ -84,6 +115,22 @@ aside .blog-categories ul > li:hover {
     margin-left: -2.8%;
     margin-right: -2.8%;
 }
+#page1 {
+	    background: #fff;
+	    overflow: hidden;
+	    margin-top: 3%;
+	}
+	#page {
+	    margin-top: -4%;
+	}
+	.cart.cart-block {
+	    margin-top: 0% !important;
+	    background: white !important;
+	}
+	.text-right {
+	    text-align: right;
+	    margin-top: 0%;
+	}
 
 }
 
@@ -100,11 +147,33 @@ aside .blog-categories ul > li:hover {
 	#page {
 	    margin-top: -2%;
 	}
+	.col-sm-9 {
+	    float: right !important;
+	}
+	.cart.cart-block {
+	    margin-top: 0% !important;
+	    background: white !important;
+	}
+	.text-right {
+	    text-align: right;
+	    margin-top: 0%;
+	}
 }
 
 @media #{$desktopDisplay} {
 	.simple_blog-category {
 	    margin-left: -9.3%;
 	    margin-right: -9.3%;
+	}
+	.col-sm-9 {
+	    float: right !important;
+	}
+	.cart.cart-block {
+	    margin-top: 0% !important;
+	    background: white !important;
+	}
+	.text-right {
+	    text-align: right;
+	    margin-top: 0%;
 	}
 }
