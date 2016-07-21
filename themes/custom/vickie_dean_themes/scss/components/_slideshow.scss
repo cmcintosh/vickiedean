@@ -1,3 +1,11 @@
+.camera_caption {
+	position: relative !important;
+}
+.camera_caption h2 {
+    font-size: 50px !important;
+    line-height: 40px !important;
+    margin-top: -80px !important;
+}
 @media #{$mobilePortrait} {
 	.picture img {
 	    height: 307px !important;

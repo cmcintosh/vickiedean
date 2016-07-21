@@ -11145,6 +11145,16 @@ a.sf-depth-3:hover {
   border-radius: 50%;
 }
 
+.camera_caption {
+  position: relative !important;
+}
+
+.camera_caption h2 {
+  font-size: 50px !important;
+  line-height: 40px !important;
+  margin-top: -80px !important;
+}
+
 @media only screen and (min-width: 260px) and (max-width: 580px) {
   .picture img {
     height: 307px !important;
