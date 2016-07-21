@@ -10308,6 +10308,10 @@ h2.block-title {
     margin-top: 0em !important;
   }
 }
+.col-sm-9 {
+  float: right !important;
+}
+
 .field.field--name-title.field--type-string.field--label-hidden.field--item {
   display: none;
 }
@@ -11054,6 +11058,93 @@ a.sf-depth-3:hover {
     z-index: 500 !important;
   }
 }
+.site-map-page .content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sitemap ul.sitemap-menu {
+  position: relative;
+}
+
+.site-map-page .content ul.sitemap-menu:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11.5px;
+  bottom: 11.5px;
+  width: 1px;
+  background: #3d8afc;
+}
+
+.site-map-page .content ul.sitemap-menu li {
+  position: relative;
+  padding-left: 60px;
+}
+
+.site-map-page .content ul.sitemap-menu ul {
+  position: relative;
+  margin-top: 17px;
+}
+
+.site-map-page .content ul.sitemap-menu > li > ul:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11.5px;
+  bottom: 11.5px;
+  width: 1px;
+  background: #d5e0ef;
+}
+
+.site-map-page .content ul.sitemap-menu > li:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  left: 0;
+  height: 1px;
+  width: 35px;
+  background: #d5e0ef;
+}
+
+.site-map-page .content ul.sitemap-menu > li:before, .site-map-page .content ul.sitemap-menu > li:after {
+  background: #3d8afc;
+}
+
+.site-map-page .content ul.sitemap-menu .first.expanded:before, .site-map-page .content ul.sitemap-menu .first.expanded:after {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.site-map-page .content ul.sitemap-menu .first.expanded:before {
+  top: 11.5px;
+}
+
+.site-map-page .content ul.sitemap-menu > li:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  left: 35px;
+  width: 12px;
+  height: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
 @media only screen and (min-width: 260px) and (max-width: 580px) {
   .picture img {
     height: 307px !important;

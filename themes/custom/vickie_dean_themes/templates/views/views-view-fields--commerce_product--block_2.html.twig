@@ -1,0 +1,42 @@
+
+	<div class="product-layout product-list col-xs-12">
+		<div class="product-thumb transition options">
+
+			<div class="image">
+				<a class="lazy lazy-loaded" style="padding-bottom: 100%" href="#">
+				  {{fields.field_product_image.content}}
+				</a>
+			</div>
+			<div class="caption">
+				<div class="name">
+					<a href="#">{{fields.field_product_name.content}}</a>
+				</div>
+				<div class="rating">
+					<span class="fa-stack"><i class="material-design-mark1   fa-stack-1x"></i>
+					<i class="material-design-mark1 star  fa-stack-1x"></i></span>
+					<span class="fa-stack"><i class="material-design-mark1   fa-stack-1x"></i>
+					<i class="material-design-mark1 star  fa-stack-1x"></i></span>
+					<span class="fa-stack"><i class="material-design-mark1   fa-stack-1x"></i>
+					<i class="material-design-mark1 star  fa-stack-1x"></i></span>
+					<span class="fa-stack"><i class="material-design-mark1   fa-stack-1x"></i>
+					<i class="material-design-mark1 star  fa-stack-1x"></i></span>
+					<span class="fa-stack"><i class="material-design-mark1   fa-stack-1x"></i>
+					<i class="material-design-mark1 star  fa-stack-1x"></i></span>
+				</div>
+				<div class="price">{{fields.field_price.content}} </div>
+			</div>
+
+			<div class="cart-button">
+				{{fields.field_products.content}}
+			</div>
+			<div class="cart-buttons">
+				<button class="product-btn" type="button" data-toggle="tooltip" title="Add to Wish List" onclick="wishlist.add('36');">
+					<i class="material-icons-favorite_border"></i>
+				</button>
+				<button class="product-btn" type="button" data-toggle="tooltip" title="Compare this Product" onclick="compare.add('36');">
+					<i class="material-icons-sort"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+

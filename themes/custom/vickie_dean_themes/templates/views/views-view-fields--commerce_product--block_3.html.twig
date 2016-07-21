@@ -1,0 +1,76 @@
+{% if fields.field_product_type.content == "Latest" %}
+<div class="product-thumb transition options">
+	<div class="quick_info">
+		<div id="quickview_featured_110010" class="quickview-style">
+			<div>
+				<div class="left col-sm-4">
+					<div class="quickview_image image">
+						<a href="#">
+							{{fields.field_product_image.content}}
+						</a>
+					</div>
+				</div>
+				<div class="right col-sm-8">
+					<h2>{{fields.field_product_name.content}} </h2>
+					<div class="inf">
+						<p class="quickview_manufacture manufacture manufacture">
+							Brand: <a href="#">{{fields.field_brand.content}}</a>
+						</p>
+						<p class="product_model model">
+							Model: {{fields.field_model.content}}</p>
+						<div class="price">
+							{{fields.field_price.content}} 
+						</div>
+					</div>
+ 
+					{{fields.field_products.content}}
+					
+					<ul class="product-buttons">
+						<li>
+						<button class="btn btn-icon" type="button" data-toggle="tooltip" title="Add to Wish List" onclick="wishlist.add('36');">
+						<i class="material-icons-favorite_border"></i>
+						</button>
+						</li>
+						<li>
+						<button class="btn btn-icon" type="button" data-toggle="tooltip" title="Compare this Product" onclick="compare.add('36');"><i class="material-icons-sort"></i></button>
+						</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+				<div class="col-sm-12">
+					<div class="quickview_description description">
+						<p>{{fields.field_description.content}}</p> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="image">
+		<a class="lazy lazy-loaded" style="padding-bottom: 100%" href="#">
+		  {{fields.field_product_image.content}}
+		</a>
+		<a class="quickview" data-rel="details" href="#quickview_featured_110010">
+			<i class="material-icons-remove_red_eye"></i>
+		</a>
+	</div>
+	<div class="caption">
+		<div class="name">
+			<a href="#">{{fields.field_product_name.content}}</a>
+		</div>
+		<div class="price">{{fields.field_price.content}} </div>
+	</div>
+
+	<div class="cart-button">
+		{{fields.field_products.content}}
+	</div>
+	<div class="cart-buttons">
+		<button class="product-btn" type="button" data-toggle="tooltip" title="Add to Wish List" onclick="wishlist.add('36');">
+			<i class="material-icons-favorite_border"></i>
+		</button>
+		<button class="product-btn" type="button" data-toggle="tooltip" title="Compare this Product" onclick="compare.add('36');">
+			<i class="material-icons-sort"></i>
+		</button>
+	</div>
+</div>
+{% endif %}
