@@ -1,0 +1,18 @@
+name: Commerce
+type: module
+description: 'Defines common functionality for all Commerce modules.'
+package: Commerce
+# core: 8.x
+configure: commerce.admin_commerce
+dependencies:
+  - address
+  - entity:entity
+  - inline_entity_form
+  - views
+  - system (>=8.1.0)
+
+# Information added by Drupal.org packaging script on 2016-07-05
+version: '8.x-2.0-alpha4+95-dev'
+core: '8.x'
+project: 'commerce'
+datestamp: 1467749670
