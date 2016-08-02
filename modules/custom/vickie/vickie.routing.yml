@@ -29,3 +29,62 @@ vickie.file.upload:
     _controller: '\Drupal\vickie\Controller\VickieReportAPI::upload_file'
   requirements:
     _permission: 'access content'
+
+# This file brings everything together. Very nifty!
+
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+entity.vickie_report.canonical:
+  path: '/vickie_report/{vickie_report}'
+  defaults:
+  # Calls the view controller, defined in the annotation of the contact entity
+    _entity_view: 'vickie_report'
+    _title: 'Report Content'
+  requirements:
+  # Calls the access controller of the entity, $operation 'view'
+    _entity_access: 'vickie_report.view'
+
+entity.vickie_report.collection:
+  path: '/vickie_report/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+    _entity_list: 'vickie_report'
+    _title: 'Report List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view report entity'
+
+vickie.report_add:
+  path: '/vickie_report/add'
+  defaults:
+  # Calls the form.add controller, defined in the contact entity.
+    _entity_form: vickie_report.add
+    _title: 'Add Report'
+  requirements:
+    _entity_create_access: 'vickie_report'
+
+entity.vickie_report.edit_form:
+  path: '/vickie_report/{vickie_report}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the contact entity.
+    _entity_form: vickie_report.edit
+    _title: 'Edit Report'
+  requirements:
+    _entity_access: 'vickie_report.edit'
+
+entity.vickie_report.delete_form:
+  path: '/report/{vickie_report}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the contact entity.
+    _entity_form: vickie_report.delete
+    _title: 'Delete Report'
+  requirements:
+    _entity_access: 'vickie_report.delete'
+
+vickie.vickie_report_settings:
+  path: 'admin/structure/vickie_report_settings'
+  defaults:
+    _form: '\Drupal\vickie\Form\VickieReportSettingsForm'
+    _title: 'Vickie Report Settings'
+  requirements:
+    _permission: 'administer report entity'

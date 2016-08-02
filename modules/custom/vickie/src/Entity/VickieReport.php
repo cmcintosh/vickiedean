@@ -13,7 +13,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
 /**
  * Defines the ContentEntityExample entity.
  *
- * @ingroup vicke_report
+ * @ingroup vickie
  *
  * @ContentEntityType(
  *   id = "vickie_report",
@@ -30,7 +30,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
  *   },
  *   list_cache_contexts = { "user" },
  *   base_table = "vickie_report",
- *   admin_permission = "administer vickie_report entity",
+ *   admin_permission = "administer report entity",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -49,7 +49,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
 
  class VickieReport extends ContentEntityBase implements VickieReportInterface {
 
-   use EntityChangeTrait;
+   use EntityChangedTrait;
 
    /**
    * {@inheritdoc}
@@ -108,7 +108,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
    /**
    * {@inheritdoc}
    */
-   public static function baseFielddefinitions(EntityTypeInterface $entity_type) {
+   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
 
      // Standard fields, used for a primary index
      $fields['id'] = BaseFieldDefinition::create('integer')
@@ -143,7 +143,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
 
         $fields['bad_mic'] = BaseFieldDefinition::create('boolean')
           ->setLabel(t('Bad Mic'))
-          ->setDescription('t('Stores the status of a bad mic.')')
+          ->setDescription(t('Stores the status of a bad mic.'))
           ->setSettings(array( 'default_value' => 0))
           ->setDisplayOptions('view', array(
             'label' => 'above',
@@ -201,15 +201,18 @@ use Drupal\Core\Entity\EntityChangedTrait;
         * FieldType and FieldFormatter classes for details
         */
 
-        $fields['audio'] = BaseFieldDefinition::create('file')
+        /*$fields['audio'] = BaseFieldDefinition::create('file')
           ->setLabel(t('Audio Files'))
           ->setDescription(t('Report audio files uploaded for this report.'))
           ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
-          ->setSettings(
-
-          )
+          ->setSettings(array(
+            'default_value' => '',
+            'max_length' => 255,
+            'text_processing' => 0,
+          ))
           ->setDisplayOptions('view', array())
           ->setDisplayOptions('form', array());
+        */
       return $fields;
    }
 

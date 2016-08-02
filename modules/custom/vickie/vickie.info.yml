@@ -1,0 +1,5 @@
+name: Vickie Report
+description: Vickie Report site module.
+core: 8.x
+package: Custom
+type: module 

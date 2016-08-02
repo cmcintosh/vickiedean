@@ -1,0 +1,22 @@
+# Define the 'local' links for the module
+
+report.settings_tab:
+  route_name: vickie.vickie_report_settings
+  title: Settings
+  base_route: vickie.vickie_report_settings
+
+report.view:
+  route_name: entity.vickie_report.canonical
+  base_route: entity.vickie_report.canonical
+  title: View
+
+report.page_edit:
+  route_name: entity.vickie_report.edit_form
+  base_route: entity.vickie_report.canonical
+  title: Edit
+
+report.delete_confirm:
+  route_name:  entity.vickie_report.delete_form
+  base_route:  entity.vickie_report.canonical
+  title: Delete
+  weight: 10
