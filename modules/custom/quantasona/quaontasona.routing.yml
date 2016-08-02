@@ -1,0 +1,39 @@
+entity.quantasona_report.canonical:
+  path: '/report/{quantasona_report}'
+  defaults:
+    _entity_view: 'quantasona_report'
+    _title: 'Quantasona Report'
+  requirements:
+    _entity_access: 'quantasona_report.view'
+
+entity.quantasona_report.collection:
+  path: '/admin/content/reports'
+  defaults:
+    _entity_list: 'quantasona_report'
+    _title: 'Report List'
+  requirements:
+    _permission: 'view quantasona_report entity'
+
+quantasona.quantasona_report_add:
+  path: '/admin/content/reports/add'
+  defaults:
+    _entity_form: quantasona_report.add
+    _title: 'Add report'
+  requirements:
+    _entity_create_access: 'quantasona_report'
+
+entity.quantasona_report.edit_form:
+  path: '/report/{quantasona_report}/edit'
+  defaults:
+    _entity_form: quantasona_report.edit
+    _title: 'Edit Report'
+  requirements:
+    _entity_access: 'quantasona_report.edit'
+
+entity.quantasona_report.delete_form:
+  path: '/report/{quantasona_report}/delete'
+  defaults:
+    _entity_form: quantasona_report.delete
+    _title: 'Delete Report'
+  requirements:
+    _entity_access: 'quantasona_report.delete'

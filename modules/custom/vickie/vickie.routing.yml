@@ -1,0 +1,31 @@
+vickie.user.create:
+  path: 'api/user/create'
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\vickie\Controller\VickieUserAPI::user_register'
+  requirements:
+    _permission: 'access content'
+
+vickie.user.login:
+  path: 'api/user/login'
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\vickie\Controller\VickieUserAPI::user_login'
+  requirements:
+    _permission: 'access content'
+
+vickie.report.create:
+  path: 'api/report/create'
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\vickie\Controller\VickieReportAPI::report_create'
+  requirements:
+    _permission: 'access content'
+
+vickie.file.upload:
+  path: 'api/file/upload'
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\vickie\Controller\VickieReportAPI::upload_file'
+  requirements:
+    _permission: 'access content'
