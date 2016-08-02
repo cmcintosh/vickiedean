@@ -1,7 +1,7 @@
 # Define the menu links for this module
 
 entity.vickie_report.collection:
-  title: 'Content Entity Example: Contacts Listing'
+  title: 'Content Entity Example: Report Listing'
   route_name: entity.vickie_report.collection
   description: 'List Contacts'
   weight: 10

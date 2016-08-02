@@ -54,7 +54,7 @@ entity.vickie_report.collection:
   # Checks for permission directly.
     _permission: 'view report entity'
 
-vickie.report_add:
+vickie.vickie_report_add:
   path: '/vickie_report/add'
   defaults:
   # Calls the form.add controller, defined in the contact entity.

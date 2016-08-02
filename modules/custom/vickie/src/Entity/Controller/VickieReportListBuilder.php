@@ -60,8 +60,8 @@ class VickieReportListBuilder extends EntityListBuilder {
    */
   public function render() {
     $build['description'] = array(
-      '#markup' => $this->t('Content Entity Example implements a Contacts model. These contacts are fieldable entities. You can manage the fields on the <a href="@adminlink">Contacts admin page</a>.', array(
-        '@adminlink' => $this->urlGenerator->generateFromRoute('vickie_report.contact_settings'),
+      '#markup' => $this->t('Content Entity Example implements a Vickie Report model. These contacts are fieldable entities. You can manage the fields on the <a href="@adminlink">Vickie Report admin page</a>.', array(
+        '@adminlink' => $this->urlGenerator->generateFromRoute('vickie.vickie_report_settings'),
       )),
     );
     $build['table'] = parent::render();

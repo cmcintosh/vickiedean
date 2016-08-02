@@ -34,7 +34,7 @@ class VickieReportSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['vickie_report_settings']['#markup'] = 'Settings form for ContentEntityExample. Manage field settings here.';
+    $form['vickie_report_settings']['#markup'] = 'Settings form for Vickie Report Settings. Manage field settings here.';
     return $form;
   }
 

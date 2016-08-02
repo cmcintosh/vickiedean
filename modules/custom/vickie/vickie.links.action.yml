@@ -2,7 +2,7 @@
 
 vickie.vickie_report_add:
   # Which route will be called by the link
-  route_name: vickie.vvickie_report_add
+  route_name: vickie.vickie_report_add
   title: 'Add Report'
 
   # Where will the link appear, defined by route name.

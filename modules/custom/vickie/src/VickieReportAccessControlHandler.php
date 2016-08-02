@@ -23,13 +23,13 @@ class VickieReportAccessControlHandler extends EntityAccessControlHandler {
   protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
     switch ($operation) {
       case 'view':
-        return AccessResult::allowedIfHasPermission($account, 'view contact entity');
+        return AccessResult::allowedIfHasPermission($account, 'view report entity');
 
       case 'edit':
-        return AccessResult::allowedIfHasPermission($account, 'edit contact entity');
+        return AccessResult::allowedIfHasPermission($account, 'edit report entity');
 
       case 'delete':
-        return AccessResult::allowedIfHasPermission($account, 'delete contact entity');
+        return AccessResult::allowedIfHasPermission($account, 'delete report entity');
     }
     return AccessResult::allowed();
   }
@@ -41,7 +41,7 @@ class VickieReportAccessControlHandler extends EntityAccessControlHandler {
    * will be created during the 'add' process.
    */
   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
-    return AccessResult::allowedIfHasPermission($account, 'add contact entity');
+    return AccessResult::allowedIfHasPermission($account, 'add report entity');
   }
 
 }

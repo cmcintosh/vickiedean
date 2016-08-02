@@ -45,7 +45,7 @@ class VickieReportDeleteForm extends ContentEntityConfirmFormBase {
     $entity = $this->getEntity();
     $entity->delete();
 
-    $this->logger('vickie_report')->notice('@type: deleted %title.',
+    $this->logger('vickie')->notice('@type: deleted %title.',
       array(
         '@type' => $this->entity->bundle(),
         '%title' => $this->entity->label(),
