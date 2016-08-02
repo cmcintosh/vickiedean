@@ -13,6 +13,12 @@ use Drupal\Core\Field\BaseFieldDefinition;
  * @ContentEntityType(
  *   id = "commerce_product_attribute_value",
  *   label = @Translation("Product attribute value"),
+ *   label_singular = @Translation("Product attribute value"),
+ *   label_plural = @Translation("Product attribute values"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count product attribute value",
+ *     plural = "@count product attribute values",
+ *   ),
  *   bundle_label = @Translation("Product attribute"),
  *   handlers = {
  *     "event" = "Drupal\commerce_product\Event\ProductAttributeValueEvent",
@@ -24,6 +30,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *   admin_permission = "administer product attributes",
  *   fieldable = TRUE,
  *   translatable = TRUE,
+ *   content_translation_ui_skip = TRUE,
  *   base_table = "commerce_product_attribute_value",
  *   data_table = "commerce_product_attribute_value_field_data",
  *   entity_keys = {
@@ -119,6 +126,7 @@ class ProductAttributeValue extends ContentEntityBase implements ProductAttribut
         'type' => 'string_textfield',
         'weight' => -5,
       ])
+      ->setDisplayConfigurable('view', TRUE)
       ->setDisplayConfigurable('form', TRUE);
 
     $fields['weight'] = BaseFieldDefinition::create('integer')

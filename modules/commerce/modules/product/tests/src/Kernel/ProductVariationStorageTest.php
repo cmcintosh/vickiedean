@@ -27,7 +27,8 @@ class ProductVariationStorageTest extends EntityKernelTestBase {
    */
   public static $modules = ['system', 'field', 'options', 'user', 'path',
     'text', 'entity', 'filter', 'entity_test', 'commerce', 'commerce_price',
-    'commerce_store', 'commerce_product', 'views', 'address', 'inline_entity_form'];
+    'commerce_store', 'commerce_product', 'views', 'address', 'inline_entity_form',
+  ];
 
   /**
    * {@inheritdoc}
@@ -47,7 +48,7 @@ class ProductVariationStorageTest extends EntityKernelTestBase {
   /**
    * Tests loadEnabled() function.
    */
-  function testLoadEnabled() {
+  public function testLoadEnabled() {
     $variations = [];
     for ($i = 1; $i <= 3; $i++) {
       $variation = ProductVariation::create([
@@ -70,4 +71,5 @@ class ProductVariationStorageTest extends EntityKernelTestBase {
     $this->assertEquals(2, count($variationsFiltered), '2 out of 3 variations are enabled');
     $this->assertEquals(reset($variations)->getSku(), reset($variationsFiltered)->getSku(), 'The sort order of the variations remains the same');
   }
+
 }

@@ -10,6 +10,12 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  * @ConfigEntityType(
  *   id = "commerce_product_type",
  *   label = @Translation("Product type"),
+ *   label_singular = @Translation("Product type"),
+ *   label_plural = @Translation("Product types"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count product type",
+ *     plural = "@count product types",
+ *   ),
  *   handlers = {
  *     "list_builder" = "Drupal\commerce_product\ProductTypeListBuilder",
  *     "form" = {
@@ -34,6 +40,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *     "label",
  *     "description",
  *     "variationType",
+ *     "injectVariationFields",
  *   },
  *   links = {
  *     "add-form" = "/admin/commerce/config/product-types/add",
@@ -46,18 +53,11 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
 class ProductType extends ConfigEntityBundleBase implements ProductTypeInterface {
 
   /**
-   * The product type machine name and primary ID.
+   * The product type ID.
    *
    * @var string
    */
   protected $id;
-
-  /**
-   * The product type UUID.
-   *
-   * @var string
-   */
-  protected $uuid;
 
   /**
    * The product type label.
@@ -79,6 +79,13 @@ class ProductType extends ConfigEntityBundleBase implements ProductTypeInterface
    * @var string
    */
   protected $variationType;
+
+  /**
+   * Indicates if variation fields should be injected.
+   *
+   * @var bool
+   */
+  protected $injectVariationFields = TRUE;
 
   /**
    * {@inheritdoc}
@@ -107,6 +114,21 @@ class ProductType extends ConfigEntityBundleBase implements ProductTypeInterface
    */
   public function setVariationTypeId($variation_type_id) {
     $this->variationType = $variation_type_id;
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function shouldInjectVariationFields() {
+    return $this->injectVariationFields;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setInjectVariationFields($inject) {
+    $this->injectVariationFields = (bool) $inject;
     return $this;
   }
 

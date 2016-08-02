@@ -17,6 +17,12 @@ use Drupal\profile\Entity\ProfileInterface;
  * @ContentEntityType(
  *   id = "commerce_order",
  *   label = @Translation("Order"),
+ *   label_singular = @Translation("Order"),
+ *   label_plural = @Translation("Orders"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count order",
+ *     plural = "@count orders",
+ *   ),
  *   bundle_label = @Translation("Order type"),
  *   handlers = {
  *     "event" = "Drupal\commerce_order\Event\OrderEvent",
@@ -95,7 +101,7 @@ class Order extends ContentEntityBase implements OrderInterface {
   public function postSave(EntityStorageInterface $storage, $update = TRUE) {
     parent::postSave($storage, $update);
 
-    // If no order number has been set explicitly, set it to the order id.
+    // If no order number has been set explicitly, set it to the order ID.
     if (!$this->getOrderNumber()) {
       $this->setOrderNumber($this->id());
       $this->save();
@@ -531,7 +537,7 @@ class Order extends ContentEntityBase implements OrderInterface {
    *   The order.
    *
    * @return string
-   *   The workflow id.
+   *   The workflow ID.
    */
   public static function getWorkflowId(OrderInterface $order) {
     $workflow = OrderType::load($order->bundle())->getWorkflowId();

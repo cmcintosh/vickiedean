@@ -11,13 +11,18 @@ use Drupal\Core\Entity\EntityStorageInterface;
  * @ConfigEntityType(
  *   id = "commerce_product_attribute",
  *   label = @Translation("Product attribute"),
+ *   label_singular = @Translation("Product attribute"),
+ *   label_plural = @Translation("Product attributes"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count product attribute",
+ *     plural = "@count product attributes",
+ *   ),
  *   handlers = {
  *     "list_builder" = "Drupal\commerce_product\ProductAttributeListBuilder",
  *     "form" = {
  *       "add" = "Drupal\commerce_product\Form\ProductAttributeForm",
  *       "edit" = "Drupal\commerce_product\Form\ProductAttributeForm",
  *       "delete" = "Drupal\commerce_product\Form\ProductAttributeDeleteForm",
- *       "reset" = "Drupal\commerce_product\Form\ProductAttributeResetForm",
  *     },
  *     "route_provider" = {
  *       "default" = "Drupal\Core\Entity\Routing\DefaultHtmlRouteProvider",
@@ -33,15 +38,14 @@ use Drupal\Core\Entity\EntityStorageInterface;
  *   },
  *   config_export = {
  *     "id",
- *     "label"
+ *     "label",
+ *     "elementType"
  *   },
  *   links = {
  *     "add-form" = "/admin/commerce/product-attributes/add",
  *     "edit-form" = "/admin/commerce/product-attributes/manage/{commerce_product_attribute}",
  *     "delete-form" = "/admin/commerce/product-attributes/manage/{commerce_product_attribute}/delete",
- *     "overview-form" = "/admin/commerce/product-attributes/manage/{commerce_product_attribute}/overview",
  *     "collection" =  "/admin/commerce/product-attributes",
- *     "reset-form" = "/admin/commerce/product-attributes/manage/{commerce_product_attribute}/reset",
  *   }
  * )
  */
@@ -62,11 +66,25 @@ class ProductAttribute extends ConfigEntityBundleBase implements ProductAttribut
   protected $label;
 
   /**
+   * The attribute element type.
+   *
+   * @var string
+   */
+  protected $elementType = 'select';
+
+  /**
    * {@inheritdoc}
    */
   public function getValues() {
     $storage = $this->entityTypeManager()->getStorage('commerce_product_attribute_value');
     return $storage->loadByProperties(['attribute' => $this->id]);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getElementType() {
+    return $this->elementType;
   }
 
   /**

@@ -15,6 +15,12 @@ use Drupal\Core\Field\BaseFieldDefinition;
  * @ContentEntityType(
  *   id = "commerce_product",
  *   label = @Translation("Product"),
+ *   label_singular = @Translation("Product"),
+ *   label_plural = @Translation("Products"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count product",
+ *     plural = "@count products",
+ *   ),
  *   bundle_label = @Translation("Product type"),
  *   handlers = {
  *     "event" = "Drupal\commerce_product\Event\ProductEvent",
@@ -32,7 +38,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *       "default" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider",
  *       "delete-multiple" = "Drupal\entity\Routing\DeleteMultipleRouteProvider",
  *     },
- *     "translation" = "Drupal\content_translation\ContentTranslationHandler"
+ *     "translation" = "Drupal\commerce_product\ProductTranslationHandler"
  *   },
  *   admin_permission = "administer products",
  *   fieldable = TRUE,
@@ -113,11 +119,8 @@ class Product extends ContentEntityBase implements ProductInterface {
    * {@inheritdoc}
    */
   public function getStores() {
-    $stores = [];
-    foreach ($this->get('stores') as $store_item) {
-      $stores[] = $store_item->entity;
-    }
-    return $stores;
+    $stores = $this->get('stores')->referencedEntities();
+    return $this->ensureTranslations($stores);
   }
 
   /**
@@ -175,6 +178,108 @@ class Product extends ContentEntityBase implements ProductInterface {
    */
   public function setOwnerId($uid) {
     return $this->set('uid', $uid);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getVariations() {
+    $variations = $this->get('variations')->referencedEntities();
+    return $this->ensureTranslations($variations);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setVariations(array $variations) {
+    $this->set('variations', $variations);
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function hasVariations() {
+    return !$this->get('variations')->isEmpty();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function addVariation(ProductVariationInterface $variation) {
+    if (!$this->hasVariation($variation)) {
+      $this->get('variations')->appendItem($variation);
+    }
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function removeVariation(ProductVariationInterface $variation) {
+    $index = $this->getVariationIndex($variation);
+    if ($index !== FALSE) {
+      $this->get('variations')->offsetUnset($index);
+    }
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function hasVariation(ProductVariationInterface $variation) {
+    return $this->getVariationIndex($variation) !== FALSE;
+  }
+
+  /**
+   * Gets the index of the given variation.
+   *
+   * @param \Drupal\commerce_product\Entity\ProductVariationInterface $variation
+   *   The variation.
+   *
+   * @return int|bool
+   *   The index of the given variation, or FALSE if not found.
+   */
+  protected function getVariationIndex(ProductVariationInterface $variation) {
+    $values = $this->get('variations')->getValue();
+    $variation_ids = array_map(function ($value) {
+      return $value['target_id'];
+    }, $values);
+
+    return array_search($variation->id(), $variation_ids);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getDefaultVariation() {
+    foreach ($this->getVariations() as $variation) {
+      // Return the first active variation.
+      if ($variation->isActive()) {
+        return $variation;
+      }
+    }
+  }
+
+  /**
+   * Ensures that the provided entities are in the current entity's language.
+   *
+   * @param \Drupal\Core\Entity\ContentEntityInterface[] $entities
+   *   The entities to process.
+   *
+   * @return \Drupal\Core\Entity\ContentEntityInterface[]
+   *   The processed entities.
+   */
+  protected function ensureTranslations(array $entities) {
+    $langcode = $this->language()->getId();
+    foreach ($entities as $index => $entity) {
+      /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
+      if ($entity->hasTranslation($langcode)) {
+        $entities[$index] = $entity->getTranslation($langcode);
+      }
+    }
+
+    return $entities;
   }
 
   /**

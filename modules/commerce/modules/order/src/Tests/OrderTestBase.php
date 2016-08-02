@@ -5,11 +5,16 @@ namespace Drupal\commerce_order\Tests;
 use Drupal\commerce_product\Entity\ProductVariation;
 use Drupal\commerce_store\Entity\Store;
 use Drupal\commerce\Tests\CommerceTestBase;
+use Drupal\commerce_store\StoreCreationTrait;
 
 /**
  * Defines base class for commerce_order test cases.
+ *
+ * @todo Remove when commerce_cart moved to browser test.
  */
 abstract class OrderTestBase extends CommerceTestBase {
+
+  use StoreCreationTrait;
 
   /**
    * The variation to test against.

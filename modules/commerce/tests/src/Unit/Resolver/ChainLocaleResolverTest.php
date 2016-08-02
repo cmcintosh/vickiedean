@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\Tests\commerce\Unit\Resolver\ChainLocaleResolverTest.
- */
-
 namespace Drupal\Tests\commerce\Unit\Resolver;
 
 use Drupal\commerce\Resolver\ChainLocaleResolver;
@@ -32,7 +27,7 @@ class ChainLocaleResolverTest extends UnitTestCase {
   /**
    * ::covers addResolver
    * ::covers getResolvers
-   * ::covers resolve
+   * ::covers resolve.
    */
   public function testResolver() {
     $mock_builder = $this->getMockBuilder('Drupal\commerce\Resolver\LocaleResolverInterface')

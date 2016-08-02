@@ -53,7 +53,7 @@ class CartController extends ControllerBase {
       $cart_views = $this->getCartViews($carts);
       foreach ($carts as $cart_id => $cart) {
         $build[$cart_id] = [
-          '#prefix' => '<div class="cart cart-form">',
+          '#prefix' => '<div>',
           '#suffix' => '</div>',
           '#type' => 'view',
           '#name' => $cart_views[$cart_id],
@@ -80,7 +80,7 @@ class CartController extends ControllerBase {
    *   The cart orders.
    *
    * @return array
-   *   An array of view ids keyed by cart order id.
+   *   An array of view ids keyed by cart order ID.
    */
   protected function getCartViews(array $carts) {
     $order_type_ids = array_map(function($cart) {

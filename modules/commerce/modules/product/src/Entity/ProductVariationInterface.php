@@ -20,10 +20,10 @@ interface ProductVariationInterface extends PurchasableEntityInterface, EntityCh
   public function getProduct();
 
   /**
-   * Gets the parent product id.
+   * Gets the parent product ID.
    *
    * @return int|null
-   *   The product id, or null.
+   *   The product ID, or null.
    */
   public function getProductId();
 
@@ -66,7 +66,7 @@ interface ProductVariationInterface extends PurchasableEntityInterface, EntityCh
   /**
    * Gets the variation price.
    *
-   * @return object
+   * @return \Drupal\commerce_price\Price
    *   The variation price.
    */
   public function getPrice();

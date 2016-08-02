@@ -4,7 +4,7 @@ commerce_product.commerce_product_type.*:
   mapping:
     id:
       type: string
-      label: 'Type'
+      label: 'ID'
     label:
       type: label
       label: 'Label'
@@ -14,6 +14,9 @@ commerce_product.commerce_product_type.*:
     variationType:
       type: string
       label: 'Variation type'
+    injectVariationFields:
+      type: boolean
+      label: 'Inject product variation fields into the rendered product'
 
 commerce_product.commerce_product_variation_type.*:
   type: config_entity
@@ -21,7 +24,7 @@ commerce_product.commerce_product_variation_type.*:
   mapping:
     id:
       type: string
-      label: 'Type'
+      label: 'ID'
     label:
       type: label
       label: 'Label'
@@ -38,10 +41,13 @@ commerce_product.commerce_product_attribute.*:
   mapping:
     id:
       type: string
-      label: 'Type'
+      label: 'ID'
     label:
       type: label
       label: 'Label'
+    elementType:
+      type: string
+      label: 'Element type'
 
 field.formatter.settings.commerce_add_to_cart:
   type: mapping
@@ -56,13 +62,18 @@ field.formatter.settings.commerce_add_to_cart:
       type: boolean
       label: 'Whether to attempt to combine line items containing the same product variation'
 
-field.widget.settings.commerce_product_variation_attributes:
+field.formatter.settings.commerce_product_attributes_overview:
   type: mapping
-  label: 'Settings for the "Product variation attributes" widget'
   mapping:
-    attribute_widget_type:
+    attributes:
+      type: sequence
+      label: 'Attributes to render.'
+      sequence:
+        type: string
+        label: 'Attribute ID'
+    view_mode:
       type: string
-      label: 'Attribute widget type'
+      label: 'View mode'
 
 action.configuration.commerce_publish_product:
   type: action_configuration_default
