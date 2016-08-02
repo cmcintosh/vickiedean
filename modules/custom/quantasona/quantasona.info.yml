@@ -1,5 +1,0 @@
-name: QuantaSona.com API
-type: module
-description: 'Creates the API functions needed to communicate from the Recorder to the site.'
-package: 'QuantaSona.com'
-core: 8.x
