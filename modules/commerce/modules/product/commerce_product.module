@@ -5,11 +5,22 @@
  * Defines the Product entity and associated features.
  */
 
+use Drupal\Core\Cache\Cache;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Render\Element;
+use Drupal\commerce_product\Entity\ProductType;
+
+/**
+ * Implements hook_config_translation_info_alter().
+ */
+function commerce_product_config_translation_info_alter(&$info) {
+  $info['commerce_product_attribute']['class'] = '\Drupal\commerce_product\ConfigTranslation\ProductAttributeMapper';
+}
 
 /**
  * Implements hook_entity_create().
@@ -30,6 +41,17 @@ function commerce_product_entity_form_display_update(EntityFormDisplayInterface 
   if ($form_display->getTargetEntityTypeId() == 'commerce_product_variation' && $form_display->getMode() == 'default') {
     $attribute_field_manager = \Drupal::service('commerce_product.attribute_field_manager');
     $attribute_field_manager->clearCaches();
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function commerce_product_entity_view_display_update(Drupal\Core\Entity\EntityInterface $entity) {
+  // The product view uses the variation view and needs to be cleared, which doesn't happen automatically
+  // because we're editing the variation, not the product
+  if (substr($entity->getConfigTarget(), 0, 27) === 'commerce_product_variation.') {
+    Cache::invalidateTags(['commerce_product_view']);
   }
 }
 
@@ -71,6 +93,29 @@ function commerce_product_theme() {
 }
 
 /**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function commerce_product_commerce_product_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  /** @var \Drupal\commerce_product\Entity\ProductInterface $entity */
+  $product_type = ProductType::load($entity->bundle());
+  if ($product_type->shouldInjectVariationFields() && $entity->getDefaultVariation()) {
+    /** @var \Drupal\commerce_product\ProductVariationFieldRendererInterface $variation_field_renderer */
+    $variation_field_renderer = \Drupal::service('commerce_product.variation_field_renderer');
+
+    $rendered_fields = $variation_field_renderer->renderFields($entity->getDefaultVariation(), $view_mode);
+    foreach ($rendered_fields as $field_name => $rendered_field) {
+      // Group attribute fields to allow them to be excluded together.
+      if (strpos($field_name, 'attribute_') !== FALSE) {
+        $build['variation_attributes']['variation_' . $field_name] = $rendered_field;
+      }
+      else {
+        $build['variation_' . $field_name] = $rendered_field;
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_theme_suggestions_commerce_product().
  */
 function commerce_product_theme_suggestions_commerce_product(array $variables) {
@@ -105,12 +150,11 @@ function template_preprocess_commerce_product(array &$variables) {
   /** @var Drupal\commerce_product\Entity\ProductInterface $product */
   $product = $variables['elements']['#commerce_product'];
 
-  $variables['product'] = $product;
-  $variables['url'] = $product->toUrl();
-  // Helpful $content variable for templates.
-  $variables['content'] = [];
-  foreach (\Drupal\Core\Render\Element::children($variables['elements']) as $key) {
-    $variables['content'][$key] = $variables['elements'][$key];
+  $variables['product_entity'] = $product;
+  $variables['product_url'] = $product->toUrl();
+  $variables['product'] = [];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['product'][$key] = $variables['elements'][$key];
   }
 }
 
@@ -129,13 +173,11 @@ function template_preprocess_commerce_product_variation(array &$variables) {
   $product_variation = $variables['elements']['#commerce_product_variation'];
   $product = $product_variation->getProduct();
 
-  $variables['product'] = $product;
-  $variables['product_variation'] = $product_variation;
+  $variables['product_variation_entity'] = $product_variation;
   $variables['product_url'] = $product->toUrl();
-  // Helpful $content variable for templates.
-  $variables['content'] = [];
-  foreach (\Drupal\Core\Render\Element::children($variables['elements']) as $key) {
-    $variables['content'][$key] = $variables['elements'][$key];
+  $variables['product_variation'] = [];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['product_variation'][$key] = $variables['elements'][$key];
   }
 }
 
@@ -149,15 +191,14 @@ function template_preprocess_commerce_product_variation(array &$variables) {
  *   - elements: An associative array containing rendered fields.
  *   - attributes: HTML attributes for the containing element.
  */
-function template_preprocess_commerce_product_commerce_product_attribute_value(array &$variables) {
+function template_preprocess_commerce_product_attribute_value(array &$variables) {
   /** @var Drupal\commerce_product\Entity\ProductAttributeValueInterface $product */
   $attribute_value = $variables['elements']['#commerce_product_attribute_value'];
 
-  $variables['attribute_value'] = $attribute_value;
-  // Helpful $content variable for templates.
-  $variables['content'] = [];
-  foreach (\Drupal\Core\Render\Element::children($variables['elements']) as $key) {
-    $variables['content'][$key] = $variables['elements'][$key];
+  $variables['product_attribute_value_entity'] = $attribute_value;
+  $variables['product_attribute_value'] = [];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['product_attribute_value'][$key] = $variables['elements'][$key];
   }
 }
 

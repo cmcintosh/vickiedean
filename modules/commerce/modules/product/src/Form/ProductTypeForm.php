@@ -85,8 +85,9 @@ class ProductTypeForm extends BundleEntityFormBase {
       '#maxlength' => EntityTypeInterface::BUNDLE_MAX_LENGTH,
     ];
     $form['description'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Description'),
+      '#description' => $this->t('This text will be displayed on the <em>Add product</em> page.'),
       '#default_value' => $product_type->getDescription(),
     ];
     $form['variationType'] = [
@@ -96,6 +97,11 @@ class ProductTypeForm extends BundleEntityFormBase {
       '#options' => $variation_types,
       '#required' => TRUE,
       '#disabled' => !$product_type->isNew(),
+    ];
+    $form['injectVariationFields'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Inject product variation fields into the rendered product.'),
+      '#default_value' => $product_type->shouldInjectVariationFields(),
     ];
     $form['product_status'] = [
       '#type' => 'checkbox',

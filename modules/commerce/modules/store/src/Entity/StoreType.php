@@ -10,6 +10,12 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  * @ConfigEntityType(
  *   id = "commerce_store_type",
  *   label = @Translation("Store type"),
+ *   label_singular = @Translation("Store type"),
+ *   label_plural = @Translation("Store types"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count store type",
+ *     plural = "@count store types",
+ *   ),
  *   handlers = {
  *     "list_builder" = "Drupal\commerce_store\StoreTypeListBuilder",
  *     "form" = {
@@ -46,18 +52,11 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
 class StoreType extends ConfigEntityBundleBase implements StoreTypeInterface {
 
   /**
-   * The store type machine name.
+   * The store type ID.
    *
    * @var string
    */
   protected $id;
-
-  /**
-   * The store type UUID.
-   *
-   * @var string
-   */
-  protected $uuid;
 
   /**
    * The store type label.

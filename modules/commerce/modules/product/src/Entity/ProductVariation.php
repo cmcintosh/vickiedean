@@ -2,13 +2,12 @@
 
 namespace Drupal\commerce_product\Entity;
 
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
-use Drupal\Core\Entity\EntityMalformedException;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\field\FieldConfigInterface;
 use Drupal\user\UserInterface;
 
 /**
@@ -17,6 +16,12 @@ use Drupal\user\UserInterface;
  * @ContentEntityType(
  *   id = "commerce_product_variation",
  *   label = @Translation("Product variation"),
+ *   label_singular = @Translation("Product variation"),
+ *   label_plural = @Translation("Product variations"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count product variation",
+ *     plural = "@count product variations",
+ *   ),
  *   bundle_label = @Translation("Product variation type"),
  *   handlers = {
  *     "event" = "Drupal\commerce_product\Event\ProductVariationEvent",
@@ -32,6 +37,7 @@ use Drupal\user\UserInterface;
  *   admin_permission = "administer products",
  *   fieldable = TRUE,
  *   translatable = TRUE,
+ *   content_translation_ui_skip = TRUE,
  *   base_table = "commerce_product_variation",
  *   data_table = "commerce_product_variation_field_data",
  *   entity_keys = {
@@ -98,7 +104,7 @@ class ProductVariation extends ContentEntityBase implements ProductVariationInte
    * {@inheritdoc}
    */
   public function getPrice() {
-    return $this->get('price')->first();
+    return $this->get('price')->first()->toPrice();
   }
 
   /**
@@ -258,6 +264,18 @@ class ProductVariation extends ContentEntityBase implements ProductVariationInte
   /**
    * {@inheritdoc}
    */
+  public function getCacheTagsToInvalidate() {
+    $tags = parent::getCacheTagsToInvalidate();
+    // Invalidate the variations view builder and product caches.
+    return Cache::mergeTags($tags, [
+      'commerce_product:' . $this->getProductId(),
+      'commerce_product_variation_view',
+    ]);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function preSave(EntityStorageInterface $storage) {
     parent::preSave($storage);
 
@@ -328,7 +346,6 @@ class ProductVariation extends ContentEntityBase implements ProductVariationInte
       ->setDescription(t('The unique, machine-readable identifier for a variation.'))
       ->setRequired(TRUE)
       ->addConstraint('ProductVariationSku')
-      ->setTranslatable(TRUE)
       ->setSetting('display_description', TRUE)
       ->setDisplayOptions('view', [
         'label' => 'hidden',

@@ -1,4 +1,4 @@
-name: Commerce Checkout
+name: 'Commerce Checkout'
 type: module
 description: 'Provides configurable checkout flows.'
 package: Commerce
@@ -10,9 +10,12 @@ dependencies:
 config_devel:
   install:
     - commerce_checkout.commerce_checkout_flow.default
+    - core.entity_view_display.commerce_product_variation.default.summary
+    - core.entity_view_mode.commerce_product_variation.summary
+    - views.view.commerce_checkout_order_summary
 
-# Information added by Drupal.org packaging script on 2016-04-28
-version: '8.x-2.0-alpha4'
+# Information added by Drupal.org packaging script on 2016-07-05
+version: '8.x-2.0-alpha4+95-dev'
 core: '8.x'
 project: 'commerce'
-datestamp: 1461882864
+datestamp: 1467749670

@@ -19,7 +19,7 @@ interface LineItemInterface extends EntityChangedInterface, ContentEntityInterfa
   public function getOrder();
 
   /**
-   * Gets the parent order id.
+   * Gets the parent order ID.
    *
    * @return int|null
    *   The order id, or null.
@@ -81,7 +81,7 @@ interface LineItemInterface extends EntityChangedInterface, ContentEntityInterfa
   /**
    * Gets the unit price.
    *
-   * @return object
+   * @return \Drupal\commerce_price\Price
    *   The unit price.
    */
   public function getUnitPrice();
@@ -89,7 +89,7 @@ interface LineItemInterface extends EntityChangedInterface, ContentEntityInterfa
   /**
    * Gets the total price.
    *
-   * @return object
+   * @return \Drupal\commerce_price\Price
    *   The total price.
    */
   public function getTotalPrice();

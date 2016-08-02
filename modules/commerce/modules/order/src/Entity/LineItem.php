@@ -14,6 +14,12 @@ use Drupal\Core\Field\BaseFieldDefinition;
  * @ContentEntityType(
  *   id = "commerce_line_item",
  *   label = @Translation("Line item"),
+ *   label_singular = @Translation("Line item"),
+ *   label_plural = @Translation("Line items"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count line item",
+ *     plural = "@count line items",
+ *   ),
  *   bundle_label = @Translation("Line item type"),
  *   handlers = {
  *     "event" = "Drupal\commerce_order\Event\LineItemEvent",
@@ -109,14 +115,14 @@ class LineItem extends ContentEntityBase implements LineItemInterface {
    * {@inheritdoc}
    */
   public function getUnitPrice() {
-    return $this->get('unit_price')->first();
+    return $this->get('unit_price')->first()->toPrice();
   }
 
   /**
    * {@inheritdoc}
    */
   public function getTotalPrice() {
-    return $this->get('total_price')->first();
+    return $this->get('total_price')->first()->toPrice();
   }
 
   /**
