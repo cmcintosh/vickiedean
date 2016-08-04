@@ -1,12 +1,12 @@
 # Define the menu links for this module
 
 entity.vickie_report.collection:
-  title: 'Content Entity Example: Contacts Listing'
+  title: 'Report Listing'
   route_name: entity.vickie_report.collection
-  description: 'List Contacts'
+  description: 'List Reports'
   weight: 10
 vickie_report.admin.structure.settings:
-  title: Report Settings
+  title: Vickie Report Settings
   description: 'Configure Report entity'
   route_name:  vickie.vickie_report_settings
   parent: system.admin_structure

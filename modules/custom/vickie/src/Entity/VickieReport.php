@@ -9,9 +9,10 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\vickie\VickieReportInterface;
 use Drupal\user\UserInterface;
 use Drupal\Core\Entity\EntityChangedTrait;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
 
 /**
- * Defines the ContentEntityExample entity.
+ * Defines the Vickie Report entity.
  *
  * @ingroup vickie
  *
@@ -42,7 +43,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
  *     "delete-form" = "/report/{vickie_report}/delete",
  *     "collection" = "/admin/content/vickie_report/list"
  *   },
- *   field_ui_base_route = "vickie_report.vickie_report_settings",
+ *   field_ui_base_route = "vickie.vickie_report_settings",
  * )
  *
  */
@@ -111,7 +112,8 @@ use Drupal\Core\Entity\EntityChangedTrait;
    public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
 
      // Standard fields, used for a primary index
-     $fields['id'] = BaseFieldDefinition::create('integer')
+
+      $fields['id'] = BaseFieldDefinition::create('integer')
        ->setLabel(t('ID'))
        ->setDescription(t('The Unique ID for this report.'))
        ->setReadOnly(TRUE);
@@ -122,7 +124,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
         ->setReadOnly(TRUE);
 
       $fields['name'] = BaseFieldDefinition::create('string')
-        ->setLabel(t('name'))
+        ->setLabel(t('Report Name'))
         ->setDescription(t('The name of the Report entity.'))
         ->setSettings(array(
           'default_value' => '',
@@ -141,7 +143,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
         ->setDisplayConfigurable('form', TRUE)
         ->setdisplayConfigurable('view', TRUE);
 
-        $fields['bad_mic'] = BaseFieldDefinition::create('boolean')
+        $fields['bad_mic'] = BaseFieldDefinition::create('string')
           ->setLabel(t('Bad Mic'))
           ->setDescription(t('Stores the status of a bad mic.'))
           ->setSettings(array( 'default_value' => 0))
@@ -151,7 +153,10 @@ use Drupal\Core\Entity\EntityChangedTrait;
             'weight' => -5
           ))
           ->setdisplayOptions('form', array(
-            'type' => 'boolean_checkbox',
+            'type' => 'string_textfield',
+            'settings' => array(
+              'display_label' => TRUE,
+            ),
             'weight' => -5
           ))
           ->setDisplayConfigurable('form', TRUE)
@@ -195,24 +200,58 @@ use Drupal\Core\Entity\EntityChangedTrait;
             ->setDisplayConfigurable('form', TRUE)
             ->setdisplayConfigurable('view', TRUE);
 
-        /*
-        * @todo: Below set limitation on the File Type to wav or mp3 Files for the audio field.
-        * Make sure to enable display / editing of the file fields, see the File module's
-        * FieldType and FieldFormatter classes for details
-        */
-
-        /*$fields['audio'] = BaseFieldDefinition::create('file')
+        $fields['audio'] = BaseFieldDefinition::create('file')
           ->setLabel(t('Audio Files'))
           ->setDescription(t('Report audio files uploaded for this report.'))
-          ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
           ->setSettings(array(
-            'default_value' => '',
-            'max_length' => 255,
-            'text_processing' => 0,
+              'upload_validators' => array(
+                  'file_validate_extensions' => array('wav mp3'),
+              ),
           ))
-          ->setDisplayOptions('view', array())
-          ->setDisplayOptions('form', array());
-        */
+          ->setDisplayOptions('view', array(
+              'label' => 'above',
+              'type' => 'file',
+              'weight' => -3,
+          ))
+          ->setDisplayOptions('form', array(
+              'type' => 'file',
+              'settings' => array(
+                  'upload_validators' => array(
+                      'file_validate_extensions' => array('wav mp3'),
+                  ),
+              ),
+              'weight' => -1,
+          ))
+          ->setDisplayConfigurable('form', TRUE)
+          ->setDisplayConfigurable('view', TRUE)
+          ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+
+          $fields['csv'] = BaseFieldDefinition::create('file')
+            ->setLabel(t('CSV File'))
+            ->setDescription(t('Report audio files uploaded for this report.'))
+            ->setSettings(array(
+                'upload_validators' => array(
+                    'file_validate_extensions' => array('csv'),
+                ),
+            ))
+            ->setDisplayOptions('view', array(
+                'label' => 'above',
+                'type' => 'file',
+                'weight' => -3,
+            ))
+            ->setDisplayOptions('form', array(
+                'type' => 'file',
+                'settings' => array(
+                    'upload_validators' => array(
+                        'file_validate_extensions' => array('csv'),
+                    ),
+                ),
+                'weight' => -1,
+            ))
+            ->setDisplayConfigurable('form', TRUE)
+            ->setDisplayConfigurable('view', TRUE)
+            ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+
       return $fields;
    }
 

@@ -60,7 +60,7 @@ class VickieReportListBuilder extends EntityListBuilder {
    */
   public function render() {
     $build['description'] = array(
-      '#markup' => $this->t('Content Entity Example implements a Contacts model. These contacts are fieldable entities. You can manage the fields on the <a href="@adminlink">Contacts admin page</a>.', array(
+      '#markup' => $this->t('Content Entity Example implements a Vickie Report model. These contacts are fieldable entities. You can manage the fields on the <a href="@adminlink">Vickie Report admin page</a>.', array(
         '@adminlink' => $this->urlGenerator->generateFromRoute('vickie.vickie_report_settings'),
       )),
     );
@@ -71,16 +71,18 @@ class VickieReportListBuilder extends EntityListBuilder {
   /**
    * {@inheritdoc}
    *
-   * Building the header and content lines for the contact list.
+   * Building the header and content lines for the report list.
    *
    * Calling the parent::buildHeader() adds a column for the possible actions
    * and inserts the 'edit' and 'delete' links as defined for the entity type.
    */
   public function buildHeader() {
-    $header['id'] = $this->t('ContactID');
+    $header['id'] = $this->t('ReportID');
     $header['name'] = $this->t('Name');
-    $header['first_name'] = $this->t('First Name');
-    $header['gender'] = $this->t('Gender');
+    $header['bad_mic'] = $this->t('Bad Mic');
+    $header['location'] = $this->t('Location');
+    $header['phone'] = $this->t('Phone');
+    $header['audio'] = $this->t('Audio');
     return $header + parent::buildHeader();
   }
 
@@ -88,11 +90,13 @@ class VickieReportListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\vickie\Entity\Contact */
+    /* @var $entity \Drupal\vickie\Entity\Report */
     $row['id'] = $entity->id();
     $row['name'] = $entity->link();
-    $row['first_name'] = $entity->first_name->value;
-    $row['gender'] = $entity->gender->value;
+    $row['bad_mic'] = $entity->bad_mic->value;
+    $row['location'] = $entity->location->value;
+    $row['phone'] = $entity->phone->value;
+    $row['audio'] = $entity->audio->value;
     return $row + parent::buildRow($entity);
   }
 
