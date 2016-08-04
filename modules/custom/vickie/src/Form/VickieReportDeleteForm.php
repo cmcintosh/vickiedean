@@ -7,7 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
 /**
- * Provides a form for deleting a vickie_report entity.
+ * Provides a form for deleting a vickie entity.
  *
  * @ingroup vickie
  */
@@ -23,7 +23,7 @@ class VickieReportDeleteForm extends ContentEntityConfirmFormBase {
   /**
    * {@inheritdoc}
    *
-   * If the delete command is canceled, return to the contact list.
+   * If the delete command is canceled, return to the report list.
    */
   public function getCancelUrl() {
     return new Url('entity.vickie_report.collection');
@@ -45,7 +45,7 @@ class VickieReportDeleteForm extends ContentEntityConfirmFormBase {
     $entity = $this->getEntity();
     $entity->delete();
 
-    $this->logger('vickie_report')->notice('@type: deleted %title.',
+    $this->logger('vickie')->notice('@type: deleted %title.',
       array(
         '@type' => $this->entity->bundle(),
         '%title' => $this->entity->label(),
