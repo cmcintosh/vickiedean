@@ -111,7 +111,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
    public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
 
      // Standard fields, used for a primary index
-     
+
       $fields['id'] = BaseFieldDefinition::create('integer')
        ->setLabel(t('ID'))
        ->setDescription(t('The Unique ID for this report.'))
@@ -196,12 +196,6 @@ use Drupal\Core\Entity\EntityChangedTrait;
             ->setDisplayConfigurable('form', TRUE)
             ->setdisplayConfigurable('view', TRUE);
 
-        /*
-        * @todo: Below set limitation on the File Type to wav or mp3 Files for the audio field.
-        * Make sure to enable display / editing of the file fields, see the File module's
-        * FieldType and FieldFormatter classes for details
-        */
-
         $fields['audio'] = BaseFieldDefinition::create('file')
           ->setLabel(t('Audio Files'))
           ->setDescription(t('Report audio files uploaded for this report.'))
@@ -225,8 +219,35 @@ use Drupal\Core\Entity\EntityChangedTrait;
               'weight' => -1,
           ))
           ->setDisplayConfigurable('form', TRUE)
-          ->setDisplayConfigurable('view', TRUE);
-        
+          ->setDisplayConfigurable('view', TRUE)
+          ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+
+          $fields['csv'] = BaseFieldDefinition::create('file')
+            ->setLabel(t('CSV File'))
+            ->setDescription(t('Report audio files uploaded for this report.'))
+            ->setSettings(array(
+                'upload_validators' => array(
+                    'file_validate_extensions' => array('csv'),
+                ),
+            ))
+            ->setDisplayOptions('view', array(
+                'label' => 'above',
+                'type' => 'file',
+                'weight' => -3,
+            ))
+            ->setDisplayOptions('form', array(
+                'type' => 'file',
+                'settings' => array(
+                    'upload_validators' => array(
+                        'file_validate_extensions' => array('csv'),
+                    ),
+                ),
+                'weight' => -1,
+            ))
+            ->setDisplayConfigurable('form', TRUE)
+            ->setDisplayConfigurable('view', TRUE)
+            ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+
       return $fields;
    }
 
