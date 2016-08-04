@@ -197,53 +197,37 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
             ->setDisplayConfigurable('form', TRUE)
             ->setdisplayConfigurable('view', TRUE);
 
-        $fields['audio'] = BaseFieldDefinition::create('file')
-          ->setLabel(t('Audio Files'))
-          ->setDescription(t('Report audio files uploaded for this report.'))
-          ->setSettings(array(
-              'upload_validators' => array(
-                  'file_validate_extensions' => array('wav mp3'),
-              ),
-          ))
-          ->setDisplayOptions('view', array(
+          $fields['audio'] = BaseFieldDefinition::create('file')
+            ->setLabel(t('Audio Files'))
+            ->setDescription(t('Report audio files uploaded for this report.'))
+            ->setSetting('file_extensions', 'mp3 wav')
+            ->setDefaultValue('')
+            ->setDisplayOptions('view', array(
               'label' => 'above',
               'type' => 'file',
-              'weight' => -3,
-          ))
-          ->setDisplayOptions('form', array(
+              'weight' => -4,
+            ))
+            ->setDisplayOptions('form', array(
               'type' => 'file',
-              'settings' => array(
-                  'upload_validators' => array(
-                      'file_validate_extensions' => array('wav mp3'),
-                  ),
-              ),
-              'weight' => -1,
-          ))
-          ->setDisplayConfigurable('form', TRUE)
-          ->setDisplayConfigurable('view', TRUE)
-          ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+              'weight' => -4,
+            ))
+            ->setDisplayConfigurable('form', TRUE)
+            ->setDisplayConfigurable('view', TRUE)
+            ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
 
           $fields['csv'] = BaseFieldDefinition::create('file')
             ->setLabel(t('CSV File'))
-            ->setDescription(t('Report audio files uploaded for this report.'))
-            ->setSettings(array(
-                'upload_validators' => array(
-                    'file_validate_extensions' => array('csv'),
-                ),
-            ))
+            ->setDescription(t('Report CSV files uploaded for this report.'))
+            ->setSetting('file_extensions', 'csv')
+            ->setDefaultValue('')
             ->setDisplayOptions('view', array(
-                'label' => 'above',
-                'type' => 'file',
-                'weight' => -3,
+              'label' => 'above',
+              'type' => 'file',
+              'weight' => -4,
             ))
             ->setDisplayOptions('form', array(
-                'type' => 'file',
-                'settings' => array(
-                    'upload_validators' => array(
-                        'file_validate_extensions' => array('csv'),
-                    ),
-                ),
-                'weight' => -1,
+              'type' => 'file',
+              'weight' => -4,
             ))
             ->setDisplayConfigurable('form', TRUE)
             ->setDisplayConfigurable('view', TRUE)

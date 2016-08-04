@@ -23,3 +23,11 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+/**
+* Display the checkbox in the Vickie Module Report.
+*/
+.path-vickie-report input[type="checkbox"],
+.path-report input[type="checkbox"] {
+	display: block;
+}
