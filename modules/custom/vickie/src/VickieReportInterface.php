@@ -13,6 +13,8 @@ use Drupal\Core\Entity\EntityChangedInterface;
  *
  * @ingroup vickie
  */
-interface VickieReportInterface extends ContentEntityInterface, EntityOwnerInterface, EntityChangedInterface {
+interface VickieReportInterface extends ContentEntityInterface, EntityOwnerInterface
+/*, EntityChangedInterface */
+{
 
 }

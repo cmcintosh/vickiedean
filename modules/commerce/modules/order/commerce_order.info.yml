@@ -2,7 +2,7 @@ name: Commerce Order
 type: module
 description: 'Defines the Order entity and associated features.'
 package: Commerce
-# core: 8.x
+core: 8.x
 dependencies:
   - commerce
   - commerce_price
@@ -26,9 +26,3 @@ config_devel:
     - views.view.commerce_line_item_table
     - views.view.commerce_user_orders
     - system.action.commerce_delete_order_action
-
-# Information added by Drupal.org packaging script on 2016-07-05
-version: '8.x-2.0-alpha4+95-dev'
-core: '8.x'
-project: 'commerce'
-datestamp: 1467749670

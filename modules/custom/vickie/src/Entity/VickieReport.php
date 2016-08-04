@@ -9,6 +9,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\vickie\VickieReportInterface;
 use Drupal\user\UserInterface;
 use Drupal\Core\Entity\EntityChangedTrait;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
 
 /**
  * Defines the Vickie Report entity.

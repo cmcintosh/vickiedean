@@ -5,6 +5,11 @@ report.settings_tab:
   title: Settings
   base_route: vickie.vickie_report_settings
 
+report.collection:
+  route_name: entity.vickie_report.collection
+  title: Reports
+  base_route: system.admin_content
+
 report.view:
   route_name: entity.vickie_report.canonical
   base_route: entity.vickie_report.canonical
