@@ -6,7 +6,7 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class ContentEntityExampleSettingsForm.
+ * Class VickieReportSettingsForm.
  *
  * @package Drupal\vickie\Form
  *

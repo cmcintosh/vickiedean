@@ -35,7 +35,7 @@ vickie.file.upload:
 # Route name can be used in several places; e.g. links, redirects, and local
 # actions.
 entity.vickie_report.canonical:
-  path: '/vickie_report/{vickie_report}'
+  path: '/report/{vickie_report}'
   defaults:
   # Calls the view controller, defined in the annotation of the contact entity
     _entity_view: 'vickie_report'
@@ -45,7 +45,7 @@ entity.vickie_report.canonical:
     _entity_access: 'vickie_report.view'
 
 entity.vickie_report.collection:
-  path: '/vickie_report/list'
+  path: '/admin/content/vickie_report/list'
   defaults:
   # Calls the list controller, defined in the annotation of the contact entity.
     _entity_list: 'vickie_report'
@@ -64,7 +64,7 @@ vickie.vickie_report_add:
     _entity_create_access: 'vickie_report'
 
 entity.vickie_report.edit_form:
-  path: '/vickie_report/{vickie_report}/edit'
+  path: '/report/{vickie_report}/edit'
   defaults:
   # Calls the form.edit controller, defined in the contact entity.
     _entity_form: vickie_report.edit
