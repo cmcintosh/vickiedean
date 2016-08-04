@@ -20,11 +20,12 @@
 
 namespace Drupal\vickie\Controller;
 
-use Drupal\Core\Controller\ControllerBase;
+ use Drupal\Core\Controller\ControllerBase;
  use Drupal\Core\Form\FormState;
  use Drupal\Core\Entity;
  use Drupal\user\Controller;
  use Symfony\Component\HttpFoundation\JsonResponse;
+ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Form controller for the vickie entity edit forms.
@@ -36,9 +37,13 @@ class VickieUserAPI extends ControllerBase {
 
 	// For User vickie user login
 
-  public function user_login() {
+  public function user_login(Request $request = null) {
+    $data = $request->request->all();
+    if ($data['name'] == '' || $data['pass'] == '') {
+      return new JsonResponse( array( 'error' => t('You Must send the name and pass fields when logging in.') ) );
+    }
 
-	$form_state = (new FormState())->setValues($_POST);
+	  $form_state = (new FormState())->setValues($data);
     \Drupal::formBuilder()->submitForm('\Drupal\user\Form\UserLoginForm', $form_state);
 
     // Check for errors from the from
@@ -59,19 +64,19 @@ class VickieUserAPI extends ControllerBase {
   // For vickie User Registration
 
   public function user_register(){
-
+    $data = $request->request->all();
  // Validate the e-mail address first.
-    if (!\Drupal::service('email.validator')->isValid($_POST['mail'])) {
+    if (!\Drupal::service('email.validator')->isValid($data['mail'])) {
       return new JsonResponse( array( 'error' => 'Invalid e-mail address' ) );
     }
 
     // Create password if it was not provided.
-    $password = $_POST['pass'] ? $_POST['pass'] : user_password();
+    $password = $data['pass'] ? $data['pass'] : user_password();
 
     /** @var \Drupal\user\Entity\User $user */
     $user = entity_create('user', array(
-      'name' => $_POST['name'],
-      'mail' => $_POST['mail'],
+      'name' => $data['name'],
+      'mail' => $data['mail'],
       'pass' => $password,
     ));
 
