@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Zziggers Elements feature.
- */
-
-include_once 'zziggers_elements.features.inc';

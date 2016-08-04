@@ -30,7 +30,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
  *   },
  *   list_cache_contexts = { "user" },
  *   base_table = "vickie_report",
- *   admin_permission = "administer vickie entity",
+ *   admin_permission = "administer report entity",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",

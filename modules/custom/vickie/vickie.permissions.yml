@@ -1,10 +1,12 @@
 'delete report entity':
-  title: Delete entity content.
+  title: Delete Report content.
 'add report entity':
-  title: Add entity content
-'view report entity':
-  title: View entity content
+  title: Add new Report
+'view own report entity':
+  title: View Own Report
+'view any report entity':
+  title: View Any Report
 'edit report entity':
-  title: Edit entity content
+  title: Edit any Report
 'administer report entity':
-  title: Administer settings
+  title: Administer Report Settings
