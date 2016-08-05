@@ -65,6 +65,43 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
    /**
    * {@inheritdoc}
    */
+   public function getID() {
+     return $this->get('id')->value;
+   }
+
+   /**
+   * {@inheritdoc}
+   */
+    public function getLocation() {
+      return $this->get('location')->value;
+    }
+
+   /**
+   * {@inheritdoc}
+   */
+    public function setLocation($location) {
+      $this->get('location')->value = $location;
+      return $this;
+    }
+
+   /**
+   * {@inheritdoc}
+   */
+    public function getPhone() {
+      return $this->get('phone')->value;
+    }
+
+   /**
+   * {@inheritdoc}
+   */
+    public function setPhone($phone) {
+      $this->get('phone')->value = $phone;
+      return $this;
+    }
+
+   /**
+   * {@inheritdoc}
+   */
    public function getCreatedTime() {
      return $this->get('created')->value;
    }
@@ -143,27 +180,81 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ->setDisplayConfigurable('form', TRUE)
         ->setdisplayConfigurable('view', TRUE);
 
-        $fields['bad_mic'] = BaseFieldDefinition::create('string')
-          ->setLabel(t('Bad Mic'))
-          ->setDescription(t('Stores the status of a bad mic.'))
-          ->setSettings(array( 'default_value' => 0))
-          ->setDisplayOptions('view', array(
-            'label' => 'above',
-            'type' => 'string',
-            'weight' => -5
-          ))
-          ->setdisplayOptions('form', array(
-            'type' => 'string_textfield',
-            'settings' => array(
-              'display_label' => TRUE,
-            ),
-            'weight' => -5
-          ))
-          ->setDisplayConfigurable('form', TRUE)
-          ->setdisplayConfigurable('view', TRUE);
+      $fields['bad_mic'] = BaseFieldDefinition::create('boolean')
+        ->setLabel(t('Bad Mic'))
+        ->setDescription(t('Stores the status of a bad mic.'))
+        ->setSettings(array( 'default_value' => 0))
+        ->setDisplayOptions('view', array(
+          'label' => 'above',
+          'type' => 'string',
+          'weight' => -5
+        ))
+        ->setdisplayOptions('form', array(
+          'type' => 'boolean_checkbox',
+          'weight' => -5
+        ))
+        ->setDisplayConfigurable('form', TRUE)
+        ->setdisplayConfigurable('view', TRUE);
 
-        $fields['location'] = BaseFieldDefinition::create('string')
-          ->setLabel(t('Location'))
+      $fields['location'] = BaseFieldDefinition::create('string')
+        ->setLabel(t('Location'))
+        ->setSettings(array(
+          'default_value' => '',
+          'max_length' => 255,
+          'text_processing' => 0,
+        ))
+        ->setDisplayOptions('view', array(
+          'label' => 'above',
+          'type' => 'string',
+          'weight' => -4
+        ))
+        ->setDisplayOptions('form', array(
+          'type' => 'string_textfield',
+          'weight' => -4
+        ))
+        ->setDisplayConfigurable('form', TRUE)
+        ->setdisplayConfigurable('view', TRUE);
+
+      $fields['gender'] = BaseFieldDefinition::create('string')
+        ->setLabel(t('Gender'))
+        ->setSettings(array(
+          'default_value' => '',
+          'max_length' => 255,
+          'text_processing' => 0,
+        ))
+        ->setDisplayOptions('view', array(
+          'label' => 'above',
+          'type' => 'string',
+          'weight' => -4
+        ))
+        ->setDisplayOptions('form', array(
+          'type' => 'string_textfield',
+          'weight' => -4
+        ))
+        ->setDisplayConfigurable('form', TRUE)
+        ->setdisplayConfigurable('view', TRUE);
+
+      $fields['age'] = BaseFieldDefinition::create('string')
+        ->setLabel(t('Age'))
+        ->setSettings(array(
+          'default_value' => '',
+          'max_length' => 255,
+          'text_processing' => 0,
+        ))
+        ->setDisplayOptions('view', array(
+          'label' => 'above',
+          'type' => 'string',
+          'weight' => -4
+        ))
+        ->setDisplayOptions('form', array(
+          'type' => 'string_textfield',
+          'weight' => -4
+        ))
+        ->setDisplayConfigurable('form', TRUE)
+        ->setdisplayConfigurable('view', TRUE);
+
+      $fields['phone'] = BaseFieldDefinition::create('string')
+          ->setLabel(t('Phone'))
           ->setSettings(array(
             'default_value' => '',
             'max_length' => 255,
@@ -181,76 +272,60 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
           ->setDisplayConfigurable('form', TRUE)
           ->setdisplayConfigurable('view', TRUE);
 
-          $fields['phone'] = BaseFieldDefinition::create('string')
-            ->setLabel(t('Phone'))
-            ->setSettings(array(
-              'default_value' => '',
-              'max_length' => 255,
-              'text_processing' => 0,
-            ))
-            ->setDisplayOptions('view', array(
-              'label' => 'above',
-              'type' => 'string',
-              'weight' => -4
-            ))
-            ->setDisplayOptions('form', array(
-              'type' => 'string_textfield',
-              'weight' => -4
-            ))
-            ->setDisplayConfigurable('form', TRUE)
-            ->setdisplayConfigurable('view', TRUE);
+      $fields['email'] = BaseFieldDefinition::create('string')
+        ->setLabel(t('Email'))
+        ->setSettings(array(
+          'default_value' => '',
+          'max_length' => 255,
+          'text_processing' => 0,
+        ))
+        ->setDisplayOptions('view', array(
+          'label' => 'above',
+          'type' => 'string',
+          'weight' => -4
+        ))
+        ->setDisplayOptions('form', array(
+          'type' => 'string_textfield',
+          'weight' => -4
+        ))
+        ->setDisplayConfigurable('form', TRUE)
+        ->setdisplayConfigurable('view', TRUE);
 
-        $fields['audio'] = BaseFieldDefinition::create('file')
+      $fields['audio'] = BaseFieldDefinition::create('entity_reference')
           ->setLabel(t('Audio Files'))
           ->setDescription(t('Report audio files uploaded for this report.'))
-          ->setSettings(array(
-              'upload_validators' => array(
-                  'file_validate_extensions' => array('wav mp3'),
-              ),
-          ))
+          ->setSetting('file_extensions', 'mp3 wav')
+          ->setDefaultValue('')
           ->setDisplayOptions('view', array(
-              'label' => 'above',
-              'type' => 'file',
-              'weight' => -3,
+            'label' => 'above',
+            'type' => 'file',
+            'weight' => -4,
           ))
           ->setDisplayOptions('form', array(
-              'type' => 'file',
-              'settings' => array(
-                  'upload_validators' => array(
-                      'file_validate_extensions' => array('wav mp3'),
-                  ),
-              ),
-              'weight' => -1,
+            'type' => 'file',
+            'weight' => -4,
           ))
           ->setDisplayConfigurable('form', TRUE)
           ->setDisplayConfigurable('view', TRUE)
           ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
 
-          $fields['csv'] = BaseFieldDefinition::create('file')
-            ->setLabel(t('CSV File'))
-            ->setDescription(t('Report audio files uploaded for this report.'))
-            ->setSettings(array(
-                'upload_validators' => array(
-                    'file_validate_extensions' => array('csv'),
-                ),
-            ))
-            ->setDisplayOptions('view', array(
-                'label' => 'above',
-                'type' => 'file',
-                'weight' => -3,
-            ))
-            ->setDisplayOptions('form', array(
-                'type' => 'file',
-                'settings' => array(
-                    'upload_validators' => array(
-                        'file_validate_extensions' => array('csv'),
-                    ),
-                ),
-                'weight' => -1,
-            ))
-            ->setDisplayConfigurable('form', TRUE)
-            ->setDisplayConfigurable('view', TRUE)
-            ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+      $fields['csv'] = BaseFieldDefinition::create('entity_reference')
+        ->setLabel(t('CSV File'))
+        ->setDescription(t('Report CSV files uploaded for this report.'))
+        ->setSetting('file_extensions', 'csv')
+        ->setDefaultValue('')
+        ->setDisplayOptions('view', array(
+          'label' => 'above',
+          'type' => 'file',
+          'weight' => -4,
+        ))
+        ->setDisplayOptions('form', array(
+          'type' => 'file',
+          'weight' => -4,
+        ))
+        ->setDisplayConfigurable('form', TRUE)
+        ->setDisplayConfigurable('view', TRUE)
+        ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
 
       return $fields;
    }
