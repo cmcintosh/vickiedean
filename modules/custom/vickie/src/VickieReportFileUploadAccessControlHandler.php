@@ -23,13 +23,13 @@ class VickieReportFileUploadAccessControlHandler extends EntityAccessControlHand
   protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
     switch ($operation) {
       case 'view':
-        return AccessResult::allowedIfHasPermission($account, 'view report_file_upload entity');
+        return AccessResult::allowedIfHasPermission($account, 'view report_file entity');
 
       case 'edit':
-        return AccessResult::allowedIfHasPermission($account, 'edit report_file_upload entity');
+        return AccessResult::allowedIfHasPermission($account, 'edit report_file entity');
 
       case 'delete':
-        return AccessResult::allowedIfHasPermission($account, 'delete report_file_upload entity');
+        return AccessResult::allowedIfHasPermission($account, 'delete report_file entity');
     }
     return AccessResult::allowed();
   }
@@ -41,7 +41,7 @@ class VickieReportFileUploadAccessControlHandler extends EntityAccessControlHand
    * will be created during the 'add' process.
    */
   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
-    return AccessResult::allowedIfHasPermission($account, 'add report_file_upload entity');
+    return AccessResult::allowedIfHasPermission($account, 'add report_file entity');
   }
 
 }

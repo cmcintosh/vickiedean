@@ -60,7 +60,7 @@ class VickieReportFileUploadListBuilder extends EntityListBuilder {
    */
   public function render() {
     $build['description'] = array(
-      '#markup' => $this->t('This is the entity for the file uploads in the Vickie Report. You can manage the fields on the <a href="@adminlink">Vickie Report admin page</a>.', array(
+      '#markup' => $this->t('This is the entity for the file uploads in the Vickie Report. You can manage the fields on the <a href="@adminlink">Vickie File Uploads Report admin page</a>.', array(
         '@adminlink' => $this->urlGenerator->generateFromRoute('vickie.vickie_report_file_upload_settings'),
       )),
     );

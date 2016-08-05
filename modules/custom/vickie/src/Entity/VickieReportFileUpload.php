@@ -31,7 +31,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
  *   },
  *   list_cache_contexts = { "user" },
  *   base_table = "vickie_report_file_upload",
- *   admin_permission = "administer report_file_upload entity",
+ *   admin_permission = "administer report_file entity",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -199,7 +199,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ))
         ->setDisplayConfigurable('form', TRUE)
         ->setdisplayConfigurable('view', TRUE);
-        
+
       $fields['audio'] = BaseFieldDefinition::create('file')
           ->setLabel(t('Audio Files'))
           ->setDescription(t('Report audio files uploaded for this report.'))
