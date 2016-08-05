@@ -1,0 +1,60 @@
+array(1) {
+  ["file"]=>
+  array(5) {
+    ["name"]=>
+    string(23) "-Test-jle6-113012-A.wav"
+    ["type"]=>
+    string(9) "audio/wav"
+    ["tmp_name"]=>
+    string(14) "/tmp/phpii0W30"
+    ["error"]=>
+    int(0)
+    ["size"]=>
+    int(220544)
+  }
+}
+array(1) {
+  ["file"]=>
+  array(5) {
+    ["name"]=>
+    string(23) "-Test-jle6-113012-B.wav"
+    ["type"]=>
+    string(0) ""
+    ["tmp_name"]=>
+    string(0) ""
+    ["error"]=>
+    int(1)
+    ["size"]=>
+    int(0)
+  }
+}
+array(1) {
+  ["file"]=>
+  array(5) {
+    ["name"]=>
+    string(24) "-Test-jle6-113012-BD.wav"
+    ["type"]=>
+    string(0) ""
+    ["tmp_name"]=>
+    string(0) ""
+    ["error"]=>
+    int(1)
+    ["size"]=>
+    int(0)
+  }
+}
+array(1) {
+  ["file"]=>
+  array(5) {
+    ["name"]=>
+    string(23) "-Test-jle6-113012-S.wav"
+    ["type"]=>
+    string(0) ""
+    ["tmp_name"]=>
+    string(0) ""
+    ["error"]=>
+    int(1)
+    ["size"]=>
+    int(0)
+  }
+}

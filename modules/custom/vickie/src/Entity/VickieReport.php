@@ -292,42 +292,50 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ->setdisplayConfigurable('view', TRUE);
 
       $fields['audio'] = BaseFieldDefinition::create('entity_reference')
-          ->setLabel(t('Audio Files'))
-          ->setDescription(t('Report audio files uploaded for this report.'))
-          ->setSetting('file_extensions', 'mp3 wav')
-          ->setDefaultValue('')
-          ->setDisplayOptions('view', array(
-            'label' => 'above',
-            'type' => 'file',
-            'weight' => -4,
-          ))
-          ->setDisplayOptions('form', array(
-            'type' => 'file',
-            'weight' => -4,
-          ))
-          ->setDisplayConfigurable('form', TRUE)
-          ->setDisplayConfigurable('view', TRUE)
-          ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
-
-      $fields['csv'] = BaseFieldDefinition::create('entity_reference')
-        ->setLabel(t('CSV File'))
-        ->setDescription(t('Report CSV files uploaded for this report.'))
-        ->setSetting('file_extensions', 'csv')
-        ->setDefaultValue('')
+        ->setLabel(t('Audio Files'))
+        ->setDescription(t('Report audio files uploaded for this report.'))
+        ->setSetting('target_type', 'vickie_report_file_upload')
+        ->setSetting('handler', 'default')
         ->setDisplayOptions('view', array(
           'label' => 'above',
-          'type' => 'file',
-          'weight' => -4,
+          'type' => 'author',
+          'weight' => -3,
         ))
         ->setDisplayOptions('form', array(
-          'type' => 'file',
-          'weight' => -4,
+          'type' => 'entity_reference_autocomplete',
+          'settings' => array(
+            'match_operator' => 'CONTAINS',
+            'size' => 60,
+            'placeholder' => '',
+          ),
+          'weight' => -3,
         ))
         ->setDisplayConfigurable('form', TRUE)
         ->setDisplayConfigurable('view', TRUE)
         ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
 
-      return $fields;
-   }
-
- }
+      $fields['csv'] = BaseFieldDefinition::create('entity_reference')
+       ->setLabel(t('CSV File'))
+       ->setDescription(t('Report CSV files uploaded for this report.'))
+       ->setSetting('target_type', 'vickie_report_file_upload')
+        ->setSetting('handler', 'default')
+        ->setDisplayOptions('view', array(
+          'label' => 'above',
+          'type' => 'author',
+          'weight' => -3,
+        ))
+        ->setDisplayOptions('form', array(
+          'type' => 'entity_reference_autocomplete',
+          'settings' => array(
+            'match_operator' => 'CONTAINS',
+            'size' => 60,
+            'placeholder' => '',
+          ),
+          'weight' => -3,
+        ))
+        ->setDisplayConfigurable('form', TRUE)
+        ->setDisplayConfigurable('view', TRUE)
+        ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+     return $fields;
+  }
+}

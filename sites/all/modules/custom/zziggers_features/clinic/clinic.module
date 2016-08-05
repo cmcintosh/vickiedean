@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Clinic feature.
+ */
+
+include_once 'clinic.features.inc';
