@@ -117,8 +117,10 @@ class VickieReportAPI extends ControllerBase {
  	}
 
   public function authorizeAccess($data) {
-
-    return false;
+    // Return new user session to client.
+    $uid = \Drupal::service('user.auth')->authenticate($data['username'], $data['password']);
+    $session_manager = \Drupal::service('session_manager');
+    return $uid;
   }
 
 }
