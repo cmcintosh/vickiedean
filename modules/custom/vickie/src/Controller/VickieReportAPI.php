@@ -39,6 +39,10 @@ class VickieReportAPI extends ControllerBase {
 	// For uploading files in vickie report entity.
  	public function upload_file(Request $request = null) {
     $data = $request->request->all();
+    if(!($this->authorizeAccess($data))) {
+      // user validatioin failed, and is not set as a new user.
+      return new JsonResponse (array( 'error' => t('Could not authorize the account.') ) );
+    }
 
     // Get the information for the audio file.
     $audioFile = $request->files->get('file');
@@ -77,8 +81,7 @@ class VickieReportAPI extends ControllerBase {
     	$data = $request->request->all();
 
     // Validate the user information here, if we cannot validate the user return an error.
-
-    if(FALSE) {
+    if(!($this->authorizeAccess($data))) {
       // user validatioin failed, and is not set as a new user.
       return new JsonResponse (array( 'error' => t('Could not authorize the account.') ) );
     }
@@ -112,5 +115,10 @@ class VickieReportAPI extends ControllerBase {
         return new JsonResponse (array( 'error' => t('There was an issue saving the report.') ) );
       }
  	}
+
+  public function authorizeAccess($data) {
+
+    return false;
+  }
 
 }
