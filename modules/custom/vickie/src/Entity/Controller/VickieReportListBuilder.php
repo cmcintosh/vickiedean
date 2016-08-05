@@ -83,6 +83,7 @@ class VickieReportListBuilder extends EntityListBuilder {
     $header['location'] = $this->t('Location');
     $header['phone'] = $this->t('Phone');
     $header['audio'] = $this->t('Audio');
+    $header['csv'] = $this->t('CSV');
     return $header + parent::buildHeader();
   }
 
@@ -97,6 +98,7 @@ class VickieReportListBuilder extends EntityListBuilder {
     $row['location'] = $entity->location->value;
     $row['phone'] = $entity->phone->value;
     $row['audio'] = $entity->audio->value;
+    $row['csv'] = $entity->csv->value;
     return $row + parent::buildRow($entity);
   }
 

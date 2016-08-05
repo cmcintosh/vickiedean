@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"string",
+				"string_textfield"
+			],
+			[
 				"vickie_report",
 				"vickie_report_settings"
 			],
@@ -510,20 +514,56 @@
 			[
 				"va",
 				"var"
-			],
-			[
-				"Re",
-				"Re-assign"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "VickieReport.php",
+			"file": "modules/custom/vickie/src/Controller/VickieReportAPI.php",
 			"settings":
 			{
-				"buffer_size": 7925,
+				"buffer_size": 1264,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/vickie/src/Entity/VickieReport.php",
+			"settings":
+			{
+				"buffer_size": 7230,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/vickie/src/Controller/VickieUserAPI.php",
+			"settings":
+			{
+				"buffer_size": 3004,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "core/modules/user/src/Entity/User.php",
+			"settings":
+			{
+				"buffer_size": 16250,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/vickie/src/Entity/Controller/VickieReportListBuilder.php",
+			"settings":
+			{
+				"buffer_size": 3323,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/vickie/vickie.routing.yml",
+			"settings":
+			{
+				"buffer_size": 2666,
 				"line_ending": "Unix"
 			}
 		}
@@ -605,6 +645,23 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/vickiedean",
+		"/C/xampp/htdocs/vickiedean/core",
+		"/C/xampp/htdocs/vickiedean/core/modules",
+		"/C/xampp/htdocs/vickiedean/core/modules/field/src/Entity",
+		"/C/xampp/htdocs/vickiedean/core/modules/field/src/Plugin/migrate",
+		"/C/xampp/htdocs/vickiedean/core/modules/field/src/Plugin/migrate/process",
+		"/C/xampp/htdocs/vickiedean/core/modules/file/src",
+		"/C/xampp/htdocs/vickiedean/core/modules/file/src/Plugin",
+		"/C/xampp/htdocs/vickiedean/core/modules/file/src/Plugin/Field",
+		"/C/xampp/htdocs/vickiedean/core/modules/file/src/Plugin/Field/FieldType",
+		"/C/xampp/htdocs/vickiedean/core/modules/file/tests/modules",
+		"/C/xampp/htdocs/vickiedean/core/modules/file/tests/src",
+		"/C/xampp/htdocs/vickiedean/core/modules/file/tests/src/Unit",
+		"/C/xampp/htdocs/vickiedean/core/modules/file/tests/src/Unit/Plugin",
+		"/C/xampp/htdocs/vickiedean/core/modules/file/tests/src/Unit/Plugin/migrate",
+		"/C/xampp/htdocs/vickiedean/core/modules/user",
+		"/C/xampp/htdocs/vickiedean/core/modules/user/src",
+		"/C/xampp/htdocs/vickiedean/core/modules/user/src/Entity",
 		"/C/xampp/htdocs/vickiedean/modules",
 		"/C/xampp/htdocs/vickiedean/modules/custom",
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie",
@@ -613,6 +670,7 @@
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Entity",
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Entity/Controller",
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Form",
+		"/C/xampp/htdocs/vickiedean/modules/examples/content_entity_example",
 		"/C/xampp/htdocs/vickiedean/modules/examples/content_entity_example/src",
 		"/C/xampp/htdocs/vickiedean/modules/examples/content_entity_example/src/Entity",
 		"/C/xampp/htdocs/vickiedean/modules/examples/content_entity_example/src/Entity/Controller",
@@ -624,15 +682,24 @@
 		"/C/xampp/htdocs/vickiedean/modules/examples/field_example/src/Plugin/Field/FieldFormatter",
 		"/C/xampp/htdocs/vickiedean/modules/examples/field_example/src/Plugin/Field/FieldType",
 		"/C/xampp/htdocs/vickiedean/modules/examples/field_example/src/Plugin/Field/FieldWidget",
-		"/C/xampp/htdocs/vickiedean/modules/examples/file_example/src"
+		"/C/xampp/htdocs/vickiedean/modules/examples/file_example/src",
+		"/C/xampp/htdocs/vickiedean/themes/custom",
+		"/C/xampp/htdocs/vickiedean/themes/custom/vickie_dean_themes",
+		"/C/xampp/htdocs/vickiedean/themes/custom/vickie_dean_themes/scss"
 	],
 	"file_history":
 	[
-		"/C/Users/tizon/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Entity/Controller/VickieReportListBuilder.php",
+		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Entity/VickieReport.php",
+		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Controller/VickieUserAPI.php",
+		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Controller/VickieReportAPI.php",
 		"/C/Users/tizon/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/Users/tizon/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/C/xampp/htdocs/vickiedean/vickiedean.sublime-workspace",
+		"/C/xampp/htdocs/vickiedean/themes/custom/vickie_dean_themes/scss/screen.scss",
+		"/C/xampp/htdocs/vickiedean/modules/examples/content_entity_example/src/Entity/Contact.php",
 		"/C/xampp/htdocs/vickiedean/modules/examples/field_example/src/Plugin/Field/FieldWidget/TextWidget.php",
 		"/C/xampp/htdocs/vickiedean/modules/examples/field_example/src/Plugin/Field/FieldType/RgbItem.php",
-		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Entity/Controller/VickieReportListBuilder.php",
 		"/C/xampp/htdocs/vickiedean/core/lib/Drupal/Core/Entity/ContentEntityBase.php",
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/vickie.routing.yml",
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/vickie.permissions.yml",
@@ -644,12 +711,8 @@
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Form/VickieReportSettingsForm.php",
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Form/VickieReportDeleteForm.php",
 		"/C/xampp/htdocs/vickiedean/modules/examples/content_entity_example/src/Entity/Controller/ContactListBuilder.php",
-		"/C/xampp/htdocs/vickiedean/modules/examples/content_entity_example/src/Entity/Contact.php",
-		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Entity/VickieReport.php",
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/vickie.links.task.yml",
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/VickieReportAccessControlHandler.php",
-		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Controller/VickieReportAPI.php",
-		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Controller/VickieUserAPI.php",
 		"/C/xampp/htdocs/vickiedean/modules/examples/content_entity_example/content_entity_example.routing.yml",
 		"/C/xampp/htdocs/vickiedean/modules/custom/vickie/src/Form/VickieReportForm.php",
 		"/C/xampp/htdocs/vickiedean/modules/examples/content_entity_example/src/Form/ContactSettingsForm.php",
@@ -753,13 +816,11 @@
 		"/C/xampp/htdocs/vickiedean/core/modules/field/src/FieldStorageConfigStorage.php",
 		"/C/xampp/htdocs/vickiedean/core/lib/Drupal/Core/Entity/EntityStorageBase.php",
 		"/C/xampp/htdocs/vickiedean/core/lib/Drupal/Core/Config/Entity/ConfigEntityStorage.php",
-		"/C/xampp/htdocs/vickiedean/core/lib/Drupal/Core/Entity/EntityFieldManager.php",
-		"/C/xampp/htdocs/vickiedean/core/modules/node/src/NodeViewsData.php",
-		"/C/xampp/htdocs/dashboard/phpinfo.php"
+		"/C/xampp/htdocs/vickiedean/core/lib/Drupal/Core/Entity/EntityFieldManager.php"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -773,6 +834,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"user",
+			"mail",
+			"name",
+			"file_validate_extension",
+			" ",
 			"location",
 			"gender",
 			"first_name",
@@ -895,12 +961,7 @@
 			", ",
 			",",
 			", ",
-			",",
-			".files.length",
-			"myapp",
-			"',",
-			")",
-			"new Date("
+			","
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -929,19 +990,47 @@
 			[
 				{
 					"buffer": 0,
-					"file": "VickieReport.php",
+					"file": "modules/custom/vickie/src/Controller/VickieReportAPI.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7925,
+						"buffer_size": 1264,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4261,
-								4261
+								1257,
+								1257
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "modules/custom/vickie/src/Entity/VickieReport.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4706,
+								4706
 							]
 						],
 						"settings":
@@ -951,10 +1040,130 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 828.0,
+						"translation.y": 2700.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "modules/custom/vickie/src/Controller/VickieUserAPI.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2610,
+								2610
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1188.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "core/modules/user/src/Entity/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								773,
+								773
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8334.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "modules/custom/vickie/src/Entity/Controller/VickieReportListBuilder.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2860,
+								2860
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1350.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "modules/custom/vickie/vickie.routing.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								219
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1012,6 +1221,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"user.php",
+				"core\\modules\\user\\src\\Entity\\User.php"
+			],
+			[
+				"contact.php",
+				"modules\\examples\\content_entity_example\\src\\Entity\\Contact.php"
+			],
 			[
 				"contententitybase.php",
 				"core\\lib\\Drupal\\Core\\Entity\\ContentEntityBase.php"
@@ -1380,12 +1597,45 @@
 	"selected_group": 0,
 	"settings":
 	{
+		"xdebug":
+		{
+			"restore_index":
+			{
+				"301":
+				{
+					"group": 0,
+					"index": 0
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 332.0,
+	"side_bar_width": 314.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

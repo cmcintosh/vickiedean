@@ -65,6 +65,36 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
    /**
    * {@inheritdoc}
    */
+    public function getLocation() {
+      return $this->get('location')->value;
+    }
+
+   /**
+   * {@inheritdoc}
+   */
+    public function setLocation($location) {
+      $this->get('location')->value = $location;
+      return $this;
+    }
+
+   /**
+   * {@inheritdoc}
+   */
+    public function getPhone() {
+      return $this->get('phone')->value;
+    }
+
+   /**
+   * {@inheritdoc}
+   */
+    public function setPhone($phone) {
+      $this->get('phone')->value = $phone;
+      return $this;
+    }
+
+   /**
+   * {@inheritdoc}
+   */
    public function getCreatedTime() {
      return $this->get('created')->value;
    }
