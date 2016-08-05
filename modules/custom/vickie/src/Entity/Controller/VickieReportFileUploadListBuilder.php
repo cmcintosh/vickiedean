@@ -77,13 +77,7 @@ class VickieReportFileUploadListBuilder extends EntityListBuilder {
    * and inserts the 'edit' and 'delete' links as defined for the entity type.
    */
   public function buildHeader() {
-    $header['id'] = $this->t('ReportID');
     $header['name'] = $this->t('Name');
-    $header['bad_mic'] = $this->t('Bad Mic');
-    $header['location'] = $this->t('Location');
-    $header['phone'] = $this->t('Phone');
-    $header['audio'] = $this->t('Audio');
-    $header['csv'] = $this->t('CSV');
     return $header + parent::buildHeader();
   }
 
@@ -91,14 +85,8 @@ class VickieReportFileUploadListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\vickie\Entity\Report */
-    $row['id'] = $entity->id();
+    /* @var $entity \Drupal\vickie\Entity\VickieReportFileUpload */
     $row['name'] = $entity->link();
-    $row['bad_mic'] = $entity->bad_mic->value;
-    $row['location'] = $entity->location->value;
-    $row['phone'] = $entity->phone->value;
-    $row['audio'] = $entity->audio->value;
-    $row['csv'] = $entity->csv->value;
     return $row + parent::buildRow($entity);
   }
 

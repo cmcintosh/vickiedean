@@ -10,3 +10,17 @@
   title: Edit any Report
 'administer report entity':
   title: Administer Report Settings
+
+# for the VickieFileUpload Entity permissions
+'delete report_file_upload entity':
+  title: Delete Report content.
+'add report_file_upload entity':
+  title: Add new Report
+'view own report_file_upload entity':
+  title: View Own Report
+'view any report_file_upload entity':
+  title: View Any Report
+'edit report_file_upload entity':
+  title: Edit any Report
+'administer report_file_upload entity':
+  title: Administer Report Settings

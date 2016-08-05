@@ -21,26 +21,26 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
  *   label = @Translation("Report File Uploads"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\vickie\Entity\Controller\VickieReportListBuilder",
+ *     "list_builder" = "Drupal\vickie\Entity\Controller\VickieReportFileUploadListBuilder",
  *     "form" = {
- *       "add" = "Drupal\vickie\Form\VickieReportForm",
- *       "edit" = "Drupal\vickie\Form\VickieReportForm",
- *       "delete" = "Drupal\vickie\Form\VickieReportDeleteForm",
+ *       "add" = "Drupal\vickie\Form\VickieReportFileUploadForm",
+ *       "edit" = "Drupal\vickie\Form\VickieReportFileUploadForm",
+ *       "delete" = "Drupal\vickie\Form\VickieReportFileUploadDeleteForm",
  *     },
- *     "access" = "Drupal\vickie\VickieReportAccessControlHandler",
+ *     "access" = "Drupal\vickie\VickieReportFileUploadAccessControlHandler",
  *   },
  *   list_cache_contexts = { "user" },
  *   base_table = "vickie_report_file_upload",
- *   admin_permission = "administer report entity",
+ *   admin_permission = "administer report_file_upload entity",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
  *     "uuid" = "uuid"
  *   },
  *   links = {
- *     "canonical" = "/report/{vickie_report_file_upload}",
- *     "edit-form" = "/report/{vickie_report_file_upload}/edit",
- *     "delete-form" = "/report/{vickie_report_file_upload}/delete",
+ *     "canonical" = "/file_upload_report/{vickie_report_file_upload}",
+ *     "edit-form" = "/file_upload_report/{vickie_report_file_upload}/edit",
+ *     "delete-form" = "/file_upload_report/{vickie_report_file_upload}/delete",
  *     "collection" = "/admin/content/vickie_report_file_upload/list"
  *   },
  *   field_ui_base_route = "vickie.vickie_report_file_upload_settings",
@@ -48,7 +48,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
  *
  */
 
- class VickieReportFileUpload extends ContentEntityBase implements VickieReportInterface {
+ class VickieReportFileUpload extends ContentEntityBase implements VickieReportFileUploadInterface {
 
    use EntityChangedTrait;
 
@@ -151,7 +151,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
      // Standard fields, used for a primary index
 
       $fields['id'] = BaseFieldDefinition::create('integer')
-       ->setLabel(t('ID'))
+       ->setLabel(t('Report ID'))
        ->setDescription(t('The Unique ID for this report.'))
        ->setReadOnly(TRUE);
 
@@ -160,44 +160,9 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ->setDescription(t('The UUID of the Contact entity.'))
         ->setReadOnly(TRUE);
 
-      $fields['name'] = BaseFieldDefinition::create('string')
-        ->setLabel(t('Report Name'))
-        ->setDescription(t('The name of the Report entity.'))
-        ->setSettings(array(
-          'default_value' => '',
-          'max_length' => 255,
-          'text_processing' => 0,
-        ))
-        ->setDisplayOptions('view', array(
-          'label' => 'above',
-          'type' => 'string',
-          'weight' => -6
-        ))
-        ->setDisplayOptions('form', array(
-          'type' => 'string_textfield',
-          'weight' => -6
-        ))
-        ->setDisplayConfigurable('form', TRUE)
-        ->setdisplayConfigurable('view', TRUE);
-
-      $fields['bad_mic'] = BaseFieldDefinition::create('boolean')
-        ->setLabel(t('Bad Mic'))
-        ->setDescription(t('Stores the status of a bad mic.'))
-        ->setSettings(array( 'default_value' => 0))
-        ->setDisplayOptions('view', array(
-          'label' => 'above',
-          'type' => 'string',
-          'weight' => -5
-        ))
-        ->setdisplayOptions('form', array(
-          'type' => 'boolean_checkbox',
-          'weight' => -5
-        ))
-        ->setDisplayConfigurable('form', TRUE)
-        ->setdisplayConfigurable('view', TRUE);
-
-      $fields['location'] = BaseFieldDefinition::create('string')
-        ->setLabel(t('Location'))
+      $fields['c_file'] = BaseFieldDefinition::create('string')
+        ->setLabel(t('C_File.'))
+        ->setDescription(t('The short string indicating for the audio recordings.'))
         ->setSettings(array(
           'default_value' => '',
           'max_length' => 255,
@@ -215,8 +180,9 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ->setDisplayConfigurable('form', TRUE)
         ->setdisplayConfigurable('view', TRUE);
 
-      $fields['gender'] = BaseFieldDefinition::create('string')
-        ->setLabel(t('Gender'))
+      $fields['n_file'] = BaseFieldDefinition::create('string')
+        ->setLabel(t('N_File.'))
+        ->setDescription(t('The long description related to the audio recordings.'))
         ->setSettings(array(
           'default_value' => '',
           'max_length' => 255,
@@ -233,64 +199,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ))
         ->setDisplayConfigurable('form', TRUE)
         ->setdisplayConfigurable('view', TRUE);
-
-      $fields['age'] = BaseFieldDefinition::create('string')
-        ->setLabel(t('Age'))
-        ->setSettings(array(
-          'default_value' => '',
-          'max_length' => 255,
-          'text_processing' => 0,
-        ))
-        ->setDisplayOptions('view', array(
-          'label' => 'above',
-          'type' => 'string',
-          'weight' => -4
-        ))
-        ->setDisplayOptions('form', array(
-          'type' => 'string_textfield',
-          'weight' => -4
-        ))
-        ->setDisplayConfigurable('form', TRUE)
-        ->setdisplayConfigurable('view', TRUE);
-
-      $fields['phone'] = BaseFieldDefinition::create('string')
-          ->setLabel(t('Phone'))
-          ->setSettings(array(
-            'default_value' => '',
-            'max_length' => 255,
-            'text_processing' => 0,
-          ))
-          ->setDisplayOptions('view', array(
-            'label' => 'above',
-            'type' => 'string',
-            'weight' => -4
-          ))
-          ->setDisplayOptions('form', array(
-            'type' => 'string_textfield',
-            'weight' => -4
-          ))
-          ->setDisplayConfigurable('form', TRUE)
-          ->setdisplayConfigurable('view', TRUE);
-
-      $fields['email'] = BaseFieldDefinition::create('string')
-        ->setLabel(t('Email'))
-        ->setSettings(array(
-          'default_value' => '',
-          'max_length' => 255,
-          'text_processing' => 0,
-        ))
-        ->setDisplayOptions('view', array(
-          'label' => 'above',
-          'type' => 'string',
-          'weight' => -4
-        ))
-        ->setDisplayOptions('form', array(
-          'type' => 'string_textfield',
-          'weight' => -4
-        ))
-        ->setDisplayConfigurable('form', TRUE)
-        ->setdisplayConfigurable('view', TRUE);
-
+        
       $fields['audio'] = BaseFieldDefinition::create('file')
           ->setLabel(t('Audio Files'))
           ->setDescription(t('Report audio files uploaded for this report.'))

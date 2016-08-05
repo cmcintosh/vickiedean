@@ -10,3 +10,16 @@ vickie_report.admin.structure.settings:
   description: 'Configure Report entity'
   route_name:  vickie.vickie_report_settings
   parent: system.admin_structure
+
+# Define the menu links for the File upload entity
+
+entity.vickie_report_file_upload.collection:
+  title: 'File Upload Report Listing'
+  route_name: entity.vickie_report_file_upload.collection
+  description: 'File Upload List Reports'
+  weight: 10
+vickie_report_file_upload.admin.structure.settings:
+  title: Vickie File Upload Report Settings
+  description: 'Configure File Upload Report entity'
+  route_name:  vickie.vickie_report_file_upload_settings
+  parent: system.admin_structure

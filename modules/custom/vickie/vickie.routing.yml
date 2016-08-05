@@ -28,9 +28,6 @@ vickie.file.upload:
   defaults:
     _controller: '\Drupal\vickie\Controller\VickieReportAPI::upload_file'
   requirements:
-    _permission: 'access content'
-
-# This file brings everything together. Very nifty!
 
 # Route name can be used in several places; e.g. links, redirects, and local
 # actions.
@@ -88,3 +85,59 @@ vickie.vickie_report_settings:
     _title: 'Vickie Report Settings'
   requirements:
     _permission: 'administer report entity'
+    
+# Routings used for the VickieReportFileUpload Entity. #
+entity.vickie_report_file_upload.canonical:
+  path: '/file_upload_report/{vickie_report_file_upload}'
+  defaults:
+  # Calls the view controller, defined in the annotation of the contact entity
+    _entity_view: 'vickie_report_file_upload'
+    _title: 'File Upload for Report Content'
+  requirements:
+  # Calls the access controller of the entity, $operation 'view'
+    _entity_access: 'vickie_report_file_upload.view'
+
+entity.vickie_report_file_upload.collection:
+  path: '/admin/content/vickie_report_file_upload/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+    _entity_list: 'vickie_report_file_upload'
+    _title: 'File Upload for Report List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view report_file_upload entity'
+
+vickie.vickie_file_upload_add:
+  path: '/vickie_report_file_upload/add'
+  defaults:
+  # Calls the form.add controller, defined in the contact entity.
+    _entity_form: vickie_report_file_upload.add
+    _title: 'Add File for Report'
+  requirements:
+    _entity_create_access: 'vickie_report_file_upload'
+
+entity.vickie_report_file_upload.edit_form:
+  path: '/file_upload_report/{vickie_report_file_upload}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the contact entity.
+    _entity_form: vickie_report_file_upload.edit
+    _title: 'Edit File for Report'
+  requirements:
+    _entity_access: 'vickie_report_file_upload.edit'
+
+entity.vickie_report_file_upload.delete_form:
+  path: '/file_upload_report/{vickie_report_file_upload}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the contact entity.
+    _entity_form: vickie_report_file_upload.delete
+    _title: 'Delete File for Report'
+  requirements:
+    _entity_access: 'vickie_report_file_upload.delete'
+
+vickie.vickie_report_file_upload_settings:
+  path: 'admin/structure/vickie_report_file_upload_settings'
+  defaults:
+    _form: '\Drupal\vickie\Form\VickieReportFileUploadSettingsForm'
+    _title: 'Vickie Report File Upload Settings'
+  requirements:
+    _permission: 'administer report_file_upload entity'

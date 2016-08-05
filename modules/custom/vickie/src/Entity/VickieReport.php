@@ -290,42 +290,45 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ))
         ->setDisplayConfigurable('form', TRUE)
         ->setdisplayConfigurable('view', TRUE);
-
-      $fields['audio'] = BaseFieldDefinition::create('file')
-          ->setLabel(t('Audio Files'))
-          ->setDescription(t('Report audio files uploaded for this report.'))
-          ->setSetting('file_extensions', 'mp3 wav')
-          ->setDefaultValue('')
-          ->setDisplayOptions('view', array(
-            'label' => 'above',
-            'type' => 'file',
-            'weight' => -4,
-          ))
-          ->setDisplayOptions('form', array(
-            'type' => 'file',
-            'weight' => -4,
-          ))
-          ->setDisplayConfigurable('form', TRUE)
-          ->setDisplayConfigurable('view', TRUE)
-          ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
-
-      $fields['csv'] = BaseFieldDefinition::create('file')
-        ->setLabel(t('CSV File'))
-        ->setDescription(t('Report CSV files uploaded for this report.'))
-        ->setSetting('file_extensions', 'csv')
-        ->setDefaultValue('')
+      $fields['audio'] = BaseFieldDefinition::create('string')
+        ->setLabel(t('Audio.'))
+        ->setDescription(t('The audio uploaded.'))
+        ->setSettings(array(
+          'default_value' => '',
+          'max_length' => 255,
+          'text_processing' => 0,
+        ))
         ->setDisplayOptions('view', array(
           'label' => 'above',
-          'type' => 'file',
-          'weight' => -4,
+          'type' => 'string',
+          'weight' => -4
         ))
         ->setDisplayOptions('form', array(
-          'type' => 'file',
-          'weight' => -4,
+          'type' => 'string_textfield',
+          'weight' => -4
         ))
         ->setDisplayConfigurable('form', TRUE)
-        ->setDisplayConfigurable('view', TRUE)
-        ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+        ->setdisplayConfigurable('view', TRUE);
+
+      $fields['csv'] = BaseFieldDefinition::create('string')
+        ->setLabel(t('CSV.'))
+        ->setDescription(t('The CSV file uploaded.'))
+        ->setSettings(array(
+          'default_value' => '',
+          'max_length' => 255,
+          'text_processing' => 0,
+        ))
+        ->setDisplayOptions('view', array(
+          'label' => 'above',
+          'type' => 'string',
+          'weight' => -4
+        ))
+        ->setDisplayOptions('form', array(
+          'type' => 'string_textfield',
+          'weight' => -4
+        ))
+        ->setDisplayConfigurable('form', TRUE)
+        ->setdisplayConfigurable('view', TRUE);
 
       return $fields;
    }

@@ -25,3 +25,31 @@ report.delete_confirm:
   base_route:  entity.vickie_report.canonical
   title: Delete
   weight: 10
+
+# Define the 'local' links for the VickieReportFileUpload entity.
+
+report_file_upload.settings_tab:
+  route_name: vickie.vickie_report_file_upload_settings
+  title: Settings
+  base_route: vickie.vickie_report_file_upload_settings
+
+report_file_upload.collection:
+  route_name: entity.vickie_report_file_upload.collection
+  title: File Upload Reports
+  base_route: system.admin_content
+
+report_file_upload.view:
+  route_name: entity.vickie_report_file_upload.canonical
+  base_route: entity.vickie_report_file_upload.canonical
+  title: View
+
+report_file_upload.page_edit:
+  route_name: entity.vickie_report_file_upload.edit_form
+  base_route: entity.vickie_report_file_upload.canonical
+  title: Edit
+
+report.delete_confirm:
+  route_name:  entity.vickie_report_file_upload.delete_form
+  base_route:  entity.vickie_report_file_upload.canonical
+  title: Delete
+  weight: 10
