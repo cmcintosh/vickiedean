@@ -21,8 +21,8 @@ report.page_edit:
   title: Edit
 
 report.delete_confirm:
-  route_name:  entity.vickie_report.delete_form
-  base_route:  entity.vickie_report.canonical
+  route_name: entity.vickie_report.delete_form
+  base_route: entity.vickie_report.canonical
   title: Delete
   weight: 10
 
@@ -47,7 +47,7 @@ report_file.page_edit:
   title: Edit
 
 report_file.delete_confirm:
-  route_name:  entity.vickie_report_file_upload.delete_form
-  base_route:  entity.vickie_report_file_upload.canonical
+  route_name: entity.vickie_report_file_upload.delete_form
+  base_route: entity.vickie_report_file_upload.canonical
   title: Delete
   weight: 10

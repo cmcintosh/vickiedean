@@ -72,36 +72,6 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
    /**
    * {@inheritdoc}
    */
-    public function getLocation() {
-      return $this->get('location')->value;
-    }
-
-   /**
-   * {@inheritdoc}
-   */
-    public function setLocation($location) {
-      $this->get('location')->value = $location;
-      return $this;
-    }
-
-   /**
-   * {@inheritdoc}
-   */
-    public function getPhone() {
-      return $this->get('phone')->value;
-    }
-
-   /**
-   * {@inheritdoc}
-   */
-    public function setPhone($phone) {
-      $this->get('phone')->value = $phone;
-      return $this;
-    }
-
-   /**
-   * {@inheritdoc}
-   */
    public function getCreatedTime() {
      return $this->get('created')->value;
    }
@@ -201,22 +171,22 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ->setdisplayConfigurable('view', TRUE);
 
       $fields['audio'] = BaseFieldDefinition::create('file')
-          ->setLabel(t('Audio Files'))
-          ->setDescription(t('Report audio files uploaded for this report.'))
-          ->setSetting('file_extensions', 'mp3 wav')
-          ->setDefaultValue('')
-          ->setDisplayOptions('view', array(
-            'label' => 'above',
-            'type' => 'file',
-            'weight' => -4,
-          ))
-          ->setDisplayOptions('form', array(
-            'type' => 'file',
-            'weight' => -4,
-          ))
-          ->setDisplayConfigurable('form', TRUE)
-          ->setDisplayConfigurable('view', TRUE)
-          ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+        ->setLabel(t('Audio Files'))
+        ->setDescription(t('Report audio files uploaded for this report.'))
+        ->setSetting('file_extensions', 'mp3 wav')
+        ->setDefaultValue('')
+        ->setDisplayOptions('view', array(
+          'label' => 'above',
+          'type' => 'file',
+          'weight' => -4,
+        ))
+        ->setDisplayOptions('form', array(
+          'type' => 'file',
+          'weight' => -4,
+        ))
+        ->setDisplayConfigurable('form', TRUE)
+        ->setDisplayConfigurable('view', TRUE)
+        ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
 
       $fields['csv'] = BaseFieldDefinition::create('file')
         ->setLabel(t('CSV File'))

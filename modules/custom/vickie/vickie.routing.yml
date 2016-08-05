@@ -133,11 +133,12 @@ entity.vickie_report_file_upload.edit_form:
 entity.vickie_report_file_upload.delete_form:
   path: '/file_upload_report/{vickie_report_file_upload}/delete'
   defaults:
-    # Calls the form.delete controller, defined in the contact entity.
-    _entity_form: vickie_report_file_upload.delete
+    # Calls the form.delete controller, defined in the Vickie Rerport File upload entity.
+    _entity_form: vickie_report_file_upload.edit
     _title: 'Delete File Upload'
   requirements:
-    _entity_access: 'vickie_report_file_upload.delete'
+    _entity_access: 'vickie_report_file_upload.edit'
+
 
 vickie.vickie_report_file_upload_settings:
   path: 'admin/structure/vickie_report_file_upload_settings'

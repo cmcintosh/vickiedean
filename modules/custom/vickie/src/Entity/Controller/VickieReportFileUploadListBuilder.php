@@ -77,11 +77,9 @@ class VickieReportFileUploadListBuilder extends EntityListBuilder {
    * and inserts the 'edit' and 'delete' links as defined for the entity type.
    */
   public function buildHeader() {
-    $header['id'] = $this->t('ReportID');
+    $header['id'] = $this->t('File Upload ID');
     $header['c_file'] = $this->t('C_File');
     $header['n_file'] = $this->t('N_File');
-    $header['audio'] = $this->t('Audio');
-    $header['csv'] = $this->t('CSV');
     return $header + parent::buildHeader();
   }
 
@@ -93,9 +91,7 @@ class VickieReportFileUploadListBuilder extends EntityListBuilder {
     $row['id'] = $entity->id();
     $row['c_file'] = $entity->c_file->value;
     $row['n_file'] = $entity->n_file->value;
-    $row['audio'] = $entity->audio->value;
-    $row['csv'] = $entity->csv->value;
-        return $row + parent::buildRow($entity);
+    return $row + parent::buildRow($entity);
   }
 
 }
