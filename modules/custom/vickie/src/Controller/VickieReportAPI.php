@@ -25,6 +25,7 @@ use Drupal\Core\Entity;
 use Drupal\vickie\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Drupal\file\Entity\File;
 
 /**
 * Form controller for the vickie entity edit forms.
@@ -37,7 +38,36 @@ class VickieReportAPI extends ControllerBase {
 
 	// For uploading files in vickie report entity.
  	public function upload_file(Request $request = null) {
- 		
+    $data = $request->request->all();
+
+    // Get the information for the audio file.
+    $audioFile = $request->files->get('file');
+    $handle = fopen($audioFile, 'r');
+    $audio = file_save_data($handle, 'public://' .$audioFile->getClientOriginalName() );
+    fclose($handle);
+
+    // Get the information for the csv file.
+    $csvFile = $request->files->get('csv');
+    $handle = fopen($csvFile, 'r');
+    $csv = file_save_data($handle, 'public://' .$csvFile->getClientOriginalName() );
+    $csv_id = ($csv) ? array($csv->ID()) : array(0);
+    fclose($handle);
+
+    /**
+    * Programmatically Create the VickieReportFileUpload Entity.
+    */
+    $values = array(
+      'report_id' => $data['r'],
+      'c_file' => $data['c_file'],
+      'n_file' => $data['n_file'],
+      'audio' => array($audio->ID()),
+      'csv' => $csv_id
+    );
+
+    // If Error
+    // return new JsonResponse (array('error' => t('There was an issue saving the uploaded files.')));
+
+    return new JsonResponse (array( $values ) );
  	}
 
  	// Creates new report for the Vickie Site.
@@ -46,18 +76,41 @@ class VickieReportAPI extends ControllerBase {
  		// gets all the data from the POST.
     	$data = $request->request->all();
 
-	    /** @var \Drupal\vickie\Entity\VickieReport $report */
-	    $report = entity_create('vickie_report', array(
-	      'location' => $data['location'],
-	      'phone' => $data['phone'],
-	    ));
+    // Validate the user information here, if we cannot validate the user return an error.
 
-	    $report->save();
-      	// Return new report credentials
-      	return new JsonResponse( array( 'Sucess' => t('You have successfully created the report') ) );
+    if(FALSE) {
+      // user validatioin failed, and is not set as a new user.
+      return new JsonResponse (array( 'error' => t('Could not authorize the account.') ) );
+    }
 
-      	
-      	//return new JsonResponse( array( 'location' => $data['location'] ) );
+
+      $values = array(
+        'bad_mic'  => $data['bad_mic'],
+        'email'    => $data['email_address'],
+        'location' => $data['location'],
+        'phone'    => $data['phone'],
+        'name'     => $data['session_name'],
+        'gender'   => $data['session_gender'],
+        'age'      => $data['session_age'],
+        'audio'    => array(0),
+        'csv'      => array(0),
+      );
+
+      try {
+        $report = entity_create('vickie_report', $values);
+  	    $report->save();
+      }
+      catch(Exception $e) {
+        watchdog_exception('vickie_report_api', $e);
+        return new JsonResponse (array('error' => $e->getMessage()));
+      }
+
+      if ($report) {
+        return new JsonResponse( array( 'success' => array('report_id' => $report->getID() ) ) );
+      }
+      else {
+        return new JsonResponse (array( 'error' => t('There was an issue saving the report.') ) );
+      }
  	}
 
 }
