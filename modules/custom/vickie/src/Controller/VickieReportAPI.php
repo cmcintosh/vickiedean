@@ -1,7 +1,7 @@
 <?php
 /**
 * @file
-* Contains \Drupal\vickie\Controller\VickieUserAPI.
+* Contains \Drupal\vickie\Controller\VickieReportAPI.
 * Represents entities as resources.
 *
 * @RestResource(

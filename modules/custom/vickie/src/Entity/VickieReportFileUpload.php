@@ -18,7 +18,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
  *
  * @ContentEntityType(
  *   id = "vickie_report_file_upload",
- *   label = @Translation("Report File Uploads"),
+ *   label = @Translation("File upload"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\vickie\Entity\Controller\VickieReportFileUploadListBuilder",
@@ -34,7 +34,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
  *   admin_permission = "administer report_file entity",
  *   entity_keys = {
  *     "id" = "id",
- *     "label" = "name",
+ *     "label" = "c_file",
  *     "uuid" = "uuid"
  *   },
  *   links = {
@@ -119,11 +119,10 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
    public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
 
      // Standard fields, used for a primary index
-
       $fields['id'] = BaseFieldDefinition::create('integer')
-       ->setLabel(t('Report ID'))
-       ->setDescription(t('The Unique ID for this report.'))
-       ->setReadOnly(TRUE);
+        ->setLabel(t('ID'))
+        ->setDescription(t('The Unique ID for this report.'))
+        ->setReadOnly(TRUE);
 
       $fields['uuid'] = BaseFieldDefinition::create('uuid')
         ->setLabel(t('UUID'))
@@ -131,8 +130,8 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ->setReadOnly(TRUE);
 
       $fields['c_file'] = BaseFieldDefinition::create('string')
-        ->setLabel(t('C_File.'))
-        ->setDescription(t('The short string indicating for the audio recordings.'))
+        ->setLabel(t('C_file'))
+        ->setDescription(t('This is the short string indicating the audio recording.'))
         ->setSettings(array(
           'default_value' => '',
           'max_length' => 255,
@@ -151,8 +150,8 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ->setdisplayConfigurable('view', TRUE);
 
       $fields['n_file'] = BaseFieldDefinition::create('string')
-        ->setLabel(t('N_File.'))
-        ->setDescription(t('The long description related to the audio recordings.'))
+        ->setLabel(t('N_File'))
+        ->setDescription(t('This is the longer description of the audio recording.'))
         ->setSettings(array(
           'default_value' => '',
           'max_length' => 255,
