@@ -719,8 +719,8 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 # }
 $databases['default']['default'] = array (
   'database' => 'vickiedean',
-  'username' => 'root',
-  'password' => '',
+  'username' => 'vickiedean',
+  'password' => 'vickiedean',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
