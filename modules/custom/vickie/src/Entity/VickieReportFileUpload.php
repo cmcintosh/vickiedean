@@ -28,6 +28,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
  *       "delete" = "Drupal\vickie\Form\VickieReportFileUploadDeleteForm",
  *     },
  *     "access" = "Drupal\vickie\VickieReportFileUploadAccessControlHandler",
+ *     "views_data" = "Drupal\views\EntityViewsData",
  *   },
  *   list_cache_contexts = { "user" },
  *   base_table = "vickie_report_file_upload",

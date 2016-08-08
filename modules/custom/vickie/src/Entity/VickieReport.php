@@ -28,6 +28,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
  *       "delete" = "Drupal\vickie\Form\VickieReportDeleteForm",
  *     },
  *     "access" = "Drupal\vickie\VickieReportAccessControlHandler",
+ *     "views_data" = "Drupal\views\EntityViewsData",
  *   },
  *   list_cache_contexts = { "user" },
  *   base_table = "vickie_report",
@@ -293,58 +294,33 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ->setDisplayConfigurable('form', TRUE)
         ->setdisplayConfigurable('view', TRUE);
 
-      $fields['audio'] = BaseFieldDefinition::create('entity_reference')
+      $fields['files'] = BaseFieldDefinition::create('entity_reference')
         ->setLabel(t('Audio Files'))
         ->setDescription(t('Report audio files uploaded for this report.'))
         ->setSetting('target_type', 'vickie_report_file_upload')
         ->setSetting('handler', 'default')
         ->setRevisionable(TRUE)
-        //->setDefaultValueCallback('Drupal\node\Entity\Node::getCurrentUserId')
         ->setTranslatable(FALSE)
         ->setDisplayOptions('view', array(
           'label' => 'above',
           'type' => 'author',
           'weight' => -3,
         ))
-        ->setDisplayOptions('form', array(
-          'type' => 'entity_reference_autocomplete',
-          'settings' => array(
-            'match_operator' => 'CONTAINS',
-            'size' => 60,
-            'placeholder' => '',
-          ),
-          'weight' => -3,
-          ),
-        ))
+        ->setDisplayOptions('form',
+          array(
+            'type' => 'entity_reference_autocomplete',
+            'settings' => array(
+              'match_operator' => 'CONTAINS',
+              'size' => 60,
+              'placeholder' => '',
+            ),
+            'weight' => -3,
+          )
+        )
         ->setDisplayConfigurable('form', TRUE)
         ->setDisplayConfigurable('view', TRUE)
         ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
 
-      $fields['csv'] = BaseFieldDefinition::create('entity_reference')
-       ->setLabel(t('CSV File'))
-        ->setSetting('target_type', 'vickie_report_file_upload')
-        ->setSetting('handler', 'default')
-       ->setRevisionable(TRUE)
-       //->setDefaultValueCallback('Drupal\node\Entity\Node::getCurrentUserId')
-       ->setTranslatable(TRUE)
-       ->setDisplayOptions('view', array(
-          'label' => 'hidden',
-          'type' => 'author',
-          'weight' => -3,
-        ))
-        ->setDisplayOptions('form', array(
-          'type' => 'entity_reference_autocomplete',
-          'settings' => array(
-            'match_operator' => 'CONTAINS',
-            'size' => 60,
-            'placeholder' => '',
-          ),
-          'weight' => -3,
-          ),
-        ))
-        ->setDisplayConfigurable('form', TRUE)
-        ->setDisplayConfigurable('view', TRUE);
-      //->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
      return $fields;
   }
 }

@@ -3,6 +3,7 @@
 namespace Drupal\vickie\Entity\Controller;
 
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Url;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Entity\EntityStorageInterface;
@@ -77,12 +78,12 @@ class VickieReportListBuilder extends EntityListBuilder {
    * and inserts the 'edit' and 'delete' links as defined for the entity type.
    */
   public function buildHeader() {
-    $header['id'] = $this->t('ReportID');
+
     $header['name'] = $this->t('Name');
     $header['bad_mic'] = $this->t('Bad Mic');
     $header['location'] = $this->t('Location');
     $header['phone'] = $this->t('Phone');
-    $header['audio'] = $this->t('Audio');
+    $header['audio'] = $this->t('Files');
     return $header + parent::buildHeader();
   }
 
@@ -91,12 +92,13 @@ class VickieReportListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\vickie\Entity\Report */
-    $row['id'] = $entity->id();
-    $row['name'] = $entity->link();
+    $entity_id = $entity->ID();
+    $url = Url::fromRoute('entity.vickie_report.canonical', array('vickie_report' => $entity_id));
+    $row['name'] =   \Drupal::l($entity->name->value, $url);
     $row['bad_mic'] = $entity->bad_mic->value;
     $row['location'] = $entity->location->value;
     $row['phone'] = $entity->phone->value;
-    $row['audio'] = $entity->audio->value;
+    $row['files'] = count($entity->files);
     return $row + parent::buildRow($entity);
   }
 

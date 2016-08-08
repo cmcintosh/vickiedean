@@ -73,8 +73,15 @@ class VickieReportAPI extends ControllerBase {
 
     //return new JsonResponse (array( $values ) );
     try {
-        $report = entity_create('vickie_report_file_upload', $values);
-  	    $report->save();
+        $entity = entity_create('vickie_report_file_upload', $values);
+  	    $entity->save();
+
+        $upload_id = $entity->ID();
+
+        // We need to programmatically load the VickieReport entity, and update it with the new file.
+        $report = \Drupal::entityManager()->getStorage('vickie_report')->load($values['report_id']);
+        $report->files[] = $upload_id;
+        $report->save();
       }
       catch(Exception $e) {
         watchdog_exception('vickie_report_api', $e);
@@ -114,6 +121,12 @@ class VickieReportAPI extends ControllerBase {
         'audio'    => array(0),
         'csv'      => array(0),
       );
+
+      foreach($values as $id => $value) {
+        if ($value == '') {
+          return new JsonResponse (array( 'error' => t('There was an issue saving the report. You were missing the !field_name field.', array('!field_name' => $id)) ) );
+        }
+      }
 
       try {
         $report = entity_create('vickie_report', $values);
