@@ -54,7 +54,11 @@ class VickieUserAPI extends ControllerBase {
     }
     else {
       	// Return 200 if sucessful login.
-      	return new JsonResponse( array( 'Success' => t('Successfully login Response 200') ) );
+      $uid = \Drupal::service('user.auth')->authenticate($_POST['name'], $_POST['pass']);
+      $session_manager = \Drupal::service('session_manager');
+      $session_id = $session_manager->getId();
+      return new JsonResponse( array( 'uid' => $uid, 'session_id' => $session_id ) );
+      return new JsonResponse( array( 'Success' => t('Successfully login Response 200') ) );
     }
   }
  // For vickie User Registration

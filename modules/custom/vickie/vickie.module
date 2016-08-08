@@ -31,3 +31,50 @@
  * Where ever possible, we use the amazing tools built into D8 natively.
  * }
  */
+function vickie_enable() {
+
+  // Create an entityreference field.
+  $field_audio = array(
+    'field_name' => 'audio',
+    'type' => 'entityreference',
+    'settings' => array(
+      'target_type' => 'vickie_report_file_upload',
+    ),
+    'cardinality' => 1, // Field may only have one value.
+    'translatable' => FALSE,
+  );
+  $field_csv = array(
+    'field_name' => 'csv',
+    'type' => 'entityreference',
+    'settings' => array(
+      'target_type' => 'vickie_report_file_upload',
+    ),
+    'cardinality' => 1, // Field may only have one value.
+    'translatable' => FALSE,
+  );
+  field_create_field($field_audio);
+  field_create_field($field_csv);
+
+  $instance_audio = array(
+    'field_name' => 'audio',
+    'entity_type' => 'vickie_report_file_upload',
+    //'bundle' => 'my_entitytype_bundle',
+    'label' => 'Reference to other entity',
+    'required' => TRUE,
+    'widget' => array(
+      'type' => 'options_select',
+    ),
+  );
+   $instance_csv = array(
+    'field_name' => 'csv',
+    'entity_type' => 'vickie_report_file_upload',
+    //'bundle' => 'my_entitytype_bundle',
+    'label' => 'Reference to other entity',
+    'required' => TRUE,
+    'widget' => array(
+      'type' => 'options_select',
+    ),
+  );
+  field_create_instance($instance_audio);
+  field_create_instance($instance_csv);
+}

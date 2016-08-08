@@ -296,46 +296,54 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         ->setDescription(t('Report audio files uploaded for this report.'))
         ->setSetting('target_type', 'vickie_report_file_upload')
         ->setSetting('handler', 'default')
+        ->setRevisionable(TRUE)
+        //->setDefaultValueCallback('Drupal\node\Entity\Node::getCurrentUserId')
+        ->setTranslatable(FALSE)
         ->setDisplayOptions('view', array(
-          'label' => 'above',
-          'type' => 'author',
+          'label' => 'hidden', 
+          'type' => 'vickie_report_file_upload',
           'weight' => -3,
         ))
         ->setDisplayOptions('form', array(
           'type' => 'entity_reference_autocomplete',
+          'weight' => 5,
           'settings' => array(
             'match_operator' => 'CONTAINS',
-            'size' => 60,
+            'size' => '60',
+            'autocomplete_type' => 'tags',
             'placeholder' => '',
           ),
-          'weight' => -3,
         ))
         ->setDisplayConfigurable('form', TRUE)
-        ->setDisplayConfigurable('view', TRUE)
-        ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+        ->setDisplayConfigurable('view', TRUE);
+      //->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
 
       $fields['csv'] = BaseFieldDefinition::create('entity_reference')
        ->setLabel(t('CSV File'))
        ->setDescription(t('Report CSV files uploaded for this report.'))
        ->setSetting('target_type', 'vickie_report_file_upload')
-        ->setSetting('handler', 'default')
-        ->setDisplayOptions('view', array(
-          'label' => 'above',
-          'type' => 'author',
+       ->setSetting('handler', 'default')
+       ->setRevisionable(TRUE)
+       //->setDefaultValueCallback('Drupal\node\Entity\Node::getCurrentUserId')
+       ->setTranslatable(TRUE)
+       ->setDisplayOptions('view', array(
+          'label' => 'hidden',
+          'type' => 'vickie_report_file_upload',
           'weight' => -3,
         ))
         ->setDisplayOptions('form', array(
           'type' => 'entity_reference_autocomplete',
+          'weight' => 5,
           'settings' => array(
             'match_operator' => 'CONTAINS',
-            'size' => 60,
+            'size' => '60',
+            'autocomplete_type' => 'tags',
             'placeholder' => '',
           ),
-          'weight' => -3,
         ))
         ->setDisplayConfigurable('form', TRUE)
-        ->setDisplayConfigurable('view', TRUE)
-        ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+        ->setDisplayConfigurable('view', TRUE);
+      //->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
      return $fields;
   }
 }

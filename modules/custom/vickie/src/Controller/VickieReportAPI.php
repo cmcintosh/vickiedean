@@ -39,8 +39,9 @@ class VickieReportAPI extends ControllerBase {
 	// For uploading files in vickie report entity.
  	public function upload_file(Request $request = null) {
     $data = $request->request->all();
+
     if(!($this->authorizeAccess($data))) {
-      // user validatioin failed, and is not set as a new user.
+      // user validation failed, and is not set as a new user.
       return new JsonResponse (array( 'error' => t('Could not authorize the account.') ) );
     }
 
@@ -67,11 +68,26 @@ class VickieReportAPI extends ControllerBase {
       'audio' => array($audio->ID()),
       'csv' => $csv_id
     );
-
     // If Error
     // return new JsonResponse (array('error' => t('There was an issue saving the uploaded files.')));
 
-    return new JsonResponse (array( $values ) );
+    //return new JsonResponse (array( $values ) );
+    try {
+        $report = entity_create('vickie_report_file_upload', $values);
+  	    $report->save();
+      }
+      catch(Exception $e) {
+        watchdog_exception('vickie_report_api', $e);
+        return new JsonResponse (array('error' => $e->getMessage()));
+      }
+
+      if ($report) {
+        return new JsonResponse( array( 'success' => array('report_id' => $report->getID() ) ) );
+      }
+      else {
+        return new JsonResponse (array( 'error' => t('There was an issue Uploading files.') ) );
+      }
+
  	}
 
  	// Creates new report for the Vickie Site.
@@ -122,5 +138,4 @@ class VickieReportAPI extends ControllerBase {
     $session_manager = \Drupal::service('session_manager');
     return $uid;
   }
-
 }
