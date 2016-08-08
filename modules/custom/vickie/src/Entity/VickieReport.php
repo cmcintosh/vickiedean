@@ -217,22 +217,24 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
 
       $fields['gender'] = BaseFieldDefinition::create('string')
         ->setLabel(t('Gender'))
+        ->setDescription(t('The Gender of the user.'))
         ->setSettings(array(
-          'default_value' => '',
-          'max_length' => 255,
-          'text_processing' => 0,
+          'allowed_values' => array(
+            'female' => 'female',
+            'male' => 'male',
+          ),
         ))
         ->setDisplayOptions('view', array(
           'label' => 'above',
           'type' => 'string',
-          'weight' => -4
+          'weight' => -4,
         ))
         ->setDisplayOptions('form', array(
-          'type' => 'string_textfield',
-          'weight' => -4
+          'type' => 'options_select',
+          'weight' => -4,
         ))
         ->setDisplayConfigurable('form', TRUE)
-        ->setdisplayConfigurable('view', TRUE);
+        ->setDisplayConfigurable('view', TRUE);
 
       $fields['age'] = BaseFieldDefinition::create('string')
         ->setLabel(t('Age'))
@@ -300,45 +302,44 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
         //->setDefaultValueCallback('Drupal\node\Entity\Node::getCurrentUserId')
         ->setTranslatable(FALSE)
         ->setDisplayOptions('view', array(
-          'label' => 'hidden', 
-          'type' => 'vickie_report_file_upload',
+          'label' => 'above',
+          'type' => 'author',
           'weight' => -3,
         ))
         ->setDisplayOptions('form', array(
           'type' => 'entity_reference_autocomplete',
-          'weight' => 5,
           'settings' => array(
             'match_operator' => 'CONTAINS',
-            'size' => '60',
-            'autocomplete_type' => 'tags',
+            'size' => 60,
             'placeholder' => '',
+          ),
+          'weight' => -3,
           ),
         ))
         ->setDisplayConfigurable('form', TRUE)
-        ->setDisplayConfigurable('view', TRUE);
-      //->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+        ->setDisplayConfigurable('view', TRUE)
+        ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
 
       $fields['csv'] = BaseFieldDefinition::create('entity_reference')
        ->setLabel(t('CSV File'))
-       ->setDescription(t('Report CSV files uploaded for this report.'))
-       ->setSetting('target_type', 'vickie_report_file_upload')
-       ->setSetting('handler', 'default')
+        ->setSetting('target_type', 'vickie_report_file_upload')
+        ->setSetting('handler', 'default')
        ->setRevisionable(TRUE)
        //->setDefaultValueCallback('Drupal\node\Entity\Node::getCurrentUserId')
        ->setTranslatable(TRUE)
        ->setDisplayOptions('view', array(
           'label' => 'hidden',
-          'type' => 'vickie_report_file_upload',
+          'type' => 'author',
           'weight' => -3,
         ))
         ->setDisplayOptions('form', array(
           'type' => 'entity_reference_autocomplete',
-          'weight' => 5,
           'settings' => array(
             'match_operator' => 'CONTAINS',
-            'size' => '60',
-            'autocomplete_type' => 'tags',
+            'size' => 60,
             'placeholder' => '',
+          ),
+          'weight' => -3,
           ),
         ))
         ->setDisplayConfigurable('form', TRUE)

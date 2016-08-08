@@ -7,7 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
 /**
- * Provides a form for deleting a VickieReportFileUpload entity.
+ * Provides a form for deleting a vickie entity.
  *
  * @ingroup vickie
  */

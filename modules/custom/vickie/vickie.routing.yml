@@ -37,7 +37,7 @@ vickie.file.upload:
 entity.vickie_report.canonical:
   path: '/report/{vickie_report}'
   defaults:
-  # Calls the view controller, defined in the annotation of the contact entity
+  # Calls the view controller, defined in the annotation of the vickie_report entity
     _entity_view: 'vickie_report'
     _title: 'Report Content'
   requirements:
@@ -47,7 +47,7 @@ entity.vickie_report.canonical:
 entity.vickie_report.collection:
   path: '/admin/content/vickie_report/list'
   defaults:
-  # Calls the list controller, defined in the annotation of the contact entity.
+  # Calls the list controller, defined in the annotation of the vickie_report entity.
     _entity_list: 'vickie_report'
     _title: 'Report List'
   requirements:
@@ -57,7 +57,7 @@ entity.vickie_report.collection:
 vickie.vickie_report_add:
   path: '/vickie_report/add'
   defaults:
-  # Calls the form.add controller, defined in the contact entity.
+  # Calls the form.add controller, defined in the vickie_report entity.
     _entity_form: vickie_report.add
     _title: 'Add Report'
   requirements:
@@ -66,7 +66,7 @@ vickie.vickie_report_add:
 entity.vickie_report.edit_form:
   path: '/report/{vickie_report}/edit'
   defaults:
-  # Calls the form.edit controller, defined in the contact entity.
+  # Calls the form.edit controller, defined in the vickie_report entity.
     _entity_form: vickie_report.edit
     _title: 'Edit Report'
   requirements:
@@ -75,7 +75,7 @@ entity.vickie_report.edit_form:
 entity.vickie_report.delete_form:
   path: '/report/{vickie_report}/delete'
   defaults:
-    # Calls the form.delete controller, defined in the contact entity.
+    # Calls the form.delete controller, defined in the vickie_report entity.
     _entity_form: vickie_report.delete
     _title: 'Delete Report'
   requirements:
@@ -90,12 +90,10 @@ vickie.vickie_report_settings:
     _permission: 'administer report entity'
 
 # VickieReportFileUpload Entity Routes
-# Route name can be used in several places; e.g. links, redirects, and local
-# actions.
 entity.vickie_report_file_upload.canonical:
   path: '/file_upload_report/{vickie_report_file_upload}'
   defaults:
-  # Calls the view controller, defined in the annotation of the contact entity
+  # Calls the view controller, defined in the annotation of the vickie_report entity
     _entity_view: 'vickie_report_file_upload'
     _title: 'Upload File Content'
   requirements:
@@ -105,7 +103,7 @@ entity.vickie_report_file_upload.canonical:
 entity.vickie_report_file_upload.collection:
   path: '/admin/content/vickie_report_file_upload/list'
   defaults:
-  # Calls the list controller, defined in the annotation of the contact entity.
+  # Calls the list controller, defined in the annotation of the vickie_report entity.
     _entity_list: 'vickie_report_file_upload'
     _title: 'Upload File List'
   requirements:
@@ -115,7 +113,7 @@ entity.vickie_report_file_upload.collection:
 vickie.vickie_file_upload_report_add:
   path: '/vickie_report_file_upload/add'
   defaults:
-  # Calls the form.add controller, defined in the contact entity.
+  # Calls the form.add controller, defined in the vickie_report entity.
     _entity_form: vickie_report_file_upload.add
     _title: 'Add File Upload'
   requirements:
@@ -124,7 +122,7 @@ vickie.vickie_file_upload_report_add:
 entity.vickie_report_file_upload.edit_form:
   path: '/file_upload_report/{vickie_report_file_upload}/edit'
   defaults:
-  # Calls the form.edit controller, defined in the contact entity.
+  # Calls the form.edit controller, defined in the vickie_report entity.
     _entity_form: vickie_report_file_upload.edit
     _title: 'Edit File Upload'
   requirements:
@@ -133,11 +131,12 @@ entity.vickie_report_file_upload.edit_form:
 entity.vickie_report_file_upload.delete_form:
   path: '/file_upload_report/{vickie_report_file_upload}/delete'
   defaults:
-    # Calls the form.delete controller, defined in the contact entity.
+    # Calls the form.delete controller, defined in the Vickie Rerport File upload entity.
     _entity_form: vickie_report_file_upload.delete
     _title: 'Delete File Upload'
   requirements:
     _entity_access: 'vickie_report_file_upload.delete'
+
 
 vickie.vickie_report_file_upload_settings:
   path: 'admin/structure/vickie_report_file_upload_settings'
