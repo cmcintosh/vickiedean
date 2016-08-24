@@ -20,7 +20,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
  *   id = "vickie_report",
  *   label = @Translation("Report"),
  *   handlers = {
- *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
+ *     "view_builder" = "Drupal\vickie\Entity\Controller\VickieReportViewBuilder",
  *     "list_builder" = "Drupal\vickie\Entity\Controller\VickieReportListBuilder",
  *     "form" = {
  *       "add" = "Drupal\vickie\Form\VickieReportForm",

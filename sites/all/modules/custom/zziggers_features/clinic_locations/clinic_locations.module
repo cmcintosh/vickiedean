@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Clinic Locations feature.
- */
-
-include_once 'clinic_locations.features.inc';

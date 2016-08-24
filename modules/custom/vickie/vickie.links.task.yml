@@ -7,7 +7,7 @@ report.settings_tab:
 
 report.collection:
   route_name: entity.vickie_report.collection
-  title: Reports
+  title: Report Data
   base_route: system.admin_content
 
 report.view:
@@ -33,7 +33,7 @@ report_file.settings_tab:
 
 report_file.collection:
   route_name: entity.vickie_report_file_upload.collection
-  title: File Upload Reports
+  title: Report Audio Uploads
   base_route: system.admin_content
 
 report_file.view:
